@@ -1,0 +1,19 @@
+{
+  "/all-services": "pages/all-services.html",
+  "/_app": "pages/_app.js",
+  "/contact-us": "pages/contact-us.html",
+  "/": "pages/index.html",
+  "/api/client": "pages/api/client.js",
+  "/my-favorite": "pages/my-favorite.html",
+  "/order": "pages/order.html",
+  "/privacy-security": "pages/privacy-security.html",
+  "/api/hello": "pages/api/hello.js",
+  "/layout": "pages/layout.html",
+  "/profile": "pages/profile.html",
+  "/testing": "pages/testing.html",
+  "/services": "pages/services.html",
+  "/_error": "pages/_error.js",
+  "/categories": "pages/categories.html",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
+}
