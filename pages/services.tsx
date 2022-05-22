@@ -1,8 +1,14 @@
 import React from "react";
+import Layout from "./layout";
+import Services from "../components/Service/Service";
 
 type Props = {};
 
 const services: React.FC<Props> = ({}) => {
-  return <div>services: React.FC</div>;
+  return (
+    <Layout>
+      <Services />
+    </Layout>
+  );
 };
 export default services;

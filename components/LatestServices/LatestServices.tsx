@@ -138,7 +138,13 @@ const LatestServices: React.FC<Props> = ({}) => {
                         marginLeft: "1%",
                       }}
                     >
-                      <StyledCard key={Math.random()} elevation={6}>
+                      <StyledCard
+                        key={Math.random()}
+                        elevation={6}
+                        onClick={() => {
+                          route.push("/services?ad=" + item?.categories_id);
+                        }}
+                      >
                         <div
                           style={{
                             width: "100%",
