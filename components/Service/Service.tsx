@@ -5,7 +5,7 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import { StyledTabs, StyledTab } from "./styles";
 export default function Service() {
-  const [value, setValue] = React.useState("two");
+  const [value, setValue] = React.useState("Description");
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
@@ -21,10 +21,10 @@ export default function Service() {
                 onChange={handleChange}
                 aria-label="secondary StyledTabs example"
               >
-                <StyledTab value="two" label="Description" />
-                <StyledTab value="three" label="About seller" />
-                <StyledTab value="four" label="Similar services" />
-                <StyledTab value="five" label="Reviews" />
+                <StyledTab value="Description" label="Description" />
+                <StyledTab value="About" label="About seller" />
+                <StyledTab value="Similar" label="Similar services" />
+                <StyledTab value="Reviews" label="Reviews" />
               </StyledTabs>
             </div>
           </Paper>
