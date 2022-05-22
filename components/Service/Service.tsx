@@ -100,7 +100,7 @@ export default function Service() {
           </div>
           <Paper sx={{ width: "50%", height: 400 }}>
             {" "}
-            {state.servicedata.map((item) => (
+            {state.servicedata.map((item: any) => (
               <>{item.services_id}</>
             ))}
           </Paper>
