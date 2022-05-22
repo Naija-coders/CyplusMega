@@ -80,6 +80,7 @@ const LatestServices: React.FC<Props> = ({}) => {
       setLoaded(false);
     }
   });
+  console.log("displaying mainservices", state.mainservices);
 
   return (
     <div className="navbar__mycontainer">
@@ -142,7 +143,7 @@ const LatestServices: React.FC<Props> = ({}) => {
                         key={Math.random()}
                         elevation={6}
                         onClick={() => {
-                          route.push("/services?ad=" + item?.categories_id);
+                          route.push("/services?ad=" + item?.services_id);
                         }}
                       >
                         <div

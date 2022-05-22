@@ -19,6 +19,15 @@ export const getuserfavorite = (favorite: any) => {
     
     } 
 }
+export const getmainservices = (services: any) => {
+    return (dispatch:Dispatch<Action> ) => {
+        dispatch({
+            type: ActionType.USERSERVICE,
+            payload:services
+        })
+    
+    } 
+}
 export const storecategory = (category: any) => {
     return (dispatch:Dispatch<Action> ) => {
         dispatch({

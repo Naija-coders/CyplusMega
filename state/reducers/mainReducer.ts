@@ -1,8 +1,13 @@
 import categories from "../../pages/categories";
 import { ActionType } from "../action-types/index"
 import { Action } from "../actions"
+import Clientapi from "../../pages/api/client";
 
-
+let categoryres;
+let servicedata = Clientapi.get("/api/company/services").then((response) => {
+  categoryres = response.data;
+  console.log("checking userservice response", categoryres);
+});
 const initialState = {
     user: [],
     isLoggedIn: false,
@@ -10,7 +15,10 @@ const initialState = {
     isCategories: false,
     services: [],
     mainservices : [],
-    userfavorite : []
+    userfavorite : [],
+    userservices: !!servicedata,
+    servicedata: []
+    
 
     
 }
@@ -47,6 +55,12 @@ const reducer = (state: any = initialState, action: Action): any => {
                     ...state,
                     mainservices: action.payload
                 }
+            case ActionType.USERSERVICE:
+                return {
+                    ...state,
+                    servicedata: action.payload
+                }
+
         
         default:
             return state

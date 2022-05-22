@@ -9,6 +9,10 @@ interface WithdrawAction {
     type: ActionType.WITHDRAW,
     payload: any
 }
+interface UserserviceAction {
+    type:ActionType.USERSERVICE,
+    payload:any
+}
 
 interface CategoryAction {
     type:ActionType.CATEGORY,
@@ -32,4 +36,4 @@ interface FavoriteAction {
     type:ActionType.FAVORITE,
     payload:any
 }
-export type Action = DepositAction | WithdrawAction | BankruptAction | UserAction | CategoryAction | ServiceAction | MainServiceAction | FavoriteAction;
+export type Action = DepositAction | WithdrawAction | BankruptAction | UserAction | CategoryAction | ServiceAction | MainServiceAction | FavoriteAction | UserserviceAction;
