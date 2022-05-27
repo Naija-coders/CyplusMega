@@ -375,7 +375,7 @@ export default function Navbar() {
                 )}
               </StyledButton>
             ) : (
-              <>
+              <div>
                 <StyledButton
                   variant="text"
                   sx={{ textTransform: "none" }}
@@ -387,8 +387,12 @@ export default function Navbar() {
                 <div
                   style={{
                     display: "flex",
-                    width: "50%",
+
                     justifyContent: "center",
+                    bottom: "20px",
+
+                    position: "absolute",
+                    right: 0,
                   }}
                 >
                   <StyledLoginIcon sx={{ color: "#ffff" }}>
@@ -402,7 +406,7 @@ export default function Navbar() {
                     <PersonIcon sx={{ fontSize: "17px" }} />
                   </StyledLoginIcon>
                 </div>
-              </>
+              </div>
             )}
           </div>
         </StyledDiv>
