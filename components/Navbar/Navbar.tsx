@@ -41,6 +41,7 @@ import {
   StyledMenu,
   MobileMenu,
   StyledLoginIcon,
+  StyledDivider,
 } from "./styles";
 import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
 import SearchIcon from "@mui/icons-material/Search";
@@ -384,9 +385,11 @@ export default function Navbar() {
                   <PersonIcon /> Account <KeyboardArrowDown />
                 </StyledButton>
                 <LoginModal OpenModalForm={open} CloseModalForm={handleClose} />{" "}
-                <StyledLoginIcon>
-                  <PersonIcon />
-                </StyledLoginIcon>
+                <div>
+                  <StyledLoginIcon sx={{ color: "#ffff" }}>
+                    <PersonIcon />
+                  </StyledLoginIcon>
+                </div>
               </>
             )}
           </div>

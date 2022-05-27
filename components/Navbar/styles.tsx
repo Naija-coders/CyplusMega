@@ -95,8 +95,6 @@ export const Styledpaper = styled(Paper)(
 export const StyledLoginIcon = styled(IconButton)(
   sx({
     display: { xs: "flex", sm: "flex", md: "none", lg: "none", xl: "none" },
-
-    justifyContent: "end",
   })
 );
 

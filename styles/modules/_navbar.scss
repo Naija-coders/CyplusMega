@@ -18,17 +18,19 @@
   }
   &__container {
     display: flex;
-    margin-left: 20%;
 
     @include atSmall {
       display: flex;
     }
     @include atSmallMax {
       display: flex;
-      margin-left: 7%;
+      justify-content: space-between;
+
+      width: 120%;
     }
     @include atMedium {
       display: flex;
+      margin-left: 20%;
     }
   }
   &__nav_mobile {
@@ -55,7 +57,7 @@
   &__mainwrapper {
     display: flex;
 
-    justify-content: space-between;
+    justify-content: space-around;
     justify-items: center;
   }
   &__catwrapper {
