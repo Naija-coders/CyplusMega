@@ -25,7 +25,7 @@
       display: flex;
       width: 100%;
     }
-    @include atSmallMax {
+    @include atFold {
       display: flex;
 
       gap: 40px;
