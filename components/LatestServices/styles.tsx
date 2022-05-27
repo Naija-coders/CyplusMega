@@ -114,7 +114,7 @@ export const StyledPriceValue = styled(Typography)(
     color: "#FCA301",
     fontFamily: "Avenir Light",
     fontSize: "25px",
-    textShadow: "rgba(0, 0, 0, 0.298039) 0px 5px 0px",
+    textShadow: "rgba(0, 0, 0, 0.298039) 0px 1px 0px",
   })
 );
 export const StyledPrice = styled(Typography)(

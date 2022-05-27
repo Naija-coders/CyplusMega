@@ -100,10 +100,9 @@ const LatestServices: React.FC<Props> = ({}) => {
             </StyledBox>
             {loaded ? (
               <Skeleton
-                count={6}
-                inline
-                height={300}
-                containerClassName="flexitems__latestservices"
+                count={1}
+                height={"100px"}
+                containerClassName="flexitems__mobilelatestservices"
                 style={{
                   marginLeft: "15px",
                   borderRadius: "0.5rem",
@@ -111,7 +110,7 @@ const LatestServices: React.FC<Props> = ({}) => {
                   justifyContent: "center",
                   marginTop: "10px",
                 }}
-                width={"270px"}
+                width={"350px"}
               />
             ) : (
               <div className="flexitems__mobilelatestservices">
