@@ -14,6 +14,13 @@ import { actionCreators } from "../../state";
 import Card from "@mui/material/Card";
 import { RootState } from "../../state/reducers";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/grid";
+import "swiper/css/pagination";
+import { Grid, Pagination, Autoplay, Navigation } from "swiper";
 
 import {
   StyledLink,
@@ -60,7 +67,6 @@ const AvailableService = (props: Props) => {
   const dispatch: Dispatch<any> = useDispatch();
   const state = useSelector((state: RootState) => state.appstate);
   const [loaded, setLoaded] = useState(true);
-
 
   function nextSlide() {
     setCurrent(current === length - 10 ? 0 : current + 1);
@@ -113,7 +119,17 @@ const AvailableService = (props: Props) => {
                 width={"270px"}
               />
             ) : (
-              <div className="flexitems__avalableservice">
+              <Swiper
+                slidesPerView={5}
+                spaceBetween={0}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                navigation={true}
+                modules={[Autoplay, Navigation]}
+                className="mySwiper"
+              >
                 {state.categories?.map(
                   (
                     item: {
@@ -128,7 +144,7 @@ const AvailableService = (props: Props) => {
                     },
                     i: string | number | any
                   ) => (
-                    <div
+                    <SwiperSlide
                       key={Math.random()}
                       style={{ marginLeft: "1%", position: "relative" }}
                     >
@@ -145,8 +161,8 @@ const AvailableService = (props: Props) => {
                           <img
                             src={serviceimages[i]}
                             style={{
-                              width: "200px",
-                              borderRadius: "13px",
+                              width: "250px",
+
                               height: "200px",
                               cursor: "pointer",
                               objectFit: "cover",
@@ -159,10 +175,10 @@ const AvailableService = (props: Props) => {
                           </Typography>
                         </StyledLink>
                       </StyledCard>
-                    </div>
+                    </SwiperSlide>
                   )
                 )}
-              </div>
+              </Swiper>
             )}
           </Paper>
         </div>

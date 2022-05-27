@@ -37,6 +37,7 @@ export const StyledCard = styled(Card)(
   sx({
     "cursor": "pointer",
     "borderRadius": "10px",
+    "marginTop": "5px",
 
     "&:hover": {
       boxShadow: " 0px 2px 12px -1px #565454;",
