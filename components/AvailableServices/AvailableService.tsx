@@ -106,6 +106,7 @@ const AvailableService = (props: Props) => {
                     marginLeft: "2%",
                     fontFamily: "serif",
                     fontSize: "1.3rem",
+                    marginLeft: "20px",
                   }}
                 >
                   Service categories
@@ -177,6 +178,7 @@ const AvailableService = (props: Props) => {
                               style={{
                                 fontFamily: "serif",
                                 fontSize: "0.5rem",
+                                textAlign: "center",
                               }}
                             >
                               {item.type}
