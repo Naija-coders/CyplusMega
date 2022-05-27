@@ -74,7 +74,11 @@ export const LoginModal: React.FC<Props> = ({
             <CloseIcon />
           </IconButton>
           {isSignup ? (
-            <Signup />
+            <Signup
+              saveUser={saveuser}
+              onSuccess={fetchuser}
+              CloseModalForm={CloseModalForm}
+            />
           ) : (
             <Signin
               saveUser={saveuser}
