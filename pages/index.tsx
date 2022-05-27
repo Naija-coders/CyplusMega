@@ -45,6 +45,7 @@ const Home: NextPage = () => {
         <AvailableServices services={categories} />
         <Featured />
         <LatestServices />
+        <TopCategories />
       </div>{" "}
     </Layout>
   );

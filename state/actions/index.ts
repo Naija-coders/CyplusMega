@@ -36,4 +36,8 @@ interface FavoriteAction {
     type:ActionType.FAVORITE,
     payload:any
 }
-export type Action = DepositAction | WithdrawAction | BankruptAction | UserAction | CategoryAction | ServiceAction | MainServiceAction | FavoriteAction | UserserviceAction;
+interface AllserviceAction {
+    type:ActionType.ALLSERVICE,
+    payload:any
+}
+export type Action = DepositAction | WithdrawAction | BankruptAction | UserAction | CategoryAction | ServiceAction | MainServiceAction | FavoriteAction | UserserviceAction | AllserviceAction;

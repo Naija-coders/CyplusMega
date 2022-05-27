@@ -28,6 +28,15 @@ export const getmainservices = (services: any) => {
     
     } 
 }
+export const getallservices = (allservices: any) => {
+    return (dispatch:Dispatch<Action> ) => {
+        dispatch({
+            type: ActionType.ALLSERVICE,
+            payload:allservices
+        })
+    
+    } 
+}
 export const storecategory = (category: any) => {
     return (dispatch:Dispatch<Action> ) => {
         dispatch({

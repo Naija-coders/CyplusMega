@@ -545,6 +545,7 @@ export default function Navbar() {
   const [myaccount, setMyaccount] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [mainservice, setMainservices] = useState([]);
+  const [allservices, setAllservices] = useState([]);
   const [anchorElmenu, setAnchorElmenu] = React.useState<null | HTMLElement>(
     null
   );
@@ -585,8 +586,13 @@ export default function Navbar() {
     });
   };
 
-  const { depositMoney, storecategory, mainServices, getuserfavorite } =
-    bindActionCreators(actionCreators, dispatch);
+  const {
+    depositMoney,
+    storecategory,
+    mainServices,
+    getuserfavorite,
+    getallservices,
+  } = bindActionCreators(actionCreators, dispatch);
   useEffect(() => {
     if (categories.length === 0) {
       Clientapi.get("api/Categories").then((response) => {
@@ -607,6 +613,12 @@ export default function Navbar() {
         mainServices(response.data);
       });
     }
+    if (allservices.length === 0) {
+      Clientapi.get("/api/company/allservices").then((response) => {
+        getallservices(response.data);
+      });
+    }
+
     if (AuthState.isLoggedIn) {
       Clientapi.get("api/user").then((response) => {
         const user = response.data;

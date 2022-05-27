@@ -17,7 +17,8 @@ const initialState = {
     mainservices : [],
     userfavorite : [],
     userservices: !!servicedata,
-    servicedata: []
+    servicedata: [],
+    allservicedata: []
     
 
     
@@ -59,6 +60,11 @@ const reducer = (state: any = initialState, action: Action): any => {
                 return {
                     ...state,
                     servicedata: action.payload
+                }
+            case ActionType.ALLSERVICE:
+                return {
+                    ...state,
+                    allservicedata: action.payload
                 }
 
         

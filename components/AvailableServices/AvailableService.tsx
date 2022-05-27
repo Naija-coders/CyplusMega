@@ -162,7 +162,7 @@ const AvailableService = (props: Props) => {
                             src={serviceimages[i]}
                             style={{
                               width: "250px",
-
+                              borderRadius: "13px",
                               height: "200px",
                               cursor: "pointer",
                               objectFit: "cover",

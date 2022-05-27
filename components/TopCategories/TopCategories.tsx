@@ -1,160 +1,274 @@
-import React from "react";
-import { Paper, Box, Typography, IconButton } from "@mui/material";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import React, { useState, useContext, useEffect } from "react";
+import StateContext from "../../context/StateContext";
+import DispatchContext from "../../context/DispatchContext";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+import { Dispatch } from "redux";
+import { useDispatch, useSelector } from "react-redux";
+import { bindActionCreators } from "redux";
+
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import { actionCreators } from "../../state";
+import { RootState } from "../../state/reducers";
+import Card from "@mui/material/Card";
+import { Avatar, IconButton } from "@mui/material";
+import StarIcon from "@mui/icons-material/Star";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { LoginModal } from "../LoginModal/Loginmodal";
+
+import { useRouter } from "next/router";
+
+import MenuIcon from "@mui/icons-material/Menu";
+import moment from "moment";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import CustomLoader from "../CustomLoader";
+import ToggleButton from "@mui/material/ToggleButton";
+
 import {
+  StyledLink,
+  StyledCard,
+  StyledTypographyHeader,
+  StyledPriceValue,
+  TextTypography,
+  StyledPrice,
+  StyledButton,
   StyledTypography,
-  StyledBox,
-  StyledDiv,
-  StyledHeaderTypo,
-  StyledTypographySub,
   StyledIconButton,
+  StyledCustomTypography,
+  StyledBox,
 } from "./styles";
-import { StyledHeader } from "../Categories/styles";
-export default function TopCategories() {
+import { StyledAbout } from "../Categories/styles";
+type Props = {};
+const LatestServices: React.FC<Props> = ({}) => {
+  const state = useSelector((state: RootState) => state.appstate);
+  const { AuthState } = useContext<any>(StateContext);
+  const { AuthDispatcher } = useContext<any>(DispatchContext);
+  const [loggedIn, setLoggedIn] = useState(false);
+  const dispatch: Dispatch<any> = useDispatch();
+  const [open, setOpen] = useState(false);
+  const [loaded, setLoaded] = useState(true);
+  const [active, setActive] = useState(false);
+
+  const route = useRouter();
+  const handleLogin = AuthState.user;
+  const [buttoncolor, setButtoncolor] = useState<any>(false);
+  const handleColor = () => {
+    if (!active) {
+      setActive(true);
+    } else {
+      setActive(false);
+    }
+  };
+  const [activeButton, setActiveButton] = useState([]);
+
+  const handleOpen = () => {
+    if (handleLogin === null || handleLogin === undefined) {
+      setLoggedIn(false);
+      setOpen(true);
+    } else {
+      setLoggedIn(true);
+      handleColor();
+      setOpen(false);
+      setButtoncolor(true);
+    }
+  };
+
+  useEffect(() => {
+    if (state.mainservices === null || state.mainservices.length < 0) {
+      setLoaded(true);
+    } else if (state.mainservices.length > 0) {
+      setLoaded(false);
+    }
+  });
+  console.log("displaying mainservices", state.mainservices);
+
   return (
     <div className="navbar__mycontainer">
       <div className="navbar__catwrapper">
-        <StyledDiv>
-          <div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                width: "90%",
-              }}
-            >
-              <img
-                alt="construction"
-                src="road.jpg"
+        <div style={{ width: "80%" }}>
+          <Paper elevation={2} sx={{ height: "110%" }}>
+            <StyledBox>
+              <StyledCustomTypography
+                variant="h5"
+                style={{ marginLeft: "2%", fontFamily: "serif" }}
+              >
+                All Services
+              </StyledCustomTypography>
+              <StyledCustomTypography
                 style={{
-                  borderTopLeftRadius: "250px",
-                  borderTopRightRadius: "250px",
-                  height: "300px",
-                  width: "100%",
-                  objectFit: "cover",
+                  marginRight: "2%",
+                  fontFamily: "serif",
+                  fontSize: "15px",
+                  textDecoration: "underline",
                 }}
-              />
-              <div style={{ background: "#152238" }}>
-                <StyledHeaderTypo>Remodel</StyledHeaderTypo>
-                <StyledTypographySub>
-                  Use this space to tell people more about what you do or a
-                  featured service.
-                </StyledTypographySub>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "end",
-                    marginRight: "4%",
-                    marginBottom: "2%",
-                  }}
-                >
-                  <StyledIconButton sx={{ background: "#ffff" }}>
-                    <ArrowForwardIcon
-                      sx={{
-                        color: "white",
-
-                        fontSize: "15px",
-                      }}
-                    />
-                  </StyledIconButton>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                width: "90%",
-              }}
-            >
-              <img
-                alt="computer"
-                src="itservices.jpg"
+              >
+                See All
+              </StyledCustomTypography>
+            </StyledBox>
+            {loaded ? (
+              <Skeleton
+                count={6}
+                inline
+                height={300}
+                containerClassName="flexitems__latestservices"
                 style={{
-                  borderTopLeftRadius: "250px",
-                  borderTopRightRadius: "250px",
-                  height: "300px",
-                  width: "100%",
-                  objectFit: "cover",
-                }}
-              />
-              <div style={{ background: "#152238" }}>
-                <StyledHeaderTypo>ReShape</StyledHeaderTypo>
-                <StyledTypographySub>
-                  Use this space to tell people more about what you do or a
-                  featured service.
-                </StyledTypographySub>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "end",
-                    marginRight: "4%",
-                    marginBottom: "2%",
-                  }}
-                >
-                  <StyledIconButton sx={{ background: "#FCA301" }}>
-                    <ArrowForwardIcon
-                      sx={{
-                        color: "white",
+                  marginLeft: "15px",
+                  borderRadius: "0.5rem",
 
-                        fontSize: "15px",
-                      }}
-                    />
-                  </StyledIconButton>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                width: "90%",
-              }}
-            >
-              <img
-                alt="design"
-                src="design.jpg"
-                style={{
-                  borderTopLeftRadius: "250px",
-                  borderTopRightRadius: "250px",
-                  height: "300px",
-                  width: "100%",
-                  objectFit: "cover",
+                  justifyContent: "center",
+                  marginTop: "10px",
                 }}
+                width={"270px"}
               />
-              <div style={{ background: "#152238" }}>
-                <StyledHeaderTypo>Redesign</StyledHeaderTypo>
-                <StyledTypographySub>
-                  Use this space to tell people more about what you do or a
-                  featured service.
-                </StyledTypographySub>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "end",
-                    marginRight: "4%",
-                    marginBottom: "2%",
-                  }}
-                >
-                  <StyledIconButton sx={{ background: "#FCA301" }}>
-                    <ArrowForwardIcon
-                      sx={{
-                        color: "white",
-
-                        fontSize: "15px",
+            ) : (
+              <div className="flexitems__latestservices">
+                {state.allservicedata.slice(0, 9)?.map(
+                  (
+                    item: {
+                      type:
+                        | boolean
+                        | React.ReactChild
+                        | React.ReactFragment
+                        | React.ReactPortal
+                        | null
+                        | undefined;
+                      categories_id: number;
+                      image: any;
+                      name: string;
+                      services_id: number;
+                      about: string;
+                      price: number;
+                      updated_at: string;
+                    },
+                    i: string | number | any
+                  ) => (
+                    <div
+                      key={item.services_id}
+                      style={{
+                        position: "relative",
+                        marginLeft: "1%",
                       }}
-                    />
-                  </StyledIconButton>
-                </div>
+                    >
+                      <StyledCard
+                        key={Math.random()}
+                        elevation={6}
+                        onClick={() => {
+                          route.push("/services?ad=" + item?.services_id);
+                        }}
+                      >
+                        <div
+                          style={{
+                            width: "100%",
+                          }}
+                        >
+                          <div
+                            style={{
+                              display: "flex",
+                            }}
+                          >
+                            <img
+                              src={item.image}
+                              style={{
+                                height: "200px",
+                                width: "100%",
+                                objectFit: "cover",
+                              }}
+                            ></img>
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              flexDirection: "column",
+                              marginLeft: "4%",
+                              marginTop: "2%",
+                            }}
+                          >
+                            <div style={{ display: "flex" }}>
+                              <span>
+                                <Avatar />
+                              </span>
+                              <div
+                                style={{
+                                  display: "flex",
+                                  flexDirection: "column",
+                                }}
+                              >
+                                <span>
+                                  <TextTypography>{item.name}</TextTypography>
+                                </span>
+                                <span>
+                                  <TextTypography>
+                                    {moment(item.updated_at).format("MMM Do ")}
+                                  </TextTypography>
+                                </span>
+                              </div>
+                            </div>
+                            <span>
+                              <StyledTypography>{item.type}</StyledTypography>
+                              <StyledTypographyHeader>
+                                {item.about}
+                              </StyledTypographyHeader>
+                            </span>
+                            <div
+                              style={{
+                                height: "50px",
+                                background: "#152238",
+
+                                width: "114%",
+                                marginLeft: "-4.5%",
+                                display: "flex",
+                                marginTop: "5%",
+                                justifyContent: "flex-end",
+                                alignSelf: "flex-end",
+                                justifyItems: "flex-end",
+
+                                alignItems: "flex-end",
+                              }}
+                            >
+                              <div
+                                style={{
+                                  display: "flex",
+                                  width: "100%",
+
+                                  alignSelf: "flex-end",
+
+                                  justifyContent: "space-evenly",
+                                  alignItems: "center",
+                                }}
+                              >
+                                <StyledIconButton
+                                  key={item.services_id}
+                                  onClick={handleOpen}
+                                >
+                                  <FavoriteBorderIcon
+                                    style={{ color: "white" }}
+                                  />
+                                </StyledIconButton>
+
+                                <StyledPrice> STARTING AT</StyledPrice>
+                                <StyledPriceValue>
+                                  ${item.price}
+                                </StyledPriceValue>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </StyledCard>
+                    </div>
+                  )
+                )}
+                <LoginModal
+                  OpenModalForm={open}
+                  CloseModalForm={() => setOpen(false)}
+                />{" "}
               </div>
-            </div>
-          </div>
-        </StyledDiv>
+            )}
+          </Paper>
+          <br></br>
+          <br></br>
+        </div>
       </div>
     </div>
   );
-}
+};
+export default LatestServices;
