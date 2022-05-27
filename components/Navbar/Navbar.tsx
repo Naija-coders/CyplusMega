@@ -396,14 +396,14 @@ export default function Navbar() {
                   }}
                 >
                   <StyledLoginIcon sx={{ color: "#ffff" }}>
-                    <FavoriteIcon sx={{ fontSize: "17px" }} />
+                    <FavoriteIcon sx={{ fontSize: "1.3rem" }} />
                   </StyledLoginIcon>
 
                   <StyledLoginIcon sx={{ color: "#ffff" }}>
-                    <NotificationsIcon sx={{ fontSize: "17px" }} />
+                    <NotificationsIcon sx={{ fontSize: "1.3rem" }} />
                   </StyledLoginIcon>
                   <StyledLoginIcon sx={{ color: "#ffff" }}>
-                    <PersonIcon sx={{ fontSize: "17px" }} />
+                    <PersonIcon sx={{ fontSize: "1.3rem" }} />
                   </StyledLoginIcon>
                 </div>
               </div>
