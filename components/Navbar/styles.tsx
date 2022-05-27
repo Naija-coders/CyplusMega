@@ -7,6 +7,8 @@ import {
   AppBar,
   TextField,
   InputAdornment,
+  IconButton,
+  Menu,
 } from "@mui/material";
 import {
   styled,
@@ -20,7 +22,14 @@ export const StyledTypography = styled(Typography)(
     color: "#fffff",
 
     fontFamily: "GeoticaW01-FourOpen",
-    fontSize: "28px",
+    fontSize: { xs: "1.3rem", md: "28px" },
+  })
+);
+export const MobileMenu = styled(IconButton)(
+  sx({
+    display: { xs: "flex", md: "none" },
+    position: "absolute",
+    right: 0,
   })
 );
 export const StyledQuote = styled(Typography)(
@@ -64,6 +73,7 @@ export const StyledTextField = styled(TextField)(
 );
 export const StyledButton = styled(Button)(
   sx({
+    display: { xs: "none", md: "flex" },
     color: "#ffff",
     textTransform: "none",
   })
@@ -124,6 +134,7 @@ export const StyledDiv = styled("div")(
 );
 export const StyledMainButton = styled(Button)(
   sx({
+    "display": { xs: "none", md: "solid" },
     "border": "1px #035772 ",
     "height": "40px",
     "borderStyle": "solid",
@@ -137,5 +148,15 @@ export const StyledMainButton = styled(Button)(
       background: "#035772",
       color: "white",
     },
+  })
+);
+export const StyledIconButton = styled(IconButton)(
+  sx({
+    display: { xs: "none", md: "flex" },
+  })
+);
+export const StyledMenu = styled(Menu)(
+  sx({
+    display: { xs: "none", md: "flex" },
   })
 );

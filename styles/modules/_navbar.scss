@@ -21,10 +21,11 @@
     margin-left: 20%;
 
     @include atSmall {
-      display: none;
+      display: flex;
     }
     @include atSmallMax {
-      display: none;
+      display: flex;
+      margin-left: 7%;
     }
     @include atMedium {
       display: flex;
