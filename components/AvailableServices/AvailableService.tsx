@@ -94,96 +94,202 @@ const AvailableService = (props: Props) => {
     }
   });
 
-  return (
-    <div className="navbar__mycontainer">
-      <div className="navbar__catwrapper">
-        <div style={{ width: "80%" }}>
-          <Paper elevation={2}>
-            <StyledBox>
-              <StyledCustomTypography
-                variant="h5"
-                style={{ marginLeft: "2%", fontFamily: "serif" }}
-              >
-                Service categories
-              </StyledCustomTypography>
-            </StyledBox>
-            {loaded ? (
-              <Skeleton
-                count={6}
-                inline
-                height={120}
-                containerClassName="flexitems__avalableservice"
-                style={{
-                  marginLeft: "2px",
-                }}
-                width={"270px"}
-              />
-            ) : (
-              <Swiper
-                slidesPerView={5}
-                spaceBetween={0}
-                autoplay={{
-                  delay: 2500,
-                  disableOnInteraction: false,
-                }}
-                navigation={true}
-                modules={[Autoplay, Navigation]}
-                className="mySwiper"
-              >
-                {state.categories?.map(
-                  (
-                    item: {
-                      type:
-                        | boolean
-                        | React.ReactChild
-                        | React.ReactFragment
-                        | React.ReactPortal
-                        | null
-                        | undefined;
-                      categories_id: number;
-                    },
-                    i: string | number | any
-                  ) => (
-                    <SwiperSlide
-                      key={Math.random()}
-                      style={{ marginLeft: "1%", position: "relative" }}
-                    >
-                      <StyledCard elevation={0}>
-                        <StyledLink /* href={"/categories?list=" + item?.categories_id} */
-                          sx={{ textDecoration: "none", color: "#000" }}
-                          onClick={() => {
-                            route.push(
-                              "/categories?services=" + item?.categories_id
-                            );
-                          }}
-                        >
-                          {" "}
-                          <img
-                            src={serviceimages[i]}
-                            style={{
-                              width: "250px",
-                              borderRadius: "13px",
-                              height: "200px",
-                              cursor: "pointer",
-                              objectFit: "cover",
+  const RenderMobile = () => {
+    return (
+      <>
+        <div className="navbar__catwrappermobile">
+          <div className="navbar__sizewidth">
+            <Paper elevation={2}>
+              <StyledBox>
+                <StyledCustomTypography
+                  style={{
+                    marginLeft: "2%",
+                    fontFamily: "serif",
+                    fontSize: "1.3rem",
+                  }}
+                >
+                  Service categories
+                </StyledCustomTypography>
+              </StyledBox>
+              {loaded ? (
+                <Skeleton
+                  count={6}
+                  inline
+                  height={120}
+                  containerClassName="flexitems__avalableservice"
+                  style={{
+                    marginLeft: "2px",
+                  }}
+                  width={"270px"}
+                />
+              ) : (
+                <Swiper
+                  slidesPerView={3}
+                  spaceBetween={0}
+                  autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  }}
+                  navigation={true}
+                  modules={[Autoplay, Navigation]}
+                  className="mySwiper"
+                >
+                  {state.categories?.map(
+                    (
+                      item: {
+                        type:
+                          | boolean
+                          | React.ReactChild
+                          | React.ReactFragment
+                          | React.ReactPortal
+                          | null
+                          | undefined;
+                        categories_id: number;
+                      },
+                      i: string | number | any
+                    ) => (
+                      <SwiperSlide
+                        key={Math.random()}
+                        style={{ marginLeft: "1%", position: "relative" }}
+                      >
+                        <StyledCard elevation={0}>
+                          <StyledLink /* href={"/categories?list=" + item?.categories_id} */
+                            sx={{ textDecoration: "none", color: "#000" }}
+                            onClick={() => {
+                              route.push(
+                                "/categories?services=" + item?.categories_id
+                              );
                             }}
-                          />
-                          <Typography
-                            style={{ fontFamily: "serif", fontSize: "0.9rem" }}
                           >
-                            {item.type}
-                          </Typography>
-                        </StyledLink>
-                      </StyledCard>
-                    </SwiperSlide>
-                  )
-                )}
-              </Swiper>
-            )}
-          </Paper>
+                            {" "}
+                            <img
+                              src={serviceimages[i]}
+                              style={{
+                                width: "100%",
+                                height: "100px",
+                                borderRadius: "13px",
+
+                                cursor: "pointer",
+                                objectFit: "cover",
+                              }}
+                            />
+                            <Typography
+                              style={{
+                                fontFamily: "serif",
+                                fontSize: "0.5rem",
+                              }}
+                            >
+                              {item.type}
+                            </Typography>
+                          </StyledLink>
+                        </StyledCard>
+                      </SwiperSlide>
+                    )
+                  )}
+                </Swiper>
+              )}
+            </Paper>
+          </div>
+        </div>
+      </>
+    );
+  };
+  return (
+    <>
+      {RenderMobile()}
+      <div className="navbar__mycontainer">
+        <div className="navbar__catwrapper">
+          <div style={{ width: "80%" }}>
+            <Paper elevation={2}>
+              <StyledBox>
+                <StyledCustomTypography
+                  variant="h5"
+                  style={{ marginLeft: "2%", fontFamily: "serif" }}
+                >
+                  Service categories
+                </StyledCustomTypography>
+              </StyledBox>
+              {loaded ? (
+                <Skeleton
+                  count={6}
+                  inline
+                  height={120}
+                  containerClassName="flexitems__avalableservice"
+                  style={{
+                    marginLeft: "2px",
+                  }}
+                  width={"270px"}
+                />
+              ) : (
+                <Swiper
+                  slidesPerView={5}
+                  spaceBetween={0}
+                  autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  }}
+                  navigation={true}
+                  modules={[Autoplay, Navigation]}
+                  className="mySwiper"
+                >
+                  {state.categories?.map(
+                    (
+                      item: {
+                        type:
+                          | boolean
+                          | React.ReactChild
+                          | React.ReactFragment
+                          | React.ReactPortal
+                          | null
+                          | undefined;
+                        categories_id: number;
+                      },
+                      i: string | number | any
+                    ) => (
+                      <SwiperSlide
+                        key={Math.random()}
+                        style={{ marginLeft: "1%", position: "relative" }}
+                      >
+                        <StyledCard elevation={0}>
+                          <StyledLink /* href={"/categories?list=" + item?.categories_id} */
+                            sx={{ textDecoration: "none", color: "#000" }}
+                            onClick={() => {
+                              route.push(
+                                "/categories?services=" + item?.categories_id
+                              );
+                            }}
+                          >
+                            {" "}
+                            <img
+                              src={serviceimages[i]}
+                              style={{
+                                width: "250px",
+                                borderRadius: "13px",
+                                height: "200px",
+                                cursor: "pointer",
+                                objectFit: "cover",
+                              }}
+                            />
+                            <Typography
+                              style={{
+                                fontFamily: "serif",
+                                fontSize: "0.9rem",
+                              }}
+                            >
+                              {item.type}
+                            </Typography>
+                          </StyledLink>
+                        </StyledCard>
+                      </SwiperSlide>
+                    )
+                  )}
+                </Swiper>
+              )}
+            </Paper>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

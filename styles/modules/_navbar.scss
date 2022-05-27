@@ -60,12 +60,42 @@
     justify-content: space-around;
     justify-items: center;
   }
+  &__catwrappermobile {
+    @include atFold {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      justify-items: center;
+      width: 100%;
+    }
+    @include atSmallMax {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      justify-items: center;
+      width: 100%;
+    }
+    @include atMedium {
+      display: none;
+    }
+  }
+  &__sizewidth {
+    @include atSmallMax {
+      width: 100%;
+    }
+    @include atFold {
+      width: 110%;
+    }
+  }
   &__catwrapper {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     justify-items: center;
+    width: 100%;
   }
   &__subitem {
     display: flex;
