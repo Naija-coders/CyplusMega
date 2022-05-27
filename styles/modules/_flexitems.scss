@@ -5,6 +5,17 @@
 
     overflow-x: scroll;
   }
+  &__mobilelatestservices {
+    margin-top: 10px;
+    width: 100%;
+    display: grid;
+    row-gap: 20px;
+
+    grid-template-columns: auto;
+    justify-content: left;
+
+    overflow-x: scroll;
+  }
   &__latestservices {
     margin-top: 10px;
     width: 100%;

@@ -23,6 +23,7 @@ import moment from "moment";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import CustomLoader from "../CustomLoader";
 import ToggleButton from "@mui/material/ToggleButton";
+import Divider from "@mui/material/Divider";
 
 import {
   StyledLink,
@@ -81,9 +82,136 @@ const LatestServices: React.FC<Props> = ({}) => {
     }
   });
   console.log("displaying mainservices", state.mainservices);
+  const Rendermobile = () => {
+    return (
+      <div className="navbar__catwrappermobile">
+        <div className="navbar__sizewidth">
+          <Paper elevation={2} sx={{ height: "110%" }}>
+            <StyledBox>
+              <StyledCustomTypography
+                sx={{
+                  marginLeft: "20px",
+                  fontFamily: "serif",
+                  fontSize: "1.3rem",
+                }}
+              >
+                Latest Services
+              </StyledCustomTypography>
+            </StyledBox>
+            {loaded ? (
+              <Skeleton
+                count={6}
+                inline
+                height={300}
+                containerClassName="flexitems__latestservices"
+                style={{
+                  marginLeft: "15px",
+                  borderRadius: "0.5rem",
 
+                  justifyContent: "center",
+                  marginTop: "10px",
+                }}
+                width={"270px"}
+              />
+            ) : (
+              <div className="flexitems__mobilelatestservices">
+                {state.mainservices.slice(0, 9)?.map(
+                  (
+                    item: {
+                      type:
+                        | boolean
+                        | React.ReactChild
+                        | React.ReactFragment
+                        | React.ReactPortal
+                        | null
+                        | undefined;
+                      categories_id: number;
+                      image: any;
+                      name: string;
+                      services_id: number;
+                      about: string;
+                      price: number;
+                      updated_at: string;
+                    },
+                    i: string | number | any
+                  ) => (
+                    <div
+                      key={item.services_id}
+                      style={{
+                        position: "relative",
+                      }}
+                    >
+                      <div
+                        key={Math.random()}
+                        onClick={() => {
+                          route.push("/services?ad=" + item?.services_id);
+                        }}
+                      >
+                        <div
+                          style={{
+                            display: "flex",
+                            borderRadius: "10px",
+
+                            marginLeft: "11px",
+                            justifyContent: "left",
+                            gap: "10px",
+                          }}
+                        >
+                          <img
+                            src={item.image}
+                            style={{
+                              height: "70px",
+                              width: "100px",
+
+                              objectFit: "cover",
+                            }}
+                          ></img>
+                          <div>
+                            <StyledTypographyHeader>
+                              {" "}
+                              {item.about}
+                            </StyledTypographyHeader>
+                            <StyledPriceValue>${item.price}</StyledPriceValue>
+                          </div>
+                        </div>
+                        <div
+                          style={{
+                            display: "flex",
+                            borderRadius: "10px",
+
+                            marginLeft: "11px",
+                            justifyContent: "left",
+                            gap: "3px",
+                            marginTop: "6px",
+                          }}
+                        >
+                          <Avatar
+                            sx={{ height: "16px", width: "16px" }}
+                          ></Avatar>
+                          <TextTypography>{item.name}</TextTypography>
+                        </div>
+                      </div>
+                      <br></br>
+                      <Divider />
+                    </div>
+                  )
+                )}
+                <LoginModal
+                  OpenModalForm={open}
+                  CloseModalForm={() => setOpen(false)}
+                />{" "}
+              </div>
+            )}
+          </Paper>
+          <br></br>
+          <br></br>
+        </div>
+      </div>
+    );
+  };
   return (
     <>
+      {Rendermobile()}
       <div className="navbar__mycontainer">
         <div className="navbar__catwrapper">
           <div style={{ width: "80%" }}>

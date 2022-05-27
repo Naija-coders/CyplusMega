@@ -60,7 +60,7 @@ export const StyledCard = styled(Card)(
     "height": "100%",
 
     "width": {
-      xs: "200px",
+      xs: "100%",
 
       sm: "230px",
 
