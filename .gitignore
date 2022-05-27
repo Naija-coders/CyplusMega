@@ -20,7 +20,8 @@
 .DS_Store
 *.pem
 
-# debug
+
+# debugxx
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
