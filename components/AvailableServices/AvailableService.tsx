@@ -113,9 +113,9 @@ const AvailableService = (props: Props) => {
               </StyledBox>
               {loaded ? (
                 <Skeleton
-                  count={6}
+                  count={3}
                   inline
-                  height={120}
+                  height={"100px"}
                   containerClassName="flexitems__avalableservice"
                   style={{
                     marginLeft: "2px",
