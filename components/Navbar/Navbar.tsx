@@ -41,7 +41,6 @@ import {
   StyledMenu,
   MobileMenu,
   StyledLoginIcon,
-  StyledDivider,
 } from "./styles";
 import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
 import SearchIcon from "@mui/icons-material/Search";
