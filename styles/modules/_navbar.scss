@@ -18,17 +18,14 @@
   }
   &__container {
     display: flex;
-    justify-content: space-between;
 
     @include atSmall {
       display: flex;
-      justify-content: space-between;
-
-      width: 120%;
     }
     @include atSmallMax {
       display: flex;
-      justify-content: space-between;
+
+      gap: 40px;
 
       width: 120%;
     }

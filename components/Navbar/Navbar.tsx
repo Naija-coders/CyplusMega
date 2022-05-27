@@ -384,7 +384,13 @@ export default function Navbar() {
                   <PersonIcon /> Account <KeyboardArrowDown />
                 </StyledButton>
                 <LoginModal OpenModalForm={open} CloseModalForm={handleClose} />{" "}
-                <div>
+                <div style={{ display: "flex" }}>
+                  <StyledLoginIcon sx={{ color: "#ffff" }}>
+                    <PersonIcon />
+                  </StyledLoginIcon>
+                  <StyledLoginIcon sx={{ color: "#ffff" }}>
+                    <PersonIcon />
+                  </StyledLoginIcon>
                   <StyledLoginIcon sx={{ color: "#ffff" }}>
                     <PersonIcon />
                   </StyledLoginIcon>
