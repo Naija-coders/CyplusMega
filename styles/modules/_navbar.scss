@@ -21,13 +21,9 @@
     width: 80%;
     justify-content: space-between;
 
-    @include atSmall {
+    @include atSmallMax {
       display: flex;
-      width: 100%;
-    }
-    @include atFold {
-      display: flex;
-
+      justify-content: space-between;
       gap: 40px;
 
       width: 120% !important;
