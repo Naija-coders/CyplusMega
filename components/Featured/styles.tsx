@@ -30,10 +30,18 @@ export const StyledDiv = styled("div")(
     alignItems: "center",
   })
 );
+export const MobileDiv = styled("div")(
+  sx({
+    marginLeft: "30px",
+    display: "flex",
+
+    alignItems: "center",
+  })
+);
 export const StyledTypography = styled(Typography)(
   sx({
     fontFamily: "EB Garamond",
-    fontSize: "24px",
+    fontSize: { xs: "0.7rem", md: "24px" },
     color: "#ffff",
   })
 );

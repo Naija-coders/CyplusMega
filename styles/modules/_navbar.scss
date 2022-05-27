@@ -60,7 +60,23 @@
     justify-content: space-around;
     justify-items: center;
   }
+  &__catfeaturemobile {
+    background: #23395d;
+    margin-top: 1%;
+    @include atMedium {
+      height: 100px;
+    }
+    @include atSmallMax {
+      width: 100%;
+      height: 60px;
+    }
+    @include atFold {
+      width: 110%;
+      height: 60px;
+    }
+  }
   &__catwrappermobile {
+    margin-top: 4%;
     @include atFold {
       display: flex;
       flex-direction: column;
