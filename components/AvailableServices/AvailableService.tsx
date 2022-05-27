@@ -201,7 +201,7 @@ const AvailableService = (props: Props) => {
       <div className="navbar__mycontainer">
         <div className="navbar__catwrapper">
           <div style={{ width: "80%" }}>
-            <Paper elevation={2}>
+            <Paper elevation={0}>
               <StyledBox>
                 <StyledCustomTypography
                   variant="h5"

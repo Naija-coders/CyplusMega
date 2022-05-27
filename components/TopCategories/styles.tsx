@@ -137,7 +137,7 @@ export const StyledBox = styled(Box)(
     alignItems: "center",
 
     width: "100%",
-    marginTop: "3%",
+    marginTop: { xs: "0%", md: "3%" },
   })
 );
 export const StyledCustomTypography = styled(Typography)(

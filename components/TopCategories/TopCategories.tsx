@@ -86,7 +86,7 @@ const LatestServices: React.FC<Props> = ({}) => {
     return (
       <div className="navbar__catwrappermobile">
         <div className="navbar__sizewidth">
-          <Paper elevation={2} sx={{ height: "110%" }}>
+          <Paper elevation={0} sx={{ height: "110%" }}>
             <StyledBox>
               <StyledCustomTypography
                 sx={{
@@ -161,6 +161,7 @@ const LatestServices: React.FC<Props> = ({}) => {
                             style={{
                               height: "70px",
                               width: "100px",
+                              borderRadius: "13px",
 
                               objectFit: "cover",
                             }}
