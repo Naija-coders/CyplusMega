@@ -157,6 +157,7 @@ export const StyledMainButton = styled(Button)(
 export const StyledIconButton = styled(IconButton)(
   sx({
     display: { xs: "flex", md: "flex" },
+    justifyContent: "end",
   })
 );
 export const StyledMenu = styled(Menu)(
