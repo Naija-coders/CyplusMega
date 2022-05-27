@@ -47,14 +47,15 @@ export const SubTypography = styled(Typography)(
   sx({
     color: "whitesmoke",
     fontFamily: "Avenir Light",
-    fontSize: { xs: "1rem", md: "20px" },
+
+    fontSize: { xs: "0.8rem", sm: "1rem", md: "20px" },
     textAlign: "left",
     marginLeft: "10px",
   })
 );
 export const StyledTextField = styled(TextField)(
   sx({
-    "minWidth": { xs: "80%", sm: "50%", md: "30%" },
+    "minWidth": { xs: "84%", sm: "50%", md: "30%", xl: "20%" },
     "border": "none",
     "borderStyle": "none",
 
@@ -70,10 +71,11 @@ export const StyledTextField = styled(TextField)(
 export const StyledDiv = styled("div")(
   sx({
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: { md: "space-between", xs: "center" },
     marginTop: "10px",
     justifyItems: "center",
-    width: { xs: "80%", sm: "40%", md: "30%" },
+    gap: { xs: "10px", md: "0px" },
+    width: { xs: "87%", sm: "40%", md: "30%", xl: "20%" },
   })
 );
 export const StyledDivButton = styled(Button)(

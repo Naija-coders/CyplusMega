@@ -51,6 +51,7 @@ export default function Banner({}: Props) {
           style={{
             position: "relative",
             marginTop: "50px",
+
             background:
               "linear-gradient(164.22deg, #23395D 11.02%, rgba(16, 101, 240, 0) 112.14%) !important",
           }}
@@ -106,7 +107,7 @@ export default function Banner({}: Props) {
           <Typography
             sx={{
               fontFamily: "Avenir Light",
-              fontSize: "15px",
+              fontSize: { xs: "0.7rem", md: "15px" },
               color: "#626462",
             }}
           >

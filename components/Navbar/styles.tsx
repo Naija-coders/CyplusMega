@@ -28,8 +28,7 @@ export const StyledTypography = styled(Typography)(
 export const MobileMenu = styled(IconButton)(
   sx({
     display: { xs: "flex", md: "none" },
-    position: "absolute",
-    right: 0,
+    alignSelf: "center",
   })
 );
 export const StyledQuote = styled(Typography)(
@@ -93,6 +92,13 @@ export const Styledpaper = styled(Paper)(
     },
   })
 );
+export const StyledLoginIcon = styled(IconButton)(
+  sx({
+    display: { xs: "flex", sm: "flex", md: "none", lg: "none", xl: "none" },
+
+    justifyContent: "end",
+  })
+);
 
 export const Wrapper = styled("div")(
   sx({ width: "90%", marginLeft: "10%", marginTop: "4%" })
@@ -152,7 +158,7 @@ export const StyledMainButton = styled(Button)(
 );
 export const StyledIconButton = styled(IconButton)(
   sx({
-    display: { xs: "none", md: "flex" },
+    display: { xs: "flex", md: "flex" },
   })
 );
 export const StyledMenu = styled(Menu)(

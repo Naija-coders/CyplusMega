@@ -40,6 +40,7 @@ import {
   StyledIconButton,
   StyledMenu,
   MobileMenu,
+  StyledLoginIcon,
 } from "./styles";
 import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
 import SearchIcon from "@mui/icons-material/Search";
@@ -290,14 +291,25 @@ export default function Navbar() {
     >
       <div className="navbar__container">
         <div className="navbar__mainwrapper">
-          <StyledTypography
-            onClick={() => {
-              route.push("/");
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "left",
+              alignItems: "center",
             }}
-            sx={{ fontFamily: "GeoticaW01-FourOpen", cursor: "pointer" }}
           >
-            GreatServices
-          </StyledTypography>
+            <MobileMenu>
+              <MenuRoundedIcon sx={{ color: "white" }} />
+            </MobileMenu>
+            <StyledTypography
+              onClick={() => {
+                route.push("/");
+              }}
+              sx={{ fontFamily: "GeoticaW01-FourOpen", cursor: "pointer" }}
+            >
+              GreatServices
+            </StyledTypography>
+          </div>
         </div>
         <StyledDiv>
           <StyledMainButton variant="outlined" size="small">
@@ -315,9 +327,7 @@ export default function Navbar() {
           >
             <FavoriteIcon />
           </StyledIconButton>
-          <MobileMenu>
-            <MenuRoundedIcon sx={{ color: "white" }} />
-          </MobileMenu>
+
           <div>
             {AuthState.user ? (
               <StyledButton
@@ -374,6 +384,9 @@ export default function Navbar() {
                   <PersonIcon /> Account <KeyboardArrowDown />
                 </StyledButton>
                 <LoginModal OpenModalForm={open} CloseModalForm={handleClose} />{" "}
+                <StyledLoginIcon>
+                  <PersonIcon />
+                </StyledLoginIcon>
               </>
             )}
           </div>
