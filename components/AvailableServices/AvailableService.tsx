@@ -103,10 +103,9 @@ const AvailableService = (props: Props) => {
               <StyledBox>
                 <StyledCustomTypography
                   style={{
-                    marginLeft: "2%",
+                    marginLeft: "20px",
                     fontFamily: "serif",
                     fontSize: "1.3rem",
-                    marginLeft: "20px",
                   }}
                 >
                   Service categories
