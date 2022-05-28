@@ -330,50 +330,74 @@ export default function Navbar() {
 
           <div>
             {AuthState.user ? (
-              <StyledButton
-                variant="text"
-                sx={{ textTransform: "none" }}
-                onClick={handleProfileClicks}
-                aria-controls={open ? "basic-menu" : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? "true" : undefined}
-              >
-                <Avatar /> &nbsp; Hi {AuthState.user.name}{" "}
-                {myaccount ? (
-                  <>
-                    {" "}
-                    <KeyboardArrowDown
-                      sx={{ transform: "rotate(180deg)" }}
-                    />{" "}
-                  </>
-                ) : (
-                  <>
-                    {" "}
-                    <KeyboardArrowDown
-                      sx={{ transform: "rotate(0deg)" }}
-                    />{" "}
-                    <StyledMenu
-                      id="basic-menu"
-                      anchorEl={anchorEl}
-                      open={displaylist}
-                      onClose={handleClose}
-                      MenuListProps={{
-                        "aria-labelledby": "basic-button",
-                      }}
-                    >
-                      <MenuItem
-                        onClick={() => {
-                          route.push("/profile");
+              <>
+                <StyledButton
+                  variant="text"
+                  sx={{ textTransform: "none" }}
+                  onClick={handleProfileClicks}
+                  aria-controls={open ? "basic-menu" : undefined}
+                  aria-haspopup="true"
+                  aria-expanded={open ? "true" : undefined}
+                >
+                  <Avatar /> &nbsp; Hi {AuthState.user.name}{" "}
+                  {myaccount ? (
+                    <>
+                      {" "}
+                      <KeyboardArrowDown
+                        sx={{ transform: "rotate(180deg)" }}
+                      />{" "}
+                    </>
+                  ) : (
+                    <>
+                      {" "}
+                      <KeyboardArrowDown
+                        sx={{ transform: "rotate(0deg)" }}
+                      />{" "}
+                      <StyledMenu
+                        id="basic-menu"
+                        anchorEl={anchorEl}
+                        open={displaylist}
+                        onClose={handleClose}
+                        MenuListProps={{
+                          "aria-labelledby": "basic-button",
                         }}
                       >
-                        Profile
-                      </MenuItem>
-                      <MenuItem onClick={handleClose}>My account</MenuItem>
-                      <MenuItem onClick={HandleLogout}>Logout</MenuItem>
-                    </StyledMenu>
-                  </>
-                )}
-              </StyledButton>
+                        <MenuItem
+                          onClick={() => {
+                            route.push("/profile");
+                          }}
+                        >
+                          Profile
+                        </MenuItem>
+                        <MenuItem onClick={handleClose}>My account</MenuItem>
+                        <MenuItem onClick={HandleLogout}>Logout</MenuItem>
+                      </StyledMenu>
+                    </>
+                  )}
+                </StyledButton>
+                <div
+                  style={{
+                    display: "flex",
+
+                    justifyContent: "center",
+                    bottom: "20px",
+
+                    position: "absolute",
+                    right: 0,
+                  }}
+                >
+                  <StyledLoginIcon sx={{ color: "#ffff" }}>
+                    <FavoriteIcon sx={{ fontSize: "1.3rem" }} />
+                  </StyledLoginIcon>
+
+                  <StyledLoginIcon sx={{ color: "#ffff" }}>
+                    <NotificationsIcon sx={{ fontSize: "1.3rem" }} />
+                  </StyledLoginIcon>
+                  <StyledLoginIcon sx={{ color: "#ffff" }} onClick={handleOpen}>
+                    <Avatar sx={{ height: "1.3rem", width: "1.3rem" }} />
+                  </StyledLoginIcon>
+                </div>
+              </>
             ) : (
               <div>
                 <StyledButton
@@ -402,7 +426,7 @@ export default function Navbar() {
                   <StyledLoginIcon sx={{ color: "#ffff" }}>
                     <NotificationsIcon sx={{ fontSize: "1.3rem" }} />
                   </StyledLoginIcon>
-                  <StyledLoginIcon sx={{ color: "#ffff" }}>
+                  <StyledLoginIcon sx={{ color: "#ffff" }} onClick={handleOpen}>
                     <PersonIcon sx={{ fontSize: "1.3rem" }} />
                   </StyledLoginIcon>
                 </div>

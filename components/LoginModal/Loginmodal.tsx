@@ -12,16 +12,6 @@ import Signin from "../Authentication/Signin/Signin";
 import Signup from "../Authentication/Signup/Signup";
 import CloseIcon from "@mui/icons-material/Close";
 // make login reusable
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 370,
-
-  borderRadius: "25px",
-  outline: 0,
-};
 
 type Props = {
   OpenModalForm: any;
@@ -65,7 +55,18 @@ export const LoginModal: React.FC<Props> = ({
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <Box sx={style}>
+      <Box
+        sx={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: { xs: 305, md: 370 },
+
+          borderRadius: "25px",
+          outline: 0,
+        }}
+      >
         <Paper style={{ borderRadius: "25px" }}>
           <IconButton
             onClick={CloseModalForm}
