@@ -137,15 +137,13 @@ const Signin: React.FC<Props> = ({ saveUser, CloseModalForm, onSuccess }) => {
           label="password"
         />
         <br></br>
-        <div className="flexitems__recaptchadesgin">
-          <ReCaptchaV2
-            sitekey="6LeotcQfAAAAAHVLOUkTTNL0tk0ic512fOIaVEPG"
-            size="compact"
-            onChange={() => {
-              setRecapcha(true);
-            }}
-          />
-        </div>
+        <ReCaptchaV2
+          sitekey="6LeotcQfAAAAAHVLOUkTTNL0tk0ic512fOIaVEPG"
+          className="flexitems__recaptchadesgin"
+          onChange={() => {
+            setRecapcha(true);
+          }}
+        />
         {loading ? (
           <StyleLoadingButton
             loading={loading}
