@@ -16,6 +16,17 @@
 
     overflow-x: scroll;
   }
+  &__recaptchadesgin {
+    @include atSmallMax {
+      transform: scale(0.81);
+      transform-origin: 0 0;
+      display: flex;
+      width: 80%;
+    }
+    @include atLarge {
+      width: auto;
+    }
+  }
   &__latestservices {
     margin-top: 10px;
     width: 100%;
