@@ -2,8 +2,14 @@ import React, { useState, useEffect, useContext } from "react";
 import { Dispatch } from "redux";
 import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
+import { useTranslation } from "react-i18next";
+
 import { actionCreators } from "../../state";
+
 import { RootState } from "../../state/reducers";
+import i18next from "../../i18n/index";
+import i18n from "../../i18n/index";
+
 //plus button
 import AddBoxRoundedIcon from "@mui/icons-material/AddBoxRounded";
 import NotificationsIcon from "@mui/icons-material/Notifications";
@@ -63,11 +69,15 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const [categories, setCategories] = useState([]);
-  const categoriesval = categories.slice(0, 14);
   const { AuthState } = useContext<any>(StateContext);
   const { AuthDispatcher } = useContext<any>(DispatchContext);
   const dispatch: Dispatch<any> = useDispatch();
+  const { t } = useTranslation();
 
+  const handleLanguageChange = (language: any) => {
+    i18next.options.lng = language;
+    i18n.changeLanguage(language);
+  };
   const route = useRouter();
   const handleClose = () => {
     setOpen(false);
@@ -327,6 +337,13 @@ export default function Navbar() {
           >
             <FavoriteIcon />
           </StyledIconButton>
+          <p
+            onClick={() => {
+              handleLanguageChange("en");
+            }}
+          >
+            EN
+          </p>
 
           <div>
             {AuthState.user ? (

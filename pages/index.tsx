@@ -17,6 +17,7 @@ import TopCategories from "../components/TopCategories/TopCategories";
 import "react-loading-skeleton/dist/skeleton.css";
 import Featured from "../components/Featured/Featured";
 import Cookie from "../components/CookieManager/Cookie";
+import "../i18n/index";
 const Home: NextPage = () => {
   const [categories, setCategories] = useState([]);
   const articles: readonly IArticle[] = useSelector(

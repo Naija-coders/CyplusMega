@@ -22,7 +22,8 @@
     "components/LoginModal/index.js",
     "components/LoginModal/Loginmodal.tsx",
     "pages/layout.js",
-    "pages/api/client.js"
+    "pages/api/client.js",
+    "i18n/index.ts"
   ],
   "exclude": ["node_modules"]
 }
