@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST={}
+self.__REACT_LOADABLE_MANIFEST={"../components/Navbar/Navbar.tsx -> ../LanguageMenu":{id:3595,files:["static/chunks/595.2873e87f78df5ccc.js"]}};

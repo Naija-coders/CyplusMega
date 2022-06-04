@@ -1,14 +1,20 @@
+import { useTranslation } from "react-i18next";
 import React, { useState, useEffect, useContext } from "react";
 import { Dispatch } from "redux";
 import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
-import { useTranslation } from "react-i18next";
 
 import { actionCreators } from "../../state";
 
 import { RootState } from "../../state/reducers";
 import i18next from "../../i18n/index";
 import i18n from "../../i18n/index";
+
+import dynamic from "next/dynamic";
+
+const LanguageMenu = dynamic(() => import("../LanguageMenu"), {
+  ssr: false,
+});
 
 //plus button
 import AddBoxRoundedIcon from "@mui/icons-material/AddBoxRounded";
@@ -337,13 +343,14 @@ export default function Navbar() {
           >
             <FavoriteIcon />
           </StyledIconButton>
-          <p
+
+          {/*      <p
             onClick={() => {
               handleLanguageChange("en");
             }}
           >
             EN
-          </p>
+          </p> */}
 
           <div>
             {AuthState.user ? (
@@ -436,20 +443,21 @@ export default function Navbar() {
                     right: 0,
                   }}
                 >
-                  <StyledLoginIcon sx={{ color: "#ffff" }}>
-                    <FavoriteIcon sx={{ fontSize: "1.3rem" }} />
-                  </StyledLoginIcon>
+                  {/*     <StyledLoginIcon sx={{ color: "#ffff" }}>
+                    <FavoriteIcon sx={{ fontSize: "0.8rem" }} />
+                  </StyledLoginIcon> */}
 
-                  <StyledLoginIcon sx={{ color: "#ffff" }}>
-                    <NotificationsIcon sx={{ fontSize: "1.3rem" }} />
-                  </StyledLoginIcon>
+                  {/*      <StyledLoginIcon sx={{ color: "#ffff" }}>
+                    <NotificationsIcon sx={{ fontSize: "0.8rem" }} />
+                  </StyledLoginIcon> */}
                   <StyledLoginIcon sx={{ color: "#ffff" }} onClick={handleOpen}>
-                    <PersonIcon sx={{ fontSize: "1.3rem" }} />
+                    <PersonIcon sx={{ fontSize: "1rem" }} />
                   </StyledLoginIcon>
                 </div>
               </div>
             )}
           </div>
+          <LanguageMenu />
         </StyledDiv>
       </div>
     </StyledAppBar>

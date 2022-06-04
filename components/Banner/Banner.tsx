@@ -21,6 +21,7 @@ import { RootState } from "../../state/reducers";
 import SearchIcon from "@mui/icons-material/Search";
 import { InputAdornment } from "@mui/material";
 import Postadvertisment from "../Postadvertisement/postadvertisement";
+import { useTranslation } from "react-i18next";
 
 type Props = {};
 
@@ -41,6 +42,7 @@ export default function Banner({}: Props) {
   
  
   }, []) */
+  const { t, i18n } = useTranslation();
 
   const state = useSelector((state: RootState) => state.appstate);
   return (
@@ -72,9 +74,7 @@ export default function Banner({}: Props) {
             }}
           >
             <StyledTypography>Great Services</StyledTypography>{" "}
-            <SubTypography>
-              Every service you can think of in one space
-            </SubTypography>
+            <SubTypography>{t("every_service")}</SubTypography>
             <br></br>
             <StyledTextField
               placeholder="Find Service"
@@ -90,9 +90,9 @@ export default function Banner({}: Props) {
               color="primary"
             />
             <StyledDiv>
-              <StyledDivButton>It Services</StyledDivButton>
-              <StyledDivButton> Events</StyledDivButton>
-              <StyledDivButton>Cleaning</StyledDivButton>
+              <StyledDivButton>{t("it_services")}</StyledDivButton>
+              <StyledDivButton> {t("Events")}</StyledDivButton>
+              <StyledDivButton>{t("Cleaning")}</StyledDivButton>
             </StyledDiv>
             <br></br>
           </div>
