@@ -19,6 +19,10 @@ const LanguageMenu = dynamic(() => import("../LanguageMenu"), {
 //plus button
 import AddBoxRoundedIcon from "@mui/icons-material/AddBoxRounded";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import SwipeableDrawer from "@mui/material/SwipeableDrawer";
+
+import Divider from "@mui/material/Divider";
+import ListItem from "@mui/material/ListItem";
 
 import {
   AppBar,
@@ -136,6 +140,14 @@ export default function Navbar() {
       getuserfavorite(favorite);
     });
   };
+  const [slide, setSlide] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
+
+  const list = () => <div>coming soon</div>;
 
   const {
     depositMoney,
@@ -184,6 +196,20 @@ export default function Navbar() {
 
   let catvalue = state.categories?.slice(0, 14);
   console.log("this are the categories", categories);
+  const toggleDrawer =
+    (anchor: "left", open: boolean) =>
+    (event: React.KeyboardEvent | React.MouseEvent) => {
+      if (
+        event &&
+        event.type === "keydown" &&
+        ((event as React.KeyboardEvent).key === "Tab" ||
+          (event as React.KeyboardEvent).key === "Shift")
+      ) {
+        return;
+      }
+
+      setSlide({ ...state, [anchor]: open });
+    };
 
   const HandleLogout = () => {
     Clientapi.get("api/logout").then((response) => {
@@ -314,9 +340,17 @@ export default function Navbar() {
               alignItems: "center",
             }}
           >
-            <MobileMenu>
+            <MobileMenu onClick={toggleDrawer("left", true)}>
               <MenuRoundedIcon sx={{ color: "white" }} />
             </MobileMenu>
+            <SwipeableDrawer
+              anchor={"left"}
+              open={slide["left"]}
+              onClose={toggleDrawer("left", false)}
+              onOpen={toggleDrawer("left", true)}
+            >
+              {list()}
+            </SwipeableDrawer>
             <StyledTypography
               onClick={() => {
                 route.push("/");
