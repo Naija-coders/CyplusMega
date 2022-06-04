@@ -410,13 +410,13 @@ export default function Navbar() {
                     right: 0,
                   }}
                 >
-                  <StyledLoginIcon sx={{ color: "#ffff" }}>
+                  {/*    <StyledLoginIcon sx={{ color: "#ffff" }}>
                     <FavoriteIcon sx={{ fontSize: "1.3rem" }} />
                   </StyledLoginIcon>
 
                   <StyledLoginIcon sx={{ color: "#ffff" }}>
                     <NotificationsIcon sx={{ fontSize: "1.3rem" }} />
-                  </StyledLoginIcon>
+                  </StyledLoginIcon> */}
                   <StyledLoginIcon sx={{ color: "#ffff" }} onClick={handleOpen}>
                     <Avatar sx={{ height: "1.3rem", width: "1.3rem" }} />
                   </StyledLoginIcon>
@@ -451,7 +451,7 @@ export default function Navbar() {
                     <NotificationsIcon sx={{ fontSize: "0.8rem" }} />
                   </StyledLoginIcon> */}
                   <StyledLoginIcon sx={{ color: "#ffff" }} onClick={handleOpen}>
-                    <PersonIcon sx={{ fontSize: "1rem" }} />
+                    <PersonIcon sx={{ fontSize: "1.3rem" }} />
                   </StyledLoginIcon>
                 </div>
               </div>

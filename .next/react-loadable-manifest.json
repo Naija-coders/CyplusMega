@@ -1,8 +1,8 @@
 {
   "../components/Navbar/Navbar.tsx -> ../LanguageMenu": {
-    "id": 3595,
+    "id": "../components/Navbar/Navbar.tsx -> ../LanguageMenu",
     "files": [
-      "static/chunks/595.2873e87f78df5ccc.js"
+      "static/chunks/components_LanguageMenu_index_tsx.js"
     ]
   }
 }

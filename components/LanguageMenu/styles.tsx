@@ -38,7 +38,7 @@ export const CustomSelect = styled(Select)(
 export const StyledDiv = styled("div")(
   sx({
     position: { xs: "absolute", md: "relative" },
-    right: { xs: "7%", md: "0" },
+    right: { xs: "9%", md: "0" },
   })
 );
 export const StyledTypography = styled(Typography)(

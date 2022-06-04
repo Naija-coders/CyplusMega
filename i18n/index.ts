@@ -5,7 +5,10 @@ import { initReactI18next } from 'react-i18next'
 import LanguageDetector from "i18next-browser-languagedetector"
 
 import { en, tr } from "./locales"
-
+let userfallback: any;
+if (typeof window !== "undefined") {
+  userfallback = localStorage.getItem("i18nextLng");
+}
 const options: InitOptions = {
   interpolation: {
     escapeValue: false,
@@ -20,7 +23,7 @@ const options: InitOptions = {
     en: en
   },
 
-  fallbackLng: "tr",
+  fallbackLng: userfallback,
 
   ns: ["translations"],
 
