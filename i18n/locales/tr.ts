@@ -15,7 +15,9 @@ export const tr = {
 every_service:"Sığdırdığınız her hizmet tek bir alanda düşünün",
 it_services:"hizmet eder",
 Cleaning:"Temizlik",
-Events:"Olaylar"
+Events:"Olaylar",
+service_categories:"Hizmet kategorileri",
+find_service:"Hizmet Bul"
 
   }
 }

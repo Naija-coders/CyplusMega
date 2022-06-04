@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import StateContext from "../../context/StateContext";
 import DispatchContext from "../../context/DispatchContext";
 import Paper from "@mui/material/Paper";
+import { useTranslation } from "react-i18next";
 import { Typography, List, Link, IconButton } from "@mui/material";
 import { useRouter } from "next/router";
 import Clientapi from "../../pages/api/client";
@@ -58,6 +59,7 @@ const serviceimages = [
 ];
 
 const AvailableService = (props: Props) => {
+  const { t, i18n } = useTranslation();
   const [checkhover, setCheckhover] = useState(false);
   const [current, setCurrent] = useState(0);
   const length = props.services.length;
@@ -108,7 +110,7 @@ const AvailableService = (props: Props) => {
                     fontSize: "1.3rem",
                   }}
                 >
-                  Service categories
+                  {t("service_categories")}
                 </StyledCustomTypography>
               </StyledBox>
               {loaded ? (
@@ -207,7 +209,7 @@ const AvailableService = (props: Props) => {
                   variant="h5"
                   style={{ marginLeft: "2%", fontFamily: "serif" }}
                 >
-                  Service categories
+                  {t("service_categories")}
                 </StyledCustomTypography>
               </StyledBox>
               {loaded ? (

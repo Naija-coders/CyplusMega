@@ -15,7 +15,9 @@ export const en = {
   every_service: "Every service you can think of in one space",
   it_services:"It services",
   Events:"Events",
-  Cleaning:"Cleaning"
+  Cleaning:"Cleaning",
+  service_categories:"Service categories",
+  find_service:"Find Service"
     
   }
 }
