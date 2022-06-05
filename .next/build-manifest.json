@@ -29,6 +29,7 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
+<<<<<<< HEAD
     ],
     "/my-favorite": [
       "static/chunks/webpack.js",
@@ -39,6 +40,8 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/services.js"
+=======
+>>>>>>> feature/front-end
     ]
   },
   "ampFirstPages": []
