@@ -15,14 +15,11 @@
     "static/development/_middlewareManifest.js"
   ],
   "pages": {
-<<<<<<< HEAD
-=======
     "/": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/index.js"
     ],
->>>>>>> feature/front-end
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -32,6 +29,16 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
+    ],
+    "/my-favorite": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/my-favorite.js"
+    ],
+    "/services": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/services.js"
     ]
   },
   "ampFirstPages": []
