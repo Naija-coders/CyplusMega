@@ -17,7 +17,7 @@ import { StyledTabs, StyledTab } from "./styles";
 import Clientapi from "../../pages/api/client";
 import { useRouter } from "next/router";
 import { RootState } from "../../state/reducers";
-import Swiper from "./Swiper";
+import SwiperThumb from "./Swiper";
 import Image from "next/image";
 
 import {
@@ -129,7 +129,7 @@ export default function Service() {
                 <StyledSubWrapper>
                   <MainSub>
                     <StyledImageDiv>
-                      <Swiper />
+                      <SwiperThumb myimage={item} />
                     </StyledImageDiv>
                   </MainSub>
                 </StyledSubWrapper>

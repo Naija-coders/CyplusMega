@@ -98,6 +98,5 @@ export const StyledImageDiv = styled("div")(
     flexDirection: "column",
     width: "80%",
     height: "400px",
-    background: "green",
   })
 );
