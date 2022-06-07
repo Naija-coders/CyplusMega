@@ -12,10 +12,21 @@ import StateContext from "../../context/StateContext";
 import DispatchContext from "../../context/DispatchContext";
 import IconButton from "@mui/material/IconButton";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import { StyledTabs, StyledTab } from "./styles";
 import Clientapi from "../../pages/api/client";
 import { useRouter } from "next/router";
 import { RootState } from "../../state/reducers";
+import Swiper from "./Swiper";
+import Image from "next/image";
+
+import {
+  StyledDiv,
+  StyledWrapper,
+  MainSub,
+  StyledImageDiv,
+  StyledSubWrapper,
+} from "./styles";
 export default function Service() {
   const [value, setValue] = React.useState("Description");
 
@@ -32,8 +43,13 @@ export default function Service() {
   const { AuthDispatcher } = React.useContext<any>(DispatchContext);
   const dispatch: Dispatch<any> = useDispatch();
   const state = useSelector((state: RootState) => state.appstate);
+  const [favorite, setFavorite] = React.useState(false);
+
   let offer = [];
   //card color #D9D9D9
+  const handleFavorite = () => {
+    setFavorite(!favorite);
+  };
   const { getmainservices } = bindActionCreators(actionCreators, dispatch);
   function getServices() {
     Clientapi.get(`/api/company/services`).then((response) => {
@@ -77,8 +93,16 @@ export default function Service() {
                 <StyledTab value="Reviews" label="Reviews" />
               </StyledTabs>
 
-              <IconButton>
-                <FavoriteBorderIcon />
+              <IconButton
+                onClick={() => {
+                  handleFavorite();
+                }}
+              >
+                {favorite ? (
+                  <FavoriteBorderIcon />
+                ) : (
+                  <FavoriteIcon sx={{ color: "red" }} />
+                )}
               </IconButton>
             </div>
           </Paper>
@@ -98,12 +122,21 @@ export default function Service() {
             </div>
             <div>Service</div>
           </div>
-          <Paper sx={{ width: "50%", height: 400 }}>
+          <StyledDiv sx={{ width: "100%" }}>
             {" "}
             {state.servicedata.map((item: any) => (
-              <>{item.services_id}</>
+              <StyledWrapper>
+                <StyledSubWrapper>
+                  <MainSub>
+                    <StyledImageDiv>
+                      <Swiper />
+                    </StyledImageDiv>
+                  </MainSub>
+                </StyledSubWrapper>
+                <StyledSubWrapper>{item.services_id}</StyledSubWrapper>
+              </StyledWrapper>
             ))}
-          </Paper>
+          </StyledDiv>
         </div>{" "}
       </div>{" "}
       <div style={{ marginTop: "37%" }}></div>

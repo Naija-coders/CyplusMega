@@ -47,6 +47,37 @@ interface StyledTabProps {
   label: string;
   value: string;
 }
+export const StyledDiv = styled("div")(
+  sx({
+    border: "solid 1px rgba(0, 0, 0, 0.23);",
+    borderRadius: "5px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    marginTop: "10px",
+    width: "100% !important",
+  })
+);
+export const StyledWrapper = styled("div")(
+  sx({
+    display: "flex",
+    flexDirection: "row",
+    width: "100%",
+  })
+);
+export const MainSub = styled("div")(
+  sx({
+    display: "flex",
+    flexDirection: "column",
+    width: "100%",
+  })
+);
+export const StyledSubWrapper = styled("div")(
+  sx({
+    display: "flex",
+    width: "50%",
+  })
+);
 export const StyledTab = styled((props: StyledTabProps) => (
   <Tab disableRipple {...props} />
 ))(({ theme }) => ({
@@ -61,3 +92,12 @@ export const StyledTab = styled((props: StyledTabProps) => (
     backgroundColor: "rgba(100, 95, 228, 0.32)",
   },
 }));
+export const StyledImageDiv = styled("div")(
+  sx({
+    display: "flex",
+    flexDirection: "column",
+    width: "80%",
+    height: "400px",
+    background: "green",
+  })
+);
