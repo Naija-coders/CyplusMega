@@ -75,7 +75,10 @@ import ForumIcon from "@mui/icons-material/Forum";
 
 import Cookies from "js-cookie";
 
-export default function Navbar() {
+type Props = {
+  isfixed?: boolean;
+};
+const Navbar: React.FC<Props> = ({ isfixed }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const [categories, setCategories] = useState([]);
@@ -326,11 +329,7 @@ export default function Navbar() {
     );
   };
   return (
-    <StyledAppBar
-      sx={{
-        postion: "relative",
-      }}
-    >
+    <StyledAppBar position={isfixed ? "relative" : "fixed"}>
       <div className="navbar__container">
         <div className="navbar__mainwrapper">
           <div
@@ -496,4 +495,6 @@ export default function Navbar() {
       </div>
     </StyledAppBar>
   );
-}
+};
+
+export default Navbar;

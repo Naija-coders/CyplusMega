@@ -8,6 +8,7 @@ import {
   Card,
   TextField,
   InputAdornment,
+  Divider,
 } from "@mui/material";
 import {
   styled,
@@ -49,7 +50,6 @@ interface StyledTabProps {
 }
 export const StyledDiv = styled("div")(
   sx({
-    border: "solid 1px rgba(0, 0, 0, 0.23);",
     borderRadius: "5px",
     display: "flex",
     flexDirection: "column",
@@ -58,11 +58,29 @@ export const StyledDiv = styled("div")(
     width: "100% !important",
   })
 );
+export const StyledContact = styled("div")(
+  sx({
+    background: "white",
+    borderRadius: "5px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+
+    height: "100%",
+    width: "30%",
+    gap: "10px",
+    marginRight: "20px",
+    justifyItems: "center",
+    paddingLeft: "1rem",
+    alignItems: "center",
+  })
+);
 export const StyledWrapper = styled("div")(
   sx({
     display: "flex",
     flexDirection: "row",
     width: "100%",
+    justifyContent: "space-between",
   })
 );
 export const MainSub = styled("div")(
@@ -70,12 +88,29 @@ export const MainSub = styled("div")(
     display: "flex",
     flexDirection: "column",
     width: "100%",
+    padding: "1rem",
+    overflowY: "scroll",
   })
 );
 export const StyledSubWrapper = styled("div")(
   sx({
     display: "flex",
-    width: "50%",
+    width: "60%",
+    background: "white",
+    borderRadius: "5px",
+  })
+);
+export const StyledMainText = styled(Typography)(
+  sx({
+    fontSize: "1rem",
+    color: "black",
+  })
+);
+export const StyledMainHeaderText = styled(Typography)(
+  sx({
+    padding: "2rem",
+    fontSize: "1.4rem",
+    fontWeight: "bold",
   })
 );
 export const StyledTab = styled((props: StyledTabProps) => (
@@ -96,7 +131,38 @@ export const StyledImageDiv = styled("div")(
   sx({
     display: "flex",
     flexDirection: "column",
-    width: "80%",
-    height: "400px",
+    width: "90%",
+    justifyContent: "center",
+
+    height: "500px",
+    padding: "1rem",
+  })
+);
+export const StyledAvatar = styled(Avatar)(sx({}));
+export const RandomFlex = styled("div")(
+  sx({
+    display: "flex",
+    gap: "10px",
+    alignItems: "center",
+    padding: "1rem",
+  })
+);
+export const CustomDivider = styled(Divider)(
+  sx({
+    marginLeft: "10px",
+    width: "90%",
+  })
+);
+export const StyledButton = styled(Button)(
+  sx({
+    "background": "#152238",
+    "width": "90%",
+    "padding": "0.8rem",
+    "color": "white",
+    "textTransform": "none",
+    "&:hover": {
+      background: "#152238",
+      color: "white",
+    },
   })
 );

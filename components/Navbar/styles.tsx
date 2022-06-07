@@ -42,7 +42,7 @@ export const StyledCaption = styled(Typography)(sx({}));
 export const StyledAppBar = styled(AppBar)(
   sx({
     height: 70,
-    position: "fixed",
+
     justifyContent: "center",
 
     display: "flex",

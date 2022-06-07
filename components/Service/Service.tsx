@@ -19,6 +19,7 @@ import { useRouter } from "next/router";
 import { RootState } from "../../state/reducers";
 import SwiperThumb from "./Swiper";
 import Image from "next/image";
+import Link from "next/link";
 
 import {
   StyledDiv,
@@ -26,9 +27,16 @@ import {
   MainSub,
   StyledImageDiv,
   StyledSubWrapper,
+  StyledAvatar,
+  StyledMainHeaderText,
+  RandomFlex,
+  StyledMainText,
+  StyledContact,
+  StyledButton,
+  CustomDivider,
 } from "./styles";
 export default function Service() {
-  const [value, setValue] = React.useState("Description");
+  const [value, setValue] = React.useState("Overview");
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
@@ -60,16 +68,20 @@ export default function Service() {
       console.log("the service ad data is ", offer);
     });
   }
-  getServices();
+  React.useEffect(() => {
+    getServices();
+  }, []);
+
   console.log("state service", state.servicedata);
   return (
     <div className="navbar__mycontainer">
       <div className="navbar__catwrapper">
-        <div style={{ width: "80%", position: "relative", marginTop: "9%" }}>
+        <div style={{ width: "80%", position: "relative", marginTop: "2%" }}>
           <Paper
             sx={{
               width: "100%",
               border: "solid 1px #D9D9D9",
+
               background: "#f6f9f5",
               height: "55px",
             }}
@@ -79,6 +91,7 @@ export default function Service() {
               style={{
                 display: "flex",
                 width: "100%",
+
                 justifyContent: "space-between",
               }}
             >
@@ -87,10 +100,43 @@ export default function Service() {
                 onChange={handleChange}
                 aria-label="secondary StyledTabs example"
               >
-                <StyledTab value="Description" label="Description" />
-                <StyledTab value="About" label="About seller" />
-                <StyledTab value="Similar" label="Similar services" />
-                <StyledTab value="Reviews" label="Reviews" />
+                <StyledTab
+                  value="Overview"
+                  onClick={() => {
+                    route.push("#Overview");
+                  }}
+                  label="Overview"
+                />
+
+                <StyledTab
+                  value="Description"
+                  onClick={() => {
+                    route.push("#Description");
+                  }}
+                  label="Description"
+                />
+
+                <StyledTab
+                  value="About"
+                  onClick={() => {
+                    route.push("#About");
+                  }}
+                  label="About seller"
+                />
+                <StyledTab
+                  value="Similar"
+                  onClick={() => {
+                    route.push("#Similar");
+                  }}
+                  label="Similar services"
+                />
+                <StyledTab
+                  value="Reviews"
+                  onClick={() => {
+                    route.push("#Reviews");
+                  }}
+                  label="Reviews"
+                />
               </StyledTabs>
 
               <IconButton
@@ -106,7 +152,7 @@ export default function Service() {
               </IconButton>
             </div>
           </Paper>
-          <div
+          {/*    <div
             style={{
               display: "flex",
               justifyContent: "left",
@@ -115,13 +161,13 @@ export default function Service() {
               marginTop: "10px",
             }}
           >
-            <div className="listitem__mainlist">
+            {/*  <div className="listitem__mainlist">
               <ul>
                 <li>Home</li>
               </ul>
             </div>
-            <div>Service</div>
-          </div>
+            <div>Service</div> 
+          </div> */}
           <StyledDiv sx={{ width: "100%" }}>
             {" "}
             {state.servicedata.map((item: any) => (
@@ -131,9 +177,63 @@ export default function Service() {
                     <StyledImageDiv>
                       <SwiperThumb myimage={item} />
                     </StyledImageDiv>
+                    <RandomFlex>
+                      <StyledAvatar />
+                      <StyledMainText>mano</StyledMainText>
+                    </RandomFlex>
+                    <StyledMainHeaderText id="Description">
+                      Description
+                    </StyledMainHeaderText>
+                    <StyledMainText paragraph>{item.About}</StyledMainText>
+                    <StyledMainHeaderText id="About">
+                      About this Seller
+                    </StyledMainHeaderText>
+                    <StyledMainText paragraph>{item.About}</StyledMainText>
                   </MainSub>
                 </StyledSubWrapper>
-                <StyledSubWrapper>{item.services_id}</StyledSubWrapper>
+
+                <StyledContact
+                  sx={{
+                    position: "-webkit-sticky",
+                    position: "sticky",
+                    top: 0,
+
+                    zIndex: 1,
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+
+                      flexDirection: "column",
+                      width: "100%",
+                      justifyContent: "center",
+                      justifyItems: "center",
+                      gap: "10px",
+
+                      alignItems: "center",
+                    }}
+                  >
+                    <StyledMainHeaderText align="center">
+                      Find out more about this seller
+                    </StyledMainHeaderText>
+                    <CustomDivider />
+                    <StyledAvatar
+                      variant="square"
+                      sx={{ width: "50%", margin: "10px" }}
+                    />
+                    <StyledMainText align="center">
+                      {item?.title}
+                    </StyledMainText>
+                    <StyledButton variant="contained">
+                      Send Enquiry{" "}
+                    </StyledButton>
+                    <StyledMainText align="center">
+                      Submit an enquiry direct
+                    </StyledMainText>
+                    <br></br>
+                  </div>
+                </StyledContact>
               </StyledWrapper>
             ))}
           </StyledDiv>

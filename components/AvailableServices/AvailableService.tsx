@@ -132,8 +132,9 @@ const AvailableService = (props: Props) => {
                     delay: 2500,
                     disableOnInteraction: false,
                   }}
-                  navigation={false}
+                  navigation={true}
                   modules={[Autoplay, Navigation]}
+                  className="mySwiper"
                 >
                   {state.categories?.map(
                     (
