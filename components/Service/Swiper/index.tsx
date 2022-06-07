@@ -40,7 +40,7 @@ const SwiperThumb: React.FC<Props> = ({ myimage }) => {
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper"
+        className="mySwiper3"
       >
         {userimage?.map((items) => (
           <SwiperSlide>
