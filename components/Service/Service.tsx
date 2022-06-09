@@ -86,7 +86,7 @@ export default function Service() {
 
               background: "#f6f9f5",
               height: "55px",
-              position: "fixed",
+
               position: "sticky",
               top: 0,
 
@@ -107,43 +107,13 @@ export default function Service() {
                 onChange={handleChange}
                 aria-label="secondary StyledTabs example"
               >
-                <StyledTab
-                  value="Overview"
-                  onClick={() => {
-                    route.push("#Overview");
-                  }}
-                  label="Overview"
-                />
+                <StyledTab value="Overview" label="Overview" />
 
-                <StyledTab
-                  value="Description"
-                  onClick={() => {
-                    route.push("#Description");
-                  }}
-                  label="Description"
-                />
+                <StyledTab value="Description" label="Description" />
 
-                <StyledTab
-                  value="About"
-                  onClick={() => {
-                    route.push("#About");
-                  }}
-                  label="About seller"
-                />
-                <StyledTab
-                  value="Similar"
-                  onClick={() => {
-                    route.push("#Similar");
-                  }}
-                  label="Similar services"
-                />
-                <StyledTab
-                  value="Reviews"
-                  onClick={() => {
-                    route.push("#Reviews");
-                  }}
-                  label="Reviews"
-                />
+                <StyledTab value="About" label="About seller" />
+                <StyledTab value="Similar" label="Similar services" />
+                <StyledTab value="Reviews" label="Reviews" />
               </StyledTabs>
 
               <IconButton
@@ -213,7 +183,6 @@ export default function Service() {
                 </StyledSubWrapper>
                 <StyledContact
                   sx={{
-                    position: "-webkit-sticky",
                     position: "sticky",
                     top: 100,
 

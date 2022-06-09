@@ -27,6 +27,7 @@
       width: auto;
     }
   }
+
   &__latestservices {
     margin-top: 10px;
     width: 100%;
@@ -78,4 +79,11 @@
   &__avalableservice::-webkit-scrollbar-thumb {
     background-color: #f68b1e;
   }
+}
+.rands {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 100;
+
+  z-index: 1;
 }
