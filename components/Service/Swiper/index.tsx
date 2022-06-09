@@ -28,7 +28,7 @@ const SwiperThumb: React.FC<Props> = ({ myimage }) => {
         className="mySwiper2"
       >
         {userimage?.map((items) => (
-          <SwiperSlide>
+          <SwiperSlide key={Math.random()}>
             <img src={items?.image} />
           </SwiperSlide>
         ))}

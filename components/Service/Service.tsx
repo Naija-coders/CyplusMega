@@ -148,7 +148,7 @@ export default function Service() {
           <StyledDiv sx={{ width: "100%" }}>
             {" "}
             {state.servicedata.map((item: any) => (
-              <StyledWrapper>
+              <StyledWrapper key={Math.random()}>
                 <StyledSubWrapper>
                   <MainSub>
                     <ContainerDiv id="Overview">
