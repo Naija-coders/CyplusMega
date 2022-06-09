@@ -34,6 +34,7 @@ import {
   StyledContact,
   StyledButton,
   CustomDivider,
+  ContainerDiv,
 } from "./styles";
 export default function Service() {
   const [value, setValue] = React.useState("Overview");
@@ -84,6 +85,11 @@ export default function Service() {
 
               background: "#f6f9f5",
               height: "55px",
+              position: "fixed",
+              position: "sticky",
+              top: 0,
+
+              zIndex: 100,
             }}
             elevation={0}
           >
@@ -174,65 +180,74 @@ export default function Service() {
               <StyledWrapper>
                 <StyledSubWrapper>
                   <MainSub>
-                    <StyledImageDiv>
-                      <SwiperThumb myimage={item} />
-                    </StyledImageDiv>
-                    <RandomFlex>
-                      <StyledAvatar />
-                      <StyledMainText>mano</StyledMainText>
-                    </RandomFlex>
-                    <StyledMainHeaderText id="Description">
-                      Description
-                    </StyledMainHeaderText>
-                    <StyledMainText paragraph>{item.About}</StyledMainText>
-                    <StyledMainHeaderText id="About">
-                      About this Seller
-                    </StyledMainHeaderText>
-                    <StyledMainText paragraph>{item.About}</StyledMainText>
+                    <ContainerDiv id="Overview">
+                      <StyledImageDiv>
+                        <SwiperThumb myimage={item} />
+                      </StyledImageDiv>
+                      <RandomFlex>
+                        <StyledAvatar />
+                        <StyledMainText>mano</StyledMainText>
+                      </RandomFlex>
+                    </ContainerDiv>
+                    <br></br>
+                    <ContainerDiv>
+                      <StyledMainHeaderText id="Description">
+                        Description
+                      </StyledMainHeaderText>
+                      <StyledMainText paragraph>{item.About}</StyledMainText>
+                    </ContainerDiv>
+                    <br></br>
+                    <ContainerDiv>
+                      <StyledMainHeaderText id="About">
+                        About this Seller
+                      </StyledMainHeaderText>
+                      <StyledMainText paragraph>{item.About}</StyledMainText>
+                    </ContainerDiv>
                   </MainSub>
                 </StyledSubWrapper>
-
                 <StyledContact
                   sx={{
                     position: "-webkit-sticky",
                     position: "sticky",
-                    top: 0,
+                    top: 100,
 
                     zIndex: 1,
                   }}
                 >
-                  <div
-                    style={{
-                      display: "flex",
+                  <ContainerDiv>
+                    <div
+                      style={{
+                        display: "flex",
 
-                      flexDirection: "column",
-                      width: "100%",
-                      justifyContent: "center",
-                      justifyItems: "center",
-                      gap: "10px",
+                        flexDirection: "column",
+                        width: "100%",
+                        justifyContent: "center",
+                        justifyItems: "center",
+                        gap: "10px",
 
-                      alignItems: "center",
-                    }}
-                  >
-                    <StyledMainHeaderText align="center">
-                      Find out more about this seller
-                    </StyledMainHeaderText>
-                    <CustomDivider />
-                    <StyledAvatar
-                      variant="square"
-                      sx={{ width: "50%", margin: "10px" }}
-                    />
-                    <StyledMainText align="center">
-                      {item?.title}
-                    </StyledMainText>
-                    <StyledButton variant="contained">
-                      Send Enquiry{" "}
-                    </StyledButton>
-                    <StyledMainText align="center">
-                      Submit an enquiry direct
-                    </StyledMainText>
-                    <br></br>
-                  </div>
+                        alignItems: "center",
+                      }}
+                    >
+                      <StyledMainHeaderText align="center">
+                        Find out more about this seller
+                      </StyledMainHeaderText>
+                      <CustomDivider />
+                      <StyledAvatar
+                        variant="square"
+                        sx={{ width: "50%", margin: "10px" }}
+                      />
+                      <StyledMainText align="center">
+                        {item?.title}
+                      </StyledMainText>
+                      <StyledButton variant="contained">
+                        Send Enquiry{" "}
+                      </StyledButton>
+                      <StyledMainText align="center">
+                        Submit an enquiry direct
+                      </StyledMainText>
+                      <br></br>
+                    </div>
+                  </ContainerDiv>
                 </StyledContact>
               </StyledWrapper>
             ))}

@@ -20,6 +20,7 @@ const LanguageMenu = dynamic(() => import("../LanguageMenu"), {
 import AddBoxRoundedIcon from "@mui/icons-material/AddBoxRounded";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
+import Search from "../Search/Search";
 
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
@@ -77,8 +78,9 @@ import Cookies from "js-cookie";
 
 type Props = {
   isfixed?: boolean;
+  showSearch?: boolean;
 };
-const Navbar: React.FC<Props> = ({ isfixed }) => {
+const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const [categories, setCategories] = useState([]);
@@ -354,7 +356,8 @@ const Navbar: React.FC<Props> = ({ isfixed }) => {
           </div>
         </div>
         <StyledDiv>
-          <StyledMainButton variant="outlined" size="small">
+          <Search isVisible={showSearch} />
+          <StyledMainButton variant="contained" size="small">
             Post a Service{" "}
             <KeyboardArrowDown sx={{ transform: "rotate(270deg)" }} />
           </StyledMainButton>
@@ -376,6 +379,7 @@ const Navbar: React.FC<Props> = ({ isfixed }) => {
             }}
           >
             EN
+            
           </p> */}
 
           <div>

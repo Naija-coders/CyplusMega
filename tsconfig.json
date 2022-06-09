@@ -21,7 +21,7 @@
     "**/*.tsx",
     "components/LoginModal/index.js",
     "components/LoginModal/Loginmodal.tsx",
-    "pages/layout.js",
+    "pages/layout.tsx",
     "pages/api/client.js",
     "public/i18n/index.ts"
   ],

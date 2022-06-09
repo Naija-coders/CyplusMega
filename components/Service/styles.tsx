@@ -67,7 +67,7 @@ export const StyledContact = styled("div")(
     justifyContent: "center",
 
     height: "100%",
-    width: "30%",
+    width: { md: "30%", xl: "25%" },
     gap: "10px",
     marginRight: "20px",
     justifyItems: "center",
@@ -96,8 +96,8 @@ export const StyledSubWrapper = styled("div")(
   sx({
     display: "flex",
     width: "60%",
-    background: "white",
-    borderRadius: "5px",
+
+    background: "#f6f9f5",
   })
 );
 export const StyledMainText = styled(Typography)(
@@ -151,6 +151,12 @@ export const CustomDivider = styled(Divider)(
   sx({
     marginLeft: "10px",
     width: "90%",
+  })
+);
+export const ContainerDiv = styled("div")(
+  sx({
+    borderRadius: "5px",
+    border: "solid 1px #D9D9D9",
   })
 );
 export const StyledButton = styled(Button)(

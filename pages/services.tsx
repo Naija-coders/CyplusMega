@@ -5,12 +5,11 @@ import Navbar from "../components/Navbar/Navbar";
 
 type Props = {};
 
-const services: React.FC<Props> = ({}) => {
+const Service = (props: Props) => {
   return (
-    <>
-      <Navbar isfixed={true} />
+    <Layout showSearch={true} isVisible={true}>
       <Services />
-    </>
+    </Layout>
   );
 };
-export default services;
+export default Service;

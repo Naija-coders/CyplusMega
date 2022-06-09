@@ -132,13 +132,14 @@ export const StyledDiv = styled("div")(
 
     justifyContent: "end",
     justifyItems: "end",
+    gap: "10px",
     marginRight: "20%",
     alignItems: "center",
   })
 );
 export const StyledMainButton = styled(Button)(
   sx({
-    "display": { xs: "none", md: "solid" },
+    "display": { xs: "none", md: "flex" },
     "border": "1px #035772 ",
     "height": "40px",
     "borderStyle": "solid",
