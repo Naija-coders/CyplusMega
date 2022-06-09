@@ -25,6 +25,7 @@ import {
   StyledDiv,
   StyledWrapper,
   MainSub,
+  NormalTypography,
   StyledImageDiv,
   StyledSubWrapper,
   StyledAvatar,
@@ -201,7 +202,12 @@ export default function Service() {
                       <StyledMainHeaderText id="About">
                         About this Seller
                       </StyledMainHeaderText>
-                      <StyledMainText paragraph>{item.About}</StyledMainText>
+                      <StyledMainText paragraph>
+                        A course description is a brief summary of the
+                        significant learning experiences for a course. Course
+                        descriptions appear in individual Course Outlines and in
+                        the Program of Studies (POSs) for individual programs.
+                      </StyledMainText>
                     </ContainerDiv>
                   </MainSub>
                 </StyledSubWrapper>
@@ -236,15 +242,15 @@ export default function Service() {
                         variant="square"
                         sx={{ width: "50%", margin: "10px" }}
                       />
-                      <StyledMainText align="center">
+                      <NormalTypography align="center">
                         {item?.title}
-                      </StyledMainText>
+                      </NormalTypography>
                       <StyledButton variant="contained">
                         Send Enquiry{" "}
                       </StyledButton>
-                      <StyledMainText align="center">
+                      <NormalTypography align="center">
                         Submit an enquiry direct
-                      </StyledMainText>
+                      </NormalTypography>
                       <br></br>
                     </div>
                   </ContainerDiv>

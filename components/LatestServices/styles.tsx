@@ -37,7 +37,7 @@ export const CustomContainer = styled("div")(
 );
 export const CustomDivContainer = styled("div")(
   sx({
-    width: { md: "95%", lg: "93%", xl: "80%" },
+    width: { md: "95%", lg: "93%", xl: "93%" },
   })
 );
 export const StyledLink = styled(Link)(
@@ -45,6 +45,7 @@ export const StyledLink = styled(Link)(
     "&:hover": {},
   })
 );
+
 export const StyledIconButton = styled(IconButton)(
   sx({
     "&:active": {
@@ -73,10 +74,11 @@ export const StyledCard = styled(Card)(
     "width": {
       xs: "100%",
 
-      sm: "230px",
+      sm: "270px",
+      md: "270px",
 
       lg: "250px",
-      xl: "270px",
+      xl: "250px",
     },
 
     "background": "#F6F9F5",
@@ -87,6 +89,23 @@ export const StyledCard = styled(Card)(
     "&:hover": {
       boxShadow: " 0px 2px 12px -1px #565454;",
     },
+  })
+);
+export const LatestServicesDiv = styled("div")(
+  sx({
+    marginTop: "10px",
+    width: "100%",
+    display: " grid",
+    rowGap: "20px",
+    gridTemplateColumns: {
+      md: "auto auto auto",
+      lg: "auto auto auto auto",
+      xl: "auto auto auto auto auto",
+    },
+    overflowX: "scroll",
+    columnGap: "20px",
+
+    justifyContent: "space-around",
   })
 );
 export const TextTypography = styled(Typography)(

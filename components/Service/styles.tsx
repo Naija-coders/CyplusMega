@@ -102,6 +102,7 @@ export const StyledSubWrapper = styled("div")(
 );
 export const StyledMainText = styled(Typography)(
   sx({
+    padding: "2rem",
     fontSize: "1rem",
     color: "black",
   })
@@ -111,6 +112,12 @@ export const StyledMainHeaderText = styled(Typography)(
     padding: "2rem",
     fontSize: "1.4rem",
     fontWeight: "bold",
+  })
+);
+export const NormalTypography = styled(Typography)(
+  sx({
+    fontSize: "1rem",
+    color: "black",
   })
 );
 export const StyledTab = styled((props: StyledTabProps) => (

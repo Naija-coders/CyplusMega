@@ -33,7 +33,7 @@ export const CustomContainer = styled("div")(
 );
 export const CustomDivContainer = styled("div")(
   sx({
-    width: { md: "95%", lg: "93%", xl: "80%" },
+    width: { md: "95%", lg: "93%", xl: "93%" },
   })
 );
 

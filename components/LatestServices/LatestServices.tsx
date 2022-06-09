@@ -39,6 +39,7 @@ import {
   StyledBox,
   CustomContainer,
   CustomDivContainer,
+  LatestServicesDiv,
 } from "./styles";
 import { StyledAbout } from "../Categories/styles";
 type Props = {};
@@ -251,7 +252,7 @@ const LatestServices: React.FC<Props> = ({}) => {
                   width={"270px"}
                 />
               ) : (
-                <div className="flexitems__latestservices">
+                <LatestServicesDiv>
                   {state.mainservices.slice(0, 9)?.map(
                     (
                       item: {
@@ -393,7 +394,7 @@ const LatestServices: React.FC<Props> = ({}) => {
                     OpenModalForm={open}
                     CloseModalForm={() => setOpen(false)}
                   />{" "}
-                </div>
+                </LatestServicesDiv>
               )}
 
               <br></br>
