@@ -37,6 +37,8 @@ import {
   StyledIconButton,
   StyledCustomTypography,
   StyledBox,
+  CustomContainer,
+  CustomDivContainer,
 } from "./styles";
 import { StyledAbout } from "../Categories/styles";
 type Props = {};
@@ -212,8 +214,8 @@ const LatestServices: React.FC<Props> = ({}) => {
     <>
       {Rendermobile()}
       <div className="navbar__mycontainer">
-        <div className="navbar__catwrapper">
-          <div style={{ width: "80%" }}>
+        <CustomContainer>
+          <CustomDivContainer>
             <Paper elevation={2} sx={{ height: "110%" }}>
               <StyledBox>
                 <StyledCustomTypography
@@ -221,6 +223,16 @@ const LatestServices: React.FC<Props> = ({}) => {
                   style={{ marginLeft: "2%", fontFamily: "serif" }}
                 >
                   Latest Services
+                </StyledCustomTypography>
+                <StyledCustomTypography
+                  style={{
+                    marginRight: "2%",
+                    fontFamily: "serif",
+                    fontSize: "15px",
+                    textDecoration: "underline",
+                  }}
+                >
+                  See All
                 </StyledCustomTypography>
               </StyledBox>
               {loaded ? (
@@ -388,8 +400,8 @@ const LatestServices: React.FC<Props> = ({}) => {
             </Paper>
             <br></br>
             <br></br>
-          </div>
-        </div>
+          </CustomDivContainer>
+        </CustomContainer>
       </div>
     </>
   );

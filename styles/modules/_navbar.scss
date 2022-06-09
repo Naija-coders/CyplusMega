@@ -14,11 +14,12 @@
     }
     @include atMedium {
       display: flex;
+      margin-left: 5%;
     }
   }
   &__container {
     display: flex;
-    width: 80%;
+    width: 100%;
     justify-content: space-between;
 
     @include atSmallMax {
@@ -30,7 +31,7 @@
     }
     @include atMedium {
       display: flex;
-      margin-left: 20%;
+      margin-left: 5%;
     }
   }
   &__nav_mobile {

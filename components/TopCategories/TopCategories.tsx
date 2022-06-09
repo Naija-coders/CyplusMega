@@ -5,25 +5,15 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { Dispatch } from "redux";
 import { useDispatch, useSelector } from "react-redux";
-import { bindActionCreators } from "redux";
 
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
-import { actionCreators } from "../../state";
 import { RootState } from "../../state/reducers";
-import Card from "@mui/material/Card";
 import { Avatar, IconButton } from "@mui/material";
-import StarIcon from "@mui/icons-material/Star";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { LoginModal } from "../LoginModal/Loginmodal";
 import { Divider } from "@mui/material";
-
 import { useRouter } from "next/router";
-
-import MenuIcon from "@mui/icons-material/Menu";
 import moment from "moment";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import CustomLoader from "../CustomLoader";
-import ToggleButton from "@mui/material/ToggleButton";
 
 import {
   StyledLink,
@@ -37,6 +27,8 @@ import {
   StyledIconButton,
   StyledCustomTypography,
   StyledBox,
+  CustomDivContainer,
+  CustomContainer,
 } from "./styles";
 import { StyledAbout } from "../Categories/styles";
 type Props = {};
@@ -212,9 +204,9 @@ const LatestServices: React.FC<Props> = ({}) => {
   return (
     <>
       {Rendermobile()}
-      <div className="navbar__mycontainer">
-        <div className="navbar__catwrapper">
-          <div style={{ width: "80%" }}>
+      <div className="navbar__mycontainer" style={{ marginTop: "-40px" }}>
+        <CustomContainer>
+          <CustomDivContainer>
             <Paper elevation={2} sx={{ height: "110%" }}>
               <StyledBox>
                 <StyledCustomTypography
@@ -398,8 +390,8 @@ const LatestServices: React.FC<Props> = ({}) => {
               <br></br>
             </Paper>
             <br></br>
-          </div>
-        </div>
+          </CustomDivContainer>
+        </CustomContainer>
       </div>
     </>
   );

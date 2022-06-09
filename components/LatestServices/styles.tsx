@@ -28,7 +28,18 @@ export const StyledTypography = styled(Typography)(
     color: "#152238",
   })
 );
-
+export const CustomContainer = styled("div")(
+  sx({
+    display: " flex",
+    marginLeft: { md: "5%", lg: "0%", xl: "5%" },
+    flexDirection: " column",
+  })
+);
+export const CustomDivContainer = styled("div")(
+  sx({
+    width: { md: "95%", lg: "93%", xl: "80%" },
+  })
+);
 export const StyledLink = styled(Link)(
   sx({
     "&:hover": {},
@@ -109,6 +120,7 @@ export const StyledButton = styled(Button)(
     },
   })
 );
+
 export const StyledPriceValue = styled(Typography)(
   sx({
     color: "#FCA301",
@@ -131,9 +143,13 @@ export const StyledPrice = styled(Typography)(
 export const StyledBox = styled(Box)(
   sx({
     background: "#152238",
+    display: "flex",
+    justifyContent: "space-between",
+    justifyItems: "center",
+    alignItems: "center",
 
     width: "100%",
-    marginTop: "3%",
+    marginTop: { xs: "0%", md: "3%" },
   })
 );
 export const StyledCustomTypography = styled(Typography)(

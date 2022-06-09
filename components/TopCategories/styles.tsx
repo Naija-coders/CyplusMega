@@ -128,6 +128,18 @@ export const StyledPrice = styled(Typography)(
     fontFamily: "Avenir Light",
   })
 );
+export const CustomContainer = styled("div")(
+  sx({
+    display: " flex",
+    marginLeft: { md: "5%", lg: "0%", xl: "5%" },
+    flexDirection: " column",
+  })
+);
+export const CustomDivContainer = styled("div")(
+  sx({
+    width: { md: "95%", lg: "93%", xl: "80%" },
+  })
+);
 export const StyledBox = styled(Box)(
   sx({
     background: "#152238",

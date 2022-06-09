@@ -85,12 +85,7 @@ const Navbar: React.FC<Props> = ({ isfixed }) => {
   const { AuthState } = useContext<any>(StateContext);
   const { AuthDispatcher } = useContext<any>(DispatchContext);
   const dispatch: Dispatch<any> = useDispatch();
-  const { t } = useTranslation();
 
-  const handleLanguageChange = (language: any) => {
-    i18next.options.lng = language;
-    i18n.changeLanguage(language);
-  };
   const route = useRouter();
   const handleClose = () => {
     setOpen(false);
@@ -98,7 +93,6 @@ const Navbar: React.FC<Props> = ({ isfixed }) => {
     setMyaccount(false);
   };
 
-  const Closeevent = () => setOpen(true);
   const [scroll, setScroll] = useState("33px");
   const [myaccount, setMyaccount] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -109,7 +103,6 @@ const Navbar: React.FC<Props> = ({ isfixed }) => {
   );
   const displaylist = Boolean(anchorEl);
   const displaymenu = Boolean(anchorElmenu);
-  const [uservaldata, setUserValdata] = useState<any>();
   const handleProfileClicks = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
     setMyaccount(!myaccount);

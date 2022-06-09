@@ -22,10 +22,11 @@ import { BorderStyle } from "@mui/icons-material";
 
 export const StyledDiv = styled("div")(
   sx({
-    width: "80%",
+    width: { md: "95%", lg: "93%", xl: "80%" },
     height: "100px",
-    marginLeft: "30px",
+
     display: "flex",
+    marginLeft: { md: "5%", lg: "0%", xl: "5%" },
 
     alignItems: "center",
   })

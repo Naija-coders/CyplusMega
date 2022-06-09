@@ -28,6 +28,8 @@ import {
   StyledCard,
   StyledCustomTypography,
   StyledBox,
+  CustomDivContainer,
+  CustomContainer,
 } from "./styles";
 
 type Props = {
@@ -201,8 +203,8 @@ const AvailableService = (props: Props) => {
     <>
       {RenderMobile()}
       <div className="navbar__mycontainer">
-        <div className="navbar__catwrapper">
-          <div style={{ width: "80%" }}>
+        <CustomContainer>
+          <CustomDivContainer>
             <Paper elevation={2}>
               <StyledBox>
                 <StyledCustomTypography
@@ -225,7 +227,7 @@ const AvailableService = (props: Props) => {
                 />
               ) : (
                 <Swiper
-                  slidesPerView={5}
+                  slidesPerView={6}
                   spaceBetween={0}
                   autoplay={{
                     delay: 2500,
@@ -289,8 +291,8 @@ const AvailableService = (props: Props) => {
                 </Swiper>
               )}
             </Paper>
-          </div>
-        </div>
+          </CustomDivContainer>
+        </CustomContainer>
       </div>
     </>
   );
