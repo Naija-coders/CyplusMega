@@ -65,10 +65,15 @@ export const StyledContact = styled("div")(
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+    position: { xs: "relative", md: "sticky" },
+    top: 100,
+
+    zIndex: 1,
 
     height: "100%",
     width: { md: "30%", xl: "25%" },
     gap: "10px",
+    marginTop: { xs: "20px", md: "0px" },
     marginRight: "20px",
     justifyItems: "center",
     paddingLeft: "1rem",
@@ -164,6 +169,7 @@ export const ContainerDiv = styled("div")(
   sx({
     borderRadius: "5px",
     border: "solid 1px #D9D9D9",
+    marginTop: "20px",
   })
 );
 export const StyledButton = styled(Button)(
