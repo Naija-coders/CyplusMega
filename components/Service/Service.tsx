@@ -13,7 +13,7 @@ import DispatchContext from "../../context/DispatchContext";
 import IconButton from "@mui/material/IconButton";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import { StyledTabs, StyledTab } from "./styles";
+import { StyledTabs, StyledTab, StyledPaper, CatWrapper } from "./styles";
 import Clientapi from "../../pages/api/client";
 import { useRouter } from "next/router";
 import { RootState } from "../../state/reducers";
@@ -23,6 +23,7 @@ import Link from "next/link";
 
 import {
   StyledDiv,
+  DivVal,
   StyledWrapper,
   MainSub,
   NormalTypography,
@@ -35,6 +36,7 @@ import {
   StyledContact,
   StyledButton,
   CustomDivider,
+  ContainerWrapper,
   ContainerDiv,
 } from "./styles";
 export default function Service() {
@@ -76,30 +78,17 @@ export default function Service() {
 
   console.log("state service", state.servicedata);
   return (
-    <div className="navbar__mycontainer">
-      <div className="navbar__catwrapper">
-        <div style={{ width: "80%", position: "relative", marginTop: "2%" }}>
-          <Paper
-            sx={{
-              width: "100%",
-              border: "solid 1px #D9D9D9",
-
-              background: "#f6f9f5",
-              height: "55px",
-
-              position: "sticky",
-              top: 0,
-
-              zIndex: 100,
-            }}
-            elevation={0}
-          >
+    <ContainerWrapper>
+      <div style={{ width: "100%", position: "relative", marginTop: "2%" }}>
+        <CatWrapper>
+          <StyledPaper>
             <div
               style={{
                 display: "flex",
                 width: "100%",
 
                 justifyContent: "space-between",
+                paddingLeft: "5%",
               }}
             >
               <StyledTabs
@@ -128,8 +117,9 @@ export default function Service() {
                 )}
               </IconButton>
             </div>
-          </Paper>
-          {/*    <div
+          </StyledPaper>
+        </CatWrapper>
+        {/*    <div
             style={{
               display: "flex",
               justifyContent: "left",
@@ -145,6 +135,7 @@ export default function Service() {
             </div>
             <div>Service</div> 
           </div> */}
+        <DivVal>
           <StyledDiv sx={{ width: "100%" }}>
             {" "}
             {state.servicedata.map((item: any) => (
@@ -181,14 +172,7 @@ export default function Service() {
                     </ContainerDiv>
                   </MainSub>
                 </StyledSubWrapper>
-                <StyledContact
-                  sx={{
-                    position: "sticky",
-                    top: 100,
-
-                    zIndex: 1,
-                  }}
-                >
+                <StyledContact>
                   <ContainerDiv>
                     <div
                       style={{
@@ -227,9 +211,9 @@ export default function Service() {
               </StyledWrapper>
             ))}
           </StyledDiv>
-        </div>{" "}
+        </DivVal>{" "}
       </div>{" "}
       <div style={{ marginTop: "37%" }}></div>
-    </div>
+    </ContainerWrapper>
   );
 }

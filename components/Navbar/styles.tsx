@@ -133,7 +133,7 @@ export const StyledDiv = styled("div")(
     justifyContent: "end",
     justifyItems: "end",
     gap: "10px",
-    marginRight: "20%",
+
     alignItems: "center",
   })
 );
