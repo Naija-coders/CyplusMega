@@ -21,7 +21,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
-import { Grid, Pagination, Autoplay, Navigation } from "swiper";
+
+import { Autoplay, Navigation } from "swiper";
 
 import {
   StyledLink,
@@ -134,7 +135,10 @@ const AvailableService = (props: Props) => {
                     delay: 2500,
                     disableOnInteraction: false,
                   }}
-                  navigation={true}
+                  navigation={{
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  }}
                   modules={[Autoplay, Navigation]}
                   className="mySwiper"
                 >

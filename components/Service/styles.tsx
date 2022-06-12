@@ -39,6 +39,7 @@ export const StyledTabs = styled((props: StyledTabsProps) => (
     backgroundColor: "transparent",
     minHeight: "5px",
   },
+
   "& .MuiTabs-indicatorSpan": {
     width: "80%",
     backgroundColor: "#152238",
@@ -58,21 +59,21 @@ export const StyledDiv = styled("div")(
     width: "100% !important",
   })
 );
+
 export const StyledContact = styled("div")(
   sx({
     borderRadius: "5px",
-    display: "flex",
+    display: { xs: "none", md: "flex" },
     flexDirection: "column",
     justifyContent: "center",
     position: { xs: "relative", md: "sticky" },
     top: 100,
-
     zIndex: 1,
 
     height: "100%",
     width: { md: "30%", xl: "25%" },
     gap: "10px",
-    marginTop: { xs: "20px", md: "0px" },
+    marginTop: { xs: "20px", md: "30px" },
     marginRight: "20px",
     justifyItems: "center",
     paddingLeft: "1rem",
@@ -82,9 +83,9 @@ export const StyledContact = styled("div")(
 export const StyledWrapper = styled("div")(
   sx({
     display: "flex",
-    flexDirection: "row",
-    width: "100%",
-    marginLeft: "5%",
+    flexDirection: { xs: "column", md: "row" },
+    width: { xs: "110%", md: "100%" },
+    marginLeft: { md: "0%", lg: "5%", xl: "5%" },
     justifyContent: "space-between",
   })
 );
@@ -92,37 +93,60 @@ export const MainSub = styled("div")(
   sx({
     display: "flex",
     flexDirection: "column",
-    width: "100%",
-    paddingLeft: "1rem",
+    width: { xs: "110%", md: "100%" },
+    paddingLeft: { xs: "0%", md: "1rem" },
     overflowY: "scroll",
+  })
+);
+export const RenderMobileDiv = styled("div")(
+  sx({
+    display: { xs: "flex", md: "none" },
+    marginTop: "-20px",
+  })
+);
+export const StyledContactMobile = styled("div")(
+  sx({
+    borderRadius: "5px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    height: "100%",
+    width: "110%",
+    gap: "10px",
+    marginTop: { xs: "20px", md: "0px" },
+
+    justifyItems: "center",
+
+    alignItems: "center",
   })
 );
 export const StyledSubWrapper = styled("div")(
   sx({
     display: "flex",
-    width: "75%",
+    width: { xs: "100%", md: "75%" },
 
     background: "#f6f9f5",
   })
 );
 export const StyledMainText = styled(Typography)(
   sx({
-    padding: "1rem 3rem",
+    padding: { xs: "0 1rem", md: " 0rem 3rem" },
     fontSize: "1rem",
-    color: "black",
+    color: "#152238",
   })
 );
 export const StyledMainHeaderText = styled(Typography)(
   sx({
-    padding: "1rem 3rem",
+    padding: { xs: "0 1rem", md: " 1rem 3rem" },
     fontSize: "1.4rem",
     fontWeight: "bold",
+    color: "#152238",
   })
 );
 export const NormalTypography = styled(Typography)(
   sx({
     fontSize: "1rem",
-    color: "black",
+    color: "#152238",
   })
 );
 export const StyledTab = styled((props: StyledTabProps) => (
@@ -143,20 +167,22 @@ export const StyledImageDiv = styled("div")(
   sx({
     display: "flex",
     flexDirection: "column",
-    width: "90%",
+    width: { xs: "100%", md: "90%" },
     justifyContent: "center",
 
-    height: "500px",
-    padding: "1rem",
+    height: { xs: "300px", md: "500px" },
+    padding: { xs: "0px", md: "1rem" },
   })
 );
 export const StyledAvatar = styled(Avatar)(sx({}));
 export const RandomFlex = styled("div")(
   sx({
     display: "flex",
+    flexDirection: "row",
     gap: "10px",
+
     alignItems: "center",
-    padding: "1rem",
+    padding: { xs: "0px", md: "1rem 3rem" },
   })
 );
 export const CustomDivider = styled(Divider)(
@@ -173,6 +199,7 @@ export const StyledPaper = styled(Paper)(
 
     position: "sticky",
     top: 0,
+    display: { xs: "none", md: "flex" },
 
     zIndex: 100,
   })
@@ -188,23 +215,20 @@ export const ContainerWrapper = styled("div")(
   sx({
     display: "flex",
     flexDirection: "column",
-    width: "100%",
   })
 );
 export const CatWrapper = styled("div")(
   sx({
     display: "flex",
     flexDirection: "column",
-    width: "100%",
-    justifyContent: "space-between",
-    justifyItems: "center",
-    flexWrap: "wrap",
+    width: { xs: "110%", md: "100%" },
   })
 );
 export const ContainerDiv = styled(Paper)(
   sx({
     borderRadius: "5px",
-    border: "solid 1px #D9D9D9",
+    width: "100%",
+    border: "solid 0.4px #D9D9D9",
   })
 );
 export const StyledButton = styled(Button)(

@@ -38,6 +38,8 @@ import {
   StyledButton,
   CustomDivider,
   ContainerWrapper,
+  RenderMobileDiv,
+  StyledContactMobile,
   ContainerDiv,
 } from "./styles";
 export default function Service() {
@@ -143,12 +145,13 @@ export default function Service() {
             <div>Service</div> 
           </div> */}
         <DivVal>
-          <StyledDiv sx={{ width: "100%" }}>
+          <StyledDiv>
             {" "}
             {state.servicedata.map((item: any) => (
               <StyledWrapper key={Math.random()}>
                 <StyledSubWrapper>
                   <MainSub>
+                    <h1 style={{ color: "#152238" }}>{item.About}</h1>
                     <ContainerDiv id="Overview">
                       <div
                         style={{
@@ -164,10 +167,49 @@ export default function Service() {
                       </div>
                       <RandomFlex>
                         <StyledAvatar />
-                        <StyledMainText>mano</StyledMainText>
+                        <p>mano</p>
                       </RandomFlex>
                     </ContainerDiv>
                     <br></br>
+                    <RenderMobileDiv>
+                      <StyledContactMobile>
+                        <ContainerDiv>
+                          <div
+                            style={{
+                              display: "flex",
+
+                              flexDirection: "column",
+
+                              justifyContent: "center",
+                              justifyItems: "center",
+                              gap: "10px",
+
+                              alignItems: "center",
+                            }}
+                          >
+                            <StyledMainHeaderText align="center">
+                              Find out more about this seller
+                            </StyledMainHeaderText>
+                            <CustomDivider />
+                            <StyledAvatar
+                              variant="square"
+                              sx={{ width: "50%", margin: "10px" }}
+                            />
+                            <NormalTypography align="center">
+                              {item?.title}
+                            </NormalTypography>
+                            <StyledButton variant="contained">
+                              Send Enquiry{" "}
+                            </StyledButton>
+                            <NormalTypography align="center">
+                              Submit an enquiry direct
+                            </NormalTypography>
+                            <br></br>
+                          </div>
+                        </ContainerDiv>
+                        <br></br>
+                      </StyledContactMobile>
+                    </RenderMobileDiv>
                     <ContainerDiv>
                       <StyledMainHeaderText id="Description">
                         Description
