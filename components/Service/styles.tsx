@@ -123,7 +123,7 @@ export const StyledContactMobile = styled("div")(
 export const StyledSubWrapper = styled("div")(
   sx({
     display: "flex",
-    width: { xs: "100%", md: "75%" },
+    width: { xs: "100%", md: "65%", lg: "70%", xl: "75%" },
 
     background: "#f6f9f5",
   })
@@ -137,7 +137,7 @@ export const StyledMainText = styled(Typography)(
 );
 export const StyledMainHeaderText = styled(Typography)(
   sx({
-    padding: { xs: "0 1rem", md: " 1rem 3rem" },
+    padding: { xs: "1rem 1rem", md: " 1rem 3rem" },
     fontSize: "1.4rem",
     fontWeight: "bold",
     color: "#152238",

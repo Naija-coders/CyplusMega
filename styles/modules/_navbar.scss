@@ -192,29 +192,33 @@
 .swiper-button-prev {
   color: #152238 !important;
   display: flex;
+
+  &:after {
+    font-size: 15px !important;
+    font-weight: bold !important;
+  }
 }
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
   color: green;
   background: white;
 
-  border-radius: 10px;
-  padding: 2rem 1rem;
+  border-radius: 40px;
+  padding: 1rem;
   position: absolute;
   top: 45% !important;
-
-  width: 60px !important;
+  width: 2rem !important;
 }
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
   color: green;
   background: white;
 
-  border-radius: 10px;
-  padding: 2rem 1rem;
+  border-radius: 40px;
+  padding: 1rem;
   position: absolute;
   top: 45% !important;
-  width: 60px !important;
+  width: 2rem !important;
 }
 .swiper-slide img {
   display: block;
