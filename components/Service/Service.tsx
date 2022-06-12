@@ -20,6 +20,7 @@ import { RootState } from "../../state/reducers";
 import SwiperThumb from "./Swiper";
 import Image from "next/image";
 import Link from "next/link";
+import CustomCard from "../CustomCard";
 
 import {
   StyledDiv,
@@ -79,7 +80,13 @@ export default function Service() {
   console.log("state service", state.servicedata);
   return (
     <ContainerWrapper>
-      <div style={{ width: "100%", position: "relative", marginTop: "2%" }}>
+      <div
+        style={{
+          width: "100%",
+
+          marginTop: "2%",
+        }}
+      >
         <CatWrapper>
           <StyledPaper>
             <div
@@ -143,9 +150,18 @@ export default function Service() {
                 <StyledSubWrapper>
                   <MainSub>
                     <ContainerDiv id="Overview">
-                      <StyledImageDiv>
-                        <SwiperThumb myimage={item} />
-                      </StyledImageDiv>
+                      <div
+                        style={{
+                          display: "flex",
+                          width: "100%",
+                          justifyContent: "center",
+                        }}
+                      >
+                        {" "}
+                        <StyledImageDiv>
+                          <SwiperThumb myimage={item} />
+                        </StyledImageDiv>
+                      </div>
                       <RandomFlex>
                         <StyledAvatar />
                         <StyledMainText>mano</StyledMainText>
@@ -169,6 +185,24 @@ export default function Service() {
                         descriptions appear in individual Course Outlines and in
                         the Program of Studies (POSs) for individual programs.
                       </StyledMainText>
+                    </ContainerDiv>
+                    <br></br>
+                    <ContainerDiv>
+                      <StyledMainHeaderText id="Recommended">
+                        Similar Services
+                      </StyledMainHeaderText>
+                      <div
+                        style={{
+                          display: "flex",
+                          padding: "10px",
+
+                          overflow: "scroll",
+                        }}
+                      >
+                        <CustomCard />
+                        <CustomCard />
+                        <CustomCard />
+                      </div>
                     </ContainerDiv>
                   </MainSub>
                 </StyledSubWrapper>
@@ -213,7 +247,6 @@ export default function Service() {
           </StyledDiv>
         </DivVal>{" "}
       </div>{" "}
-      <div style={{ marginTop: "37%" }}></div>
     </ContainerWrapper>
   );
 }

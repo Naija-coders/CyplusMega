@@ -107,14 +107,14 @@ export const StyledSubWrapper = styled("div")(
 );
 export const StyledMainText = styled(Typography)(
   sx({
-    padding: "2rem",
+    padding: "1rem 3rem",
     fontSize: "1rem",
     color: "black",
   })
 );
 export const StyledMainHeaderText = styled(Typography)(
   sx({
-    padding: "2rem",
+    padding: "1rem 3rem",
     fontSize: "1.4rem",
     fontWeight: "bold",
   })
@@ -188,6 +188,7 @@ export const ContainerWrapper = styled("div")(
   sx({
     display: "flex",
     flexDirection: "column",
+    width: "100%",
   })
 );
 export const CatWrapper = styled("div")(
@@ -195,6 +196,9 @@ export const CatWrapper = styled("div")(
     display: "flex",
     flexDirection: "column",
     width: "100%",
+    justifyContent: "space-between",
+    justifyItems: "center",
+    flexWrap: "wrap",
   })
 );
 export const ContainerDiv = styled(Paper)(

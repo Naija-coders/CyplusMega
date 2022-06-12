@@ -15,6 +15,7 @@ import { Avatar, IconButton } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { LoginModal } from "../LoginModal/Loginmodal";
+import CustomCard from "../CustomCard";
 
 import { useRouter } from "next/router";
 
