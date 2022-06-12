@@ -56,20 +56,29 @@ export const StyledIconButton = styled(IconButton)(
     },
   })
 );
+export const CoverCard = styled("div")(
+  sx({
+    display: "flex",
+    flexDirection: "column",
+    width: "100%",
+    justifyItems: "end",
+    gap: "10px",
+    justifyContent: "space-between",
+    justifySelf: "center",
+    alignContent: "flex-end",
+    flexGrow: 10,
+    height: "100%",
+  })
+);
 
 export const StyledCard = styled(Card)(
   sx({
     "cursor": "pointer",
 
-    "display": "flex",
-
-    "justifyContent": "space-between",
-
     "border": "#949593 1px",
 
     "borderRadius": " 3px",
     "borderStyle": "solid",
-    "height": "100%",
 
     "width": {
       xs: "100%",
@@ -82,9 +91,6 @@ export const StyledCard = styled(Card)(
     },
 
     "background": "#F6F9F5",
-
-    "justifyItems": "flex-end",
-    "alignItems": "flex-end",
 
     "&:hover": {
       boxShadow: " 0px 2px 12px -1px #565454;",

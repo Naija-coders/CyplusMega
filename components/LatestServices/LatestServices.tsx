@@ -25,7 +25,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import CustomLoader from "../CustomLoader";
 import ToggleButton from "@mui/material/ToggleButton";
 import Divider from "@mui/material/Divider";
-
+import CustomCardSwiper from "../CustomCard/CardSwiper";
 import {
   StyledLink,
   StyledCard,
@@ -41,6 +41,7 @@ import {
   CustomContainer,
   CustomDivContainer,
   LatestServicesDiv,
+  CoverCard,
 } from "./styles";
 import { StyledAbout } from "../Categories/styles";
 type Props = {};
@@ -281,109 +282,93 @@ const LatestServices: React.FC<Props> = ({}) => {
                           marginLeft: "1%",
                         }}
                       >
-                        <StyledCard
-                          key={Math.random()}
-                          elevation={6}
-                          onClick={() => {
-                            route.push("/services?ad=" + item?.services_id);
-                          }}
-                        >
+                        <StyledCard key={Math.random()} elevation={6}>
                           <div
                             style={{
-                              width: "100%",
+                              display: "flex",
+                              flexDirection: "column",
+                              justifyContent: "space-between",
+                              height: "380px",
                             }}
                           >
-                            <div
-                              style={{
-                                display: "flex",
-                              }}
-                            >
-                              <img
-                                src={item.image}
-                                style={{
-                                  height: "200px",
-                                  width: "100%",
-                                  objectFit: "cover",
-                                }}
-                              ></img>
+                            <div style={{ height: "200px", width: "100%" }}>
+                              {" "}
+                              <CustomCardSwiper />
                             </div>
                             <div
-                              style={{
-                                display: "flex",
-                                flexDirection: "column",
-                                marginLeft: "4%",
-                                marginTop: "2%",
+                              style={{ display: "flex", padding: "0.7rem" }}
+                              onClick={() => {
+                                route.push("/services?ad=" + item?.services_id);
                               }}
                             >
-                              <div style={{ display: "flex" }}>
-                                <span>
-                                  <Avatar />
-                                </span>
-                                <div
-                                  style={{
-                                    display: "flex",
-                                    flexDirection: "column",
-                                  }}
-                                >
-                                  <span>
-                                    <TextTypography>{item.name}</TextTypography>
-                                  </span>
-                                  <span>
-                                    <TextTypography>
-                                      {moment(item.updated_at).format(
-                                        "MMM Do "
-                                      )}
-                                    </TextTypography>
-                                  </span>
-                                </div>
-                              </div>
                               <span>
-                                <StyledTypography>{item.type}</StyledTypography>
-                                <StyledTypographyHeader>
-                                  {item.about}
-                                </StyledTypographyHeader>
+                                <Avatar />
                               </span>
                               <div
                                 style={{
-                                  height: "50px",
-                                  background: "#152238",
-
-                                  width: "114%",
-                                  marginLeft: "-4.5%",
                                   display: "flex",
-                                  marginTop: "5%",
-                                  justifyContent: "flex-end",
-                                  alignSelf: "flex-end",
-                                  justifyItems: "flex-end",
-
-                                  alignItems: "flex-end",
+                                  flexDirection: "column",
                                 }}
                               >
-                                <div
-                                  style={{
-                                    display: "flex",
-                                    width: "100%",
+                                <span>
+                                  <TextTypography>{item.name}</TextTypography>
+                                </span>
+                                <span>
+                                  <TextTypography>
+                                    {moment(item.updated_at).format("MMM Do ")}
+                                  </TextTypography>
+                                </span>
+                              </div>
+                            </div>
+                            <div style={{ marginLeft: "1rem" }}>
+                              <StyledTypography>{item.type}</StyledTypography>
+                            </div>
+                            <div style={{ marginLeft: "1rem" }}>
+                              <StyledTypographyHeader>
+                                {item.about}
+                              </StyledTypographyHeader>
+                            </div>
+                            <div
+                              style={{
+                                height: "50px",
+                                background: "#152238",
 
-                                    alignSelf: "flex-end",
+                                width: "114%",
 
-                                    justifyContent: "space-evenly",
-                                    alignItems: "center",
-                                  }}
+                                display: "flex",
+                                marginTop: "5%",
+                                justifyContent: "flex-end",
+                                alignSelf: "flex-end",
+                                justifyItems: "flex-end",
+
+                                alignItems: "flex-end",
+                              }}
+                            >
+                              <div
+                                style={{
+                                  display: "flex",
+                                  width: "100%",
+
+                                  alignSelf: "flex-end",
+                                  marginLeft: "10px",
+
+                                  justifyContent: "space-evenly",
+                                  alignItems: "center",
+                                }}
+                              >
+                                <StyledIconButton
+                                  key={item.services_id}
+                                  onClick={handleOpen}
                                 >
-                                  <StyledIconButton
-                                    key={item.services_id}
-                                    onClick={handleOpen}
-                                  >
-                                    <FavoriteBorderIcon
-                                      style={{ color: "white" }}
-                                    />
-                                  </StyledIconButton>
+                                  <FavoriteBorderIcon
+                                    style={{ color: "white" }}
+                                  />
+                                </StyledIconButton>
 
-                                  <StyledPrice> STARTING AT</StyledPrice>
-                                  <StyledPriceValue>
-                                    ${item.price}
-                                  </StyledPriceValue>
-                                </div>
+                                <StyledPrice> STARTING AT</StyledPrice>
+                                <StyledPriceValue>
+                                  ${item.price}
+                                </StyledPriceValue>
                               </div>
                             </div>
                           </div>
