@@ -38,7 +38,7 @@ export const StyledTabs = styled((props: StyledTabsProps) => (
     justifyContent: "center",
     backgroundColor: "transparent",
     minHeight: "5px",
-  },
+  },     
 
   "& .MuiTabs-indicatorSpan": {
     width: "80%",

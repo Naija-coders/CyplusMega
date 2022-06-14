@@ -59,7 +59,8 @@ export default function Banner({}: Props) {
                   <InputAdornment position="start">
                     <SearchIcon />
                   </InputAdornment>
-                ),
+                ),         
+                
               }}
               size="small"
               variant="outlined"

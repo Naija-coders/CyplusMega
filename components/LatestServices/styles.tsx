@@ -1,4 +1,5 @@
 import { makeStyles, withStyles } from "@mui/styles";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import {
   Paper,
   Button,
@@ -32,7 +33,9 @@ export const CustomContainer = styled("div")(
   sx({
     display: " flex",
     marginLeft: { md: "5%", lg: "0%", xl: "5%" },
+    width: { md: "100%", lg: "100%", xl: "95%" },
     flexDirection: " column",
+  
   })
 );
 export const CustomDivContainer = styled("div")(
@@ -109,7 +112,6 @@ export const LatestServicesDiv = styled("div")(
       xl: "auto auto auto auto auto",
     },
     overflowX: "scroll",
-    columnGap: "20px",
 
     justifyContent: "space-around",
   })
