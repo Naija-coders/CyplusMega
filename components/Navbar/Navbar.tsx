@@ -326,7 +326,11 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
   return (
     <StyledAppBar
       position={isfixed ? "relative" : "fixed"}
-      sx={{ width: isfixed ? { xs: "110%" } : { xs: "100%" } }}
+      sx={{
+        width: isfixed
+          ? { xs: "110%", md: "100%" }
+          : { xs: "100%", md: "100%" },
+      }}
     >
       <div className="navbar__container">
         <div className="navbar__mainwrapper">
