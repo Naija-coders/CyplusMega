@@ -119,13 +119,13 @@ export default function Service() {
   }, [similar]);
   console.log("similar", similar);
   const handleData = () => {
-    state.servicedata.map((item: any) => {
+    offers?.map((item: any) => {
       setTypes(item.type);
     });
-    recommended = state.mainservices.filter(
-      (items: any) => items?.type == types
-    );
-    setSimilar(recommended);
+    Clientapi.get("/api/company/categories").then((response) => {
+      recommended = response.data.filter((items: any) => items?.type == types);
+      setSimilar(recommended);
+    });
   };
 
   return (
@@ -203,7 +203,7 @@ export default function Service() {
         <DivVal>
           <StyledDiv>
             {" "}
-            {state.servicedata.map((item: any) => (
+            {offers?.map((item: any) => (
               <StyledWrapper key={Math.random()}>
                 <StyledSubWrapper>
                   <MainSub>
@@ -305,7 +305,7 @@ export default function Service() {
                         {similar?.slice(0, 6)?.map((item: any) => (
                           <div key={Math.random()}>
                             <CustomCard
-                              id={item.service_id}
+                              id={item.services_id}
                               name={item.name}
                               type={item.type}
                               about={item.about}

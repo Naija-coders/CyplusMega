@@ -44,7 +44,7 @@ const CustomCard: React.FC<Props> = ({
             marginLeft: "1%",
           }}
         >
-          <StyledCard key={Math.random()} elevation={6}>
+          <StyledCard key={id} elevation={6}>
             <div
               style={{
                 display: "flex",
