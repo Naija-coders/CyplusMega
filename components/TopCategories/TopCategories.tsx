@@ -272,13 +272,7 @@ const LatestServices: React.FC<Props> = ({}) => {
                           marginLeft: "1%",
                         }}
                       >
-                        <StyledCard
-                          key={Math.random()}
-                          elevation={6}
-                          onClick={() => {
-                            route.push("/services?ad=" + item?.services_id);
-                          }}
-                        >
+                        <StyledCard key={Math.random()} elevation={6}>
                           <div
                             style={{
                               display: "flex",
@@ -291,7 +285,12 @@ const LatestServices: React.FC<Props> = ({}) => {
                               {" "}
                               <CustomCardSwiper />
                             </div>
-                            <div style={{ display: "flex", padding: "0.7rem" }}>
+                            <div
+                              style={{ display: "flex", padding: "0.7rem" }}
+                              onClick={() => {
+                                route.push("/services?ad=" + item?.services_id);
+                              }}
+                            >
                               <span>
                                 <Avatar />
                               </span>

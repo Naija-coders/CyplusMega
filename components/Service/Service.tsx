@@ -1,8 +1,5 @@
 import React from "react";
-import Paper from "@mui/material/Paper";
-import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Box from "@mui/material/Box";
 import { Dispatch } from "redux";
 
 import { actionCreators } from "../../state";
@@ -42,6 +39,34 @@ import {
   StyledContactMobile,
   ContainerDiv,
 } from "./styles";
+import Typography from "@mui/material/Typography";
+interface LinkTabProps {
+  label?: string;
+  href?: string;
+  value?: any;
+}
+
+function LinkTab(props: LinkTabProps) {
+  return (
+    <Tab
+      component="a"
+      onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {}}
+      sx={{
+        "textTransform": "none",
+
+        "marginRight": "20px",
+        "color": "grey",
+        "&.Mui-selected": {
+          color: "#152238",
+        },
+        "&.Mui-focusVisible": {
+          backgroundColor: "rgba(100, 95, 228, 0.32)",
+        },
+      }}
+      {...props}
+    />
+  );
+}
 export default function Service() {
   const [value, setValue] = React.useState("Overview");
 
@@ -59,9 +84,11 @@ export default function Service() {
   const dispatch: Dispatch<any> = useDispatch();
   const state = useSelector((state: RootState) => state.appstate);
   const [favorite, setFavorite] = React.useState(false);
-
+  const [types, setTypes] = React.useState<any>();
+  const [offers, setOffers] = React.useState<any>();
   let offer = [];
-  //card color #D9D9D9
+  let recommended = [];
+
   const handleFavorite = () => {
     setFavorite(!favorite);
   };
@@ -71,15 +98,29 @@ export default function Service() {
       offer = response.data.filter(
         (items: any) => items?.services_id == handle
       );
+      setOffers(offer);
       getmainservices(offer);
-      console.log("the service ad data is ", offer);
     });
   }
   React.useEffect(() => {
     getServices();
   }, []);
+  React.useEffect(() => {
+    handleData();
+    recommendService();
+  });
 
-  console.log("state service", state.servicedata);
+  const handleData = () => {
+    state.servicedata.map((item: any) => {
+      setTypes(item.type);
+    });
+  };
+  function recommendService() {
+    recommended = state.mainservices.filter(
+      (items: any) => items?.type == types
+    );
+  }
+
   return (
     <ContainerWrapper>
       <div
@@ -105,13 +146,21 @@ export default function Service() {
                 onChange={handleChange}
                 aria-label="secondary StyledTabs example"
               >
-                <StyledTab value="Overview" label="Overview" />
+                <LinkTab value="Overview" label="Overview" href={"#Overview"} />
 
-                <StyledTab value="Description" label="Description" />
+                <LinkTab
+                  value="Description"
+                  label="Description"
+                  href={"#Description"}
+                />
 
-                <StyledTab value="About" label="About seller" />
-                <StyledTab value="Similar" label="Similar services" />
-                <StyledTab value="Reviews" label="Reviews" />
+                <LinkTab value="About" label="About seller" href={"#About"} />
+                <LinkTab
+                  value="Similar"
+                  label="Similar services"
+                  href={"#Similar"}
+                />
+                <LinkTab value="Reviews" label="Reviews" href="#Reviews" />
               </StyledTabs>
 
               <IconButton
@@ -151,7 +200,11 @@ export default function Service() {
               <StyledWrapper key={Math.random()}>
                 <StyledSubWrapper>
                   <MainSub>
-                    <h1 style={{ color: "#152238" }}>{item.About}</h1>
+                    <Typography
+                      style={{ color: "#152238", fontSize: "1.4rem" }}
+                    >
+                      {item.About}
+                    </Typography>
                     <ContainerDiv id="Overview">
                       <div
                         style={{

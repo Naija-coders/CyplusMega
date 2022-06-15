@@ -19,14 +19,24 @@ type Props = {
   price?: any;
   updated_at?: any;
 };
+let value;
 
 const CustomCardSwiper: React.FC<Props> = ({}) => {
+  const [nav, setNav] = useState(false);
+  const [anchorElmenu, setAnchorElmenu] = React.useState<null | HTMLElement>(
+    null
+  );
+
   return (
-    <>
+    <div
+      style={{ height: "100%" }}
+      onMouseEnter={() => setNav(true)}
+      onMouseLeave={() => setNav(false)}
+    >
       <Swiper
         effect={"flip"}
-        grabCursor={true}
-        navigation={true}
+        grabCursor={false}
+        navigation={nav}
         modules={[EffectFlip, Pagination, Navigation]}
         className="mySwiper"
       >
@@ -49,7 +59,7 @@ const CustomCardSwiper: React.FC<Props> = ({}) => {
           <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 };
 export default CustomCardSwiper;

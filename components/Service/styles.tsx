@@ -71,7 +71,7 @@ export const StyledContact = styled("div")(
     zIndex: 1,
 
     height: "100%",
-    width: { md: "30%", xl: "25%" },
+    width: { md: "300px", lg: "300px", xl: "300px" },
     gap: "10px",
     marginTop: { xs: "20px", md: "30px" },
     marginRight: "20px",
@@ -86,7 +86,7 @@ export const StyledWrapper = styled("div")(
     flexDirection: { xs: "column", md: "row" },
     width: { xs: "110%", md: "100%" },
     marginLeft: { md: "0%", lg: "5%", xl: "5%" },
-    justifyContent: "space-between",
+    justifyContent: "space-evenly",
   })
 );
 export const MainSub = styled("div")(
@@ -169,7 +169,7 @@ export const StyledImageDiv = styled("div")(
     flexDirection: "column",
     width: { xs: "100%", md: "90%" },
     justifyContent: "center",
-
+    alignItems: "center",
     height: { xs: "300px", md: "500px" },
     padding: { xs: "0px", md: "1rem" },
   })
