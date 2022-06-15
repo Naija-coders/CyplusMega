@@ -302,7 +302,7 @@ export default function Service() {
                           width: "100%",
                         }}
                       >
-                        {similar?.slice(0, 9)?.map((item: any) => (
+                        {similar?.slice(0, 6)?.map((item: any) => (
                           <div key={Math.random()}>
                             <CustomCard
                               id={item.service_id}
