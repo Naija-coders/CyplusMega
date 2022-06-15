@@ -297,13 +297,24 @@ export default function Service() {
                         style={{
                           display: "flex",
                           padding: "10px",
-
-                          overflow: "scroll",
+                          gap: "20px",
+                          overflowX: "scroll",
+                          width: "100%",
                         }}
                       >
-                        <CustomCard />
-                        <CustomCard />
-                        <CustomCard />
+                        {similar?.slice(0, 9)?.map((item: any) => (
+                          <div key={Math.random()}>
+                            <CustomCard
+                              id={item.service_id}
+                              name={item.name}
+                              type={item.type}
+                              about={item.about}
+                              price={item.price}
+                              updated_at={item.updated_at}
+                              image={item.image}
+                            />
+                          </div>
+                        ))}
                       </div>
                     </ContainerDiv>
                   </MainSub>
