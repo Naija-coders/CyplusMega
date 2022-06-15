@@ -55,6 +55,18 @@ export const storeservices = (services: any) => {
     
     }
 }
+
+export const recommendedServices = (recommendedservices: any) => {
+    return (dispatch:Dispatch<Action> ) => {
+        dispatch({
+            type: ActionType.RECOMMENDED,
+            payload:recommendedservices
+        })
+    
+    }
+}
+
+
 export const mainServices = (mainservices: any) => {
     return (dispatch:Dispatch<Action> ) => {
         dispatch({

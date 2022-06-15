@@ -9,6 +9,7 @@ export enum ActionType {
     FAVORITE="favorites",
     USERSERVICE="userservice",
     ALLSERVICE="allservice",
+    RECOMMENDED="recommended",
 
     
 }

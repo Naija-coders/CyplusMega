@@ -40,4 +40,8 @@ interface AllserviceAction {
     type:ActionType.ALLSERVICE,
     payload:any
 }
-export type Action = DepositAction | WithdrawAction | BankruptAction | UserAction | CategoryAction | ServiceAction | MainServiceAction | FavoriteAction | UserserviceAction | AllserviceAction;
+interface RecommendedAction {
+    type:ActionType.RECOMMENDED,
+    payload:any
+}
+export type Action = DepositAction | WithdrawAction | BankruptAction | UserAction | CategoryAction | ServiceAction | MainServiceAction | FavoriteAction | UserserviceAction | AllserviceAction | RecommendedAction;

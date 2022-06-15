@@ -18,7 +18,8 @@ const initialState = {
     userfavorite : [],
     userservices: !!servicedata,
     servicedata: [],
-    allservicedata: []
+    allservicedata: [],
+    recommended:[],
     
 
     
@@ -66,6 +67,12 @@ const reducer = (state: any = initialState, action: Action): any => {
                     ...state,
                     allservicedata: action.payload
                 }
+                case ActionType.RECOMMENDED:
+                    return{
+                        ...state,
+                        recommended:action.payload
+                        
+                    }
 
         
         default:

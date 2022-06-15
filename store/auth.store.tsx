@@ -52,6 +52,7 @@ const getfavorite = (draft: any, payload: any) => {
   draft.user = initialAuthState.favorite;
   return draft;
 };
+
 const AuthReducer = (draft: any, action: any) => {
   const actions: any = {
     login: () => {

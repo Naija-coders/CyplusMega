@@ -86,13 +86,18 @@ export default function Service() {
   const [favorite, setFavorite] = React.useState(false);
   const [types, setTypes] = React.useState<any>();
   const [offers, setOffers] = React.useState<any>();
+  const [similar, setSimilar] = React.useState<any>([]);
+
   let offer = [];
   let recommended = [];
 
   const handleFavorite = () => {
     setFavorite(!favorite);
   };
-  const { getmainservices } = bindActionCreators(actionCreators, dispatch);
+  const { getmainservices, recommendedServices } = bindActionCreators(
+    actionCreators,
+    dispatch
+  );
   function getServices() {
     Clientapi.get(`/api/company/services`).then((response) => {
       offer = response.data.filter(
@@ -106,20 +111,22 @@ export default function Service() {
     getServices();
   }, []);
   React.useEffect(() => {
-    handleData();
-    recommendService();
-  });
+    if (similar.length <= 0) {
+      handleData();
+    }
 
+    recommendedServices(similar);
+  }, [similar]);
+  console.log("similar", similar);
   const handleData = () => {
     state.servicedata.map((item: any) => {
       setTypes(item.type);
     });
-  };
-  function recommendService() {
     recommended = state.mainservices.filter(
       (items: any) => items?.type == types
     );
-  }
+    setSimilar(recommended);
+  };
 
   return (
     <ContainerWrapper>
