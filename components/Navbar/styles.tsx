@@ -49,7 +49,7 @@ export const StyledAppBar = styled(AppBar)(
     background: "#152238",
     opacity: "100%",
 
-    width: { xs: "110%", md: "100%" },
+    width: { xs: "110%", sm: "100%", md: "100%" },
   })
 );
 //BUTTON MAIN COLOR IS #F68B1E
