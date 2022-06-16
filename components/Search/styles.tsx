@@ -15,7 +15,7 @@ import {
 
 export const StyledTextField = styled(TextField)(
   sx({
-    "minWidth": { xs: "84%", sm: "100%", md: "100%", lg: "100%", xl: "800px" },
+    "minWidth": { xs: "84%", sm: "100%", md: "100%", lg: "100%", xl: "700px" },
     "border": "none",
     "borderStyle": "none",
     "display": { xs: "none", md: "flex", lg: "flex", xl: "flex" },

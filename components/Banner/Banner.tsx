@@ -41,15 +41,14 @@ export default function Banner({}: Props) {
               display: "flex",
               height: "300px",
               justifyContent: "center",
-              background:
-                "linear-gradient(164.22deg, #23395D 11.02%, rgba(16, 101, 240, 0) 112.14%) ",
+              background: `url("happybanner.jpg")`,
 
               alignItems: "center",
 
               flexDirection: "column",
             }}
           >
-            <StyledTypography>Great Services</StyledTypography>{" "}
+            {/*  <StyledTypography>Great Services</StyledTypography>{" "}
             <SubTypography>{t("every_service")}</SubTypography>
             <br></br>
             <StyledTextField
@@ -59,8 +58,7 @@ export default function Banner({}: Props) {
                   <InputAdornment position="start">
                     <SearchIcon />
                   </InputAdornment>
-                ),         
-                
+                ),
               }}
               size="small"
               variant="outlined"
@@ -89,7 +87,8 @@ export default function Banner({}: Props) {
             }}
           >
             Welcome to a place where you find reliable services
-          </Typography>
+          </Typography>*/}
+          </div>
         </div>
       </div>
     </>
