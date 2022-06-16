@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Button, Divider, Typography } from "@mui/material";
 import React from "react";
 import {
   StyledButton,
@@ -6,12 +6,20 @@ import {
   SubTypography,
   StyledTextField,
   StyledDiv,
+  StyledPaper,
+  StyledContainers,
+  CustomContainer,
+  CustomDivContainer,
   StyledDivButton,
+  SubText,
+  Text,
 } from "./styles";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { useSelector } from "react-redux";
 import { RootState } from "../../state/reducers";
 import SearchIcon from "@mui/icons-material/Search";
 import { InputAdornment } from "@mui/material";
+import Paper from "@mui/material/Paper";
 
 import { useTranslation } from "react-i18next";
 
@@ -25,38 +33,56 @@ export default function Banner({}: Props) {
     <>
       <br></br>
       <div className="maindiv">
-        <div
-          style={{
-            position: "relative",
-            marginTop: "50px",
-
-            background:
-              "linear-gradient(164.22deg, #23395D 11.02%, rgba(16, 101, 240, 0) 112.14%) !important",
-          }}
-        >
-          <div
-            style={{
-              width: "100%",
-
-              display: "flex",
-              height: "300px",
-              justifyContent: "center",
-
-              alignItems: "center",
-
-              flexDirection: "column",
-            }}
-          >
+        <CustomContainer>
+          <CustomDivContainer>
             <div
               style={{
-                background: `url("happybanner.jpg")`,
-                width: "100%",
-
-                display: "flex",
-                height: "300px",
+                position: "relative",
+                marginTop: "50px",
               }}
-            ></div>
-            {/*  <StyledTypography>Great Services</StyledTypography>{" "}
+            >
+              <StyledContainers>
+                <StyledPaper elevation={1}>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      gap: "20px",
+                      padding: "20px",
+                      width: "100%",
+                    }}
+                  >
+                    <Text align="center">Post a Service</Text>
+                    <Divider sx={{ width: "100%" }} />
+
+                    <SubText align="center">
+                      Advertise your business for free
+                    </SubText>
+                    <StyledButton
+                      variant="contained"
+                      endIcon={<ArrowRightAltIcon />}
+                    >
+                      Post Now{" "}
+                    </StyledButton>
+                  </div>
+                </StyledPaper>
+                <div>
+                  {" "}
+                  <img
+                    src="happybanner.jpg"
+                    style={{
+                      width: "100%",
+                      objectFit: "cover",
+
+                      display: "flex",
+                      height: "300px",
+                      opacity: "100%",
+                    }}
+                  />
+                </div>
+
+                {/*  <StyledTypography>Great Services</StyledTypography>{" "}
             <SubTypography>{t("every_service")}</SubTypography>
             <br></br>
             <StyledTextField
@@ -96,8 +122,10 @@ export default function Banner({}: Props) {
           >
             Welcome to a place where you find reliable services
           </Typography>*/}
-          </div>
-        </div>
+              </StyledContainers>
+            </div>
+          </CustomDivContainer>
+        </CustomContainer>
       </div>
     </>
   );

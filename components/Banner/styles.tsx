@@ -13,7 +13,18 @@ import {
   ThemeProvider,
   experimental_sx as sx,
 } from "@mui/system";
-
+export const CustomContainer = styled("div")(
+  sx({
+    display: " flex",
+    marginLeft: { md: "5%", lg: "0%", xl: "5%" },
+    flexDirection: " column",
+  })
+);
+export const CustomDivContainer = styled("div")(
+  sx({
+    width: { md: "95%", lg: "93%", xl: "100%" },
+  })
+);
 export const mainStyleDiv = styled("div")(
   sx({
     width: "100%",
@@ -22,19 +33,57 @@ export const mainStyleDiv = styled("div")(
       "linear-gradient(164.22deg, #23395D 11.02%, rgba(16, 101, 240, 0) 112.14%) !important",
   })
 );
+export const StyledContainers = styled("div")(
+  sx({
+    width: "98%",
+
+    display: "flex",
+    marginLeft: "5%",
+    height: "300px",
+    justifyContent: "space-between",
+    gap: "30px",
+
+    alignItems: "center",
+
+    flexDirection: { xs: "column-reverse", md: "row" },
+  })
+);
+
+export const Text = styled(Typography)(
+  sx({
+    fontSize: "1.4rem",
+    fontWeight: "bold",
+  })
+);
+export const SubText = styled(Typography)(
+  sx({
+    fontSize: "1.3rem",
+  })
+);
+export const StyledPaper = styled(Paper)(
+  sx({
+    width: { xs: "100%", md: "400px", lg: "400px", xl: "300px" },
+    height: "90%",
+  })
+);
+
 export const StyledButton = styled(Button)(
   sx({
-    "width": "50%",
-    "color": "white",
-    "fontFamily": "serif",
+    "borderStyle": "solid",
+
+    "fontFamily": "Avenir Light",
     "textTransform": "none",
-    "marginLeft": "10px",
-    "background": "#F68B1E",
+    "width": "80%",
+    "background": "#222325",
+    "color": "white",
+    "fontSize": "13px",
     "&:hover": {
-      background: "#FFA500",
+      background: "white",
+      color: "#222325",
     },
   })
 );
+
 export const StyledTypography = styled(Typography)(
   sx({
     color: "whitesmoke",

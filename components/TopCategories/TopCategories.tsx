@@ -21,7 +21,11 @@ const LatestServices: React.FC<Props> = ({}) => {
   console.log("displaying mainservices", state.mainservices);
   return (
     <div>
-      <ReuseableCategory title={"All Services"} data={state.allservicedata} />
+      <ReuseableCategory
+        title={"All Services"}
+        data={state.allservicedata}
+        quantity={40}
+      />
     </div>
   );
 };

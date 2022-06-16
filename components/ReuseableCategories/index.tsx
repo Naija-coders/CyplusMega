@@ -36,8 +36,9 @@ import {
 type Props = {
   title: any;
   data?: any;
+  quantity: number;
 };
-const ReuseableCategory: React.FC<Props> = ({ data, title }) => {
+const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
   const state = useSelector((state: RootState) => state.appstate);
   const { AuthState } = useContext<any>(StateContext);
   const { AuthDispatcher } = useContext<any>(DispatchContext);
@@ -251,7 +252,7 @@ const ReuseableCategory: React.FC<Props> = ({ data, title }) => {
                 />
               ) : (
                 <LatestServicesDiv>
-                  {data?.slice(0, 20)?.map(
+                  {data?.slice(0, quantity)?.map(
                     (
                       item: {
                         type:
