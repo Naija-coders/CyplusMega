@@ -104,7 +104,7 @@ const AvailableService = (props: Props) => {
       <>
         <div className="navbar__catwrappermobile">
           <div className="navbar__sizewidth">
-            <Paper elevation={2}>
+            <Paper elevation={0}>
               <StyledBox>
                 <StyledCustomTypography
                   style={{
@@ -209,7 +209,7 @@ const AvailableService = (props: Props) => {
       <div className="navbar__mycontainer">
         <CustomContainer>
           <CustomDivContainer>
-            <Paper elevation={2}>
+            <Paper elevation={1}>
               <StyledBox>
                 <StyledCustomTypography
                   variant="h5"

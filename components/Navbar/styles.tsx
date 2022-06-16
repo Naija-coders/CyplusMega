@@ -19,7 +19,7 @@ import {
 
 export const StyledTypography = styled(Typography)(
   sx({
-    color: "#fffff",
+    color: "#222325",
 
     fontFamily: "GeoticaW01-FourOpen",
     fontSize: { xs: "1.3rem", md: "28px" },
@@ -46,7 +46,7 @@ export const StyledAppBar = styled(AppBar)(
     justifyContent: "center",
 
     display: "flex",
-    background: "#152238",
+    background: "white",
     opacity: "100%",
 
     width: { xs: "110%", sm: "100%", md: "100%" },
@@ -68,12 +68,13 @@ export const StyledSearchSubmitButton = styled(Button)(
 export const StyledTextField = styled(TextField)(
   sx({
     minWidth: "40%",
+    color: "#222325",
   })
 );
 export const StyledButton = styled(Button)(
   sx({
     display: { xs: "none", md: "flex" },
-    color: "#ffff",
+    color: "#222325",
     textTransform: "none",
   })
 );
@@ -140,18 +141,18 @@ export const StyledDiv = styled("div")(
 export const StyledMainButton = styled(Button)(
   sx({
     "display": { xs: "none", md: "flex" },
-    "border": "1px #035772 ",
+
     "height": "40px",
     "borderStyle": "solid",
     "borderRadius": "20px",
     "fontFamily": "Avenir Light",
     "textTransform": "none",
-    "background": "#F6F9F5",
-    "color": "#152238",
+    "background": "#222325",
+    "color": "white",
     "fontSize": "13px",
     "&:hover": {
-      background: "#035772",
-      color: "white",
+      background: "white",
+      color: "#222325",
     },
   })
 );

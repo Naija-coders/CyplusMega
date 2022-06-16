@@ -18,8 +18,8 @@ const LanguageMenu = dynamic(() => import("../LanguageMenu"), {
 
 //plus button
 import AddBoxRoundedIcon from "@mui/icons-material/AddBoxRounded";
-import NotificationsIcon from "@mui/icons-material/Notifications";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
+import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import Search from "../Search/Search";
 
 import Divider from "@mui/material/Divider";
@@ -45,7 +45,8 @@ import {
 
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { useRouter } from "next/router";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import {
   StyledAppBar,
   StyledButton,
@@ -342,7 +343,7 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
             }}
           >
             <MobileMenu onClick={toggleDrawer("left", true)}>
-              <MenuRoundedIcon sx={{ color: "white" }} />
+              <MenuRoundedIcon sx={{ color: "black" }} />
             </MobileMenu>
             <SwipeableDrawer
               anchor={"left"}
@@ -368,16 +369,16 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
             Post a Service{" "}
             <KeyboardArrowDown sx={{ transform: "rotate(270deg)" }} />
           </StyledMainButton>
-          <StyledIconButton sx={{ color: "#ffff" }}>
-            <NotificationsIcon />
+          <StyledIconButton sx={{ color: "#222325" }}>
+            <NotificationsNoneOutlinedIcon />
           </StyledIconButton>
           <StyledIconButton
             onClick={() => {
               route.push("/my-favorite");
             }}
-            sx={{ color: "#ffff" }}
+            sx={{ color: "#222325" }}
           >
-            <FavoriteIcon />
+            <FavoriteBorderOutlinedIcon />
           </StyledIconButton>
 
           {/*      <p
@@ -447,14 +448,17 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
                     right: 0,
                   }}
                 >
-                  {/*    <StyledLoginIcon sx={{ color: "#ffff" }}>
-                    <FavoriteIcon sx={{ fontSize: "1.3rem" }} />
+                  {/*    <StyledLoginIcon sx={{ color: "#222325" }}>
+                    <FavoriteBorderOutlinedIcon sx={{ fontSize: "1.3rem" }} />
                   </StyledLoginIcon>
 
-                  <StyledLoginIcon sx={{ color: "#ffff" }}>
-                    <NotificationsIcon sx={{ fontSize: "1.3rem" }} />
+                  <StyledLoginIcon sx={{ color: "#222325" }}>
+                    <NotificationsNoneOutlinedIcon sx={{ fontSize: "1.3rem" }} />
                   </StyledLoginIcon> */}
-                  <StyledLoginIcon sx={{ color: "#ffff" }} onClick={handleOpen}>
+                  <StyledLoginIcon
+                    sx={{ color: "#222325" }}
+                    onClick={handleOpen}
+                  >
                     <Avatar sx={{ height: "1.3rem", width: "1.3rem" }} />
                   </StyledLoginIcon>
                 </div>
@@ -480,14 +484,17 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
                     right: 0,
                   }}
                 >
-                  {/*     <StyledLoginIcon sx={{ color: "#ffff" }}>
-                    <FavoriteIcon sx={{ fontSize: "0.8rem" }} />
+                  {/*     <StyledLoginIcon sx={{ color: "#222325" }}>
+                    <FavoriteBorderOutlinedIcon sx={{ fontSize: "0.8rem" }} />
                   </StyledLoginIcon> */}
 
-                  {/*      <StyledLoginIcon sx={{ color: "#ffff" }}>
-                    <NotificationsIcon sx={{ fontSize: "0.8rem" }} />
+                  {/*      <StyledLoginIcon sx={{ color: "#222325" }}>
+                    <NotificationsNoneOutlinedIcon sx={{ fontSize: "0.8rem" }} />
                   </StyledLoginIcon> */}
-                  <StyledLoginIcon sx={{ color: "#ffff" }} onClick={handleOpen}>
+                  <StyledLoginIcon
+                    sx={{ color: "#222325" }}
+                    onClick={handleOpen}
+                  >
                     <PersonIcon sx={{ fontSize: "1.3rem" }} />
                   </StyledLoginIcon>
                 </div>

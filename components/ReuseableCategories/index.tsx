@@ -211,7 +211,7 @@ const ReuseableCategory: React.FC<Props> = ({ data, title }) => {
       <div className="navbar__mycontainer" style={{ marginTop: "-40px" }}>
         <CustomContainer>
           <CustomDivContainer>
-            <Paper elevation={2} sx={{ height: "110%" }}>
+            <Paper elevation={0} sx={{ height: "110%", background: "#f6f9f5" }}>
               <StyledBox>
                 <StyledCustomTypography
                   variant="h5"
@@ -247,7 +247,7 @@ const ReuseableCategory: React.FC<Props> = ({ data, title }) => {
                 />
               ) : (
                 <LatestServicesDiv>
-                  {data?.slice(0, 9)?.map(
+                  {data?.slice(0, 20)?.map(
                     (
                       item: {
                         type:
@@ -274,7 +274,7 @@ const ReuseableCategory: React.FC<Props> = ({ data, title }) => {
                           marginLeft: "1%",
                         }}
                       >
-                        <StyledCard key={Math.random()} elevation={6}>
+                        <StyledCard key={Math.random()} elevation={0}>
                           <div
                             style={{
                               display: "flex",
@@ -315,15 +315,15 @@ const ReuseableCategory: React.FC<Props> = ({ data, title }) => {
                             <div style={{ marginLeft: "1rem" }}>
                               <StyledTypography>{item.type}</StyledTypography>
                             </div>
-                            <div style={{ marginLeft: "1rem" }}>
+                            <div style={{ marginLeft: "1rem", width: "92%" }}>
                               <StyledTypographyHeader>
-                                {item.about}
+                                {item.about.slice(0, 40)}
                               </StyledTypographyHeader>
                             </div>
                             <div
                               style={{
                                 height: "50px",
-                                background: "#152238",
+                                background: "#222325",
 
                                 width: "114%",
 

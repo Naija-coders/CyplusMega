@@ -152,7 +152,6 @@ export const CustomDivContainer = styled("div")(
 );
 export const StyledBox = styled(Box)(
   sx({
-    background: "#152238",
     display: "flex",
     justifyContent: "space-between",
     justifyItems: "center",
@@ -164,8 +163,9 @@ export const StyledBox = styled(Box)(
 );
 export const StyledCustomTypography = styled(Typography)(
   sx({
-    fontSize: "30px",
+    fontSize: "24px",
     fontFamily: "caudex",
-    color: "#ffff",
+    color: "#222325",
+    fontWeight: "bold",
   })
 );

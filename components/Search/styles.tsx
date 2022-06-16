@@ -15,18 +15,18 @@ import {
 
 export const StyledTextField = styled(TextField)(
   sx({
-    "minWidth": { xs: "84%", sm: "100%", md: "300px", lg: "100%", xl: "300px" },
+    "minWidth": { xs: "84%", sm: "100%", md: "100%", lg: "100%", xl: "800px" },
     "border": "none",
     "borderStyle": "none",
-    "display": { xs: "none", md: "none", lg: "flex", xl: "flex" },
+    "display": { xs: "none", md: "flex", lg: "flex", xl: "flex" },
 
     "background": "#ffff",
-    "borderRadius": "20px",
+    "borderRadius": "2px",
     "marginRight": "30px !important",
 
     "outline": 0,
     "& fieldset": {
-      borderRadius: "20px",
+      borderRadius: "2px",
     },
   })
 );

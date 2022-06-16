@@ -20,18 +20,18 @@ import {
 export const CustomSelect = styled(Select)(
   sx({
     ".MuiSelect-iconOutlined": {
-      color: "white",
+      color: "black",
     },
 
     ".MuiSelect-outlined": {
-      background: "#152238",
-      color: "white",
-      border: "#152238 ",
+      background: "white",
+      color: "black",
+      border: "white ",
       borderRadius: "20px",
     },
     "outline": 0,
     "& fieldset": {
-      border: "#152238 ",
+      border: "white ",
     },
   })
 );

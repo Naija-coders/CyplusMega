@@ -39,7 +39,7 @@ const Home: NextPage = () => {
   }, [categories]);
   console.log("checking via the index", categories);
   return (
-    <Layout>
+    <Layout showSearch={true}>
       {" "}
       <div>
         <Banner />
