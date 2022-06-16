@@ -116,7 +116,7 @@ const CustomCard: React.FC<Props> = ({
               <div
                 style={{
                   height: "50px",
-                  background: "#152238",
+                  background: "green",
 
                   width: "114%",
 

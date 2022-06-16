@@ -209,7 +209,10 @@ const ReuseableCategory: React.FC<Props> = ({ data, title }) => {
   return (
     <>
       {Rendermobile()}
-      <div className="navbar__mycontainer" style={{ marginTop: "-40px" }}>
+      <div
+        className="navbar__mycontainer"
+        style={{ marginTop: "-40px", position: "relative" }}
+      >
         <CustomContainer>
           <CustomDivContainer>
             <Paper elevation={0} sx={{ height: "110%", background: "#f6f9f5" }}>

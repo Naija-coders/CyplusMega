@@ -35,48 +35,51 @@ export default function Recommended() {
   console.log("sorted data", recommend);
 
   return (
-    <div className="navbar__mycontainer">
-      <CustomContainer>
-        <CustomDivContainer>
-          <Paper elevation={0} sx={{ height: "110%", background: "#f6f9f5" }}>
-            <StyledBox>
-              <div
-                style={{ display: "flex", alignItems: "center", gap: "10px" }}
-              >
-                <StyledCustomTypography
-                  variant="h5"
-                  style={{ fontFamily: "serif" }}
+    <div
+      className="navbar__mycontainer"
+      style={{ marginTop: "-40px", background: "#f6f9f5" }}
+    >
+      {recommend.length > 0 ? (
+        <CustomContainer>
+          <CustomDivContainer>
+            <Paper elevation={0} sx={{ height: "110%", background: "#f6f9f5" }}>
+              <StyledBox>
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "10px" }}
                 >
-                  Because you viewed
-                </StyledCustomTypography>
+                  <StyledCustomTypography
+                    variant="h5"
+                    style={{ fontFamily: "serif" }}
+                  >
+                    Because you viewed
+                  </StyledCustomTypography>
+                  <StyledCustomTypography
+                    variant="h5"
+                    style={{ fontFamily: "serif", color: "green" }}
+                  >
+                    "{state.viewed}"
+                  </StyledCustomTypography>
+                </div>
                 <StyledCustomTypography
-                  variant="h5"
-                  style={{ fontFamily: "serif", color: "green" }}
+                  style={{
+                    marginRight: "2%",
+                    fontFamily: "serif",
+                    fontSize: "15px",
+                    textDecoration: "underline",
+                  }}
                 >
-                  "{state.viewed}"
+                  See All
                 </StyledCustomTypography>
-              </div>
-              <StyledCustomTypography
-                style={{
-                  marginRight: "2%",
-                  fontFamily: "serif",
-                  fontSize: "15px",
-                  textDecoration: "underline",
-                }}
-              >
-                See All
-              </StyledCustomTypography>
-            </StyledBox>
-            {recommend.length > 0 ? (
-              <>
+              </StyledBox>
+              <div style={{ background: "#f6f9f5" }}>
                 <SlideCustomCard data={recommend} />
-              </>
-            ) : (
-              <></>
-            )}
-          </Paper>
-        </CustomDivContainer>
-      </CustomContainer>
+              </div>
+            </Paper>
+          </CustomDivContainer>
+        </CustomContainer>
+      ) : (
+        <div style={{ marginTop: "50px" }}></div>
+      )}
     </div>
   );
 }
