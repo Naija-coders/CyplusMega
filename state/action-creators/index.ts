@@ -92,6 +92,15 @@ export const user = (amount : any) => {
         })
     }
 }
+
+export const setViewed = (view : any) => {
+    return (dispatch: Dispatch<Action>) => {
+        dispatch({
+            type: ActionType.VIEWED,
+            payload: view
+        })
+    }
+}
 export const bankrupt = () => {
     return (dispatch: Dispatch<Action>) => {
         dispatch({

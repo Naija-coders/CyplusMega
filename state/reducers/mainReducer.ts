@@ -20,6 +20,7 @@ const initialState = {
     servicedata: [],
     allservicedata: [],
     recommended:[],
+    viewed: '',
     
 
     
@@ -73,6 +74,11 @@ const reducer = (state: any = initialState, action: Action): any => {
                         recommended:action.payload
                         
                     }
+            case ActionType.VIEWED:
+                return{
+                    ...state,
+                    viewed:action.payload
+                }
 
         
         default:

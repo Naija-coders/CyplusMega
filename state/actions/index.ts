@@ -44,4 +44,8 @@ interface RecommendedAction {
     type:ActionType.RECOMMENDED,
     payload:any
 }
-export type Action = DepositAction | WithdrawAction | BankruptAction | UserAction | CategoryAction | ServiceAction | MainServiceAction | FavoriteAction | UserserviceAction | AllserviceAction | RecommendedAction;
+interface ViewedAction {
+    type:ActionType.VIEWED,
+    payload:any
+}
+export type Action = DepositAction | WithdrawAction | BankruptAction | UserAction | CategoryAction | ServiceAction | MainServiceAction | FavoriteAction | UserserviceAction | AllserviceAction | RecommendedAction | ViewedAction

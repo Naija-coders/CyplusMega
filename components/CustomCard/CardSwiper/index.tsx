@@ -21,7 +21,7 @@ type Props = {
 };
 let value;
 
-const CustomCardSwiper: React.FC<Props> = ({}) => {
+const CustomCardSwiper: React.FC<Props> = ({ image }) => {
   const [nav, setNav] = useState(false);
   const [anchorElmenu, setAnchorElmenu] = React.useState<null | HTMLElement>(
     null

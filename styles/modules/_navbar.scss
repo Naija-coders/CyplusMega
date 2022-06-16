@@ -197,8 +197,8 @@
     font-weight: bold !important;
     position: absolute;
     right: -10;
-    color: #152238;
-    background: white;
+    color: white;
+    background: #222325;
 
     padding: 1rem;
     position: absolute;
@@ -206,6 +206,11 @@
     border-bottom-left-radius: 45px;
     width: 1rem !important;
   }
+}
+.swiper-button-disabled {
+  opacity: 0 !important;
+  cursor: auto;
+  pointer-events: none;
 }
 .swiper-button-prev {
   color: #152238 !important;
@@ -217,8 +222,8 @@
     position: absolute;
 
     left: -10;
-    color: #152238;
-    background: white;
+    color: white;
+    background: #222325;
 
     border-top-left-radius: 1px;
     border-top-right-radius: 45px;

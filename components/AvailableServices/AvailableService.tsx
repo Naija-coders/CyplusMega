@@ -108,7 +108,6 @@ const AvailableService = (props: Props) => {
               <StyledBox>
                 <StyledCustomTypography
                   style={{
-                    marginLeft: "20px",
                     fontFamily: "serif",
                     fontSize: "1.3rem",
                   }}
@@ -213,7 +212,12 @@ const AvailableService = (props: Props) => {
               <StyledBox>
                 <StyledCustomTypography
                   variant="h5"
-                  style={{ marginLeft: "2%", fontFamily: "serif" }}
+                  style={{
+                    fontSize: "24px",
+                    fontFamily: "caudex",
+                    color: "#222325",
+                    fontWeight: "bold",
+                  }}
                 >
                   {t("service_categories")}
                 </StyledCustomTypography>

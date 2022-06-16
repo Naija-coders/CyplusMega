@@ -94,10 +94,8 @@ export default function Service() {
   const handleFavorite = () => {
     setFavorite(!favorite);
   };
-  const { getmainservices, recommendedServices } = bindActionCreators(
-    actionCreators,
-    dispatch
-  );
+  const { getmainservices, recommendedServices, setViewed } =
+    bindActionCreators(actionCreators, dispatch);
   function getServices() {
     Clientapi.get(`/api/company/services`).then((response) => {
       offer = response.data.filter(
@@ -121,6 +119,7 @@ export default function Service() {
   const handleData = () => {
     offers?.map((item: any) => {
       setTypes(item.type);
+      setViewed(item.type);
     });
     Clientapi.get("/api/company/categories").then((response) => {
       recommended = response.data.filter((items: any) => items?.type == types);

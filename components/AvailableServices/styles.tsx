@@ -58,7 +58,6 @@ export const StyledCard = styled(Card)(
 );
 export const StyledBox = styled(Box)(
   sx({
-    background: "#222325",
     width: "100%",
     marginTop: "3%",
   })
@@ -68,6 +67,6 @@ export const StyledCustomTypography = styled(Typography)(
     fontSize: "24px",
     font: "Macan,Helvetica Neue,Helvetica,Arial,sans-serif",
 
-    color: "white",
+    color: "#222325e",
   })
 );

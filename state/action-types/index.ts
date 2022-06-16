@@ -10,6 +10,7 @@ export enum ActionType {
     USERSERVICE="userservice",
     ALLSERVICE="allservice",
     RECOMMENDED="recommended",
+    VIEWED = "viewed"
 
     
 }

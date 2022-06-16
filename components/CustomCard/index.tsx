@@ -3,6 +3,7 @@ import Avatar from "@mui/material/Avatar";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import moment from "moment";
 import CustomCardSwiper from "../CustomCard/CardSwiper";
+import StarIcon from "@mui/icons-material/Star";
 import { useRouter } from "next/router";
 
 type Props = {
@@ -10,7 +11,7 @@ type Props = {
   image?: string;
   name?: any;
   type?: string;
-  about?: string;
+  about?: any;
   price?: any;
   updated_at?: any;
 };
@@ -58,7 +59,11 @@ const CustomCard: React.FC<Props> = ({
                 <CustomCardSwiper />
               </div>
               <div
-                style={{ display: "flex", padding: "0.7rem" }}
+                style={{
+                  display: "flex",
+                  paddingLeft: "0.7rem",
+                  marginTop: "2px",
+                }}
                 onClick={() => {
                   route.push("/services?ad=" + id);
                 }}
@@ -80,13 +85,33 @@ const CustomCard: React.FC<Props> = ({
                       {moment(updated_at).format("MMM Do ")}
                     </TextTypography>
                   </span>
+                  <span
+                    style={{
+                      width: "8",
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  >
+                    <StarIcon sx={{ fontSize: "13px", color: "#faaf00" }} />
+                    <p
+                      style={{
+                        fontSize: "13px",
+                        color: "#faaf00",
+                      }}
+                    >
+                      {" "}
+                      4.9(59)
+                    </p>
+                  </span>
                 </div>
               </div>
               <div style={{ marginLeft: "1rem" }}>
                 <StyledTypography>{type}</StyledTypography>
               </div>
-              <div style={{ marginLeft: "1rem" }}>
-                <StyledTypographyHeader>{about}</StyledTypographyHeader>
+              <div style={{ marginLeft: "1rem", width: "8" }}>
+                <StyledTypographyHeader>
+                  {about.slice(0, 40)}
+                </StyledTypographyHeader>
               </div>
               <div
                 style={{
@@ -96,7 +121,7 @@ const CustomCard: React.FC<Props> = ({
                   width: "114%",
 
                   display: "flex",
-                  marginTop: "5%",
+
                   justifyContent: "flex-end",
                   alignSelf: "flex-end",
                   justifyItems: "flex-end",

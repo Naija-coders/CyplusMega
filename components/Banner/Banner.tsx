@@ -41,13 +41,21 @@ export default function Banner({}: Props) {
               display: "flex",
               height: "300px",
               justifyContent: "center",
-              background: `url("happybanner.jpg")`,
 
               alignItems: "center",
 
               flexDirection: "column",
             }}
           >
+            <div
+              style={{
+                background: `url("happybanner.jpg")`,
+                width: "100%",
+
+                display: "flex",
+                height: "300px",
+              }}
+            ></div>
             {/*  <StyledTypography>Great Services</StyledTypography>{" "}
             <SubTypography>{t("every_service")}</SubTypography>
             <br></br>

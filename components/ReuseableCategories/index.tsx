@@ -15,6 +15,7 @@ import { Divider } from "@mui/material";
 import { useRouter } from "next/router";
 import moment from "moment";
 import CustomCardSwiper from "../CustomCard/CardSwiper";
+import StarIcon from "@mui/icons-material/Star";
 
 import {
   StyledLink,
@@ -215,7 +216,7 @@ const ReuseableCategory: React.FC<Props> = ({ data, title }) => {
               <StyledBox>
                 <StyledCustomTypography
                   variant="h5"
-                  style={{ marginLeft: "2%", fontFamily: "serif" }}
+                  style={{ fontFamily: "serif" }}
                 >
                   {title}
                 </StyledCustomTypography>
@@ -287,8 +288,13 @@ const ReuseableCategory: React.FC<Props> = ({ data, title }) => {
                               {" "}
                               <CustomCardSwiper />
                             </div>
+
                             <div
-                              style={{ display: "flex", padding: "0.7rem" }}
+                              style={{
+                                display: "flex",
+                                paddingLeft: "0.7rem",
+                                marginTop: "2px",
+                              }}
                               onClick={() => {
                                 route.push("/services?ad=" + item?.services_id);
                               }}
@@ -296,6 +302,7 @@ const ReuseableCategory: React.FC<Props> = ({ data, title }) => {
                               <span>
                                 <Avatar />
                               </span>
+
                               <div
                                 style={{
                                   display: "flex",
@@ -310,16 +317,38 @@ const ReuseableCategory: React.FC<Props> = ({ data, title }) => {
                                     {moment(item.updated_at).format("MMM Do ")}
                                   </TextTypography>
                                 </span>
+                                <span
+                                  style={{
+                                    width: "8",
+                                    display: "flex",
+                                    alignItems: "center",
+                                  }}
+                                >
+                                  <StarIcon
+                                    sx={{ fontSize: "13px", color: "#faaf00" }}
+                                  />
+                                  <p
+                                    style={{
+                                      fontSize: "13px",
+                                      color: "#faaf00",
+                                    }}
+                                  >
+                                    {" "}
+                                    4.9(59)
+                                  </p>
+                                </span>
                               </div>
                             </div>
+
                             <div style={{ marginLeft: "1rem" }}>
                               <StyledTypography>{item.type}</StyledTypography>
                             </div>
-                            <div style={{ marginLeft: "1rem", width: "92%" }}>
+                            <div style={{ marginLeft: "1rem", width: "8" }}>
                               <StyledTypographyHeader>
                                 {item.about.slice(0, 40)}
                               </StyledTypographyHeader>
                             </div>
+
                             <div
                               style={{
                                 height: "50px",
@@ -328,7 +357,7 @@ const ReuseableCategory: React.FC<Props> = ({ data, title }) => {
                                 width: "114%",
 
                                 display: "flex",
-                                marginTop: "5%",
+
                                 justifyContent: "flex-end",
                                 alignSelf: "flex-end",
                                 justifyItems: "flex-end",

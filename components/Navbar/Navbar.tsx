@@ -353,14 +353,22 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
             >
               {list()}
             </SwipeableDrawer>
-            <StyledTypography
+            <div
               onClick={() => {
                 route.push("/");
               }}
-              sx={{ fontFamily: "GeoticaW01-FourOpen", cursor: "pointer" }}
+              style={{ display: "flex", alignItems: "center" }}
             >
-              GreatServices
-            </StyledTypography>
+              <StyledTypography
+                sx={{ fontFamily: "GeoticaW01-FourOpen", cursor: "pointer" }}
+              >
+                Elverr
+              </StyledTypography>
+              <img
+                src="companylogo.jpeg"
+                style={{ height: "20px", objectFit: "contain" }}
+              ></img>
+            </div>
           </div>
         </div>
         <StyledDiv>
