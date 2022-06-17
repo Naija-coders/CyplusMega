@@ -13,11 +13,14 @@ import Clientapi from "./api/client";
 import AvailableServices from "../components/AvailableServices";
 import Testing from "./testing";
 import LatestServices from "../components/LatestServices";
-import TopCategories from "../components/TopCategories/TopCategories";
 import Recommended from "../components/Recommended/Recommended";
 import "react-loading-skeleton/dist/skeleton.css";
 import Featured from "../components/Featured/Featured";
 import Cookie from "../components/CookieManager/Cookie";
+import dynamic from "next/dynamic";
+const TopCategories = dynamic(
+  () => import("../components/TopCategories/TopCategories")
+);
 
 import "../i18n";
 const Home: NextPage = () => {
