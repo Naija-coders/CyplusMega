@@ -54,7 +54,7 @@ export default function Recommended() {
                     variant="h5"
                     style={{ fontFamily: "serif", color: "green" }}
                   >
-                    "{state.viewed}"
+                    &ldquo; {state.viewed} &rdquo;
                   </StyledCustomTypography>
                 </div>
                 <StyledCustomTypography

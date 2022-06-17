@@ -42,7 +42,7 @@ const Home: NextPage = () => {
   }, [categories]);
   console.log("checking via the index", categories);
   return (
-    <Layout showSearch={true}>
+    <Layout showSearch={true} isVisible={true}>
       {" "}
       <div>
         <Banner />

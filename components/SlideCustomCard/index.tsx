@@ -40,7 +40,7 @@ const SlideCustomCard: React.FC<Props> = ({ data }) => {
         className="mySwiper"
       >
         {data.slice(0, 9).map((item: any) => (
-          <SwiperSlide>
+          <SwiperSlide key={Math.random()}>
             <CustomCard
               id={item.services_id}
               name={item.name}

@@ -118,9 +118,10 @@ const CustomCard: React.FC<Props> = ({
                   height: "50px",
                   background: "green",
 
-                  width: "114%",
+                  width: "100%",
 
                   display: "flex",
+                  padding: "10px",
 
                   justifyContent: "flex-end",
                   alignSelf: "flex-end",
@@ -135,9 +136,8 @@ const CustomCard: React.FC<Props> = ({
                     width: "100%",
 
                     alignSelf: "flex-end",
-                    marginLeft: "10px",
 
-                    justifyContent: "space-evenly",
+                    justifyContent: "space-between",
                     alignItems: "center",
                   }}
                 >
@@ -145,7 +145,6 @@ const CustomCard: React.FC<Props> = ({
                     <FavoriteBorderIcon style={{ color: "white" }} />
                   </StyledIconButton>
 
-                  <StyledPrice> STARTING AT</StyledPrice>
                   <StyledPriceValue>${price}</StyledPriceValue>
                 </div>
               </div>

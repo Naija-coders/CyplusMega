@@ -51,7 +51,7 @@ export const StyledCard = styled(Card)(
 
     "border": "#949593 1px",
 
-    "borderRadius": " 3px",
+    "borderRadius": " 12px",
     "borderStyle": "solid",
 
     "width": {

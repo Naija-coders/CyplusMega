@@ -341,7 +341,11 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
                               </div>
                             </div>
 
-                            <div style={{ marginLeft: "1rem" }}>
+                            <div
+                              style={{
+                                marginLeft: "1rem",
+                              }}
+                            >
                               <StyledTypography>{item.type}</StyledTypography>
                             </div>
                             <div style={{ marginLeft: "1rem", width: "8" }}>
@@ -349,48 +353,44 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
                                 {item.about.slice(0, 40)}
                               </StyledTypographyHeader>
                             </div>
-
-                            <div
-                              style={{
-                                height: "50px",
-                                background: "#222325",
-
-                                width: "114%",
-
-                                display: "flex",
-
-                                justifyContent: "flex-end",
-                                alignSelf: "flex-end",
-                                justifyItems: "flex-end",
-
-                                alignItems: "flex-end",
-                              }}
-                            >
+                            <div style={{ background: "#222325" }}>
                               <div
                                 style={{
                                   display: "flex",
-                                  width: "100%",
 
+                                  justifyContent: "flex-end",
                                   alignSelf: "flex-end",
-                                  marginLeft: "10px",
+                                  justifyItems: "flex-end",
+                                  width: "97%",
 
-                                  justifyContent: "space-evenly",
-                                  alignItems: "center",
+                                  alignItems: "flex-end",
+                                  paddingLeft: "1px",
                                 }}
                               >
-                                <StyledIconButton
-                                  key={item.services_id}
-                                  onClick={handleOpen}
-                                >
-                                  <FavoriteBorderIcon
-                                    style={{ color: "white" }}
-                                  />
-                                </StyledIconButton>
+                                <div
+                                  style={{
+                                    display: "flex",
+                                    width: "100%",
 
-                                <StyledPrice> STARTING AT</StyledPrice>
-                                <StyledPriceValue>
-                                  ${item.price}
-                                </StyledPriceValue>
+                                    alignSelf: "flex-end",
+
+                                    justifyContent: "space-between",
+                                    alignItems: "center",
+                                  }}
+                                >
+                                  <StyledIconButton
+                                    key={item.services_id}
+                                    onClick={handleOpen}
+                                  >
+                                    <FavoriteBorderIcon
+                                      style={{ color: "white" }}
+                                    />
+                                  </StyledIconButton>
+
+                                  <StyledPriceValue>
+                                    ${item.price}
+                                  </StyledPriceValue>
+                                </div>
                               </div>
                             </div>
                           </div>

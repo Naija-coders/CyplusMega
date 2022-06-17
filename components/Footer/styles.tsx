@@ -13,6 +13,56 @@ import {
   ThemeProvider,
   experimental_sx as sx,
 } from "@mui/system";
+export const DurationDiv = styled("div")(
+  sx({
+    display: "table",
+    flexDirection: "column",
+
+    justifyContent: "space-betweeen",
+    alignItems: "flex-start",
+    justifyItems: "flex-start",
+    marginTop: "30px",
+
+    width: { xs: "100%", md: "80%" },
+  })
+);
+export const DurationGroup = styled("div")(
+  sx({
+    display: "table-row-group",
+  })
+);
+export const TableCells = styled("div")(
+  sx({
+    display: "table-cell",
+    paddingLeft: "2px",
+
+    verticalAlign: "top",
+  })
+);
+export const DurationSubDiv = styled("div")(
+  sx({
+    display: "table-row;",
+    flexDirection: "row",
+    alignItems: "flex-end",
+    justifyContent: "space-evenly",
+    padding: "0.1rem",
+    width: "100%",
+  })
+);
+
+export const DurationTypography = styled(Typography)(
+  sx({
+    fontSize: "1rem !important",
+
+    color: "#fff",
+  })
+);
+export const DurationTypography1 = styled(Typography)(
+  sx({
+    fontSize: "1rem !important",
+    color: "orange",
+  })
+);
 
 export const StyledTypography = styled(Typography)(
   sx({
@@ -47,5 +97,19 @@ export const StyledButton = styled(Button)(
     width: "10%",
     height: "40px",
     textTransform: "none",
+  })
+);
+
+export const CustomFooterBackgroundDiv = styled(AppBar)(
+  sx({
+    justifyContent: "center",
+    position: "relative",
+
+    display: "flex",
+    background: "#0C0C0C",
+    opacity: "100%",
+    marginTop: "30px",
+
+    width: { xs: "110%", sm: "100%", md: "100%" },
   })
 );

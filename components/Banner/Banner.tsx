@@ -37,8 +37,7 @@ export default function Banner({}: Props) {
           <CustomDivContainer>
             <div
               style={{
-                position: "relative",
-                marginTop: "50px",
+                marginTop: "20px",
               }}
             >
               <StyledContainers>
