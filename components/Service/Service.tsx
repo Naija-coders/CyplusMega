@@ -140,6 +140,7 @@ export default function Service() {
 
             marginTop: "2%",
           }}
+          key={Math.random()}
         >
           <CatWrapper sx={{ background: "white" }}>
             <div style={{ display: "flex", flexDirection: "column" }}>

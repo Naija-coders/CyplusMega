@@ -41,8 +41,8 @@ function a11yProps(index: number) {
 type Props = {
   overview: any;
   Description: any;
-  About: any;
-  Reviews: any;
+  About?: any;
+  Reviews?: any;
 };
 const BasicTab: React.FC<Props> = ({
   overview,
