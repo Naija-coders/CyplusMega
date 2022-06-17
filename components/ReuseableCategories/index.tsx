@@ -210,10 +210,7 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
   return (
     <>
       {Rendermobile()}
-      <div
-        className="navbar__mycontainer"
-        style={{ marginTop: "-40px", position: "relative" }}
-      >
+      <div className="navbar__mycontainer" style={{ position: "relative" }}>
         <CustomContainer>
           <CustomDivContainer>
             <Paper elevation={0} sx={{ height: "110%", background: "#f6f9f5" }}>
@@ -276,7 +273,7 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
                         key={item.services_id}
                         style={{
                           position: "relative",
-                          marginLeft: "1%",
+                          marginTop: "10%",
                         }}
                       >
                         <StyledCard key={Math.random()} elevation={0}>

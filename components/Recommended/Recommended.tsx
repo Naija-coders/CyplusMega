@@ -35,10 +35,7 @@ export default function Recommended() {
   console.log("sorted data", recommend);
 
   return (
-    <div
-      className="navbar__mycontainer"
-      style={{ marginTop: "-40px", background: "#f6f9f5" }}
-    >
+    <div className="navbar__mycontainer" style={{ background: "#f6f9f5" }}>
       {recommend.length > 0 ? (
         <CustomContainer>
           <CustomDivContainer>
@@ -71,7 +68,7 @@ export default function Recommended() {
                   See All
                 </StyledCustomTypography>
               </StyledBox>
-              <div style={{ background: "#f6f9f5" }}>
+              <div style={{ background: "#f6f9f5", marginTop: "3%" }}>
                 <SlideCustomCard data={recommend} />
               </div>
             </Paper>

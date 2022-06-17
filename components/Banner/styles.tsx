@@ -16,7 +16,8 @@ import {
 export const CustomContainer = styled("div")(
   sx({
     display: " flex",
-    marginLeft: { md: "5%", lg: "0%", xl: "5%" },
+
+    marginLeft: { xs: "0%", md: "5%", lg: "0%", xl: "5%" },
     flexDirection: " column",
   })
 );
@@ -38,7 +39,8 @@ export const StyledContainers = styled("div")(
     width: "98%",
 
     display: "flex",
-    marginLeft: "5%",
+
+    marginLeft: { md: "5%" },
     height: "300px",
     justifyContent: "space-between",
     gap: "30px",
