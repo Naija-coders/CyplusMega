@@ -18,6 +18,7 @@ import SwiperThumb from "./Swiper";
 import Image from "next/image";
 import Link from "next/link";
 import CustomCard from "../CustomCard";
+import BasicTabs from "./TabBarPanel";
 
 import {
   StyledDiv,
@@ -38,6 +39,9 @@ import {
   RenderMobileDiv,
   StyledContactMobile,
   ContainerDiv,
+  HeaderPageTypo,
+  PaperDiv,
+  NormalContainer,
 } from "./styles";
 import Typography from "@mui/material/Typography";
 interface LinkTabProps {
@@ -129,14 +133,43 @@ export default function Service() {
 
   return (
     <ContainerWrapper>
-      <div
-        style={{
-          width: "100%",
+      {offers?.map((item: any) => (
+        <div
+          style={{
+            width: "100%",
 
-          marginTop: "2%",
-        }}
-      >
-        <CatWrapper>
+            marginTop: "2%",
+          }}
+        >
+          <CatWrapper sx={{ background: "white" }}>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <div
+                style={{
+                  display: "flex",
+                  paddingLeft: "5%",
+                  alignItems: "center",
+                  gap: "10px",
+                  marginTop: "3px",
+                }}
+              >
+                <HeaderPageTypo sx={{ color: "black" }}>Home</HeaderPageTypo>{" "}
+                {/* svg greater than sign for navigayion */}
+                <svg
+                  width="8"
+                  height="12"
+                  viewBox="0 0 8 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M0.772126 1.19065L0.153407 1.80934C0.00696973 1.95578 0.00696973 2.19322 0.153407 2.33969L5.80025 8L0.153407 13.6603C0.00696973 13.8067 0.00696973 14.0442 0.153407 14.1907L0.772126 14.8094C0.918563 14.9558 1.156 14.9558 1.30247 14.8094L7.84666 8.26519C7.99309 8.11875 7.99309 7.88131 7.84666 7.73484L1.30247 1.19065C1.156 1.04419 0.918563 1.04419 0.772126 1.19065Z"></path>
+                </svg>
+                <HeaderPageTypo sx={{ color: "green" }}>Service</HeaderPageTypo>
+              </div>
+              <div style={{ display: "flex", paddingLeft: "5%" }}>
+                <h2>{item.title}</h2>
+              </div>
+            </div>
+          </CatWrapper>
+          {/* <CatWrapper>
           <StyledPaper>
             <div
               style={{
@@ -182,8 +215,8 @@ export default function Service() {
               </IconButton>
             </div>
           </StyledPaper>
-        </CatWrapper>
-        {/*    <div
+        </CatWrapper> */}
+          {/*    <div
             style={{
               display: "flex",
               justifyContent: "left",
@@ -199,24 +232,22 @@ export default function Service() {
             </div>
             <div>Service</div> 
           </div> */}
-        <DivVal>
-          <StyledDiv>
-            {" "}
-            {offers?.map((item: any) => (
+          <DivVal>
+            <StyledDiv>
+              {" "}
               <StyledWrapper key={Math.random()}>
                 <StyledSubWrapper>
                   <MainSub>
-                    <Typography
+                    {/*     <Typography
                       style={{ color: "#152238", fontSize: "1.4rem" }}
                     >
                       {item.About}
-                    </Typography>
-                    <ContainerDiv id="Overview">
+                    </Typography> */}
+                    <NormalContainer id="Overview">
                       <div
                         style={{
                           display: "flex",
                           width: "100%",
-                          justifyContent: "center",
                         }}
                       >
                         {" "}
@@ -224,15 +255,15 @@ export default function Service() {
                           <SwiperThumb myimage={item} />
                         </StyledImageDiv>
                       </div>
-                      <RandomFlex>
+                      {/*    <RandomFlex>
                         <StyledAvatar />
                         <p>mano</p>
-                      </RandomFlex>
-                    </ContainerDiv>
+                      </RandomFlex> */}
+                    </NormalContainer>
                     <br></br>
                     <RenderMobileDiv>
                       <StyledContactMobile>
-                        <ContainerDiv>
+                        <ContainerDiv elevation={0.6}>
                           <div
                             style={{
                               display: "flex",
@@ -269,17 +300,18 @@ export default function Service() {
                         <br></br>
                       </StyledContactMobile>
                     </RenderMobileDiv>
-                    <ContainerDiv>
+                    <ContainerDiv elevation={0.6}>
                       <StyledMainHeaderText id="Description">
                         Description
                       </StyledMainHeaderText>
                       <StyledMainText paragraph>{item.About}</StyledMainText>
                     </ContainerDiv>
                     <br></br>
-                    <ContainerDiv>
+                    <ContainerDiv elevation={0.6}>
                       <StyledMainHeaderText id="About">
                         About this Seller
                       </StyledMainHeaderText>
+
                       <StyledMainText paragraph>
                         A course description is a brief summary of the
                         significant learning experiences for a course. Course
@@ -287,8 +319,18 @@ export default function Service() {
                         the Program of Studies (POSs) for individual programs.
                       </StyledMainText>
                     </ContainerDiv>
+
+                    <PaperDiv elevation={0.6} style={{ marginTop: "-60px" }}>
+                      <BasicTabs
+                        overview={item.type}
+                        Description={
+                          "A course description is a brief summary of the significant learning experiences for a course. Course descriptions appear in individual Course Outlines and in the Program of Studies"
+                        }
+                        About={"About"}
+                      />
+                    </PaperDiv>
                     <br></br>
-                    <ContainerDiv>
+                    <PaperDiv elevation={0.6}>
                       <StyledMainHeaderText id="Recommended">
                         Similar Services
                       </StyledMainHeaderText>
@@ -315,11 +357,11 @@ export default function Service() {
                           </div>
                         ))}
                       </div>
-                    </ContainerDiv>
+                    </PaperDiv>
                   </MainSub>
                 </StyledSubWrapper>
                 <StyledContact>
-                  <ContainerDiv>
+                  <PaperDiv>
                     <div
                       style={{
                         display: "flex",
@@ -352,13 +394,13 @@ export default function Service() {
                       </NormalTypography>
                       <br></br>
                     </div>
-                  </ContainerDiv>
+                  </PaperDiv>
                 </StyledContact>
               </StyledWrapper>
-            ))}
-          </StyledDiv>
-        </DivVal>{" "}
-      </div>{" "}
+            </StyledDiv>
+          </DivVal>{" "}
+        </div>
+      ))}
     </ContainerWrapper>
   );
 }

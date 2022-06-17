@@ -24,8 +24,8 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 interface StyledTabsProps {
   children?: React.ReactNode;
-  value: string;
-  onChange: (event: React.SyntheticEvent, newValue: string) => void;
+  value: any;
+  onChange: any;
 }
 export const StyledTabs = styled((props: StyledTabsProps) => (
   <Tabs
@@ -46,8 +46,8 @@ export const StyledTabs = styled((props: StyledTabsProps) => (
   },
 });
 interface StyledTabProps {
-  label: string;
-  value: string;
+  label?: string;
+  value?: string;
 }
 export const StyledDiv = styled("div")(
   sx({
@@ -86,7 +86,7 @@ export const StyledWrapper = styled("div")(
     flexDirection: { xs: "column", md: "row" },
     width: { xs: "110%", md: "100%" },
     marginLeft: { md: "0%", lg: "5%", xl: "5%" },
-    justifyContent: "space-evenly",
+    justifyContent: "space-between",
   })
 );
 export const MainSub = styled("div")(
@@ -130,14 +130,19 @@ export const StyledSubWrapper = styled("div")(
 );
 export const StyledMainText = styled(Typography)(
   sx({
-    padding: { xs: "0 1rem", md: " 0rem 3rem" },
+    padding: { xs: "0 1rem", md: " 0rem 1rem" },
     fontSize: "1rem",
     color: "#152238",
   })
 );
+export const HeaderPageTypo = styled(Typography)(
+  sx({
+    fontSize: "1rem",
+  })
+);
 export const StyledMainHeaderText = styled(Typography)(
   sx({
-    padding: { xs: "1rem 1rem", md: " 1rem 3rem" },
+    padding: { xs: "1rem 1rem", md: " 1rem 1rem" },
     fontSize: "1.4rem",
     fontWeight: "bold",
     color: "#152238",
@@ -168,8 +173,8 @@ export const StyledImageDiv = styled("div")(
     display: "flex",
     flexDirection: "column",
     width: { xs: "100%", md: "90%" },
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: "left",
+    alignItems: "left",
     height: { xs: "300px", md: "500px" },
     padding: { xs: "0px", md: "1rem" },
   })
@@ -224,7 +229,20 @@ export const CatWrapper = styled("div")(
     width: { xs: "110%", md: "100%" },
   })
 );
+export const NormalContainer = styled("div")(
+  sx({
+    width: "100%",
+  })
+);
 export const ContainerDiv = styled(Paper)(
+  sx({
+    display: { md: "none" },
+    borderRadius: "5px",
+    width: "100%",
+    border: "solid 0.4px #D9D9D9",
+  })
+);
+export const PaperDiv = styled(Paper)(
   sx({
     borderRadius: "5px",
     width: "100%",
@@ -233,7 +251,7 @@ export const ContainerDiv = styled(Paper)(
 );
 export const StyledButton = styled(Button)(
   sx({
-    "background": "#152238",
+    "background": "green",
     "width": "90%",
     "padding": "0.8rem",
     "color": "white",
