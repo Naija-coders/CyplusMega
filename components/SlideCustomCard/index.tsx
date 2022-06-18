@@ -28,19 +28,49 @@ const SlideCustomCard: React.FC<Props> = ({ data }) => {
   );
   return (
     <div
-      style={{ height: "100%" }}
+      style={{ height: "100%", display: "flex" }}
       onMouseEnter={() => setNav(true)}
       onMouseLeave={() => setNav(false)}
     >
       <Swiper
-        slidesPerView={4}
+        slidesPerView={1}
         spaceBetween={30}
-        navigation={nav}
-        modules={[Navigation, Autoplay]}
         className="mySwiper"
+        navigation={nav}
+        modules={[Navigation]}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          823: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1200: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1010: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+
+          1500: {
+            slidesPerView: 5,
+            spaceBetween: 40,
+          },
+        }}
       >
-        {data.slice(0, 9).map((item: any) => (
-          <SwiperSlide key={Math.random()}>
+        {data.slice(0, 9).map((item: any, index: any) => (
+          <SwiperSlide
+            key={Math.random()}
+            style={{ display: "flex", gap: "20px" }}
+          >
             <CustomCard
               id={item.services_id}
               name={item.name}

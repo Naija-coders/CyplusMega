@@ -68,10 +68,10 @@ export default function Recommended() {
                   See All
                 </StyledCustomTypography>
               </StyledBox>
-              <div style={{ background: "#f6f9f5", marginTop: "3%" }}>
-                <SlideCustomCard data={recommend} />
-              </div>
             </Paper>
+            <div style={{ background: "#f6f9f5", marginTop: "3%" }}>
+              <SlideCustomCard data={recommend} />
+            </div>
           </CustomDivContainer>
         </CustomContainer>
       ) : (
