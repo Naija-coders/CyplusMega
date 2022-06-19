@@ -19,9 +19,9 @@ import {
 
 export const StyledLink = styled(Link)(
   sx({
-    textDecoration: "none",
-    color: "black",
-    cursor: "pointer",
+    "textDecoration": "none",
+    "color": "black",
+    "cursor": "pointer",
     "&:hover": {
       color: "blue",
     },
@@ -30,7 +30,7 @@ export const StyledLink = styled(Link)(
 
 export const StyledCard = styled(Card)(
   sx({
-    cursor: "pointer",
+    "cursor": "pointer",
     "&:hover": {
       boxShadow: " 0px 2px 12px -1px #565454;",
     },
@@ -70,9 +70,9 @@ export const StyledPriceValue = styled(Typography)(
 );
 export const StyledButton = styled(Button)(
   sx({
-    background: "#F68B1E",
-    marginBottom: "10px",
-    color: "white",
+    "background": "#F68B1E",
+    "marginBottom": "10px",
+    "color": "white",
     "&:hover": {
       background: "#F68B1E",
     },
@@ -80,9 +80,9 @@ export const StyledButton = styled(Button)(
 );
 export const CustomDrawer = styled(Drawer)(
   sx({
-    width: "19rem",
+    "width": "19rem",
 
-    flexShrink: 0,
+    "flexShrink": 0,
 
     "& .MuiDrawer-paper": {
       width: "85%",
@@ -105,5 +105,60 @@ export const StyledTypography = styled(Typography)(
     fontSize: "0.9rem",
 
     marginLeft: "10px",
+  })
+);
+//mano contribution
+
+export const ContainerDiv = styled("div")(
+  sx({
+    display: "flex",
+    flexDirection: "row",
+
+    justifyContent: "space-between",
+  })
+);
+export const StickyBar = styled(Paper)(
+  sx({
+    width: "20%",
+
+    height: "55px",
+
+    position: "sticky",
+    top: 10,
+    marginTop: "7px",
+    display: "flex",
+
+    zIndex: 100,
+  })
+);
+export const StyledPaper = styled(Paper)(
+  sx({
+    width: "75%",
+    marginTop: "7px",
+  })
+);
+export const CustomDivContainer = styled("div")(
+  sx({
+    displaY: "flex",
+
+    justifyContent: "left",
+    width: "100%",
+    marginTop: "20px",
+  })
+);
+export const MainPaperDiv = styled("div")(
+  sx({
+    display: "grid",
+    gridTemplateColumns: {
+      xs: "auto",
+      md: "250px 250px  ",
+      lg: "250px 250px 250px ",
+      xl: "auto auto auto auto",
+    },
+    width: "100%",
+    columnGap: { md: "60px", lg: "30px" },
+    rowGap: "30px",
+    justifyContent: "center",
+    alignItems: "left",
   })
 );

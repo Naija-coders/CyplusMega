@@ -79,6 +79,7 @@ const SlideCustomCard: React.FC<Props> = ({ data }) => {
               price={item.price}
               updated_at={item.updated_at}
               image={item.image}
+              bottomColor={"green"}
             />
           </SwiperSlide>
         ))}

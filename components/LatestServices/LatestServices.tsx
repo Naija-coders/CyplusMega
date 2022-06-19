@@ -32,16 +32,20 @@ const LatestServices: React.FC<Props> = ({}) => {
     } else if (state.mainservices.length > 0) {
       setLoaded(false);
     }
+    if (state.isLoggedIn === true) setLoggedIn(false);
+    else setLoggedIn(true);
   });
   console.log("displaying mainservices", state.mainservices);
   return (
     <div>
       <br></br>
-      <ReuseableCategory
-        title={"Latest Services"}
-        data={state.mainservices}
-        quantity={10}
-      />
+      {!loggedIn && (
+        <ReuseableCategory
+          title={"Latest Services"}
+          data={state.mainservices}
+          quantity={10}
+        />
+      )}
     </div>
   );
 };

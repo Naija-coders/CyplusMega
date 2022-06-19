@@ -14,6 +14,7 @@ type Props = {
   about?: any;
   price?: any;
   updated_at?: any;
+  bottomColor: string;
 };
 import {
   LatestServicesDiv,
@@ -33,6 +34,7 @@ const CustomCard: React.FC<Props> = ({
   about,
   price,
   updated_at,
+  bottomColor,
 }) => {
   const route = useRouter();
   return (
@@ -110,13 +112,13 @@ const CustomCard: React.FC<Props> = ({
               </div>
               <div style={{ marginLeft: "1rem", width: "8" }}>
                 <StyledTypographyHeader>
-                  {about.slice(0, 40)}
+                  {about?.slice(0, 40)}
                 </StyledTypographyHeader>
               </div>
               <div
                 style={{
                   height: "50px",
-                  background: "green",
+                  background: bottomColor,
 
                   width: "100%",
 

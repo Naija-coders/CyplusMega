@@ -44,6 +44,7 @@ import {
   NormalContainer,
 } from "./styles";
 import Typography from "@mui/material/Typography";
+import CustomLoader from "../CustomLoader";
 interface LinkTabProps {
   label?: string;
   href?: string;
@@ -335,29 +336,37 @@ export default function Service() {
                       <StyledMainHeaderText id="Recommended">
                         Similar Services
                       </StyledMainHeaderText>
-                      <div
-                        style={{
-                          display: "flex",
-                          padding: "10px",
-                          gap: "20px",
-                          overflowX: "scroll",
-                          width: "100%",
-                        }}
-                      >
-                        {similar?.slice(0, 6)?.map((item: any) => (
-                          <div key={Math.random()}>
-                            <CustomCard
-                              id={item.services_id}
-                              name={item.name}
-                              type={item.type}
-                              about={item.about}
-                              price={item.price}
-                              updated_at={item.updated_at}
-                              image={item.image}
-                            />
-                          </div>
-                        ))}
-                      </div>
+
+                      {similar.length <= 0 ? (
+                        <div>
+                          <CustomLoader />
+                        </div>
+                      ) : (
+                        <div
+                          style={{
+                            display: "flex",
+                            padding: "10px",
+                            gap: "20px",
+                            overflowX: "scroll",
+                            width: "100%",
+                          }}
+                        >
+                          {similar?.slice(0, 6)?.map((item: any) => (
+                            <div key={Math.random()}>
+                              <CustomCard
+                                id={item.services_id}
+                                name={item.name}
+                                type={item.type}
+                                about={item.about}
+                                price={item.price}
+                                updated_at={item.updated_at}
+                                image={item.image}
+                                bottomColor={"green"}
+                              />
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </PaperDiv>
                   </MainSub>
                 </StyledSubWrapper>

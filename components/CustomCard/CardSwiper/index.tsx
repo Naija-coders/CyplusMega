@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
-import { EffectFlip, Pagination, Navigation } from "swiper";
+import { Lazy, EffectFlip, Pagination, Navigation } from "swiper";
 type Props = {
   id?: any;
   image?: string;
@@ -37,7 +37,8 @@ const CustomCardSwiper: React.FC<Props> = ({ image }) => {
         effect={"flip"}
         grabCursor={false}
         navigation={nav}
-        modules={[EffectFlip, Pagination, Navigation]}
+        lazy={true}
+        modules={[Lazy, EffectFlip, Pagination, Navigation]}
         className="mySwiper"
       >
         <SwiperSlide>
