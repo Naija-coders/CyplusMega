@@ -127,11 +127,12 @@ export const StickyBar = styled(Paper)(
     top: 10,
     marginTop: "7px",
     display: "flex",
+    justifyContent: "center",
 
     zIndex: 100,
   })
 );
-export const StyledPaper = styled(Paper)(
+export const StyledPaper = styled("div")(
   sx({
     width: "75%",
     marginTop: "7px",
@@ -157,8 +158,38 @@ export const MainPaperDiv = styled("div")(
     },
     width: "100%",
     columnGap: { md: "60px", lg: "30px" },
-    rowGap: "30px",
+    rowGap: "-10px",
     justifyContent: "center",
     alignItems: "left",
+  })
+);
+export const ColorText = styled(Typography)(
+  sx({
+    fontSize: "0.8rem",
+    color: "green",
+  })
+);
+export const BasicText1 = styled(Typography)(
+  sx({
+    fontSize: "1.5rem",
+    fontWeight: "bold",
+    color: "#222325",
+  })
+);
+export const BasicText = styled(Typography)(
+  sx({
+    fontSize: "0.8rem",
+    color: "#222325",
+  })
+);
+export const StyledDiv = styled("div")(
+  sx({
+    border: "green 1px",
+    borderStyle: "solid",
+    height: "30px",
+    display: "flex",
+    gap: "10px",
+    alignItems: "center",
+    justifyContent: "center",
   })
 );
