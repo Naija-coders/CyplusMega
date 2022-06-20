@@ -16,14 +16,13 @@ const Categoriesid: React.FC<Props> = ({ query, ourService }) => {
 export async function getServerSideProps(context: any) {
   const query = context.query;
   let datas;
+  const { res } = context;
+  res.setHeader("Cache-Control", `s-maxage=3660, stale-while-revalidate=4600`);
   const mydata = Clientapi.get("/api/company/categories")
     .then((response) => {
       datas = response.data;
-      console.log("hey checking the static prop to see if theres any changes");
     })
-    .catch((error) => {
-      console.log("it didnt wr=ork");
-    });
+    .catch((error) => {});
   await mydata;
   const ourService = datas;
 

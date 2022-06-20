@@ -1,5 +1,4 @@
 import Cookies from "js-cookie";
-import categories from "../pages/categories";
 import * as actionTypes from "./actions/actionTypes";
 import Clientapi from "../pages/api/client";
 

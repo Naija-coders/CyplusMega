@@ -104,7 +104,7 @@ const Categories: React.FC<Props> = ({ servicesState, query }) => {
             </div>
           </div>
           <div style={{ display: "flex", gap: "10px" }}>
-            <BasicText>{userservice.length} results</BasicText>
+            <BasicText>{userservice.length} services available</BasicText>
           </div>
         </div>
         <div
@@ -124,7 +124,7 @@ const Categories: React.FC<Props> = ({ servicesState, query }) => {
             <div>
               {" "}
               {userservice?.slice(0, 1)?.map((item: any) => (
-                <div>
+                <div key={Math.random()}>
                   <BasicText1>{item?.type}</BasicText1>
                 </div>
               ))}

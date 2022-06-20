@@ -1,4 +1,3 @@
-import categories from "../../pages/categories";
 import { ActionType } from "../action-types/index"
 import { Action } from "../actions"
 import Clientapi from "../../pages/api/client";
