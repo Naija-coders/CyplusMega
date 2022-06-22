@@ -10,6 +10,7 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import { RootState } from "../../state/reducers";
 import { Avatar, IconButton } from "@mui/material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import { LoginModal } from "../LoginModal/Loginmodal";
 import { Divider } from "@mui/material";
 import { useRouter } from "next/router";
@@ -32,6 +33,7 @@ import {
   CustomDivContainer,
   CustomContainer,
   LatestServicesDiv,
+  StyledMobileCard,
 } from "../TopCategories/styles";
 type Props = {
   title: any;
@@ -136,59 +138,54 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
                       key={item.services_id}
                       style={{
                         position: "relative",
+                        width: "100%",
                       }}
                     >
-                      <div
-                        key={Math.random()}
-                        onClick={() => {
-                          route.push("/services?ad=" + item?.services_id);
-                        }}
-                      >
+                      <StyledMobileCard>
                         <div
                           style={{
-                            display: "flex",
-                            borderRadius: "10px",
-
-                            marginLeft: "11px",
-                            justifyContent: "left",
-                            gap: "10px",
+                            width: "100%",
+                            height: "150px",
+                            position: "relative",
                           }}
                         >
-                          <img
-                            src={item.image}
+                          <CustomCardSwiper />
+                          <div
                             style={{
-                              height: "70px",
-                              width: "100px",
-                              borderRadius: "13px",
+                              position: "absolute",
+                              bottom: "-10%",
 
-                              objectFit: "cover",
+                              zIndex: "200",
+                              right: "3%",
                             }}
-                          ></img>
-                          <div>
-                            <StyledTypographyHeader>
-                              {" "}
-                              {item.about}
-                            </StyledTypographyHeader>
-                            <StyledPriceValue>${item.price}</StyledPriceValue>
+                          >
+                            <IconButton sx={{ background: "white" }}>
+                              <BookmarkBorderIcon sx={{ color: "green" }} />
+                            </IconButton>
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              flexDirection: "column",
+                              marginTop: "10px",
+                              height: "100%",
+                              position: "relative",
+                              justifyItems: "flex-end",
+                            }}
+                          >
+                            <TextTypography
+                              onClick={() => {
+                                route.push("/services?ad=" + item?.services_id);
+                              }}
+                            >
+                              {item?.type}
+                            </TextTypography>
+                            <StyledPriceValue align="right">
+                              {item?.price}
+                            </StyledPriceValue>
                           </div>
                         </div>
-                        <div
-                          style={{
-                            display: "flex",
-                            borderRadius: "10px",
-
-                            marginLeft: "11px",
-                            justifyContent: "left",
-                            gap: "3px",
-                            marginTop: "6px",
-                          }}
-                        >
-                          <Avatar
-                            sx={{ height: "16px", width: "16px" }}
-                          ></Avatar>
-                          <TextTypography>{item.name}</TextTypography>
-                        </div>
-                      </div>
+                      </StyledMobileCard>
                       <br></br>
                       <Divider />
                     </div>
@@ -382,7 +379,7 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
                                     key={item.services_id}
                                     onClick={handleOpen}
                                   >
-                                    <FavoriteBorderIcon
+                                    <BookmarkBorderIcon
                                       style={{ color: "white" }}
                                     />
                                   </StyledIconButton>

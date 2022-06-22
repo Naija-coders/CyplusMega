@@ -95,7 +95,7 @@ export const TextTypography = styled(Typography)(
     fontStretch: "normal",
     fontStyle: "normal",
 
-    fontSize: "12px",
+    fontSize: { xs: "0.6rem", md: "12px" },
     marginLeft: "4px",
     color: "rgb(98, 100, 98)",
   })
@@ -123,7 +123,7 @@ export const StyledPriceValue = styled(Typography)(
   sx({
     color: "#FCA301",
     fontFamily: "Avenir Light",
-    fontSize: "25px",
+    fontSize: { xs: "1rem", md: "25px" },
     textShadow: "rgba(0, 0, 0, 0.298039) 0px 1px 0px",
   })
 );
@@ -167,5 +167,28 @@ export const StyledCustomTypography = styled(Typography)(
     fontFamily: "caudex",
     color: "#222325",
     fontWeight: "bold",
+  })
+);
+
+//mobile design coming soon
+
+export const StyledMobileCard = styled("div")(
+  sx({
+    minWidth: "50%",
+    height: "200px",
+    justifyContent: "flex-start",
+    display: "flex",
+    flexDirection: "column",
+  })
+);
+
+export const CustomMobileDiv = styled("div")(
+  sx({
+    justifyContent: "center",
+
+    display: "grid",
+    gridTemplateColumns: "auto auto",
+    gap: "10px",
+    width: "110%",
   })
 );

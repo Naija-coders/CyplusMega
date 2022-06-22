@@ -7,14 +7,26 @@
   }
   &__mobilelatestservices {
     margin-top: 10px;
-    width: 100%;
+
+    justify-content: space-between;
+
     display: grid;
-    row-gap: 20px;
+    grid-template-columns: 49% 49%;
+    width: 100%;
 
-    grid-template-columns: auto;
-    justify-content: left;
-
-    overflow-x: scroll;
+    @include atSmall {
+      width: 110%;
+      grid-template-columns: 54% 54%;
+    }
+    @include atSmallMax {
+      width: 100%;
+      grid-template-columns: 50% 50%;
+      gap: 10px;
+    }
+    @include atFold {
+      width: 100%;
+      grid-template-columns: 48% 48%;
+    }
   }
   &__recaptchadesgin {
     @include atSmallMax {

@@ -205,6 +205,21 @@
     border-top-left-radius: 45px;
     border-bottom-left-radius: 45px;
     width: 1rem !important;
+    @include atSmallMax {
+      font-size: 10px !important;
+      font-weight: bold !important;
+      position: absolute;
+      right: -10;
+      color: white;
+      background: #222325;
+
+      padding: 0.6rem;
+      position: absolute;
+      border-top-left-radius: 45px;
+      border-bottom-left-radius: 45px;
+      width: 1rem !important;
+      margin-left: 12px;
+    }
   }
 }
 .swiper-button-disabled {
@@ -232,6 +247,24 @@
     position: absolute;
 
     width: 1rem !important;
+    @include atSmallMax {
+      font-size: 10px !important;
+      font-weight: bold !important;
+      position: absolute;
+      margin-right: 12px;
+
+      left: -10;
+      color: white;
+      background: #222325;
+
+      border-top-left-radius: 1px;
+      border-top-right-radius: 45px;
+      border-bottom-right-radius: 45px;
+      padding: 0.6rem;
+      position: absolute;
+
+      width: 1rem !important;
+    }
   }
 }
 

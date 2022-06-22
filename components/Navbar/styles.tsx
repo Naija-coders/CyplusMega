@@ -9,6 +9,7 @@ import {
   InputAdornment,
   IconButton,
   Menu,
+  Divider,
 } from "@mui/material";
 import {
   styled,
@@ -22,13 +23,22 @@ export const StyledTypography = styled(Typography)(
     color: "#222325",
 
     fontFamily: "GeoticaW01-FourOpen",
-    fontSize: { xs: "1.3rem", md: "28px" },
+    fontSize: { xs: "1.3rem", md: "2rem" },
   })
 );
 export const MobileMenu = styled(IconButton)(
   sx({
     display: { xs: "flex", md: "none" },
     alignSelf: "center",
+  })
+);
+export const ResponsiveDiv = styled("div")(
+  sx({
+    display: { xs: "none", sm: "none", md: "flex" },
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginLeft: "5%",
   })
 );
 export const StyledQuote = styled(Typography)(
@@ -38,11 +48,14 @@ export const StyledQuote = styled(Typography)(
     fontFamily: "cursive",
   })
 );
+export const MainText = styled(Typography)(
+  sx({
+    color: "#221133",
+  })
+);
 export const StyledCaption = styled(Typography)(sx({}));
 export const StyledAppBar = styled(AppBar)(
   sx({
-    height: 70,
-
     justifyContent: "center",
 
     display: "flex",
@@ -78,6 +91,7 @@ export const StyledButton = styled(Button)(
     textTransform: "none",
   })
 );
+
 export const Styledpaper = styled(Paper)(
   sx({
     "height": 500,
@@ -113,6 +127,11 @@ export const StyledProfile = styled("div")(
     bottom: "40px",
   })
 );
+export const CustomDivider = styled(Divider)(
+  sx({
+    width: "100%",
+  })
+);
 export const StyledTitle = styled("div")(
   sx({
     justifyContent: "spaced-evenly",
@@ -131,7 +150,7 @@ export const StyledDiv = styled("div")(
 
     width: "100%",
 
-    justifyContent: "end",
+    justifyContent: "right",
     justifyItems: "end",
     gap: "10px",
 
