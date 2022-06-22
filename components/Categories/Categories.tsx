@@ -155,7 +155,6 @@ const Categories: React.FC<Props> = ({ servicesState, query }) => {
         </div>
       </div>
       <ContainerDiv>
-        <StickyBar elevation={0.8}>hey mano</StickyBar>{" "}
         <StyledPaper>
           <MainPaperDiv>
             {userservice?.map((item: any) => (

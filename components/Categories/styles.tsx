@@ -134,7 +134,7 @@ export const StickyBar = styled(Paper)(
 );
 export const StyledPaper = styled("div")(
   sx({
-    width: "75%",
+    width: "100%",
     marginTop: "7px",
   })
 );
@@ -152,8 +152,8 @@ export const MainPaperDiv = styled("div")(
     display: "grid",
     gridTemplateColumns: {
       xs: "auto",
-      md: "250px 250px  ",
-      lg: "250px 250px 250px ",
+      md: "250px 250px 250px ",
+      lg: "250px 250px 250px 250px",
       xl: "auto auto auto auto",
     },
     width: "100%",
