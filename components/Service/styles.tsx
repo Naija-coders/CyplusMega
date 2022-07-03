@@ -222,6 +222,15 @@ export const ContainerWrapper = styled("div")(
     flexDirection: "column",
   })
 );
+export const NormalDiv = styled("div")(
+  sx({
+    display: "flex",
+    paddingLeft: "5%",
+    alignItems: "center",
+    gap: "10px",
+    marginTop: { xs: "25%", md: "3px" },
+  })
+);
 export const CatWrapper = styled("div")(
   sx({
     display: "flex",

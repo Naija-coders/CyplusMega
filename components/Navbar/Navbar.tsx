@@ -369,7 +369,7 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
                       aria-haspopup="true"
                       aria-expanded={open ? "true" : undefined}
                     >
-                      <Avatar />
+                      <Avatar sx={{ background: "green" }}>M</Avatar>
                       {myaccount ? (
                         <>
                           {" "}
