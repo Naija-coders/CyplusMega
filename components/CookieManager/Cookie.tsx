@@ -10,11 +10,9 @@ export default function Cookie() {
       cookieName="myAwesomeCookieNamse2"
       style={{
         background: "#2B373B",
-        width: "60%",
+        width: "100%",
         display: "flex",
         justifyContent: "center",
-
-        left: "20%",
       }}
       extraCookieOptions={["open"]}
       enableDeclineButton

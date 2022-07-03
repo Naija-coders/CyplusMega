@@ -58,11 +58,21 @@ export const StyledAppBar = styled(AppBar)(
   sx({
     justifyContent: "center",
 
-    display: "flex",
+    display: { xs: "none", md: "flex" },
     background: "white",
     opacity: "100%",
 
-    width: { xs: "110%", sm: "100%", md: "100%" },
+    width: { xs: "none", sm: "100%", md: "100%" },
+  })
+);
+export const MyAppBar = styled(AppBar)(
+  sx({
+    display: "flex",
+    background: "white",
+    width: "100%",
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    padding: "1rem 2rem",
   })
 );
 //BUTTON MAIN COLOR IS #F68B1E

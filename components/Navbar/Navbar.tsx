@@ -63,6 +63,7 @@ import {
   CustomDivider,
   MainText,
   ResponsiveDiv,
+  MyAppBar,
 } from "./styles";
 import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
 import SearchIcon from "@mui/icons-material/Search";
@@ -242,157 +243,113 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
   ];
   const RenderMobile = () => {
     return (
-      <div className="navbar__nav_mobile">
-        <IconButton onClick={handleMenuClicks} onMouseLeave={handleCloseMenu}>
-          <MenuRoundedIcon />
-          <Menu
-            id="basic-menu"
-            anchorEl={anchorElmenu}
-            open={displaymenu}
-            onClose={handleCloseMenu}
-            MenuListProps={{
-              "aria-labelledby": "basic-button",
-            }}
-          >
-            {" "}
-            <Box>
-              {catvalue?.map(
-                (
-                  item: {
-                    type:
-                      | boolean
-                      | React.ReactChild
-                      | React.ReactFragment
-                      | React.ReactPortal
-                      | null
-                      | undefined;
-                  },
-                  i: string | number | any
-                ) => (
-                  <MenuItem key={Math.random()}>
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignSelf: "self-end",
-                      }}
-                    >
-                      <Typography
-                        style={{
-                          fontFamily: "serif",
-
-                          fontSize: "0.9rem",
-                        }}
-                      >
-                        <img
-                          src={imagelist[i]}
-                          style={{
-                            height: "20px",
-                            width: "20px",
-                            position: "relative",
-                            top: "4px",
-                            left: -10,
-                          }}
-                        />
-                        {item?.type}
-                      </Typography>
-                    </div>
-                  </MenuItem>
-                )
-              )}
-              <MenuItem onClick={handleCloseMenu}>
-                <Typography
-                  style={{
-                    fontFamily: "serif",
-
-                    fontSize: "0.9rem",
-                  }}
-                >
-                  Other Services
-                </Typography>
-              </MenuItem>
-            </Box>
-          </Menu>
-        </IconButton>
-
-        <StyledTextField
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <SearchIcon />
-              </InputAdornment>
-            ),
-          }}
-          size="small"
-        />
+      <div>
+        <MyAppBar>
+          {" "}
+          <div style={{ display: "flex", flexDirection: "row", gap: "50px" }}>
+            <MobileMenu onClick={toggleDrawer("left", true)}>
+              <MenuRoundedIcon sx={{ color: "black" }} />
+            </MobileMenu>
+            <div
+              onClick={() => {
+                route.push("/");
+              }}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "left",
+                WebkitTapHighlightColor: "red !important",
+              }}
+            >
+              <StyledTypography
+                sx={{
+                  fontFamily: "GeoticaW01-FourOpen",
+                  cursor: "pointer",
+                }}
+              >
+                Elverr
+              </StyledTypography>
+              <img
+                src="companylogo.jpeg"
+                style={{ height: "20px", objectFit: "contain" }}
+              ></img>
+            </div>
+          </div>
+          <div>
+            <Search isVisible={showSearch} />
+          </div>
+        </MyAppBar>
       </div>
     );
   };
   return (
-    <StyledAppBar position={isfixed ? "relative" : "fixed"}>
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <div className="navbar__container">
-          <Toolbar></Toolbar>
-          <div className="navbar__mainwrapper">
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "left",
-                alignItems: "center",
-              }}
-            >
-              <MobileMenu onClick={toggleDrawer("left", true)}>
-                <MenuRoundedIcon sx={{ color: "black" }} />
-              </MobileMenu>
-              <SwipeableDrawer
-                anchor={"left"}
-                open={slide["left"]}
-                onClose={toggleDrawer("left", false)}
-                onOpen={toggleDrawer("left", true)}
-              >
-                {list()}
-              </SwipeableDrawer>
+    <div>
+      {RenderMobile()}
+      <StyledAppBar position={isfixed ? "relative" : "fixed"}>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <div className="navbar__container">
+            <Toolbar></Toolbar>
+            <div className="navbar__mainwrapper">
               <div
-                onClick={() => {
-                  route.push("/");
-                }}
                 style={{
                   display: "flex",
-                  alignItems: "center",
                   justifyContent: "left",
+                  alignItems: "center",
                 }}
               >
-                <StyledTypography
-                  sx={{
-                    fontFamily: "GeoticaW01-FourOpen",
-                    cursor: "pointer",
+                <MobileMenu onClick={toggleDrawer("left", true)}>
+                  <MenuRoundedIcon sx={{ color: "black" }} />
+                </MobileMenu>
+                <SwipeableDrawer
+                  anchor={"left"}
+                  open={slide["left"]}
+                  onClose={toggleDrawer("left", false)}
+                  onOpen={toggleDrawer("left", true)}
+                >
+                  {list()}
+                </SwipeableDrawer>
+                <div
+                  onClick={() => {
+                    route.push("/");
+                  }}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "left",
+                    WebkitTapHighlightColor: "red !important",
                   }}
                 >
-                  Elverr
-                </StyledTypography>
-                <img
-                  src="companylogo.jpeg"
-                  style={{ height: "20px", objectFit: "contain" }}
-                ></img>
+                  <StyledTypography
+                    sx={{
+                      fontFamily: "GeoticaW01-FourOpen",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Elverr
+                  </StyledTypography>
+                  <img
+                    src="companylogo.jpeg"
+                    style={{ height: "20px", objectFit: "contain" }}
+                  ></img>
+                </div>
               </div>
             </div>
-          </div>
 
-          <StyledDiv>
-            <Search isVisible={showSearch} />
-            <StyledIconButton sx={{ color: "#222325" }}>
-              <NotificationsNoneOutlinedIcon />
-            </StyledIconButton>
-            <StyledIconButton
-              onClick={() => {
-                route.push("/my-favorite");
-              }}
-              sx={{ color: "#222325" }}
-            >
-              <FavoriteBorderOutlinedIcon />
-            </StyledIconButton>
+            <StyledDiv>
+              <Search isVisible={showSearch} />
+              <StyledIconButton sx={{ color: "#222325" }}>
+                <NotificationsNoneOutlinedIcon />
+              </StyledIconButton>
+              <StyledIconButton
+                onClick={() => {
+                  route.push("/my-favorite");
+                }}
+                sx={{ color: "#222325" }}
+              >
+                <FavoriteBorderOutlinedIcon />
+              </StyledIconButton>
 
-            {/*      <p
+              {/*      <p
             onClick={() => {
               handleLanguageChange("en");
             }}
@@ -401,152 +358,155 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
             
           </p> */}
 
-            <div>
-              {AuthState.user ? (
-                <>
-                  <StyledButton
-                    variant="text"
-                    sx={{ textTransform: "none" }}
-                    onClick={handleProfileClicks}
-                    aria-controls={open ? "basic-menu" : undefined}
-                    aria-haspopup="true"
-                    aria-expanded={open ? "true" : undefined}
-                  >
-                    <Avatar /> &nbsp; Hi {AuthState.user.name}{" "}
-                    {myaccount ? (
-                      <>
-                        {" "}
-                        <KeyboardArrowDown
-                          sx={{ transform: "rotate(180deg)" }}
-                        />{" "}
-                      </>
-                    ) : (
-                      <>
-                        {" "}
-                        <KeyboardArrowDown
-                          sx={{ transform: "rotate(0deg)" }}
-                        />{" "}
-                        <StyledMenu
-                          id="basic-menu"
-                          anchorEl={anchorEl}
-                          open={displaylist}
-                          onClose={handleClose}
-                          MenuListProps={{
-                            "aria-labelledby": "basic-button",
-                          }}
-                        >
-                          <MenuItem
-                            onClick={() => {
-                              route.push("/profile");
+              <div>
+                {AuthState.user ? (
+                  <>
+                    <StyledButton
+                      variant="text"
+                      sx={{ textTransform: "none" }}
+                      onClick={handleProfileClicks}
+                      aria-controls={open ? "basic-menu" : undefined}
+                      aria-haspopup="true"
+                      aria-expanded={open ? "true" : undefined}
+                    >
+                      <Avatar />
+                      {myaccount ? (
+                        <>
+                          {" "}
+                          <KeyboardArrowDown
+                            sx={{ transform: "rotate(180deg)" }}
+                          />{" "}
+                        </>
+                      ) : (
+                        <>
+                          {" "}
+                          <KeyboardArrowDown
+                            sx={{ transform: "rotate(0deg)" }}
+                          />{" "}
+                          <StyledMenu
+                            id="basic-menu"
+                            anchorEl={anchorEl}
+                            open={displaylist}
+                            onClose={handleClose}
+                            MenuListProps={{
+                              "aria-labelledby": "basic-button",
                             }}
                           >
-                            Profile
-                          </MenuItem>
-                          <MenuItem onClick={handleClose}>My account</MenuItem>
-                          <MenuItem onClick={HandleLogout}>Logout</MenuItem>
-                        </StyledMenu>
-                      </>
-                    )}
-                  </StyledButton>
-                  <div
-                    style={{
-                      display: "flex",
+                            <MenuItem
+                              onClick={() => {
+                                route.push("/profile");
+                              }}
+                            >
+                              Profile
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                              My account
+                            </MenuItem>
+                            <MenuItem onClick={HandleLogout}>Logout</MenuItem>
+                          </StyledMenu>
+                        </>
+                      )}
+                    </StyledButton>
+                    <div
+                      style={{
+                        display: "flex",
 
-                      justifyContent: "center",
-                      bottom: "20px",
+                        justifyContent: "center",
+                        bottom: "20px",
 
-                      position: "absolute",
-                      right: 0,
-                    }}
-                  >
-                    {/*    <StyledLoginIcon sx={{ color: "#222325" }}>
+                        position: "absolute",
+                        right: 0,
+                      }}
+                    >
+                      {/*    <StyledLoginIcon sx={{ color: "#222325" }}>
                     <FavoriteBorderOutlinedIcon sx={{ fontSize: "1.3rem" }} />
                   </StyledLoginIcon>
 
                   <StyledLoginIcon sx={{ color: "#222325" }}>
                     <NotificationsNoneOutlinedIcon sx={{ fontSize: "1.3rem" }} />
                   </StyledLoginIcon> */}
-                    <StyledLoginIcon
-                      sx={{ color: "#222325" }}
+                      <StyledLoginIcon
+                        sx={{ color: "#222325" }}
+                        onClick={handleOpen}
+                      >
+                        <Avatar sx={{ height: "1.3rem", width: "1.3rem" }} />
+                      </StyledLoginIcon>
+                    </div>
+                  </>
+                ) : (
+                  <div>
+                    <StyledButton
+                      variant="text"
+                      sx={{ textTransform: "none" }}
                       onClick={handleOpen}
                     >
-                      <Avatar sx={{ height: "1.3rem", width: "1.3rem" }} />
-                    </StyledLoginIcon>
-                  </div>
-                </>
-              ) : (
-                <div>
-                  <StyledButton
-                    variant="text"
-                    sx={{ textTransform: "none" }}
-                    onClick={handleOpen}
-                  >
-                    <PersonIcon /> Account <KeyboardArrowDown />
-                  </StyledButton>
-                  <LoginModal
-                    OpenModalForm={open}
-                    CloseModalForm={handleClose}
-                  />{" "}
-                  <div
-                    style={{
-                      display: "flex",
+                      <PersonIcon /> Account <KeyboardArrowDown />
+                    </StyledButton>
+                    <LoginModal
+                      OpenModalForm={open}
+                      CloseModalForm={handleClose}
+                    />{" "}
+                    <div
+                      style={{
+                        display: "flex",
 
-                      justifyContent: "center",
-                      bottom: "20px",
+                        justifyContent: "center",
+                        bottom: "20px",
 
-                      position: "absolute",
-                      right: 0,
-                    }}
-                  >
-                    {/*     <StyledLoginIcon sx={{ color: "#222325" }}>
+                        position: "absolute",
+                        right: 0,
+                      }}
+                    >
+                      {/*     <StyledLoginIcon sx={{ color: "#222325" }}>
                     <FavoriteBorderOutlinedIcon sx={{ fontSize: "0.8rem" }} />
                   </StyledLoginIcon> */}
 
-                    {/*      <StyledLoginIcon sx={{ color: "#222325" }}>
+                      {/*      <StyledLoginIcon sx={{ color: "#222325" }}>
                     <NotificationsNoneOutlinedIcon sx={{ fontSize: "0.8rem" }} />
                   </StyledLoginIcon> */}
-                    <StyledLoginIcon
-                      sx={{ color: "#222325" }}
-                      onClick={handleOpen}
-                    >
-                      <PersonIcon sx={{ fontSize: "1.3rem" }} />
-                    </StyledLoginIcon>
+                      <StyledLoginIcon
+                        sx={{ color: "#222325" }}
+                        onClick={handleOpen}
+                      >
+                        <PersonIcon sx={{ fontSize: "1.3rem" }} />
+                      </StyledLoginIcon>
+                    </div>
                   </div>
-                </div>
-              )}
-            </div>
-          </StyledDiv>
+                )}
+              </div>
+            </StyledDiv>
+          </div>
+          <CustomDivider />
+          <ResponsiveDiv>
+            <IconButton>
+              <MainText>Categories</MainText>
+              <KeyboardArrowDown />
+            </IconButton>
+            <IconButton>
+              <MainText>IT Services</MainText>
+              <KeyboardArrowDown />
+            </IconButton>
+            <IconButton>
+              <MainText>Cleaning Services</MainText>
+              <KeyboardArrowDown />
+            </IconButton>
+            <IconButton>
+              <MainText>Automative Services</MainText>
+              <KeyboardArrowDown />
+            </IconButton>
+            <IconButton>
+              <MainText>Advertise on Elverr</MainText>
+              <KeyboardArrowDown />
+            </IconButton>
+            <IconButton>
+              <MainText>FAQ</MainText>
+              <KeyboardArrowDown />
+            </IconButton>
+            <LanguageMenu />
+          </ResponsiveDiv>
         </div>
-        <CustomDivider />
-        <ResponsiveDiv>
-          <IconButton>
-            <MainText>Categories</MainText>
-            <KeyboardArrowDown />
-          </IconButton>
-          <IconButton>
-            <MainText>IT Services</MainText>
-            <KeyboardArrowDown />
-          </IconButton>
-          <IconButton>
-            <MainText>Cleaning Services</MainText>
-            <KeyboardArrowDown />
-          </IconButton>
-          <IconButton>
-            <MainText>Automative Services</MainText>
-            <KeyboardArrowDown />
-          </IconButton>
-          <IconButton>
-            <MainText>Advertise on Elverr</MainText>
-            <KeyboardArrowDown />
-          </IconButton>
-          <IconButton>
-            <MainText>FAQ</MainText>
-            <KeyboardArrowDown />
-          </IconButton>
-          <LanguageMenu />
-        </ResponsiveDiv>
-      </div>
-    </StyledAppBar>
+      </StyledAppBar>
+    </div>
   );
 };
 

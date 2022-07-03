@@ -24,7 +24,7 @@ export const StyledTextField = styled(TextField)(
     },
     "border": "none",
     "borderStyle": "none",
-    "display": { xs: "none", md: "flex", lg: "flex", xl: "flex" },
+    "display": { xs: "flex", md: "flex", lg: "flex", xl: "flex" },
 
     "background": "#ffff",
     "borderRadius": "10px",
