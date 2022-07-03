@@ -30,7 +30,11 @@
 
     @include atMedium {
       display: flex;
-      margin-left: 5%;
+      gap: 20px;
+    }
+    @include atSmall {
+      display: flex;
+      gap: 20px;
     }
   }
   &__nav_mobile {
@@ -92,7 +96,7 @@
       margin-top: 0%;
       justify-content: space-between;
       justify-items: center;
-      width: 100%;
+      width: 107%;
     }
     @include atMedium {
       display: none;

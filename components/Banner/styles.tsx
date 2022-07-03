@@ -13,6 +13,16 @@ import {
   ThemeProvider,
   experimental_sx as sx,
 } from "@mui/system";
+export const StyledImage = styled("img")(
+  sx({
+    width: "100%",
+    objectFit: "cover",
+
+    display: { xs: "none", md: "flex" },
+    height: "300px",
+    opacity: "100%",
+  })
+);
 export const CustomContainer = styled("div")(
   sx({
     display: " flex",
@@ -40,7 +50,7 @@ export const StyledContainers = styled("div")(
 
     display: "flex",
 
-    marginLeft: { md: "5%" },
+    marginLeft: { md: "5%", xs: "5%" },
     height: "300px",
     justifyContent: "space-between",
     gap: "30px",
@@ -64,7 +74,7 @@ export const SubText = styled(Typography)(
 );
 export const StyledPaper = styled(Paper)(
   sx({
-    width: { xs: "100%", md: "400px", lg: "400px", xl: "300px" },
+    width: { xs: "400px", md: "400px", lg: "400px", xl: "300px" },
     height: "90%",
   })
 );

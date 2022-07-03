@@ -42,14 +42,13 @@ const Home: NextPage = () => {
   }, [categories]);
   console.log("checking via the index", categories);
   return (
-    <Layout showSearch={true} isVisible={true}>
+    <Layout showSearch={true} isVisible={false}>
       {" "}
       <div>
+        <div style={{ marginTop: "5%" }}></div>
         <Banner />
         <Cookie />
-
         <AvailableServices services={categories} />
-
         <LatestServices />
         <TopCategories />
         <Recommended />

@@ -8,20 +8,20 @@
   &__mobilelatestservices {
     margin-top: 10px;
 
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     display: grid;
     grid-template-columns: 49% 49%;
     width: 100%;
 
     @include atSmall {
-      width: 110%;
-      grid-template-columns: 54% 54%;
+      display: "none";
     }
     @include atSmallMax {
       width: 100%;
       grid-template-columns: 50% 50%;
       gap: 10px;
+      margin-left: 6px;
     }
     @include atFold {
       width: 100%;

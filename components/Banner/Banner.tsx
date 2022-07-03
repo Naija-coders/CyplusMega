@@ -12,6 +12,7 @@ import {
   CustomDivContainer,
   StyledDivButton,
   SubText,
+  StyledImage,
   Text,
 } from "./styles";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
@@ -68,17 +69,7 @@ export default function Banner({}: Props) {
                 </StyledPaper>
                 <div>
                   {" "}
-                  <img
-                    src="happybanner.jpg"
-                    style={{
-                      width: "100%",
-                      objectFit: "cover",
-
-                      display: "flex",
-                      height: "300px",
-                      opacity: "100%",
-                    }}
-                  />
+                  <StyledImage src="happybanner.jpg" />
                 </div>
 
                 {/*  <StyledTypography>Great Services</StyledTypography>{" "}

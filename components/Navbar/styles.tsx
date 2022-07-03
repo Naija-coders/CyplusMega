@@ -37,8 +37,8 @@ export const ResponsiveDiv = styled("div")(
     display: { xs: "none", sm: "none", md: "flex" },
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
-    marginLeft: "5%",
+    justifyContent: "center",
+    gap: "30px",
   })
 );
 export const StyledQuote = styled(Typography)(

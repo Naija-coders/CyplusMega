@@ -356,7 +356,11 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
                 onClick={() => {
                   route.push("/");
                 }}
-                style={{ display: "flex", alignItems: "center" }}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "left",
+                }}
               >
                 <StyledTypography
                   sx={{
@@ -516,7 +520,6 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
         <CustomDivider />
         <ResponsiveDiv>
           <IconButton>
-            <MenuRoundedIcon />
             <MainText>Categories</MainText>
             <KeyboardArrowDown />
           </IconButton>
@@ -533,7 +536,7 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
             <KeyboardArrowDown />
           </IconButton>
           <IconButton>
-            <MainText>Post a service</MainText>
+            <MainText>Advertise on Elverr</MainText>
             <KeyboardArrowDown />
           </IconButton>
           <IconButton>

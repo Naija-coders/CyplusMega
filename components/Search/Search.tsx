@@ -14,8 +14,9 @@ const Search: React.FC<Props> = ({ isVisible }) => {
   return (
     <>
       {isVisible ? (
-        <div>
+        <div style={{ width: "100%" }}>
           <StyledTextField
+            fullWidth
             placeholder={t("find_service")}
             InputProps={{
               endAdornment: (
