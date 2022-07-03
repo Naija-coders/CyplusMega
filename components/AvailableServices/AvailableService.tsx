@@ -110,6 +110,8 @@ const AvailableService = (props: Props) => {
                   style={{
                     fontFamily: "serif",
                     fontSize: "1.3rem",
+                    fontWeight: "bold",
+                    paddingLeft: "1rem",
                   }}
                 >
                   {t("service_categories")}

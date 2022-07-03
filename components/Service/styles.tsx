@@ -233,6 +233,7 @@ export const NormalDiv = styled("div")(
 );
 export const CatWrapper = styled("div")(
   sx({
+    marginTop: { md: "8%" },
     display: "flex",
     flexDirection: "column",
     width: { xs: "110%", md: "100%" },

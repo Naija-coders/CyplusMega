@@ -8,8 +8,10 @@ interface Props {
 }
 const Categoriesid: React.FC<Props> = ({ query, ourService }) => {
   return (
-    <Layout showSearch={true} isVisible={true}>
-      <CustomCategories query={query} servicesState={ourService} />
+    <Layout showSearch={true}>
+      <div style={{ marginTop: "10%" }}>
+        <CustomCategories query={query} servicesState={ourService} />
+      </div>
     </Layout>
   );
 };

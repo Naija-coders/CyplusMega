@@ -9,7 +9,7 @@ type Props = {
 
 export default function categories({ ourService }: Props) {
   return (
-    <Layout showSearch={true} isVisible={true}>
+    <Layout showSearch={true}>
       <CustomCategories servicesState={ourService} />
     </Layout>
   );

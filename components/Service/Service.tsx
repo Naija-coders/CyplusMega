@@ -19,6 +19,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CustomCard from "../CustomCard";
 import BasicTabs from "./TabBarPanel";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 import {
   StyledDiv,
@@ -46,6 +47,7 @@ import {
 } from "./styles";
 import Typography from "@mui/material/Typography";
 import CustomLoader from "../CustomLoader";
+
 interface LinkTabProps {
   label?: string;
   href?: string;
@@ -93,6 +95,7 @@ export default function Service() {
   const [types, setTypes] = React.useState<any>();
   const [offers, setOffers] = React.useState<any>();
   const [similar, setSimilar] = React.useState<any>([]);
+  const [loaded, setLoaded] = React.useState(false);
 
   let offer = [];
   let recommended = [];
@@ -133,38 +136,51 @@ export default function Service() {
     });
   };
 
+  React.useEffect(() => {
+    if (offers === null || offers?.length < 0) {
+      setLoaded(false);
+    } else if (state.mainservices.length > 0) {
+      setLoaded(true);
+    }
+  });
   return (
-    <ContainerWrapper>
-      {offers?.map((item: any) => (
-        <div
-          style={{
-            width: "100%",
+    <div>
+      {loaded ? (
+        <ContainerWrapper>
+          {offers?.map((item: any) => (
+            <div
+              style={{
+                width: "100%",
 
-            marginTop: "2%",
-          }}
-          key={Math.random()}
-        >
-          <CatWrapper sx={{ background: "white" }}>
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <NormalDiv>
-                <HeaderPageTypo sx={{ color: "black" }}>Home</HeaderPageTypo>{" "}
-                {/* svg greater than sign for navigayion */}
-                <svg
-                  width="8"
-                  height="12"
-                  viewBox="0 0 8 16"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M0.772126 1.19065L0.153407 1.80934C0.00696973 1.95578 0.00696973 2.19322 0.153407 2.33969L5.80025 8L0.153407 13.6603C0.00696973 13.8067 0.00696973 14.0442 0.153407 14.1907L0.772126 14.8094C0.918563 14.9558 1.156 14.9558 1.30247 14.8094L7.84666 8.26519C7.99309 8.11875 7.99309 7.88131 7.84666 7.73484L1.30247 1.19065C1.156 1.04419 0.918563 1.04419 0.772126 1.19065Z"></path>
-                </svg>
-                <HeaderPageTypo sx={{ color: "green" }}>Service</HeaderPageTypo>
-              </NormalDiv>
-              <div style={{ display: "flex", paddingLeft: "5%" }}>
-                <h2>{item.title}</h2>
-              </div>
-            </div>
-          </CatWrapper>
-          {/* <CatWrapper>
+                marginTop: "2%",
+              }}
+              key={Math.random()}
+            >
+              <CatWrapper sx={{ background: "white" }}>
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <NormalDiv>
+                    <HeaderPageTypo sx={{ color: "black" }}>
+                      Home
+                    </HeaderPageTypo>{" "}
+                    {/* svg greater than sign for navigayion */}
+                    <svg
+                      width="8"
+                      height="12"
+                      viewBox="0 0 8 16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M0.772126 1.19065L0.153407 1.80934C0.00696973 1.95578 0.00696973 2.19322 0.153407 2.33969L5.80025 8L0.153407 13.6603C0.00696973 13.8067 0.00696973 14.0442 0.153407 14.1907L0.772126 14.8094C0.918563 14.9558 1.156 14.9558 1.30247 14.8094L7.84666 8.26519C7.99309 8.11875 7.99309 7.88131 7.84666 7.73484L1.30247 1.19065C1.156 1.04419 0.918563 1.04419 0.772126 1.19065Z"></path>
+                    </svg>
+                    <HeaderPageTypo sx={{ color: "green" }}>
+                      Service
+                    </HeaderPageTypo>
+                  </NormalDiv>
+                  <div style={{ display: "flex", paddingLeft: "5%" }}>
+                    <h2>{item.title}</h2>
+                  </div>
+                </div>
+              </CatWrapper>
+              {/* <CatWrapper>
           <StyledPaper>
             <div
               style={{
@@ -211,7 +227,7 @@ export default function Service() {
             </div>
           </StyledPaper>
         </CatWrapper> */}
-          {/*    <div
+              {/*    <div
             style={{
               display: "flex",
               justifyContent: "left",
@@ -227,183 +243,204 @@ export default function Service() {
             </div>
             <div>Service</div> 
           </div> */}
-          <DivVal>
-            <StyledDiv>
-              {" "}
-              <StyledWrapper key={Math.random()}>
-                <StyledSubWrapper>
-                  <MainSub>
-                    {/*     <Typography
+              <DivVal>
+                <StyledDiv>
+                  {" "}
+                  <StyledWrapper key={Math.random()}>
+                    <StyledSubWrapper>
+                      <MainSub>
+                        {/*     <Typography
                       style={{ color: "#152238", fontSize: "1.4rem" }}
                     >
                       {item.About}
                     </Typography> */}
-                    <NormalContainer id="Overview">
-                      <div
-                        style={{
-                          display: "flex",
-                          width: "100%",
-                        }}
-                      >
-                        {" "}
-                        <StyledImageDiv>
-                          <SwiperThumb myimage={item} />
-                        </StyledImageDiv>
-                      </div>
-                      {/*    <RandomFlex>
-                        <StyledAvatar />
-                        <p>mano</p>
-                      </RandomFlex> */}
-                    </NormalContainer>
-                    <br></br>
-                    <RenderMobileDiv>
-                      <StyledContactMobile>
-                        <ContainerDiv elevation={0.6}>
+                        <NormalContainer id="Overview">
                           <div
                             style={{
                               display: "flex",
-
-                              flexDirection: "column",
-
-                              justifyContent: "center",
-                              justifyItems: "center",
-                              gap: "10px",
-
-                              alignItems: "center",
+                              width: "100%",
                             }}
                           >
-                            <StyledMainHeaderText align="center">
-                              Find out more about this seller
-                            </StyledMainHeaderText>
-                            <CustomDivider />
-                            <StyledAvatar
-                              variant="square"
-                              sx={{ width: "50%", margin: "10px" }}
-                            />
-                            <NormalTypography align="center">
-                              {item?.title}
-                            </NormalTypography>
-                            <StyledButton variant="contained">
-                              Send Enquiry{" "}
-                            </StyledButton>
-                            <NormalTypography align="center">
-                              Submit an enquiry direct
-                            </NormalTypography>
-                            <br></br>
+                            {" "}
+                            <StyledImageDiv>
+                              <SwiperThumb myimage={item} />
+                            </StyledImageDiv>
                           </div>
+                          {/*    <RandomFlex>
+                        <StyledAvatar />
+                        <p>mano</p>
+                      </RandomFlex> */}
+                        </NormalContainer>
+                        <br></br>
+                        <RenderMobileDiv>
+                          <StyledContactMobile>
+                            <ContainerDiv elevation={0.6}>
+                              <div
+                                style={{
+                                  display: "flex",
+
+                                  flexDirection: "column",
+
+                                  justifyContent: "center",
+                                  justifyItems: "center",
+                                  gap: "10px",
+
+                                  alignItems: "center",
+                                }}
+                              >
+                                <StyledMainHeaderText align="center">
+                                  Find out more about this seller
+                                </StyledMainHeaderText>
+                                <CustomDivider />
+                                <StyledAvatar
+                                  variant="square"
+                                  sx={{ width: "50%", margin: "10px" }}
+                                />
+                                <NormalTypography align="center">
+                                  {item?.title}
+                                </NormalTypography>
+                                <StyledButton variant="contained">
+                                  Send Enquiry{" "}
+                                </StyledButton>
+                                <NormalTypography align="center">
+                                  Submit an enquiry direct
+                                </NormalTypography>
+                                <br></br>
+                              </div>
+                            </ContainerDiv>
+                            <br></br>
+                          </StyledContactMobile>
+                        </RenderMobileDiv>
+                        <ContainerDiv elevation={0.6}>
+                          <StyledMainHeaderText id="Description">
+                            Description
+                          </StyledMainHeaderText>
+                          <StyledMainText paragraph>
+                            {item.About}
+                          </StyledMainText>
                         </ContainerDiv>
                         <br></br>
-                      </StyledContactMobile>
-                    </RenderMobileDiv>
-                    <ContainerDiv elevation={0.6}>
-                      <StyledMainHeaderText id="Description">
-                        Description
-                      </StyledMainHeaderText>
-                      <StyledMainText paragraph>{item.About}</StyledMainText>
-                    </ContainerDiv>
-                    <br></br>
-                    <ContainerDiv elevation={0.6}>
-                      <StyledMainHeaderText id="About">
-                        About this Seller
-                      </StyledMainHeaderText>
+                        <ContainerDiv elevation={0.6}>
+                          <StyledMainHeaderText id="About">
+                            About this Seller
+                          </StyledMainHeaderText>
 
-                      <StyledMainText paragraph>
-                        A course description is a brief summary of the
-                        significant learning experiences for a course. Course
-                        descriptions appear in individual Course Outlines and in
-                        the Program of Studies (POSs) for individual programs.
-                      </StyledMainText>
-                    </ContainerDiv>
+                          <StyledMainText paragraph>
+                            A course description is a brief summary of the
+                            significant learning experiences for a course.
+                            Course descriptions appear in individual Course
+                            Outlines and in the Program of Studies (POSs) for
+                            individual programs.
+                          </StyledMainText>
+                        </ContainerDiv>
 
-                    <PaperDiv elevation={0.6} style={{ marginTop: "-60px" }}>
-                      <BasicTabs
-                        overview={item.type}
-                        Description={
-                          "A course description is a brief summary of the significant learning experiences for a course. Course descriptions appear in individual Course Outlines and in the Program of Studies"
-                        }
-                        About={"About"}
-                      />
-                    </PaperDiv>
-                    <br></br>
-                    <PaperDiv elevation={0.6}>
-                      <StyledMainHeaderText id="Recommended">
-                        Similar Services
-                      </StyledMainHeaderText>
+                        <PaperDiv
+                          elevation={0.6}
+                          style={{ marginTop: "-60px" }}
+                        >
+                          <BasicTabs
+                            overview={item.type}
+                            Description={
+                              "A course description is a brief summary of the significant learning experiences for a course. Course descriptions appear in individual Course Outlines and in the Program of Studies"
+                            }
+                            About={"About"}
+                          />
+                        </PaperDiv>
+                        <br></br>
+                        <PaperDiv elevation={0.6}>
+                          <StyledMainHeaderText id="Recommended">
+                            Similar Services
+                          </StyledMainHeaderText>
 
-                      {similar.length <= 0 ? (
-                        <div>
-                          <CustomLoader />
-                        </div>
-                      ) : (
+                          {similar.length <= 0 ? (
+                            <div>
+                              <CustomLoader />
+                            </div>
+                          ) : (
+                            <div
+                              style={{
+                                display: "flex",
+                                padding: "10px",
+                                gap: "20px",
+                                overflowX: "scroll",
+                                width: "100%",
+                              }}
+                            >
+                              {similar?.slice(0, 6)?.map((item: any) => (
+                                <div key={Math.random()}>
+                                  <CustomCard
+                                    id={item.services_id}
+                                    name={item.name}
+                                    type={item.type}
+                                    about={item.about}
+                                    price={item.price}
+                                    updated_at={item.updated_at}
+                                    image={item.image}
+                                    bottomColor={"green"}
+                                  />
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </PaperDiv>
+                      </MainSub>
+                    </StyledSubWrapper>
+                    <StyledContact>
+                      <PaperDiv>
                         <div
                           style={{
                             display: "flex",
-                            padding: "10px",
-                            gap: "20px",
-                            overflowX: "scroll",
+
+                            flexDirection: "column",
                             width: "100%",
+                            justifyContent: "center",
+                            justifyItems: "center",
+                            gap: "10px",
+
+                            alignItems: "center",
                           }}
                         >
-                          {similar?.slice(0, 6)?.map((item: any) => (
-                            <div key={Math.random()}>
-                              <CustomCard
-                                id={item.services_id}
-                                name={item.name}
-                                type={item.type}
-                                about={item.about}
-                                price={item.price}
-                                updated_at={item.updated_at}
-                                image={item.image}
-                                bottomColor={"green"}
-                              />
-                            </div>
-                          ))}
+                          <StyledMainHeaderText align="center">
+                            Find out more about this seller
+                          </StyledMainHeaderText>
+                          <CustomDivider />
+                          <StyledAvatar
+                            variant="square"
+                            sx={{ width: "50%", margin: "10px" }}
+                          />
+                          <NormalTypography align="center">
+                            {item?.title}
+                          </NormalTypography>
+                          <StyledButton variant="contained">
+                            Send Enquiry{" "}
+                          </StyledButton>
+                          <NormalTypography align="center">
+                            Submit an enquiry direct
+                          </NormalTypography>
+                          <br></br>
                         </div>
-                      )}
-                    </PaperDiv>
-                  </MainSub>
-                </StyledSubWrapper>
-                <StyledContact>
-                  <PaperDiv>
-                    <div
-                      style={{
-                        display: "flex",
+                      </PaperDiv>
+                    </StyledContact>
+                  </StyledWrapper>
+                </StyledDiv>
+              </DivVal>{" "}
+            </div>
+          ))}
+        </ContainerWrapper>
+      ) : (
+        <Skeleton
+          count={6}
+          height={30}
+          style={{
+            marginLeft: "15px",
+            borderRadius: "0.5rem",
 
-                        flexDirection: "column",
-                        width: "100%",
-                        justifyContent: "center",
-                        justifyItems: "center",
-                        gap: "10px",
-
-                        alignItems: "center",
-                      }}
-                    >
-                      <StyledMainHeaderText align="center">
-                        Find out more about this seller
-                      </StyledMainHeaderText>
-                      <CustomDivider />
-                      <StyledAvatar
-                        variant="square"
-                        sx={{ width: "50%", margin: "10px" }}
-                      />
-                      <NormalTypography align="center">
-                        {item?.title}
-                      </NormalTypography>
-                      <StyledButton variant="contained">
-                        Send Enquiry{" "}
-                      </StyledButton>
-                      <NormalTypography align="center">
-                        Submit an enquiry direct
-                      </NormalTypography>
-                      <br></br>
-                    </div>
-                  </PaperDiv>
-                </StyledContact>
-              </StyledWrapper>
-            </StyledDiv>
-          </DivVal>{" "}
-        </div>
-      ))}
-    </ContainerWrapper>
+            justifyContent: "center",
+            marginTop: "10px",
+          }}
+          width={"100%"}
+        />
+      )}
+    </div>
   );
 }
