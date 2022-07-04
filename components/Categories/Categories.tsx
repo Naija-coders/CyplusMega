@@ -1,23 +1,11 @@
 import React, { useContext, useState, useEffect } from "react";
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import { IconButton, Paper } from "@mui/material";
-
-import { useRouter } from "next/router";
-import { Typography } from "@mui/material";
-import Toolbar from "@mui/material/Toolbar";
 import Divider from "@mui/material/Divider";
-import StateContext from "../../context/StateContext";
-import DispatchContext from "../../context/DispatchContext";
-import Button from "@mui/material/Button";
-import Clientapi from "../../pages/api/client";
 import { Dispatch } from "redux";
 import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
 import { actionCreators } from "../../state";
 import { RootState } from "../../state/reducers";
-import Card from "@mui/material/Card";
-import { SideBar } from "../SideBar/SideBar";
+
 import {
   ContainerDiv,
   StickyBar,
@@ -159,7 +147,14 @@ const Categories: React.FC<Props> = ({ servicesState, query }) => {
           <MainPaperDiv>
             {userservice?.map((item: any) => (
               <CustomDivContainer key={Math.random()}>
-                <CustomCard bottomColor="#222325" />
+                <CustomCard
+                  bottomColor="#222325"
+                  name={item?.name}
+                  type={item.type}
+                  about={item.about}
+                  price={item.price}
+                  updated_at={item.updated_at}
+                />
                 <br></br>
               </CustomDivContainer>
             ))}

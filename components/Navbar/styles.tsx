@@ -51,6 +51,7 @@ export const StyledQuote = styled(Typography)(
 export const MainText = styled(Typography)(
   sx({
     color: "#221133",
+    fontSize: "14px",
   })
 );
 export const StyledCaption = styled(Typography)(sx({}));

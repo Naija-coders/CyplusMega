@@ -224,6 +224,10 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
                     fontFamily: "serif",
                     fontSize: "15px",
                     textDecoration: "underline",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => {
+                    route.push("/");
                   }}
                 >
                   See All

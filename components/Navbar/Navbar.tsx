@@ -480,27 +480,21 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
           <ResponsiveDiv>
             <IconButton>
               <MainText>Categories</MainText>
-              <KeyboardArrowDown />
             </IconButton>
             <IconButton>
               <MainText>IT Services</MainText>
-              <KeyboardArrowDown />
             </IconButton>
             <IconButton>
               <MainText>Cleaning Services</MainText>
-              <KeyboardArrowDown />
             </IconButton>
             <IconButton>
               <MainText>Automative Services</MainText>
-              <KeyboardArrowDown />
             </IconButton>
             <IconButton>
               <MainText>Advertise on Elverr</MainText>
-              <KeyboardArrowDown />
             </IconButton>
             <IconButton>
               <MainText>FAQ</MainText>
-              <KeyboardArrowDown />
             </IconButton>
             <LanguageMenu />
           </ResponsiveDiv>

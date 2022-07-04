@@ -45,8 +45,8 @@ const Home: NextPage = () => {
     <Layout showSearch={true} isVisible={false}>
       {" "}
       <div>
-        <div style={{ marginTop: "5%" }}></div>
-        <Banner />
+        <div style={{ padding: "2rem" }}></div>
+
         <Cookie />
         <AvailableServices services={categories} />
         <LatestServices />

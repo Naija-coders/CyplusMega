@@ -16,6 +16,7 @@ import Card from "@mui/material/Card";
 import { RootState } from "../../state/reducers";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import { Swiper, SwiperSlide } from "swiper/react";
+import VerifiedIcon from "@mui/icons-material/Verified";
 
 // Import Swiper styles
 import "swiper/css";
@@ -205,6 +206,7 @@ const AvailableService = (props: Props) => {
   return (
     <>
       {RenderMobile()}
+      <br></br> <br></br>
       <div className="navbar__mycontainer">
         <CustomContainer>
           <CustomDivContainer>
