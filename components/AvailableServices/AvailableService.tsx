@@ -103,6 +103,7 @@ const AvailableService = (props: Props) => {
   const RenderMobile = () => {
     return (
       <>
+        <div style={{ marginTop: "60px" }}></div>
         <div className="navbar__catwrappermobile">
           <div className="navbar__sizewidth">
             <Paper elevation={0}>
