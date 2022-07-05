@@ -49,6 +49,10 @@ const Home: NextPage = () => {
 
         <Cookie />
         <AvailableServices services={categories} />
+        <br></br>
+        <br></br>
+        <Featured />
+
         <LatestServices />
         <TopCategories />
         <Recommended />

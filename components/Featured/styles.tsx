@@ -19,41 +19,51 @@ import {
   experimental_sx as sx,
 } from "@mui/system";
 import { BorderStyle } from "@mui/icons-material";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+interface StyledTabsProps {
+  children?: React.ReactNode;
+  value: any;
+  onChange: any;
+  variant: any;
+  scrollButtons: any;
+}
+interface StyledTabProps {
+  label?: string;
+  value?: string;
+}
+export const StyledTab = styled((props: StyledTabProps) => (
+  <Tab disableRipple {...props} />
+))(({ theme }) => ({
+  "textTransform": "none",
 
-export const StyledDiv = styled("div")(
-  sx({
-    width: { md: "95%", lg: "93%", xl: "80%" },
-    height: "100px",
+  "marginRight": theme.spacing(1),
+  "color": "black",
+  "fontWeight": "bold",
+  "fontSize": "1rem",
+  "&.Mui-selected": {
+    color: "green",
+  },
+  "&.Mui-focusVisible": {
+    backgroundColor: "rgba(100, 95, 228, 0.32)",
+  },
+}));
 
+export const StyledTabs = styled((props: StyledTabsProps) => (
+  <Tabs
+    {...props}
+    TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan" /> }}
+  />
+))({
+  "& .MuiTabs-indicator": {
     display: "flex",
-    marginLeft: { md: "5%", lg: "0%", xl: "5%" },
+    justifyContent: "center",
+    backgroundColor: "transparent",
+    minHeight: "5px",
+  },
 
-    alignItems: "center",
-  })
-);
-export const MobileDiv = styled("div")(
-  sx({
-    marginLeft: "30px",
-    display: "flex",
-
-    alignItems: "center",
-  })
-);
-export const StyledTypography = styled(Typography)(
-  sx({
-    fontFamily: "EB Garamond",
-    fontSize: { xs: "0.7rem", md: "24px" },
-    color: "#ffff",
-  })
-);
-
-export const StyledDivider = styled(Divider)(
-  sx({
-    width: "1px",
-    border: "#ffff 1px",
-    opacity: "100%",
-    borderStyle: "solid ",
-    marginLeft: "10%",
-    height: "40px",
-  })
-);
+  "& .MuiTabs-indicatorSpan": {
+    width: "80%",
+    backgroundColor: "green",
+  },
+});

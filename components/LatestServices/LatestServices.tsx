@@ -38,7 +38,6 @@ const LatestServices: React.FC<Props> = ({}) => {
   console.log("displaying mainservices", state.mainservices);
   return (
     <div>
-      <br></br>
       {!loggedIn && (
         <ReuseableCategory
           title={"Latest Services"}
