@@ -17,13 +17,45 @@ import {
   ThemeProvider,
   experimental_sx as sx,
 } from "@mui/system";
+import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 
+export const HtmlTooltip = styled(({ className, ...props }: TooltipProps) => (
+  <Tooltip {...props} arrow classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.arrow}`]: {
+    color: "black",
+  },
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: "black",
+    minWidth: "99.5vw",
+    padding: "1rem",
+  },
+}));
+export const LightTooltip = styled(({ className, ...props }: TooltipProps) => (
+  <Tooltip {...props} classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: "white",
+
+    boxShadow: " 1px 1px #888888",
+    fontSize: 11,
+  },
+}));
 export const StyledTypography = styled(Typography)(
   sx({
     color: "#222325",
 
     fontFamily: "GeoticaW01-FourOpen",
     fontSize: { xs: "1.3rem", md: "2rem" },
+  })
+);
+export const Tooltipdiv = styled("div")(
+  sx({
+    display: "flex",
+    flexDirection: "row",
+    width: "100%",
+    justifyContent: "center",
+    gap: "30px",
   })
 );
 export const MobileMenu = styled(IconButton)(
@@ -54,6 +86,26 @@ export const MainText = styled(Typography)(
     fontSize: "14px",
   })
 );
+export const TooltipButton = styled(Button)(
+  sx({
+    "background": "green",
+    "&:hover": {
+      background: "green",
+    },
+  })
+);
+export const TooltipText = styled(Typography)(
+  sx({
+    "color": "#fff",
+    "fontSize": "0.9rem",
+    "&:hover": {
+      color: "green",
+      textDecoration: "underline",
+      cursor: "pointer",
+    },
+  })
+);
+
 export const StyledCaption = styled(Typography)(sx({}));
 export const StyledAppBar = styled(AppBar)(
   sx({

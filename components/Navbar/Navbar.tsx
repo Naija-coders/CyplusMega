@@ -24,6 +24,7 @@ import Search from "../Search/Search";
 
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
+import ToolTips from "./ToolTips";
 
 import {
   AppBar,
@@ -63,9 +64,14 @@ import {
   CustomDivider,
   MainText,
   ResponsiveDiv,
+  Tooltipdiv,
   MyAppBar,
+  HtmlTooltip,
+  TooltipText,
+  LightTooltip,
 } from "./styles";
 import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
+
 import SearchIcon from "@mui/icons-material/Search";
 import PersonIcon from "@mui/icons-material/Person";
 import HelpIcon from "@mui/icons-material/Help";
@@ -337,9 +343,32 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
 
             <StyledDiv>
               <Search isVisible={showSearch} />
-              <StyledIconButton sx={{ color: "#222325" }}>
-                <NotificationsNoneOutlinedIcon />
-              </StyledIconButton>
+              <LightTooltip
+                title={
+                  <div style={{ display: "flex", flexDirection: "column" }}>
+                    <Typography
+                      color="green"
+                      style={{ fontWeight: "bold", padding: "1rem" }}
+                      align="center"
+                    >
+                      Notifications{" "}
+                    </Typography>
+
+                    <Typography
+                      color="black"
+                      style={{ fontSize: "0.8rem", paddingLeft: "1rem" }}
+                    >
+                      No notifications.
+                    </Typography>
+                    <br></br>
+                  </div>
+                }
+              >
+                <StyledIconButton sx={{ color: "#222325" }}>
+                  <NotificationsNoneOutlinedIcon />
+                </StyledIconButton>
+              </LightTooltip>
+
               <StyledIconButton
                 onClick={() => {
                   route.push("/my-favorite");
@@ -478,24 +507,8 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
           </div>
           <CustomDivider />
           <ResponsiveDiv>
-            <IconButton>
-              <MainText>Categories</MainText>
-            </IconButton>
-            <IconButton>
-              <MainText>IT Services</MainText>
-            </IconButton>
-            <IconButton>
-              <MainText>Cleaning Services</MainText>
-            </IconButton>
-            <IconButton>
-              <MainText>Automative Services</MainText>
-            </IconButton>
-            <IconButton>
-              <MainText>Advertise on Elverr</MainText>
-            </IconButton>
-            <IconButton>
-              <MainText>FAQ</MainText>
-            </IconButton>
+            <ToolTips />
+
             <LanguageMenu />
           </ResponsiveDiv>
         </div>
