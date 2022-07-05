@@ -152,7 +152,7 @@ export default function Featured() {
               {servicetype?.length <= 0 ? (
                 <div>
                   <Typography align="center">
-                    There's no IT Services at the moment!
+                    {"There's no IT Services at the moment"!}
                   </Typography>
                 </div>
               ) : (
@@ -171,7 +171,7 @@ export default function Featured() {
               {servicecleaning?.length <= 0 ? (
                 <div>
                   <Typography align="center">
-                    There's no Cleaning Services at the moment!
+                    {" There's no Cleaning Services at the moment!"}
                   </Typography>
                 </div>
               ) : (
@@ -189,7 +189,9 @@ export default function Featured() {
             {servicebuilding?.length <= 0 ? (
               <div>
                 <Typography align="center">
-                  There's no Building and Trade Services services at the moment!
+                  {
+                    " There's no Building and Trade Services services at the moment!"
+                  }
                 </Typography>
               </div>
             ) : (
@@ -206,7 +208,7 @@ export default function Featured() {
             {servicemanufacturing?.length <= 0 ? (
               <div>
                 <Typography align="center">
-                  There's no Manufacturing Services at the moment!
+                  {"There's no Manufacturing Services at the moment!"}
                 </Typography>
               </div>
             ) : (
@@ -223,7 +225,9 @@ export default function Featured() {
             {servicelandspacing?.length <= 0 ? (
               <div>
                 <Typography align="center">
-                  There's no Landspacing and Gardening Services at the moment!
+                  {
+                    " There's no Landspacing and Gardening Services at the moment!"
+                  }
                 </Typography>
               </div>
             ) : (
