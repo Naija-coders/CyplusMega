@@ -207,7 +207,7 @@ const AvailableService = (props: Props) => {
   return (
     <>
       {RenderMobile()}
-      <br></br> <br></br>
+
       <div className="navbar__mycontainer">
         <CustomContainer>
           <CustomDivContainer>

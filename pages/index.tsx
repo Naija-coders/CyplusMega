@@ -46,12 +46,12 @@ const Home: NextPage = () => {
       {" "}
       <div>
         <div style={{ padding: "2rem" }}></div>
-
+        <Banner />
+        <br></br>
+        <br></br>
         <Cookie />
-        <AvailableServices services={categories} />
-        <br></br>
-        <br></br>
         <Featured />
+        <AvailableServices services={categories} />
 
         <LatestServices />
         <TopCategories />

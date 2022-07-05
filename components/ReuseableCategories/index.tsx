@@ -210,7 +210,7 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
       <div className="navbar__mycontainer" style={{ position: "relative" }}>
         <CustomContainer>
           <CustomDivContainer>
-            <Paper elevation={0} sx={{ height: "110%", background: "#f6f9f5" }}>
+            <Paper elevation={0} sx={{ height: "110%" }}>
               <StyledBox>
                 <StyledCustomTypography
                   variant="h5"

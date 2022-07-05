@@ -1,122 +1,46 @@
-import { Button, Divider, Typography } from "@mui/material";
-import React from "react";
-import {
-  StyledButton,
-  StyledTypography,
-  SubTypography,
-  StyledTextField,
-  StyledDiv,
-  StyledPaper,
-  StyledContainers,
-  CustomContainer,
-  CustomDivContainer,
-  StyledDivButton,
-  SubText,
-  StyledImage,
-  Text,
-} from "./styles";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import { useSelector } from "react-redux";
-import { RootState } from "../../state/reducers";
-import SearchIcon from "@mui/icons-material/Search";
-import { InputAdornment } from "@mui/material";
-import Paper from "@mui/material/Paper";
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import { useTranslation } from "react-i18next";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
 
-type Props = {};
+// import required modules
+import { Pagination } from "swiper";
 
-export default function Banner({}: Props) {
-  const { t, i18n } = useTranslation();
-
-  const state = useSelector((state: RootState) => state.appstate);
+export default function Banner() {
   return (
     <>
-      <br></br>
-      <div className="maindiv">
-        <CustomContainer>
-          <CustomDivContainer>
-            <div
+      <div style={{ marginTop: "3%" }}></div>
+      <Swiper
+        pagination={true}
+        modules={[Pagination]}
+        className="mySwiper"
+        style={{ height: "650px" }}
+      >
+        <SwiperSlide>
+          <div style={{ width: "100%", height: "100%" }}>
+            <img
+              src="servicesbanner.png"
               style={{
-                marginTop: "40px",
+                width: "100%",
+                height: "100%",
+                objectPosition: "center -4px",
+                objectFit: "cover",
               }}
-            >
-              <StyledContainers>
-                <StyledPaper elevation={1}>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      gap: "20px",
-                      padding: "20px",
-                      width: "100%",
-                    }}
-                  >
-                    <Text align="center">Post a Service</Text>
-                    <Divider sx={{ width: "100%" }} />
-
-                    <SubText align="center">
-                      Advertise your business for free
-                    </SubText>
-                    <StyledButton
-                      variant="contained"
-                      endIcon={<ArrowRightAltIcon />}
-                    >
-                      Post Now{" "}
-                    </StyledButton>
-                  </div>
-                </StyledPaper>
-                <div>
-                  {" "}
-                  <StyledImage src="happybanner.jpg" />
-                </div>
-
-                {/*  <StyledTypography>Great Services</StyledTypography>{" "}
-            <SubTypography>{t("every_service")}</SubTypography>
-            <br></br>
-            <StyledTextField
-              placeholder={t("find_service")}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="start">
-                    <SearchIcon />
-                  </InputAdornment>
-                ),
-              }}
-              size="small"
-              variant="outlined"
-              color="primary"
             />
-            <StyledDiv>
-              <StyledDivButton>{t("it_services")}</StyledDivButton>
-              <StyledDivButton> {t("Events")}</StyledDivButton>
-              <StyledDivButton>{t("Cleaning")}</StyledDivButton>
-            </StyledDiv>
-            <br></br>
           </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "10px",
-          }}
-        >
-          <Typography
-            sx={{
-              fontFamily: "Avenir Light",
-              fontSize: { xs: "0.7rem", md: "15px" },
-              color: "#626462",
-            }}
-          >
-            Welcome to a place where you find reliable services
-          </Typography>*/}
-              </StyledContainers>
-            </div>
-          </CustomDivContainer>
-        </CustomContainer>
-      </div>
+        </SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
+      </Swiper>
     </>
   );
 }
