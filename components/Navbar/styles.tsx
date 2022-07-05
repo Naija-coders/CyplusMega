@@ -97,7 +97,7 @@ export const TooltipButton = styled(Button)(
 export const TooltipText = styled(Typography)(
   sx({
     "color": "#fff",
-    "fontSize": "0.9rem",
+    "fontSize": "0.7rem !important",
     "&:hover": {
       color: "green",
       textDecoration: "underline",
