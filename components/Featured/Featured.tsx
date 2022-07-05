@@ -121,7 +121,7 @@ export default function Featured() {
     handleFilterBuilding();
     handleManufacturing();
     handleLandspacing();
-  }, []);
+  }, [servicetype, servicecleaning, servicebuilding, servicemanufacturing]);
 
   return (
     <Box sx={{ width: "100%" }}>
