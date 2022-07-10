@@ -267,16 +267,8 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
                 WebkitTapHighlightColor: "red !important",
               }}
             >
-              <StyledTypography
-                sx={{
-                  fontFamily: "GeoticaW01-FourOpen",
-                  cursor: "pointer",
-                }}
-              >
-                Elverr
-              </StyledTypography>
               <img
-                src="companylogo.jpeg"
+                src="elverr.png"
                 style={{ height: "20px", objectFit: "contain" }}
               ></img>
             </div>
@@ -319,23 +311,17 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
                     route.push("/");
                   }}
                   style={{
+                    height: "45px",
                     display: "flex",
-                    alignItems: "center",
-                    justifyContent: "left",
-                    WebkitTapHighlightColor: "red !important",
                   }}
                 >
-                  <StyledTypography
-                    sx={{
-                      fontFamily: "GeoticaW01-FourOpen",
-                      cursor: "pointer",
-                    }}
-                  >
-                    Elverr
-                  </StyledTypography>
                   <img
-                    src="companylogo.jpeg"
-                    style={{ height: "20px", objectFit: "contain" }}
+                    src="elverrlogo.png"
+                    style={{
+                      height: "100%",
+
+                      objectFit: "cover",
+                    }}
                   ></img>
                 </div>
               </div>

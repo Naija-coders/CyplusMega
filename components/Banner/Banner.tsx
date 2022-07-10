@@ -19,7 +19,7 @@ export default function Banner() {
         className="mySwiper"
         style={{ height: "650px" }}
       >
-        <SwiperSlide>
+        {/*  <SwiperSlide>
           <div style={{ width: "100%", height: "100%" }}>
             <img
               src="servicesbanner.png"
@@ -31,7 +31,7 @@ export default function Banner() {
               }}
             />
           </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
 
         <SwiperSlide>
           {" "}
