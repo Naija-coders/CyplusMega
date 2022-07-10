@@ -10,6 +10,7 @@ import Stack from "@mui/material/Stack";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import PaginationItem from "@mui/material/PaginationItem";
+import { useRouter } from "next/router";
 
 import {
   ContainerDiv,
@@ -36,6 +37,7 @@ const Categories: React.FC<Props> = ({ servicesState, query }) => {
   const { storeservices } = bindActionCreators(actionCreators, dispatch);
   const [services, setServices] = useState<any>(servicesState);
   const [userservice, setUserservice] = useState<any>([]);
+  const route = useRouter();
 
   const state = useSelector((state: RootState) => state.appstate);
   useEffect(() => {
@@ -57,6 +59,11 @@ const Categories: React.FC<Props> = ({ servicesState, query }) => {
   console.log(servicesState, "checking out service state");
   console.log("the lenght of service is", services.length);
   console.log("the dispatch state services", state.services);
+  const [page, setPage] = React.useState(1);
+  const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+    setPage(value);
+  };
+
   return (
     <Stack spacing={2}>
       <div style={{ marginTop: "10px" }}>
@@ -151,7 +158,7 @@ const Categories: React.FC<Props> = ({ servicesState, query }) => {
         <ContainerDiv>
           <StyledPaper>
             <MainPaperDiv>
-              {userservice?.map((item: any) => (
+              {userservice?.slice(0, 20).map((item: any) => (
                 <CustomDivContainer key={Math.random()}>
                   <CustomCard
                     bottomColor="#222325"
@@ -177,9 +184,14 @@ const Categories: React.FC<Props> = ({ servicesState, query }) => {
         }}
       >
         <Pagination
-          count={10}
+          count={Math.ceil(userservice.length / 2)}
           shape="rounded"
           variant="outlined"
+          page={page}
+          onChange={handleChange}
+          onClick={() => {
+            route.push("/categories/" + query?.id + "/?page=" + page);
+          }}
           renderItem={(item) => (
             <PaginationItem
               components={{ previous: ArrowBackIcon, next: ArrowForwardIcon }}
