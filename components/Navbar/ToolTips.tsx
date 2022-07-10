@@ -3,6 +3,7 @@ import IconButton from "@mui/material/IconButton";
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
 import AddBoxIcon from "@mui/icons-material/AddBox";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import {
   ResponsiveDiv,
   HtmlTooltip,
@@ -18,8 +19,17 @@ const ToolTips: React.FC<Props> = ({}) => {
   return (
     <ResponsiveDiv>
       <HtmlTooltip title={"random categories"}>
-        <IconButton>
-          <MainText>Categories</MainText>
+        <IconButton
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            gap: "6px",
+          }}
+        >
+          {" "}
+          <MenuRoundedIcon sx={{ color: "black" }} />
+          <MainText>All</MainText>
         </IconButton>
       </HtmlTooltip>
       <HtmlTooltip
