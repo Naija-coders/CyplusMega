@@ -100,11 +100,15 @@ export const TextTypography = styled(Typography)(
     color: "rgb(98, 100, 98)",
   })
 );
+
 export const StyledTypographyHeader = styled(Typography)(
   sx({
-    fontSize: " 14px",
+    "fontSize": " 14px",
 
-    fontFamily: "Avenir Light",
+    "fontFamily": "Avenir Light",
+    "&:hover": {
+      color: "green",
+    },
   })
 );
 export const StyledButton = styled(Button)(

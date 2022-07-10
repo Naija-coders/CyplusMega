@@ -5,6 +5,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
 import { actionCreators } from "../../state";
 import { RootState } from "../../state/reducers";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import PaginationItem from "@mui/material/PaginationItem";
 
 import {
   ContainerDiv,
@@ -53,115 +58,137 @@ const Categories: React.FC<Props> = ({ servicesState, query }) => {
   console.log("the lenght of service is", services.length);
   console.log("the dispatch state services", state.services);
   return (
-    <div style={{ marginTop: "10px" }}>
+    <Stack spacing={2}>
+      <div style={{ marginTop: "10px" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            background: "white",
+            padding: "15px",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                gap: "10px",
+                alignItems: "center",
+                marginLeft: "5%",
+              }}
+            >
+              <div>
+                <BasicText>Home</BasicText>
+              </div>
+              <svg
+                width="8"
+                height="12"
+                viewBox="0 0 8 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M0.772126 1.19065L0.153407 1.80934C0.00696973 1.95578 0.00696973 2.19322 0.153407 2.33969L5.80025 8L0.153407 13.6603C0.00696973 13.8067 0.00696973 14.0442 0.153407 14.1907L0.772126 14.8094C0.918563 14.9558 1.156 14.9558 1.30247 14.8094L7.84666 8.26519C7.99309 8.11875 7.99309 7.88131 7.84666 7.73484L1.30247 1.19065C1.156 1.04419 0.918563 1.04419 0.772126 1.19065Z"></path>
+              </svg>
+              <div>
+                <ColorText>Service</ColorText>
+              </div>
+            </div>
+            <div style={{ display: "flex", gap: "10px" }}>
+              <BasicText>{userservice.length} services available</BasicText>
+            </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                gap: "10px",
+                alignItems: "center",
+                marginLeft: "5%",
+              }}
+            >
+              <div>
+                {" "}
+                {userservice?.slice(0, 1)?.map((item: any) => (
+                  <div key={Math.random()}>
+                    <BasicText1>{item?.type}</BasicText1>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                gap: "10px",
+                alignItems: "center",
+              }}
+            >
+              <BasicText sx={{ fontWeight: "bold" }}>Sort By:</BasicText>
+              <StyledDiv>
+                <BasicText sx={{ color: "green" }}>Relavance</BasicText>
+                <Divider
+                  orientation="vertical"
+                  sx={{ background: "green" }}
+                ></Divider>
+                <BasicText>Price- High To Low</BasicText>
+                <Divider
+                  orientation="vertical"
+                  sx={{ background: "green" }}
+                ></Divider>
+                <BasicText>Price- Low to High</BasicText>
+              </StyledDiv>
+            </div>
+          </div>
+        </div>
+        <ContainerDiv>
+          <StyledPaper>
+            <MainPaperDiv>
+              {userservice?.map((item: any) => (
+                <CustomDivContainer key={Math.random()}>
+                  <CustomCard
+                    bottomColor="#222325"
+                    name={item?.name}
+                    type={item.type}
+                    about={item.about}
+                    price={item.price}
+                    updated_at={item.updated_at}
+                  />
+                  <br></br>
+                </CustomDivContainer>
+              ))}
+            </MainPaperDiv>
+          </StyledPaper>
+        </ContainerDiv>
+      </div>
       <div
         style={{
+          width: "100%",
           display: "flex",
-          flexDirection: "column",
-          background: "white",
-          padding: "15px",
+          justifyContent: "center",
+          marginTop: "30px",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              gap: "10px",
-              alignItems: "center",
-              marginLeft: "5%",
-            }}
-          >
-            <div>
-              <BasicText>Home</BasicText>
-            </div>
-            <svg
-              width="8"
-              height="12"
-              viewBox="0 0 8 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M0.772126 1.19065L0.153407 1.80934C0.00696973 1.95578 0.00696973 2.19322 0.153407 2.33969L5.80025 8L0.153407 13.6603C0.00696973 13.8067 0.00696973 14.0442 0.153407 14.1907L0.772126 14.8094C0.918563 14.9558 1.156 14.9558 1.30247 14.8094L7.84666 8.26519C7.99309 8.11875 7.99309 7.88131 7.84666 7.73484L1.30247 1.19065C1.156 1.04419 0.918563 1.04419 0.772126 1.19065Z"></path>
-            </svg>
-            <div>
-              <ColorText>Service</ColorText>
-            </div>
-          </div>
-          <div style={{ display: "flex", gap: "10px" }}>
-            <BasicText>{userservice.length} services available</BasicText>
-          </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              gap: "10px",
-              alignItems: "center",
-              marginLeft: "5%",
-            }}
-          >
-            <div>
-              {" "}
-              {userservice?.slice(0, 1)?.map((item: any) => (
-                <div key={Math.random()}>
-                  <BasicText1>{item?.type}</BasicText1>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              gap: "10px",
-              alignItems: "center",
-            }}
-          >
-            <BasicText sx={{ fontWeight: "bold" }}>Sort By:</BasicText>
-            <StyledDiv>
-              <BasicText sx={{ color: "green" }}>Relavance</BasicText>
-              <Divider
-                orientation="vertical"
-                sx={{ background: "green" }}
-              ></Divider>
-              <BasicText>Price- High To Low</BasicText>
-              <Divider
-                orientation="vertical"
-                sx={{ background: "green" }}
-              ></Divider>
-              <BasicText>Price- Low to High</BasicText>
-            </StyledDiv>
-          </div>
-        </div>
+        <Pagination
+          count={10}
+          shape="rounded"
+          variant="outlined"
+          renderItem={(item) => (
+            <PaginationItem
+              components={{ previous: ArrowBackIcon, next: ArrowForwardIcon }}
+              {...item}
+            />
+          )}
+        />
       </div>
-      <ContainerDiv>
-        <StyledPaper>
-          <MainPaperDiv>
-            {userservice?.map((item: any) => (
-              <CustomDivContainer key={Math.random()}>
-                <CustomCard
-                  bottomColor="#222325"
-                  name={item?.name}
-                  type={item.type}
-                  about={item.about}
-                  price={item.price}
-                  updated_at={item.updated_at}
-                />
-                <br></br>
-              </CustomDivContainer>
-            ))}
-          </MainPaperDiv>
-        </StyledPaper>
-      </ContainerDiv>
-    </div>
+    </Stack>
   );
 };
 

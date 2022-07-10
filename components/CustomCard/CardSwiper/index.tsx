@@ -34,10 +34,10 @@ const CustomCardSwiper: React.FC<Props> = ({ image }) => {
       onMouseLeave={() => setNav(false)}
     >
       <Swiper
+        lazy={true}
         effect={"flip"}
         grabCursor={false}
         navigation={nav}
-        lazy={true}
         modules={[Lazy, EffectFlip, Pagination, Navigation]}
         className="mySwiper"
       >
