@@ -269,9 +269,7 @@ const AvailableService = (props: Props) => {
                         <StyledCard elevation={0}>
                           <StyledLink /* href={"/categories?list=" + item?.categories_id} */
                             sx={{ textDecoration: "none", color: "#000" }}
-                            onClick={() => {
-                              route.push("/categories/" + item?.categories_id);
-                            }}
+                            href={"/categories/" + item?.categories_id}
                           >
                             {" "}
                             <img

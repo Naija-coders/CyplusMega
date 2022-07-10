@@ -17,6 +17,7 @@ import { useRouter } from "next/router";
 import moment from "moment";
 import CustomCardSwiper from "../CustomCard/CardSwiper";
 import StarIcon from "@mui/icons-material/Star";
+import Link from "next/link";
 
 import {
   StyledLink,
@@ -297,9 +298,6 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
                                 paddingLeft: "0.7rem",
                                 marginTop: "2px",
                               }}
-                              onClick={() => {
-                                route.push("/services?ad=" + item?.services_id);
-                              }}
                             >
                               <span>
                                 <Avatar />
@@ -350,9 +348,11 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
                               <StyledTypography>{item.type}</StyledTypography>
                             </div>
                             <div style={{ marginLeft: "1rem", width: "8" }}>
-                              <StyledTypographyHeader>
-                                {item.about.slice(0, 40)}
-                              </StyledTypographyHeader>
+                              <a href={"/services?ad=" + item?.services_id}>
+                                <StyledTypographyHeader>
+                                  {item.about.slice(0, 40)}
+                                </StyledTypographyHeader>
+                              </a>
                             </div>
                             <div style={{ background: "#222325" }}>
                               <div

@@ -93,7 +93,7 @@ export default function Service() {
   const state = useSelector((state: RootState) => state.appstate);
   const [favorite, setFavorite] = React.useState(false);
   const [types, setTypes] = React.useState<any>();
-  const [offers, setOffers] = React.useState<any>();
+  const [offers, setOffers] = React.useState<any>([]);
   const [similar, setSimilar] = React.useState<any>([]);
   const [loaded, setLoaded] = React.useState(false);
 
@@ -115,8 +115,10 @@ export default function Service() {
     });
   }
   React.useEffect(() => {
-    getServices();
-  }, []);
+    if (offers.length <= 0) {
+      getServices();
+    }
+  }, [offers]);
   React.useEffect(() => {
     if (similar.length <= 0) {
       handleData();
@@ -137,7 +139,7 @@ export default function Service() {
   };
 
   React.useEffect(() => {
-    if (offers === null || offers?.length < 0) {
+    if (offers === null || offers?.length <= 0) {
       setLoaded(false);
     } else if (state.mainservices.length > 0) {
       setLoaded(true);
@@ -430,7 +432,7 @@ export default function Service() {
       ) : (
         <Skeleton
           count={6}
-          height={30}
+          height={200}
           style={{
             marginLeft: "15px",
             borderRadius: "0.5rem",

@@ -12,4 +12,5 @@ const Service = (props: Props) => {
     </Layout>
   );
 };
+
 export default Service;
