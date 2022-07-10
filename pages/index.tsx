@@ -44,6 +44,9 @@ const Home: NextPage = () => {
   return (
     <Layout showSearch={true} isVisible={false}>
       {" "}
+      <Head>
+        <title>Elverr - The Market Place</title>
+      </Head>
       <div>
         <div style={{ padding: "2rem" }}></div>
         <Banner />
