@@ -47,8 +47,7 @@ const Home: NextPage = () => {
       <div>
         <div style={{ padding: "2rem" }}></div>
         <Banner />
-        <br></br>
-        <br></br>
+
         <Cookie />
         <Featured />
         <AvailableServices services={categories} />

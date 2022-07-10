@@ -262,14 +262,12 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
               }}
               style={{
                 display: "flex",
-                alignItems: "center",
-                justifyContent: "left",
-                WebkitTapHighlightColor: "red !important",
+                height: "30px",
               }}
             >
               <img
-                src="elverr.png"
-                style={{ height: "20px", objectFit: "contain" }}
+                src="elverrlogo.png"
+                style={{ height: "100%", objectFit: "contain" }}
               ></img>
             </div>
           </div>

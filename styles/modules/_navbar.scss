@@ -182,7 +182,21 @@
   box-sizing: border-box;
   padding: 10px 0;
 }
-
+.myCustomSwiper {
+  width: "100%";
+  @include atFold {
+    width: 110%;
+  }
+  @include atSmallMax {
+    width: 110%;
+  }
+  @include atSmall {
+    width: 110%;
+  }
+  @include atMedium {
+    width: 100%;
+  }
+}
 .mySwiper3 .swiper-slide {
   width: 20%;
   height: 60%;

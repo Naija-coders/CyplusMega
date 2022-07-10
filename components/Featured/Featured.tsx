@@ -124,7 +124,7 @@ export default function Featured() {
   }, [servicetype, servicecleaning, servicebuilding, servicemanufacturing]);
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: "100%", marginTop: { md: "20px" } }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <StyledTabs
           variant="scrollable"

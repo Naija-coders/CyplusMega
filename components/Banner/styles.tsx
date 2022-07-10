@@ -16,11 +16,14 @@ import {
 export const StyledImage = styled("img")(
   sx({
     width: "100%",
-    objectFit: "cover",
+    objectFit: "contain",
+    marginTop: { xs: "30px", md: "-10px" },
+  })
+);
 
-    display: { xs: "none", md: "flex" },
-    height: "300px",
-    opacity: "100%",
+export const StyledCustomDivBanner = styled("div")(
+  sx({
+    width: { xs: "110%", md: "100%", height: "100%" },
   })
 );
 export const CustomContainer = styled("div")(
