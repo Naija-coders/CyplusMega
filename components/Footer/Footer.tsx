@@ -113,7 +113,7 @@ export default function Footer({}: Props) {
           <div style={{ display: "flex", gap: "10px", alignItems: "end" }}>
             <img src={"elverrlogo.png"} style={{ height: "40px" }} />
 
-            <Typography fontSize={"13px"} color="black">
+            <Typography fontSize={"13px"} sx={{ color: "black" }}>
               {" "}
               &nbsp; ©Elverr International Ltd. 2022 &nbsp;
             </Typography>
