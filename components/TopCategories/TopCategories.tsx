@@ -24,7 +24,7 @@ const LatestServices: React.FC<Props> = ({}) => {
       <ReuseableCategory
         title={"Just for you"}
         data={state.allservicedata}
-        quantity={40}
+        quantity={10}
       />
     </div>
   );

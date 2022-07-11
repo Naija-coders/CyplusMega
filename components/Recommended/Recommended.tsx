@@ -35,7 +35,7 @@ export default function Recommended() {
   console.log("sorted data", recommend);
 
   return (
-    <div className="navbar__mycontainer" style={{ background: "#f6f9f5" }}>
+    <div className="navbar__mycontainer" style={{ background: "#ffffff" }}>
       {recommend.length > 0 ? (
         <CustomContainer>
           <CustomDivContainer>

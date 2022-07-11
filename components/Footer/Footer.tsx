@@ -2,6 +2,10 @@ import React from "react";
 import Link from "next/link";
 import { Paper, TextField, Typography, Button, Divider } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 type Props = {};
 import {
   DurationDiv,
@@ -21,7 +25,8 @@ const Root = styled("div")(({ theme }) => ({
 }));
 export default function Footer({}: Props) {
   return (
-    <CustomFooterBackgroundDiv>
+    <CustomFooterBackgroundDiv elevation={0}>
+      <Divider sx={{ width: "100%" }} />
       <div
         style={{
           display: "flex",
@@ -31,24 +36,12 @@ export default function Footer({}: Props) {
           alignItems: "center",
         }}
       >
-        <div style={{ background: "#2e2e2e", width: "100%" }}>
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            mano
-          </div>
-        </div>
         {/*  <Divider sx={{ width: "100%", background: "grey" }} /> */}
         <DurationDiv>
           <DurationGroup>
             <DurationSubDiv>
               <TableCells>
-                <DurationTypography1>{"For Services"}</DurationTypography1>
+                <DurationTypography1>{"Categories"}</DurationTypography1>
               </TableCells>
               <TableCells>
                 <DurationTypography1>
@@ -57,6 +50,9 @@ export default function Footer({}: Props) {
               </TableCells>
               <TableCells>
                 <DurationTypography1>{"Helpful Resources"}</DurationTypography1>
+              </TableCells>
+              <TableCells>
+                <DurationTypography1>{"About"}</DurationTypography1>
               </TableCells>
             </DurationSubDiv>{" "}
             <DurationSubDiv>
@@ -70,6 +66,9 @@ export default function Footer({}: Props) {
                 <DurationTypography>
                   {"Terms and Conditions"}
                 </DurationTypography>
+              </TableCells>{" "}
+              <TableCells>
+                <DurationTypography>{"Partnerships"}</DurationTypography>
               </TableCells>
             </DurationSubDiv>{" "}
             <DurationSubDiv>
@@ -81,6 +80,9 @@ export default function Footer({}: Props) {
               </TableCells>
               <TableCells>
                 <DurationTypography>{"Blog"}</DurationTypography>
+              </TableCells>
+              <TableCells>
+                <DurationTypography>{"Carears"}</DurationTypography>
               </TableCells>
             </DurationSubDiv>{" "}
             <DurationSubDiv>
@@ -98,15 +100,39 @@ export default function Footer({}: Props) {
         </DurationDiv>
         <br></br>
         <br></br>
+        <Divider sx={{ width: "100%" }} />
+        <div
+          style={{
+            display: "flex",
+            alignItems: "end",
+            justifyContent: "space-between",
+            width: "100%",
+            paddingLeft: "9rem",
+          }}
+        >
+          <div style={{ display: "flex", gap: "10px", alignItems: "end" }}>
+            <img src={"elverrlogo.png"} style={{ height: "40px" }} />
 
-        <Divider sx={{ width: "100%", background: "grey", height: "0.3px" }}>
-          <div style={{ marginTop: "-10px", background: "#0C0C0C" }}>
-            <Typography fontSize={"13px"}>
+            <Typography fontSize={"13px"} color="black">
               {" "}
-              &nbsp;Copyright ©Elverr 2022 &nbsp;
+              &nbsp; ©Elverr International Ltd. 2022 &nbsp;
             </Typography>
           </div>
-        </Divider>
+          <div
+            style={{
+              display: "flex",
+
+              justifyContent: "right",
+              gap: "10px",
+              marginRight: "60px",
+            }}
+          >
+            <FacebookRoundedIcon sx={{ color: "black" }} />
+            <TwitterIcon sx={{ color: "black" }} />
+            <InstagramIcon sx={{ color: "black" }} />
+            <LinkedInIcon sx={{ color: "black" }} />
+          </div>
+        </div>
 
         <br></br>
       </div>

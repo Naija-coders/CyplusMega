@@ -52,15 +52,20 @@ export const DurationSubDiv = styled("div")(
 
 export const DurationTypography = styled(Typography)(
   sx({
-    fontSize: "1rem !important",
-
-    color: "#fff",
+    "fontSize": "1.1rem !important",
+    "paddingTop": "1rem",
+    "color": "grey",
+    "&:hover": {
+      color: "green",
+      cursor: "pointer",
+    },
   })
 );
 export const DurationTypography1 = styled(Typography)(
   sx({
-    fontSize: "1rem !important",
-    color: "orange",
+    fontSize: "1.1rem !important",
+    color: "black",
+    fontWeight: "bold",
   })
 );
 
@@ -106,8 +111,8 @@ export const CustomFooterBackgroundDiv = styled(AppBar)(
     position: "relative",
 
     display: "flex",
-    background: "#0C0C0C",
-    opacity: "100%",
+    background: "white",
+    opacity: "90%",
     marginTop: "30px",
 
     width: { xs: "110%", sm: "100%", md: "100%" },
