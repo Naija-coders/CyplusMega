@@ -52,7 +52,7 @@ export const DurationSubDiv = styled("div")(
 
 export const DurationTypography = styled(Typography)(
   sx({
-    "fontSize": "1.1rem !important",
+    "fontSize": "1rem !important",
     "paddingTop": "1rem",
     "color": "grey",
     "&:hover": {
@@ -63,7 +63,7 @@ export const DurationTypography = styled(Typography)(
 );
 export const DurationTypography1 = styled(Typography)(
   sx({
-    fontSize: "1.1rem !important",
+    fontSize: "1rem !important",
     color: "black",
     fontWeight: "bold",
   })
