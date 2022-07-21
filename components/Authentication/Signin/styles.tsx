@@ -20,7 +20,7 @@ import {
 
 export const StyledButton = styled(Button)(
   sx({
-    "width": "35%",
+    "width": "80%",
 
     "color": "white",
     "borderRadius": "13px",
@@ -34,7 +34,7 @@ export const StyledButton = styled(Button)(
 );
 export const StyledButtonGoogle = styled(Button)(
   sx({
-    "width": "35%",
+    "width": "80%",
 
     "color": "black",
     "borderRadius": "13px",
@@ -77,11 +77,11 @@ export const StyleCheckoutButton = styled(Button)(
     "marginTop": "30px",
     "borderRadius": "13px",
     "textTransform": "none",
-    "background": "#152238",
+    "background": "green",
     "borderShadow": " 0px 0px 0px 10px grey",
 
     "&:hover": {
-      background: "#035772",
+      background: "green",
     },
   })
 );
