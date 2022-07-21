@@ -36,7 +36,7 @@ export const StyledButton = styled(Button)(
 export const ContainerDiv = styled("div")(
   sx({
     marginTop: "11%",
-    width: { xs: "150%", sm: "100%" },
+    width: { xs: "100%", sm: "100%" },
   })
 );
 export const StyledDiv = styled("div")(
