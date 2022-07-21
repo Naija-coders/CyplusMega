@@ -54,15 +54,28 @@ const Categories: React.FC<Props> = ({ servicesState, query }) => {
   }, [userservice]);
 
   // the userservice data will be the mapped data
+  const [first, setFirst] = useState(1);
 
   console.log(query, "checking out categories query");
   console.log(servicesState, "checking out service state");
   console.log("the lenght of service is", services.length);
   console.log("the dispatch state services", state.services);
-  const [page, setPage] = React.useState(1);
+  const [page, setPage] = React.useState(userservice?.slice(0, 20));
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
-    setPage(value);
+    const recentData = userservice.slice(value * 20 - 20, 20 * value);
+    setPage(recentData);
+
+    setFirst(value);
+    route.push("/categories/" + query?.id + "/?page=" + first);
   };
+  console.log("lets see the first page", page);
+  useEffect(() => {
+    if (page.length <= 0) {
+      setPage(userservice.slice(0, 20));
+
+      console.log("the page is visible");
+    }
+  }, [page]);
 
   return (
     <Stack spacing={2}>
@@ -158,7 +171,7 @@ const Categories: React.FC<Props> = ({ servicesState, query }) => {
         <ContainerDiv>
           <StyledPaper>
             <MainPaperDiv>
-              {userservice?.slice(0, 20).map((item: any) => (
+              {page.map((item: any) => (
                 <CustomDivContainer key={Math.random()}>
                   <CustomCard
                     bottomColor="#222325"
@@ -184,14 +197,11 @@ const Categories: React.FC<Props> = ({ servicesState, query }) => {
         }}
       >
         <Pagination
-          count={Math.ceil(userservice.length / 2)}
+          count={Math.ceil(userservice.length / 20)}
           shape="rounded"
           variant="outlined"
-          page={page}
+          page={first}
           onChange={handleChange}
-          onClick={() => {
-            route.push("/categories/" + query?.id + "/?page=" + page);
-          }}
           renderItem={(item) => (
             <PaginationItem
               components={{ previous: ArrowBackIcon, next: ArrowForwardIcon }}

@@ -113,6 +113,50 @@ const Signin: React.FC<Props> = ({ saveUser, CloseModalForm, onSuccess }) => {
           Log In
         </Typography>
         <CustomDivider />
+        <br></br>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-evenly",
+            width: "100%",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "20px",
+          }}
+        >
+          <StyledButton>
+            {" "}
+            <img
+              src="fb.png"
+              alt="facebookimage"
+              height={20}
+              style={{
+                color: "white",
+                background: "white",
+                marginRight: "2px",
+
+                position: "relative",
+              }}
+            ></img>
+            Facebook
+          </StyledButton>
+          <StyledButtonGoogle>
+            {" "}
+            <img
+              src="google.png"
+              alt="googleimage"
+              height={20}
+              style={{
+                color: "white",
+                background: "white",
+                marginRight: "2px",
+
+                position: "relative",
+              }}
+            ></img>
+            Google
+          </StyledButtonGoogle>
+        </div>
         {!loginsucess && (
           <StyledBox sx={{ background: "red" }}>
             <Typography
@@ -180,46 +224,6 @@ const Signin: React.FC<Props> = ({ saveUser, CloseModalForm, onSuccess }) => {
           isSignup={true}
           CloseModalForm={handleClose}
         />{" "}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-evenly",
-            width: "100%",
-          }}
-        >
-          <StyledButton>
-            {" "}
-            <img
-              src="fb.png"
-              alt="facebookimage"
-              height={20}
-              style={{
-                color: "white",
-                background: "white",
-                marginRight: "2px",
-
-                position: "relative",
-              }}
-            ></img>
-            Facebook
-          </StyledButton>
-          <StyledButtonGoogle>
-            {" "}
-            <img
-              src="google.png"
-              alt="googleimage"
-              height={20}
-              style={{
-                color: "white",
-                background: "white",
-                marginRight: "2px",
-
-                position: "relative",
-              }}
-            ></img>
-            Google
-          </StyledButtonGoogle>
-        </div>
         <br></br>
         <br></br>
       </div>
