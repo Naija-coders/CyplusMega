@@ -154,7 +154,7 @@ export const MainPaperDiv = styled("div")(
       xs: "auto",
       md: "250px 250px 250px ",
       lg: "250px 250px 250px 250px 250px",
-      xl: "auto auto auto auto auto",
+      xl: "auto auto auto auto auto auto",
     },
     width: "100%",
     columnGap: { md: "60px", lg: "10px", xl: "20px" },
