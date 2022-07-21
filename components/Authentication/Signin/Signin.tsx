@@ -26,6 +26,7 @@ import StateContext from "../../../context/StateContext";
 import DispatchContext from "../../../context/DispatchContext";
 import Cookies from "js-cookie";
 import ReCaptchaV2 from "react-google-recaptcha";
+import { useRouter } from "next/router";
 
 import LoadingButton from "@mui/lab/LoadingButton";
 import { LoginModal } from "../../LoginModal/Loginmodal";
@@ -52,6 +53,7 @@ const Signin: React.FC<Props> = ({ saveUser, CloseModalForm, onSuccess }) => {
   const handleClose = () => {
     setOpen(false);
   };
+  const route = useRouter();
 
   function handleClick() {
     setLoading(true);
@@ -212,18 +214,12 @@ const Signin: React.FC<Props> = ({ saveUser, CloseModalForm, onSuccess }) => {
           <Button
             variant="text"
             sx={{ textTransform: "none" }}
-            onClick={() => {
-              handleOpen();
-            }}
+            href={"/register"}
           >
             SignUp
           </Button>
         </StyledTypography>
-        <LoginModal
-          OpenModalForm={open}
-          isSignup={true}
-          CloseModalForm={handleClose}
-        />{" "}
+
         <br></br>
         <br></br>
       </div>

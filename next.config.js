@@ -7,7 +7,7 @@ const nextConfig = {
     formats: ["image/webp"],
   },
   devIndicators: {
-    autoPrerender: false,
+    autoPrerender: true,
   },
 };
 

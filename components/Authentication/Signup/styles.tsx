@@ -20,16 +20,33 @@ import {
 
 export const StyledButton = styled(Button)(
   sx({
-    "width": "35%",
+    "width": { xs: "95%", md: "400px" },
 
     "color": "white",
-    "borderRadius": "13px",
+
     "textTransform": "none",
     "boxShadow": "  0px 1px 0px 1px #888888",
-    "background": "	#4267B2",
+    "marginTop": "15px",
+    "background": "	green",
     "&:hover": {
-      background: "blue",
+      background: "green",
     },
+  })
+);
+export const ContainerDiv = styled("div")(
+  sx({
+    marginTop: "11%",
+    width: { xs: "150%", sm: "100%" },
+  })
+);
+export const StyledDiv = styled("div")(
+  sx({
+    width: { xs: "90%", md: "400px" },
+    display: "flex",
+    justifyItems: "flex-start",
+
+    flexDirection: "row",
+    marginTop: "10px",
   })
 );
 export const StyledButtonGoogle = styled(Button)(
@@ -55,19 +72,29 @@ export const CustomDivider = styled(Divider)(
 );
 export const StyledTextField = styled(TextField)(
   sx({
-    width: "80%",
+    "width": { xs: "95%", md: "400px" },
 
-    marginTop: "30px",
-    color: "white",
-    borderRadius: "10px",
+    "marginTop": "10px",
 
-    textTransform: "none",
+    "color": "white",
+    "borderRadius": "10px",
+
+    "textTransform": "none",
+
+    "outline": 0,
+    "& fieldset": {
+      borderColor: "green",
+    },
   })
 );
 export const StyledBox = styled(Box)(
   sx({
-    width: "80%",
-    marginTop: "30px",
+    marginTop: "150px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+
+    width: { xs: "120%", md: "100%" },
   })
 );
 export const StyleCheckoutButton = styled(Button)(
@@ -85,6 +112,7 @@ export const StyleCheckoutButton = styled(Button)(
     },
   })
 );
+
 export const StyleLoadingButton = styled(LoadingButton)(
   sx({
     width: "80%",
@@ -101,5 +129,8 @@ export const StyledTypography = styled(Typography)(
   sx({
     marginTop: "10px",
     fontFamily: "serif",
+    fontWeight: "bold",
+    fontSize: "1.2rem",
+    color: "black",
   })
 );
