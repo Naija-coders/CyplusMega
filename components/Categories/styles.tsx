@@ -153,8 +153,8 @@ export const MainPaperDiv = styled("div")(
     gridTemplateColumns: {
       xs: "auto auto",
       md: "250px 250px 250px ",
-      lg: "250px 250px 250px 250px 250px",
-      xl: "auto auto auto auto auto ",
+      lg: "250px 250px 250px 250px ",
+      xl: "auto auto auto auto auto auto ",
     },
     width: "100%",
     overflowX: "scroll",
