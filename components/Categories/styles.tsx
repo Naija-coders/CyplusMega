@@ -158,7 +158,7 @@ export const MainPaperDiv = styled("div")(
     },
     width: "100%",
     overflowX: "scroll",
-    columnGap: { xs: "10px", md: "60px", lg: "10px", xl: "20px" },
+    columnGap: { xs: "10px", md: "60px", lg: "40px", xl: "20px" },
     rowGap: "-10px",
     justifyContent: { xs: "space-between", md: "center" },
     alignItems: "left",
