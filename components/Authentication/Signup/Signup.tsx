@@ -60,6 +60,7 @@ const SignUp: React.FC<Props> = ({}) => {
   function handleClick() {
     setLoading(true);
   }
+
   const onSubmit = async (data: any) => {
     console.log(data.email, "your email is ");
     console.log(data.password, "password is ");
@@ -176,30 +177,63 @@ const SignUp: React.FC<Props> = ({}) => {
             >
               By Signing up, you agree to our{" "}
               <Typography
-                style={{
-                  fontSize: "0.8rem",
-                  textDecoration: "underline",
-                  textDecorationThickness: "2px",
-                  textUnderlinePosition: "under",
-                  textDecorationLine: "underline",
+                sx={{
+                  "fontSize": "0.8rem",
+                  "textDecoration": "underline",
+                  "textDecorationThickness": "2px",
+                  "textUnderlinePosition": "under",
+                  "textDecorationLine": "underline",
+                  "cursor": "pointer",
+                  "&:hover": {
+                    color: "green",
+                  },
                 }}
               >
                 Terms of Use
               </Typography>
               and{" "}
               <Typography
-                style={{
-                  fontSize: "0.8rem",
-                  textDecoration: "underline",
-                  textDecorationThickness: "2px",
-                  textUnderlinePosition: "under",
-                  textDecorationLine: "underline",
+                sx={{
+                  "fontSize": "0.8rem",
+                  "textDecoration": "underline",
+                  "textDecorationThickness": "2px",
+                  "textUnderlinePosition": "under",
+                  "textDecorationLine": "underline",
+                  "cursor": "pointer",
+                  "&:hover": {
+                    color: "green",
+                  },
                 }}
               >
                 Privacy Policy
               </Typography>
             </Typography>
           </span>
+          <CustomDivider />
+          <Typography
+            style={{
+              fontSize: "0.8rem",
+              paddingTop: "1rem",
+              display: "flex",
+              gap: "10px",
+              justifyContent: "center",
+            }}
+          >
+            Already have an account?{" "}
+            <Typography
+              style={{
+                fontSize: "0.9rem",
+                color: "green",
+                textDecoration: "underline",
+                textDecorationThickness: "2px",
+                textUnderlinePosition: "under ",
+                textDecorationLine: "underline",
+                cursor: "pointer",
+              }}
+            >
+              Log In
+            </Typography>
+          </Typography>
         </div>
       </StyledBox>
     </ContainerDiv>
