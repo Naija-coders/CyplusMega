@@ -18,6 +18,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 import Featured from "../components/Featured/Featured";
 import Cookie from "../components/CookieManager/Cookie";
 import dynamic from "next/dynamic";
+import ChatWidget from "../components/ChatWidget/ChatWidget";
 const TopCategories = dynamic(
   () => import("../components/TopCategories/TopCategories")
 );
@@ -58,6 +59,7 @@ const Home: NextPage = () => {
         <LatestServices />
         <TopCategories />
         <Recommended />
+        <ChatWidget />
       </div>{" "}
     </Layout>
   );
