@@ -115,14 +115,13 @@ export const StyleCheckoutButton = styled(Button)(
 
 export const StyleLoadingButton = styled(LoadingButton)(
   sx({
-    width: "80%",
+    width: { xs: "95%", md: "400px" },
     color: "white",
-    marginTop: "30px",
-    borderRadius: "13px",
+    marginTop: "15px",
+
     textTransform: "none",
-    background: "#FFA500",
-    borderShadow: " 5px 4px grey",
-    boxShadow: " 5px 4px #888888",
+    background: "grey",
+    boxShadow: "  0px 1px 0px 1px grey",
   })
 );
 export const StyledTypography = styled(Typography)(

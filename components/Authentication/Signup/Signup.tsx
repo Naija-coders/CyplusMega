@@ -11,6 +11,7 @@ import { AxiosError, AxiosResponse } from "axios";
 
 import Checkbox from "@mui/material/Checkbox";
 import { useForm } from "react-hook-form";
+import { useRouter } from "next/router";
 import {
   StyledButton,
   StyleCheckoutButton,
@@ -41,12 +42,51 @@ import FormControl from "@mui/material/FormControl";
 
 type Props = {};
 const SignUp: React.FC<Props> = ({}) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
   };
+  const { AuthState } = useContext<any>(StateContext);
+  const { AuthDispatcher } = useContext<any>(DispatchContext);
+  const [recapcha, setRecapcha] = useState(false);
+  const [loading, setLoading] = React.useState(false);
+  const route = useRouter();
+  function handleClick() {
+    setLoading(true);
+  }
+  const onSubmit = async (data: any) => {
+    console.log(data.email, "your email is ");
+    console.log(data.password, "password is ");
+    console.log(data.name, "the name you entered is");
+    await handleClick();
+    await Clientapi.post("api/company/register", data)
+      .then((response) => {
+        const user = response.data;
+        console.log("you just created an account", user);
+        Cookies.set("auth_token", response.data.auth_token);
+        AuthDispatcher({ type: "login" });
+        AuthDispatcher({ type: "addUser", payload: response.data });
 
+        setArticle({
+          ...article,
+          user,
+        });
+        console.log("article payload data", article);
+
+        setLoading(false);
+        route.push("/");
+      })
+      .catch((err: AxiosError) => {
+        console.log("invalid data entered");
+      });
+  };
+  const [article, setArticle] = React.useState<IArticle | {}>();
   const handleMouseDownPassword = (
     event: React.MouseEvent<HTMLButtonElement>
   ) => {
@@ -54,7 +94,7 @@ const SignUp: React.FC<Props> = ({}) => {
   };
   return (
     <ContainerDiv>
-      <StyledBox component="form">
+      <StyledBox component="form" onSubmit={handleSubmit(onSubmit)}>
         <div
           style={{
             display: "flex",
@@ -65,12 +105,26 @@ const SignUp: React.FC<Props> = ({}) => {
           <StyledTypography>
             Signup and start browsing services
           </StyledTypography>
-          <StyledTextField type="text" size="medium" label="Full Name" />
-          <StyledTextField type="text" size="medium" label="Email" />
+          <StyledTextField
+            type="text"
+            size="medium"
+            label="Full Name"
+            required
+            {...register("name", { required: true, maxLength: 100 })}
+          />
+          <StyledTextField
+            type="text"
+            size="medium"
+            label="Email"
+            required
+            {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
+          />
           <StyledTextField
             type={showPassword ? "text" : "password"}
             size="medium"
             label="Password"
+            required
+            {...register("password", { required: true, maxLength: 100 })}
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end">
@@ -94,8 +148,22 @@ const SignUp: React.FC<Props> = ({}) => {
               tips
             </Typography>
           </StyledDiv>
+          {loading ? (
+            <StyleLoadingButton
+              loading={loading}
+              loadingPosition="end"
+              endIcon={<ArrowForwardIosIcon />}
+              variant="contained"
+              size="large"
+            >
+              Sign Up
+            </StyleLoadingButton>
+          ) : (
+            <StyledButton size="large" type="submit">
+              Sign Up
+            </StyledButton>
+          )}
 
-          <StyledButton size="large">Sign Up</StyledButton>
           <span style={{ display: "flex" }}>
             {" "}
             <Typography
