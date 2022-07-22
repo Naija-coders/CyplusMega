@@ -60,8 +60,8 @@ export const StyledCard = styled(Card)(
       sm: "270px",
       md: "270px",
 
-      lg: "290px",
-      xl: "290px",
+      lg: "270px",
+      xl: "270px",
     },
 
     "background": "#F6F9F5",
