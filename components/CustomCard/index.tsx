@@ -5,6 +5,11 @@ import moment from "moment";
 import CustomCardSwiper from "../CustomCard/CardSwiper";
 import StarIcon from "@mui/icons-material/Star";
 import { useRouter } from "next/router";
+import Divider from "@mui/material/Divider";
+import Checkbox from "@mui/material/Checkbox";
+import Favorite from "@mui/icons-material/Favorite";
+
+const label = { inputProps: { "aria-label": "Favorite Icon" } };
 
 type Props = {
   id?: any;
@@ -53,7 +58,7 @@ const CustomCard: React.FC<Props> = ({
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
-                height: "380px",
+                height: "410px",
               }}
             >
               <div style={{ height: "200px", width: "100%" }}>
@@ -80,7 +85,16 @@ const CustomCard: React.FC<Props> = ({
                   }}
                 >
                   <span>
-                    <TextTypography>{name}</TextTypography>
+                    <TextTypography
+                      sx={{
+                        "fontWeight": "bold",
+                        "&:hover": {
+                          textDecoration: "underline",
+                        },
+                      }}
+                    >
+                      {name}
+                    </TextTypography>
                   </span>
                   <span>
                     <TextTypography>
@@ -107,18 +121,32 @@ const CustomCard: React.FC<Props> = ({
                   </span>
                 </div>
               </div>
-              <div style={{ marginLeft: "1rem" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
                 <StyledTypography>{type}</StyledTypography>
               </div>
               <div style={{ marginLeft: "1rem", width: "8" }}>
-                <StyledTypographyHeader>
+                <StyledTypographyHeader
+                  sx={{
+                    "fontSize": "1rem",
+                    "&:hover": {
+                      color: "green",
+                    },
+                  }}
+                >
                   {about?.slice(0, 40)}
                 </StyledTypographyHeader>
               </div>
+              <Divider />
               <div
                 style={{
                   height: "50px",
-                  background: bottomColor,
+                  background: "white",
 
                   width: "100%",
 
@@ -143,9 +171,12 @@ const CustomCard: React.FC<Props> = ({
                     alignItems: "center",
                   }}
                 >
-                  <StyledIconButton key={id} /*  onClick={handleOpen} */>
-                    <FavoriteBorderIcon style={{ color: "white" }} />
-                  </StyledIconButton>
+                  <Checkbox
+                    sx={{ color: "#969799" }}
+                    {...label}
+                    icon={<Favorite />}
+                    checkedIcon={<Favorite sx={{ color: "#ba1e33" }} />}
+                  />
 
                   <StyledPriceValue>${price}</StyledPriceValue>
                 </div>

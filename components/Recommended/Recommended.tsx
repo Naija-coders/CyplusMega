@@ -39,7 +39,7 @@ export default function Recommended() {
       {recommend.length > 0 ? (
         <CustomContainer>
           <CustomDivContainer>
-            <Paper elevation={0} sx={{ height: "110%", background: "#f6f9f5" }}>
+            <Paper elevation={0} sx={{ height: "110%", background: "white" }}>
               <StyledBox>
                 <div
                   style={{ display: "flex", alignItems: "center", gap: "10px" }}
@@ -69,7 +69,7 @@ export default function Recommended() {
                 </StyledCustomTypography>
               </StyledBox>
             </Paper>
-            <div style={{ background: "#f6f9f5", marginTop: "3%" }}>
+            <div style={{ background: "white", marginTop: "3%" }}>
               <SlideCustomCard data={recommend} />
             </div>
           </CustomDivContainer>

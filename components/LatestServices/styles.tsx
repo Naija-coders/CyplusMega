@@ -92,7 +92,7 @@ export const StyledCard = styled(Card)(
       xl: "250px",
     },
 
-    "background": "#F6F9F5",
+    "background": "white",
 
     "&:hover": {
       boxShadow: " 0px 2px 12px -1px #565454;",
@@ -149,10 +149,9 @@ export const StyledButton = styled(Button)(
 
 export const StyledPriceValue = styled(Typography)(
   sx({
-    color: "#FCA301",
+    color: "black",
     fontFamily: "Avenir Light",
     fontSize: "25px",
-    textShadow: "rgba(0, 0, 0, 0.298039) 0px 1px 0px",
   })
 );
 export const StyledPrice = styled(Typography)(
