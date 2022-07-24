@@ -86,10 +86,10 @@ export const StyledCard = styled(Card)(
       xs: "270px",
 
       sm: "270px",
-      md: "290px",
+      md: "270px",
 
-      lg: "290px",
-      xl: "290px",
+      lg: "270px",
+      xl: "270px",
     },
 
     "background": "white",
