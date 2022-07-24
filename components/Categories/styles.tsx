@@ -113,8 +113,6 @@ export const ContainerDiv = styled("div")(
   sx({
     display: "flex",
     flexDirection: "row",
-
-    justifyContent: "space-between",
   })
 );
 export const StickyBar = styled(Paper)(
@@ -136,34 +134,37 @@ export const StyledPaper = styled("div")(
   sx({
     width: "100%",
     marginTop: "7px",
+    display: "flex",
+    justifyContent: "center",
   })
 );
 export const CustomDivContainer = styled("div")(
   sx({
     displaY: "flex",
 
-    justifyContent: "left",
+    justifyContent: "center",
     width: "100%",
     marginTop: "20px",
   })
 );
 export const MainPaperDiv = styled("div")(
   sx({
+    marginTop: "10px",
     display: "grid",
+    justifyContent: "center",
+    marginLeft: "2%",
+
     gridTemplateColumns: {
-      xs: "auto auto",
-      md: "250px 250px 250px ",
-      lg: "250px 250px 250px 250px ",
-      xl: "auto auto auto auto  auto ",
+      xs: "repeat(1,1fr)",
+      sm: "repeat(2,1fr)",
+      md: "repeat(3,1fr)",
+      lg: "repeat(4,1fr)",
+      xl: "repeat(5,1fr)",
     },
-    width: "100%",
-    overflowX: "scroll",
-    columnGap: { xs: "10px", md: "60px", lg: "40px", xl: "40px" },
-    rowGap: "-10px",
-    justifyContent: { xs: "space-between", md: "center" },
-    alignItems: "left",
+    gap: "32px",
   })
 );
+
 export const ColorText = styled(Typography)(
   sx({
     fontSize: "0.8rem",

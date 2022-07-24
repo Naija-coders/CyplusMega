@@ -225,7 +225,7 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
                 </StyledCustomTypography>
                 <StyledCustomTypography
                   style={{
-                    marginRight: "3%",
+                    marginRight: "2%",
                     fontFamily: "serif",
                     fontSize: "15px",
                     textDecoration: "underline",
