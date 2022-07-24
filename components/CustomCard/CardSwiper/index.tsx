@@ -38,6 +38,7 @@ const CustomCardSwiper: React.FC<Props> = ({ image }) => {
         effect={"flip"}
         grabCursor={false}
         navigation={nav}
+        pagination={true}
         modules={[Lazy, EffectFlip, Pagination, Navigation]}
         className="mySwiper"
       >

@@ -285,7 +285,9 @@
     }
   }
 }
-
+.swiper-pagination-bullet {
+  background-color: white !important;
+}
 .swiper-slide img {
   display: block;
   width: 100%;

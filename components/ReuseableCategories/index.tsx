@@ -18,6 +18,8 @@ import moment from "moment";
 import CustomCardSwiper from "../CustomCard/CardSwiper";
 import StarIcon from "@mui/icons-material/Star";
 import Link from "next/link";
+import Checkbox from "@mui/material/Checkbox";
+import Favorite from "@mui/icons-material/Favorite";
 
 import {
   StyledLink,
@@ -54,6 +56,7 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
   const route = useRouter();
   const handleLogin = AuthState.user;
   const [buttoncolor, setButtoncolor] = useState<any>(false);
+
   const handleColor = () => {
     if (!active) {
       setActive(true);
@@ -83,6 +86,8 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
     }
   });
   console.log("displaying mainservices", state.mainservices);
+
+  const label = { inputProps: { "aria-label": "Favorite Icon" } };
   const Rendermobile = () => {
     return (
       <div className="navbar__catwrappermobile">
@@ -284,7 +289,7 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
                               display: "flex",
                               flexDirection: "column",
                               justifyContent: "space-between",
-                              height: "380px",
+                              height: "410px",
                             }}
                           >
                             <div style={{ height: "200px", width: "100%" }}>
@@ -310,7 +315,12 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
                                 }}
                               >
                                 <span>
-                                  <TextTypography sx={{ fontWeight: "bold" }}>
+                                  <TextTypography
+                                    sx={{
+                                      fontWeight: "bold",
+                                      userSelect: "none",
+                                    }}
+                                  >
                                     {item.name}
                                   </TextTypography>
                                 </span>
@@ -356,7 +366,8 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
                                 </StyledTypographyHeader>
                               </a>
                             </div>
-                            <div style={{ background: "#222325" }}>
+                            <Divider />
+                            <div>
                               <div
                                 style={{
                                   display: "flex",
@@ -381,14 +392,14 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
                                     alignItems: "center",
                                   }}
                                 >
-                                  <StyledIconButton
-                                    key={item.services_id}
-                                    onClick={handleOpen}
-                                  >
-                                    <BookmarkBorderIcon
-                                      style={{ color: "white" }}
-                                    />
-                                  </StyledIconButton>
+                                  <Checkbox
+                                    sx={{ color: "#969799" }}
+                                    {...label}
+                                    icon={<Favorite />}
+                                    checkedIcon={
+                                      <Favorite sx={{ color: "#ba1e33" }} />
+                                    }
+                                  />
 
                                   <StyledPriceValue>
                                     ${item.price}

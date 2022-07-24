@@ -267,7 +267,11 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
             >
               <img
                 src="elverrlogo.png"
-                style={{ height: "100%", objectFit: "contain" }}
+                style={{
+                  height: "100%",
+                  objectFit: "contain",
+                  userSelect: "none",
+                }}
               ></img>
             </div>
           </div>
@@ -317,6 +321,7 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
                     src="elverrlogo.png"
                     style={{
                       height: "100%",
+                      userSelect: "none",
 
                       objectFit: "cover",
                     }}
