@@ -310,7 +310,9 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
                                 }}
                               >
                                 <span>
-                                  <TextTypography>{item.name}</TextTypography>
+                                  <TextTypography sx={{ fontWeight: "bold" }}>
+                                    {item.name}
+                                  </TextTypography>
                                 </span>
                                 <span>
                                   <TextTypography>
