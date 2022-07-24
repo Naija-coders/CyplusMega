@@ -77,7 +77,7 @@ export const StyledCard = styled(Card)(
   sx({
     "cursor": "pointer",
 
-    "border": "#949593 1px",
+    "border": "grey 1px",
 
     "borderRadius": " 12px",
     "borderStyle": "solid",

@@ -212,8 +212,7 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
   };
   return (
     <>
-      {Rendermobile()}
-      <div className="navbar__mycontainer" style={{ position: "relative" }}>
+      <div className="navbar__rand" style={{ position: "relative" }}>
         <CustomContainer>
           <CustomDivContainer>
             <Paper elevation={0} sx={{ height: "110%" }}>
@@ -226,7 +225,7 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
                 </StyledCustomTypography>
                 <StyledCustomTypography
                   style={{
-                    marginRight: "2%",
+                    marginRight: "3%",
                     fontFamily: "serif",
                     fontSize: "15px",
                     textDecoration: "underline",

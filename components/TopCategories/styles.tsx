@@ -49,20 +49,21 @@ export const StyledCard = styled(Card)(
   sx({
     "cursor": "pointer",
 
-    "border": "#949593 1px",
+    "border": "#d5d7db 2px",
 
     "borderRadius": " 12px",
     "borderStyle": "solid",
 
     "width": {
-      xs: "100%",
+      xs: "300px",
 
-      sm: "270px",
+      sm: "300px",
       md: "270px",
 
-      lg: "250px",
-      xl: "250px",
+      lg: "270px",
+      xl: "270px",
     },
+    "minWidth": "245px",
 
     "background": "white",
 
@@ -76,16 +77,16 @@ export const LatestServicesDiv = styled("div")(
     marginTop: "10px",
     width: "100%",
     display: " grid",
-    rowGap: "20px",
-    gridTemplateColumns: {
-      md: "auto auto auto",
-      lg: "auto auto auto auto",
-      xl: "auto auto auto auto auto",
-    },
-    overflowX: "scroll",
-    columnGap: "20px",
+    justifyContent: "space-between",
 
-    justifyContent: "space-around",
+    gridTemplateColumns: {
+      xs: "repeat(1,1fr)",
+      sm: "repeat(2,1fr)",
+      md: "repeat(3,1fr)",
+      lg: "repeat(4,1fr)",
+      xl: "repeat(5,1fr)",
+    },
+    gridGap: { sm: "32px", md: "32px" },
   })
 );
 export const TextTypography = styled(Typography)(
@@ -145,12 +146,13 @@ export const CustomContainer = styled("div")(
   sx({
     display: " flex",
     marginLeft: { md: "5%", lg: "0%", xl: "5%" },
+
     flexDirection: " column",
   })
 );
 export const CustomDivContainer = styled("div")(
   sx({
-    width: { md: "95%", lg: "93%", xl: "93%" },
+    width: { md: "95%", lg: "94%", xl: "93%" },
   })
 );
 export const StyledBox = styled(Box)(

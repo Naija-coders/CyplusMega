@@ -17,6 +17,24 @@
       margin-left: 5%;
     }
   }
+  &__rand {
+    display: flex;
+    margin-left: 5%;
+    flex-direction: column;
+
+    @include atSmall {
+      display: flex;
+      justify-content: center;
+    }
+    @include atSmallMax {
+      display: flex;
+      justify-content: center;
+    }
+    @include atMedium {
+      display: flex;
+      margin-left: 5%;
+    }
+  }
   &__container {
     display: flex;
 

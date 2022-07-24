@@ -31,7 +31,7 @@ interface StyledTabsProps {
 interface StyledTabProps {
   label?: string;
   value?: string;
-  onClick?:any;
+  onClick?: any;
 }
 export const StyledTab = styled((props: StyledTabProps) => (
   <Tab disableRipple {...props} />
