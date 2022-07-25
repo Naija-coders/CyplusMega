@@ -41,6 +41,35 @@ export const LightTooltip = styled(({ className, ...props }: TooltipProps) => (
     fontSize: 11,
   },
 }));
+export const AllCategoryTooltip = styled(
+  ({ className, ...props }: TooltipProps) => (
+    <Tooltip {...props} classes={{ popper: className }} />
+  )
+)(({ theme }) => ({
+  [`& .${tooltipClasses.tooltip}`]: {
+    minWidth: "25.5vw",
+
+    backgroundColor: "white",
+    color: "black",
+    fontSize: 11,
+  },
+}));
+export const MyCustomTooltip = styled(
+  ({ className, ...props }: TooltipProps) => (
+    <Tooltip {...props} classes={{ popper: className }} />
+  )
+)(({ theme }) => ({
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: "white",
+
+    boxShadow: " 1px 1px #888888",
+    fontSize: 11,
+    position: "fixed",
+    left: -8,
+    minWidth: "74vw",
+    minHeight: "100%",
+  },
+}));
 export const StyledTypography = styled(Typography)(
   sx({
     color: "#222325",
@@ -70,6 +99,7 @@ export const ResponsiveDiv = styled("div")(
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
+    background: "white",
     gap: "30px",
   })
 );

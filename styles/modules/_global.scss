@@ -16,16 +16,10 @@ a {
 * {
   box-sizing: border-box;
 }
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td,
-th {
-  text-align: left;
-  padding: 8px;
+table,
+th,
+td {
+  border: 1px solid;
 }
 body::-webkit-scrollbar {
   width: 0.3em;

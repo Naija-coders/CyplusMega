@@ -40,17 +40,18 @@ export default function Footer({}: Props) {
         {/*  <Divider sx={{ width: "100%", background: "grey" }} /> */}
         <DurationDiv>
           <DurationGroup>
+            <br></br>
             <DurationSubDiv>
               <TableCells>
                 <DurationTypography1>{"Categories"}</DurationTypography1>
               </TableCells>
               <TableCells>
-                <DurationTypography1>
-                  {"For Posting Services"}
-                </DurationTypography1>
+                <DurationTypography1>{"Support"}</DurationTypography1>
               </TableCells>
               <TableCells>
-                <DurationTypography1>{"Helpful Resources"}</DurationTypography1>
+                <DurationTypography1>
+                  {"Advertise on Elverr"}
+                </DurationTypography1>
               </TableCells>
               <TableCells>
                 <DurationTypography1>{"About"}</DurationTypography1>
@@ -58,45 +59,161 @@ export default function Footer({}: Props) {
             </DurationSubDiv>{" "}
             <DurationSubDiv>
               <TableCells>
-                <DurationTypography>{"Browse Services"}</DurationTypography>
+                <DurationTypography>{"IT Services"}</DurationTypography>
               </TableCells>
               <TableCells>
-                <DurationTypography>{"Products"}</DurationTypography>
+                <DurationTypography>{"Help & Support"}</DurationTypography>
+              </TableCells>
+              <TableCells>
+                <DurationTypography>{"Become a Seller"}</DurationTypography>
+              </TableCells>
+              <TableCells>
+                <DurationTypography>{"Contact us"}</DurationTypography>
+              </TableCells>
+            </DurationSubDiv>
+            <DurationSubDiv>
+              <TableCells>
+                <DurationTypography>{"Cleaning Services"}</DurationTypography>
+              </TableCells>
+              <TableCells>
+                <DurationTypography>{"Trust & Safety"}</DurationTypography>
+              </TableCells>
+              <TableCells>
+                <DurationTypography>{"Forum"}</DurationTypography>
+              </TableCells>
+              <TableCells>
+                <DurationTypography>{"FAQ"}</DurationTypography>
+              </TableCells>
+            </DurationSubDiv>
+            <DurationSubDiv>
+              <TableCells>
+                <DurationTypography>{"Event Services"}</DurationTypography>
+              </TableCells>
+              <TableCells>
+                <DurationTypography>{"Buying on Elverr"}</DurationTypography>
+              </TableCells>
+              <TableCells>
+                <DurationTypography>{"Inivite a Friend"}</DurationTypography>
+              </TableCells>
+              <TableCells>
+                <DurationTypography>{"Terms of Services"}</DurationTypography>
+              </TableCells>
+            </DurationSubDiv>
+            <DurationSubDiv>
+              <TableCells>
+                <DurationTypography>{"Automative Services"}</DurationTypography>
+              </TableCells>
+              <TableCells>
+                <DurationTypography>{"Selling on Elverr"}</DurationTypography>
+              </TableCells>
+              <TableCells>
+                <DurationTypography></DurationTypography>
+              </TableCells>
+              <TableCells>
+                <DurationTypography>{"Blog"}</DurationTypography>
+              </TableCells>
+            </DurationSubDiv>
+            <DurationSubDiv>
+              <TableCells>
+                <DurationTypography>
+                  {"Building & Trade Services"}
+                </DurationTypography>
+              </TableCells>
+              <TableCells>
+                <DurationTypography></DurationTypography>
+              </TableCells>
+              <TableCells>
+                <DurationTypography></DurationTypography>
+              </TableCells>
+              <TableCells>
+                <DurationTypography>{"Privacy Policy"}</DurationTypography>
+              </TableCells>
+            </DurationSubDiv>
+            <DurationSubDiv>
+              <TableCells>
+                <DurationTypography>
+                  {"Healthy & Beauty Services"}
+                </DurationTypography>
+              </TableCells>
+              <TableCells>
+                <DurationTypography></DurationTypography>
+              </TableCells>
+              <TableCells>
+                <DurationTypography></DurationTypography>
               </TableCells>
               <TableCells>
                 <DurationTypography>
                   {"Terms and Conditions"}
                 </DurationTypography>
-              </TableCells>{" "}
-              <TableCells>
-                <DurationTypography>{"Partnerships"}</DurationTypography>
               </TableCells>
-            </DurationSubDiv>{" "}
+            </DurationSubDiv>
             <DurationSubDiv>
               <TableCells>
-                <DurationTypography>{"Blog"}</DurationTypography>
+                <DurationTypography>
+                  {"Landscaping & Gardening Services"}
+                </DurationTypography>
               </TableCells>
-              <TableCells>
-                <DurationTypography>{"Blog"}</DurationTypography>
-              </TableCells>
-              <TableCells>
-                <DurationTypography>{"Blog"}</DurationTypography>
-              </TableCells>
-              <TableCells>
-                <DurationTypography>{"Carears"}</DurationTypography>
-              </TableCells>
-            </DurationSubDiv>{" "}
+            </DurationSubDiv>
             <DurationSubDiv>
               <TableCells>
-                <DurationTypography>{"Contact Us"}</DurationTypography>
+                <DurationTypography>{"Logistics Services"}</DurationTypography>
               </TableCells>
+            </DurationSubDiv>
+            <DurationSubDiv>
               <TableCells>
-                <DurationTypography>{"Contact Us"}</DurationTypography>
+                <DurationTypography>{"Printing Services"}</DurationTypography>
               </TableCells>
+            </DurationSubDiv>
+            <DurationSubDiv>
               <TableCells>
-                <DurationTypography>{"Contact Us"}</DurationTypography>
+                <DurationTypography>
+                  {"Photography & Video Services"}
+                </DurationTypography>
               </TableCells>
-            </DurationSubDiv>{" "}
+            </DurationSubDiv>
+            <DurationSubDiv>
+              <TableCells>
+                <DurationTypography>
+                  {"Wedding Events Services"}
+                </DurationTypography>
+              </TableCells>
+            </DurationSubDiv>
+            <DurationSubDiv>
+              <TableCells>
+                <DurationTypography>{"Repair Services"}</DurationTypography>
+              </TableCells>
+            </DurationSubDiv>
+            <DurationSubDiv>
+              <TableCells>
+                <DurationTypography>{"Fitness Services"}</DurationTypography>
+              </TableCells>
+            </DurationSubDiv>
+            <DurationSubDiv>
+              <TableCells>
+                <DurationTypography>{"Pet Services"}</DurationTypography>
+              </TableCells>
+            </DurationSubDiv>
+            <DurationSubDiv>
+              <TableCells>
+                <DurationTypography>
+                  {"Travel Agent & Tour Services"}
+                </DurationTypography>
+              </TableCells>
+            </DurationSubDiv>
+            <DurationSubDiv>
+              <TableCells>
+                <DurationTypography>
+                  {"Classes & Courses Services"}
+                </DurationTypography>
+              </TableCells>
+            </DurationSubDiv>
+            <DurationSubDiv>
+              <TableCells>
+                <DurationTypography>
+                  {"Manufacturing Services"}
+                </DurationTypography>
+              </TableCells>
+            </DurationSubDiv>
           </DurationGroup>
         </DurationDiv>
         <br></br>

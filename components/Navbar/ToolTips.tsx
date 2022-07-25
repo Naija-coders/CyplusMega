@@ -4,13 +4,18 @@ import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
 import AddBoxIcon from "@mui/icons-material/AddBox";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
 import {
   ResponsiveDiv,
   HtmlTooltip,
   TooltipText,
   MainText,
   Tooltipdiv,
+  AllCategoryTooltip,
   LightTooltip,
+  MyCustomTooltip,
   TooltipButton,
 } from "./styles";
 import { Typography } from "@mui/material";
@@ -18,7 +23,7 @@ type Props = {};
 const ToolTips: React.FC<Props> = ({}) => {
   return (
     <ResponsiveDiv>
-      <HtmlTooltip title={"random categories"}>
+      <AllCategoryTooltip title={""}>
         <IconButton
           sx={{
             display: "flex",
@@ -31,7 +36,7 @@ const ToolTips: React.FC<Props> = ({}) => {
           <MenuRoundedIcon sx={{ color: "black" }} />
           <MainText>All</MainText>
         </IconButton>
-      </HtmlTooltip>
+      </AllCategoryTooltip>
       <HtmlTooltip
         title={
           <Tooltipdiv>

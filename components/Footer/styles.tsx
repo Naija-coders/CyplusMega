@@ -109,6 +109,7 @@ export const CustomFooterBackgroundDiv = styled(AppBar)(
   sx({
     justifyContent: "center",
     position: "relative",
+    zIndex: 0,
 
     display: "flex",
     background: "white",
