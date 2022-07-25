@@ -61,7 +61,7 @@ const CustomCardFeature: React.FC<Props> = ({ data }) => {
           },
 
           1500: {
-            slidesPerView: 5,
+            slidesPerView: 4,
             spaceBetween: 40,
           },
         }}
