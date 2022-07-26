@@ -5,8 +5,9 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { Dispatch } from "redux";
 import { useDispatch, useSelector } from "react-redux";
+import Skeleton from "@mui/material/Skeleton";
+import Stack from "@mui/material/Stack";
 
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import { RootState } from "../../state/reducers";
 import { Avatar, IconButton } from "@mui/material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -88,128 +89,7 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
   console.log("displaying mainservices", state.mainservices);
 
   const label = { inputProps: { "aria-label": "Favorite Icon" } };
-  const Rendermobile = () => {
-    return (
-      <div className="navbar__catwrappermobile">
-        <div className="navbar__sizewidth">
-          <Paper elevation={0} sx={{ height: "110%" }}>
-            <StyledBox>
-              <StyledCustomTypography
-                sx={{
-                  marginLeft: "20px",
-                  fontFamily: "serif",
-                  fontSize: "1.3rem",
-                }}
-              >
-                {title}
-              </StyledCustomTypography>
-            </StyledBox>
-            {loaded ? (
-              <Skeleton
-                count={1}
-                height={"100px"}
-                containerClassName="flexitems__mobilelatestservices"
-                style={{
-                  marginLeft: "15px",
-                  borderRadius: "0.5rem",
 
-                  justifyContent: "center",
-                  marginTop: "10px",
-                }}
-                width={"350px"}
-              />
-            ) : (
-              <div className="flexitems__mobilelatestservices">
-                {data?.slice(0, 9)?.map(
-                  (
-                    item: {
-                      type:
-                        | boolean
-                        | React.ReactChild
-                        | React.ReactFragment
-                        | React.ReactPortal
-                        | null
-                        | undefined;
-                      categories_id: number;
-                      image: any;
-                      name: string;
-                      services_id: number;
-                      about: string;
-                      price: number;
-                      updated_at: string;
-                    },
-                    i: string | number | any
-                  ) => (
-                    <div
-                      key={item.services_id}
-                      style={{
-                        position: "relative",
-                        width: "100%",
-                      }}
-                    >
-                      <StyledMobileCard>
-                        <div
-                          style={{
-                            width: "100%",
-                            height: "150px",
-                            position: "relative",
-                          }}
-                        >
-                          <CustomCardSwiper />
-                          <div
-                            style={{
-                              position: "absolute",
-                              bottom: "-10%",
-
-                              zIndex: "200",
-                              right: "3%",
-                            }}
-                          >
-                            <IconButton sx={{ background: "white" }}>
-                              <BookmarkBorderIcon sx={{ color: "green" }} />
-                            </IconButton>
-                          </div>
-                          <div
-                            style={{
-                              display: "flex",
-                              flexDirection: "column",
-                              marginTop: "10px",
-                              height: "100%",
-                              position: "relative",
-                              justifyItems: "flex-end",
-                            }}
-                          >
-                            <TextTypography
-                              onClick={() => {
-                                route.push("/services?ad=" + item?.services_id);
-                              }}
-                            >
-                              {item?.type}
-                            </TextTypography>
-                            <StyledPriceValue align="right">
-                              {item?.price}
-                            </StyledPriceValue>
-                          </div>
-                        </div>
-                      </StyledMobileCard>
-                      <br></br>
-                      <Divider />
-                    </div>
-                  )
-                )}
-                <LoginModal
-                  OpenModalForm={open}
-                  CloseModalForm={() => setOpen(false)}
-                />{" "}
-              </div>
-            )}
-          </Paper>
-          <br></br>
-          <br></br>
-        </div>
-      </div>
-    );
-  };
   return (
     <>
       <div className="navbar__rand" style={{ position: "relative" }}>
@@ -239,20 +119,65 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
                 </StyledCustomTypography>
               </StyledBox>
               {loaded ? (
-                <Skeleton
-                  count={6}
-                  inline
-                  height={300}
-                  containerClassName="flexitems__latestservices"
-                  style={{
-                    marginLeft: "15px",
-                    borderRadius: "0.5rem",
+                <LatestServicesDiv>
+                  <Stack spacing={1}>
+                    <Skeleton
+                      variant="rectangular"
+                      width={"270px"}
+                      height={118}
+                    />
+                    <Skeleton variant="circular" width={40} height={40} />
+                    <Skeleton variant="text" width={"270px"} />
+                    <Skeleton
+                      variant="rectangular"
+                      width={"270px"}
+                      height={118}
+                    />
+                  </Stack>
+                  <Stack spacing={1}>
+                    <Skeleton
+                      variant="rectangular"
+                      width={"270px"}
+                      height={118}
+                    />
+                    <Skeleton variant="circular" width={40} height={40} />
+                    <Skeleton variant="text" width={"270px"} />
+                    <Skeleton
+                      variant="rectangular"
+                      width={"270px"}
+                      height={118}
+                    />
+                  </Stack>
+                  <Stack spacing={1}>
+                    <Skeleton
+                      variant="rectangular"
+                      width={"270px"}
+                      height={118}
+                    />
+                    <Skeleton variant="circular" width={40} height={40} />
+                    <Skeleton variant="text" width={"270px"} />
+                    <Skeleton
+                      variant="rectangular"
+                      width={"270px"}
+                      height={118}
+                    />
+                  </Stack>
 
-                    justifyContent: "center",
-                    marginTop: "10px",
-                  }}
-                  width={"270px"}
-                />
+                  <Stack spacing={1}>
+                    <Skeleton
+                      variant="rectangular"
+                      width={"270px"}
+                      height={118}
+                    />
+                    <Skeleton variant="circular" width={40} height={40} />
+                    <Skeleton variant="text" width={"270px"} />
+                    <Skeleton
+                      variant="rectangular"
+                      width={"270px"}
+                      height={118}
+                    />
+                  </Stack>
+                </LatestServicesDiv>
               ) : (
                 <LatestServicesDiv>
                   {data?.slice(0, quantity)?.map(
