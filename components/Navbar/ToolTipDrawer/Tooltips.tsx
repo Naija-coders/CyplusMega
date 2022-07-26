@@ -41,6 +41,9 @@ const CleaningService = () => {
             <TableCells>
               <DurationTypography1>{"Commercial Cleaning"}</DurationTypography1>
             </TableCells>
+            <TableCells>
+              <DurationTypography1>{"Builder's Cleaning"}</DurationTypography1>
+            </TableCells>
           </DurationSubDiv>
           <DurationSubDiv>
             <TableCells>
@@ -49,13 +52,21 @@ const CleaningService = () => {
             <TableCells>
               <DurationTypography>{"Janitorial Services"}</DurationTypography>
             </TableCells>
+            <TableCells>
+              <DurationTypography>{"Air vent  Cleaning"}</DurationTypography>
+            </TableCells>
           </DurationSubDiv>
           <DurationSubDiv>
             <TableCells>
               <DurationTypography>{"Disinfect your Home"}</DurationTypography>
             </TableCells>
             <TableCells>
-              <DurationTypography>{"Disinfection CLeaning"}</DurationTypography>
+              <DurationTypography>{"Disinfection Cleaning"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>
+                {"Windows & Frames Cleaning"}
+              </DurationTypography>
             </TableCells>
           </DurationSubDiv>
           <DurationSubDiv>
@@ -65,6 +76,11 @@ const CleaningService = () => {
             <TableCells>
               <DurationTypography>
                 {"Project-Based Cleaning"}
+              </DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>
+                {"Wiping of switches & outlets"}
               </DurationTypography>
             </TableCells>
           </DurationSubDiv>
@@ -77,49 +93,31 @@ const CleaningService = () => {
             <TableCells>
               <DurationTypography>{"Pressure Washing"}</DurationTypography>
             </TableCells>
-          </DurationSubDiv>
-          <br></br>
-          <DurationSubDiv>
             <TableCells>
-              <DurationTypography1>{"Builder's Cleaning"}</DurationTypography1>
+              <DurationTypography>
+                {"Packaging & Removal of debris"}
+              </DurationTypography>
             </TableCells>
+          </DurationSubDiv>
+          <br></br> <br></br>
+          <DurationSubDiv>
             <TableCells>
               <DurationTypography1>{"Upholstery Cleaning"}</DurationTypography1>
             </TableCells>
           </DurationSubDiv>
           <DurationSubDiv>
             <TableCells>
-              <DurationTypography>{"Air vent  Cleaning"}</DurationTypography>
-            </TableCells>
-            <TableCells>
               <DurationTypography>{"Steam Cleaning"}</DurationTypography>
             </TableCells>
           </DurationSubDiv>
           <DurationSubDiv>
-            <TableCells>
-              <DurationTypography>
-                {"Windows & Frames Cleaning"}
-              </DurationTypography>
-            </TableCells>
             <TableCells>
               <DurationTypography>{"Sofa Cleaning"}</DurationTypography>
             </TableCells>
           </DurationSubDiv>
           <DurationSubDiv>
             <TableCells>
-              <DurationTypography>
-                {"Wiping of switches & outlets"}
-              </DurationTypography>
-            </TableCells>
-            <TableCells>
               <DurationTypography>{"Leather Cleaning"}</DurationTypography>
-            </TableCells>
-          </DurationSubDiv>
-          <DurationSubDiv>
-            <TableCells>
-              <DurationTypography>
-                {"Packaging & Removal of debris"}
-              </DurationTypography>
             </TableCells>
           </DurationSubDiv>
         </DurationGroup>
@@ -133,13 +131,15 @@ const ItService = () => {
     <>
       <DurationDiv>
         <DurationGroup>
-          <br></br>
           <DurationSubDiv>
             <TableCells>
               <DurationTypography1>{"Web Design"}</DurationTypography1>
             </TableCells>
             <TableCells>
               <DurationTypography1>{"Software Developer"}</DurationTypography1>
+            </TableCells>
+            <TableCells>
+              <DurationTypography1>{"IT Consultant"}</DurationTypography1>
             </TableCells>
           </DurationSubDiv>
           <DurationSubDiv>
@@ -151,6 +151,9 @@ const ItService = () => {
                 {"Mobile App Development"}
               </DurationTypography>
             </TableCells>
+            <TableCells>
+              <DurationTypography>{"IT Roadmap"}</DurationTypography>
+            </TableCells>
           </DurationSubDiv>
           <DurationSubDiv>
             <TableCells>
@@ -158,6 +161,9 @@ const ItService = () => {
             </TableCells>
             <TableCells>
               <DurationTypography>{"DevOps Automation"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Vendor Management"}</DurationTypography>
             </TableCells>
           </DurationSubDiv>
           <DurationSubDiv>
@@ -167,42 +173,32 @@ const ItService = () => {
             <TableCells>
               <DurationTypography>{"Cloud Consulting"}</DurationTypography>
             </TableCells>
+            <TableCells>
+              <DurationTypography>{"Project Management"}</DurationTypography>
+            </TableCells>
           </DurationSubDiv>
           <br></br> <br></br>
           <DurationSubDiv>
-            <TableCells>
-              <DurationTypography1>{"IT Consultant"}</DurationTypography1>
-            </TableCells>
             <TableCells>
               <DurationTypography1>{"Hardware Developer"}</DurationTypography1>
             </TableCells>
           </DurationSubDiv>
           <DurationSubDiv>
             <TableCells>
-              <DurationTypography>{"IT Roadmap"}</DurationTypography>
-            </TableCells>
-            <TableCells>
               <DurationTypography>{"Program Management"}</DurationTypography>
             </TableCells>
           </DurationSubDiv>
           <DurationSubDiv>
-            <TableCells>
-              <DurationTypography>{"Vendor Management"}</DurationTypography>
-            </TableCells>
             <TableCells>
               <DurationTypography>{"App Structure"}</DurationTypography>
             </TableCells>
           </DurationSubDiv>
           <DurationSubDiv>
             <TableCells>
-              <DurationTypography>{"Project Management"}</DurationTypography>
-            </TableCells>
-            <TableCells>
               <DurationTypography>{"Systems Management"}</DurationTypography>
             </TableCells>
           </DurationSubDiv>
           <DurationSubDiv>
-            <TableCells></TableCells>
             <TableCells>
               <DurationTypography>
                 {"Application Architecture"}
@@ -215,6 +211,113 @@ const ItService = () => {
   );
 };
 
+const AutomativeServices = () => {
+  return (
+    <>
+      <DurationDiv>
+        <DurationGroup>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography1>{"Automotive Industry"}</DurationTypography1>
+            </TableCells>
+            <TableCells>
+              <DurationTypography1>{"Automobile Services"}</DurationTypography1>
+            </TableCells>
+            <TableCells>
+              <DurationTypography1>{"Car Services"}</DurationTypography1>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Wholesaling parts"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Cooling System"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>
+                {"Extension brake inspectio"}
+              </DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Retailing parts"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Lubrication System"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>
+                {"Air condioning inspection"}
+              </DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>
+                {"Maintenance of Motor Vehicles"}
+              </DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Electrical System"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>
+                {"Radiator & coolant hose check"}
+              </DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Safety & Security"}</DurationTypography>
+            </TableCells>
+            <TableCells></TableCells>
+          </DurationSubDiv>
+          <br></br> <br></br>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography1>{"Vehicle Services"}</DurationTypography1>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>
+                {"Wiper blade replacement"}
+              </DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Oil replacement"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Fuel Fiter(diesel)"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Tire replacement"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Relace Air filter"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Scheduled Maintenance"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <br></br>
+        </DurationGroup>
+      </DurationDiv>
+    </>
+  );
+};
 const Tooltips: React.FC<Props> = ({}) => {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
 
@@ -229,8 +332,9 @@ const Tooltips: React.FC<Props> = ({}) => {
       sx={{
         display: "flex",
         minWidth: "99.5vw",
-        height: "100%",
+        height: "1100px",
         background: "white",
+        overflowY: "scroll",
       }}
     >
       <div style={{ width: "25vw" }}>
@@ -279,7 +383,7 @@ const Tooltips: React.FC<Props> = ({}) => {
           </ListItemButton>
         </List>
       </div>
-      <Divider orientation="vertical" sx={{ height: "500px" }}></Divider>
+      <Divider orientation="vertical"></Divider>
       <div style={{ width: "70vw" }}>
         <div
           style={{
@@ -293,6 +397,7 @@ const Tooltips: React.FC<Props> = ({}) => {
           {/*  <Divider sx={{ width: "100%", background: "grey" }} /> */}
           {selectedIndex == 0 && <ItService />}
           {selectedIndex == 1 && <CleaningService />}
+          {selectedIndex == 2 && <AutomativeServices />}
         </div>
       </div>
     </Box>
