@@ -19,11 +19,12 @@ import {
   TooltipButton,
 } from "./styles";
 import { Typography } from "@mui/material";
+import MyToolTips from "./ToolTipDrawer";
 type Props = {};
 const ToolTips: React.FC<Props> = ({}) => {
   return (
     <ResponsiveDiv>
-      <AllCategoryTooltip title={""}>
+      <AllCategoryTooltip title={<MyToolTips />}>
         <IconButton
           sx={{
             display: "flex",

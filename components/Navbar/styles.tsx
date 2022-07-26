@@ -47,8 +47,8 @@ export const AllCategoryTooltip = styled(
   )
 )(({ theme }) => ({
   [`& .${tooltipClasses.tooltip}`]: {
-    minWidth: "25.5vw",
-
+    minWidth: "99.5vw",
+    boxShadow: " 1px 1px #888888",
     backgroundColor: "white",
     color: "black",
     fontSize: 11,
