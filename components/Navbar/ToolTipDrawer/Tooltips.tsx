@@ -318,6 +318,414 @@ const AutomativeServices = () => {
     </>
   );
 };
+
+const EventServices = () => {
+  return (
+    <>
+      <DurationDiv>
+        <DurationGroup>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography1>{"Event Management"}</DurationTypography1>
+            </TableCells>
+            <TableCells>
+              <DurationTypography1>{"Event Planner"}</DurationTypography1>
+            </TableCells>
+            <TableCells>
+              <DurationTypography1>
+                {"Event design & Decor"}
+              </DurationTypography1>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Conferences"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>
+                {"Conception & Event planning services"}
+              </DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Budgeting"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Concerts"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Location scouting"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Design proposal"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Festivals"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>
+                {"Servcice bid & contract mangement"}
+              </DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Decor setuo & styling"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Ceremonies"}</DurationTypography>
+            </TableCells>
+            <TableCells></TableCells>
+            <TableCells>
+              <DurationTypography>
+                {"Vendor sourcing & curating"}
+              </DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <br></br>
+          <br></br>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography1>{"Corporate Events"}</DurationTypography1>
+            </TableCells>
+          </DurationSubDiv>
+        </DurationGroup>
+      </DurationDiv>
+    </>
+  );
+};
+const TravelAgentServices = () => {
+  return (
+    <>
+      <DurationDiv>
+        <DurationGroup>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography1>{"Travel Management"}</DurationTypography1>
+            </TableCells>
+            <TableCells>
+              <DurationTypography1>{"Travel Agents"}</DurationTypography1>
+            </TableCells>
+            <TableCells>
+              <DurationTypography1>{"Tour Operator"}</DurationTypography1>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Consulting"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>
+                {"Domestic & International Hotel booking"}
+              </DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Railway reservations"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells></TableCells>
+            <TableCells></TableCells>
+            <TableCells>
+              <DurationTypography>{"Travel Insurance"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+        </DurationGroup>
+      </DurationDiv>
+    </>
+  );
+};
+const EntertainmentServices = () => {
+  return (
+    <>
+      <DurationDiv>
+        <DurationGroup>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography1>{"Media Industry"}</DurationTypography1>
+            </TableCells>
+            <TableCells>
+              <DurationTypography1>
+                {"Entertainment Industry"}
+              </DurationTypography1>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>
+                {"Photo Edition Services"}
+              </DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Cultural Events"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>
+                {"Creative Design  Services"}
+              </DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Perfomance Art"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Data Entry Services"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Sports"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Call Center Services"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Film"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells></TableCells>
+            <TableCells>
+              <DurationTypography>{"Attractions"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells></TableCells>
+            <TableCells>
+              <DurationTypography>{"Museums"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells></TableCells>
+            <TableCells>
+              <DurationTypography>{"Media"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+        </DurationGroup>
+      </DurationDiv>
+    </>
+  );
+};
+
+const Othercategories = () => {
+  return (
+    <>
+      <DurationDiv>
+        <DurationGroup>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography1>
+                {"Building & Trade Services"}
+              </DurationTypography1>
+            </TableCells>
+            <TableCells>
+              <DurationTypography1>
+                {"Heath & Beauty Services"}
+              </DurationTypography1>
+            </TableCells>
+            <TableCells>
+              <DurationTypography1>
+                {"Lnadscaping & Gardening Services"}
+              </DurationTypography1>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography1>
+                {"Electrical Installation & Testing"}
+              </DurationTypography1>
+            </TableCells>
+            <TableCells>
+              <DurationTypography1>{"Make-up"}</DurationTypography1>
+            </TableCells>
+            <TableCells>
+              <DurationTypography1>{"Pruning"}</DurationTypography1>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Carpentry and Joinery"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Hair dresser & Barber"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Garden Design"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Oil & Gas Industry"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Skincare"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Soil Enrichment"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Electrician"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Pedicure"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>
+                {"Landscape/garden Cleanup"}
+              </DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>
+                {"Heavy Equipment Operator"}
+              </DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Drainage Services"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>
+                {"Alarm & CCTV Installations"}
+              </DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <br></br> <br></br>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography1>{"Printing Services"}</DurationTypography1>
+            </TableCells>
+            <TableCells>
+              <DurationTypography1>{"Repair Services"}</DurationTypography1>
+            </TableCells>
+            <TableCells>
+              <DurationTypography1>{"Logistics Services"}</DurationTypography1>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Gradvure Printing"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Dry docking & Repairs"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Engraving"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Machine Services"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Thermongraphy"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Emergency Repairs"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Flexography"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Home Repairs"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Screen Printing"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Bookbinding"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Plate-making Services"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <br></br> <br></br>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography1>{"Fitness Services"}</DurationTypography1>
+            </TableCells>
+            <TableCells>
+              <DurationTypography1>{"Pet Services"}</DurationTypography1>
+            </TableCells>
+            <TableCells>
+              <DurationTypography1>
+                {"Manufacturing Services"}
+              </DurationTypography1>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Yoga Classes"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Veterinarian"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>
+                {"Apparent Manufacturing"}
+              </DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Physiotheraphy"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Dog Grooming"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>
+                {"Texttile Product Mills"}
+              </DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Lifestyle Seminars"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Kernal Attendant"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"3d Printing"}</DurationTypography>
+            </TableCells>
+          </DurationSubDiv>
+          <DurationSubDiv>
+            <TableCells>
+              <DurationTypography>{"Weight Training"}</DurationTypography>
+            </TableCells>
+            <TableCells>
+              <DurationTypography>{"Pet Breeder"}</DurationTypography>
+            </TableCells>
+            <TableCells></TableCells>
+          </DurationSubDiv>
+        </DurationGroup>
+      </DurationDiv>
+    </>
+  );
+};
 const Tooltips: React.FC<Props> = ({}) => {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
 
@@ -334,7 +742,7 @@ const Tooltips: React.FC<Props> = ({}) => {
         minWidth: "99.5vw",
         height: "1100px",
         background: "white",
-        overflowY: "scroll",
+        overflow: "scroll",
       }}
     >
       <div style={{ width: "25vw" }}>
@@ -367,7 +775,7 @@ const Tooltips: React.FC<Props> = ({}) => {
             selected={selectedIndex === 4}
             onMouseEnter={(event) => handleListItemClick(event, 4)}
           >
-            <ListItemText primary="Wedding Event Services" />
+            <ListItemText primary="Travel Agent & Tour Servcices" />
           </ListItemButton>
           <ListItemButton
             selected={selectedIndex === 5}
@@ -384,7 +792,7 @@ const Tooltips: React.FC<Props> = ({}) => {
         </List>
       </div>
       <Divider orientation="vertical"></Divider>
-      <div style={{ width: "70vw" }}>
+      <div style={{ width: "70vw", overflow: "scroll", overflowY: "scroll" }}>
         <div
           style={{
             display: "flex",
@@ -398,6 +806,10 @@ const Tooltips: React.FC<Props> = ({}) => {
           {selectedIndex == 0 && <ItService />}
           {selectedIndex == 1 && <CleaningService />}
           {selectedIndex == 2 && <AutomativeServices />}
+          {selectedIndex == 3 && <EventServices />}
+          {selectedIndex == 4 && <TravelAgentServices />}
+          {selectedIndex == 5 && <EntertainmentServices />}
+          {selectedIndex == 6 && <Othercategories />}
         </div>
       </div>
     </Box>

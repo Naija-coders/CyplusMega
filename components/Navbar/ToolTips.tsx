@@ -7,6 +7,7 @@ import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
+import Fade from "@mui/material/Fade";
 import {
   ResponsiveDiv,
   HtmlTooltip,
@@ -24,7 +25,11 @@ type Props = {};
 const ToolTips: React.FC<Props> = ({}) => {
   return (
     <ResponsiveDiv>
-      <AllCategoryTooltip title={<MyToolTips />}>
+      <AllCategoryTooltip
+        TransitionComponent={Fade}
+        enterDelay={-500}
+        title={<MyToolTips />}
+      >
         <IconButton
           sx={{
             display: "flex",
