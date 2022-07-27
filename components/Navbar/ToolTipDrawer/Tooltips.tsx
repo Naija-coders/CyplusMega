@@ -751,43 +751,64 @@ const Tooltips: React.FC<Props> = ({}) => {
             selected={selectedIndex === 0}
             onMouseEnter={(event) => handleListItemClick(event, 0)}
           >
-            <ListItemText primary="IT Services" />
+            <ListItemText
+              style={{ color: selectedIndex == 0 ? "green" : "black" }}
+              primary="IT Services"
+            />
           </ListItemButton>
           <ListItemButton
             selected={selectedIndex === 1}
             onMouseEnter={(event) => handleListItemClick(event, 1)}
           >
-            <ListItemText primary="Cleaning Services" />
+            <ListItemText
+              style={{ color: selectedIndex == 1 ? "green" : "black" }}
+              primary="Cleaning Services"
+            />
           </ListItemButton>
           <ListItemButton
             selected={selectedIndex === 2}
             onMouseEnter={(event) => handleListItemClick(event, 2)}
           >
-            <ListItemText primary="Automative Services" />
+            <ListItemText
+              style={{ color: selectedIndex == 2 ? "green" : "black" }}
+              primary="Automative Services"
+            />
           </ListItemButton>
           <ListItemButton
             selected={selectedIndex === 3}
             onMouseEnter={(event) => handleListItemClick(event, 3)}
           >
-            <ListItemText primary="Event Services" />
+            <ListItemText
+              style={{ color: selectedIndex == 3 ? "green" : "black" }}
+              primary="Event Services"
+            />
           </ListItemButton>
           <ListItemButton
             selected={selectedIndex === 4}
             onMouseEnter={(event) => handleListItemClick(event, 4)}
           >
-            <ListItemText primary="Travel Agent & Tour Servcices" />
+            <ListItemText
+              style={{ color: selectedIndex == 4 ? "green" : "black" }}
+              primary="Travel Agent & Tour Servcices"
+            />
           </ListItemButton>
           <ListItemButton
             selected={selectedIndex === 5}
             onMouseEnter={(event) => handleListItemClick(event, 5)}
           >
-            <ListItemText primary="Entertainment Services" />
+            <ListItemText
+              style={{ color: selectedIndex == 5 ? "green" : "black" }}
+              primary="Entertainment Services"
+            />
           </ListItemButton>
           <ListItemButton
             selected={selectedIndex === 6}
             onMouseEnter={(event) => handleListItemClick(event, 6)}
           >
-            <ListItemText primary="Other Categories" />
+            <ListItemText
+              style={{ color: selectedIndex == 6 ? "green" : "black" }}
+              primary="Other Categories"
+            />
           </ListItemButton>
         </List>
       </div>
