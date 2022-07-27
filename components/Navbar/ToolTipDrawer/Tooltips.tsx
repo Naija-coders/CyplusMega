@@ -531,21 +531,21 @@ const Othercategories = () => {
             </TableCells>
             <TableCells>
               <DurationTypography1>
-                {"Lnadscaping & Gardening Services"}
+                {"Landscaping & Gardening Services"}
               </DurationTypography1>
             </TableCells>
           </DurationSubDiv>
           <DurationSubDiv>
             <TableCells>
-              <DurationTypography1>
+              <DurationTypography>
                 {"Electrical Installation & Testing"}
-              </DurationTypography1>
+              </DurationTypography>
             </TableCells>
             <TableCells>
-              <DurationTypography1>{"Make-up"}</DurationTypography1>
+              <DurationTypography>{"Make-up"}</DurationTypography>
             </TableCells>
             <TableCells>
-              <DurationTypography1>{"Pruning"}</DurationTypography1>
+              <DurationTypography>{"Pruning"}</DurationTypography>
             </TableCells>
           </DurationSubDiv>
           <DurationSubDiv>
