@@ -49,7 +49,7 @@ const Home: NextPage = () => {
         <title>Elverr - The Market Place</title>
       </Head>
       <div>
-        <div style={{ padding: "2rem" }}></div>
+        <div style={{ padding: "2.5rem" }}></div>
         <Banner />
 
         <Cookie />

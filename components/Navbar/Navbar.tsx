@@ -275,6 +275,7 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
               ></img>
             </div>
           </div>
+          <br></br>
           <div>
             <Search isVisible={showSearch} />
           </div>

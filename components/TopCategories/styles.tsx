@@ -55,7 +55,7 @@ export const StyledCard = styled(Card)(
     "borderStyle": "solid",
 
     "width": {
-      xs: "300px",
+      xs: "245px",
 
       sm: "300px",
       md: "270px",
@@ -75,18 +75,19 @@ export const StyledCard = styled(Card)(
 export const LatestServicesDiv = styled("div")(
   sx({
     marginTop: "10px",
-    width: "100%",
+    width: { xs: "110%", md: "100%" },
     display: " grid",
     justifyContent: "space-between",
+    overflow: { xs: "scroll", md: "none" },
 
     gridTemplateColumns: {
-      xs: "repeat(1,1fr)",
+      xs: "repeat(2,1fr)",
       sm: "repeat(2,1fr)",
       md: "repeat(3,1fr)",
       lg: "repeat(4,1fr)",
       xl: "repeat(4,1fr)",
     },
-    gridGap: { sm: "32px", md: "32px" },
+    gridGap: { xs: "10px", sm: "32px", md: "32px" },
   })
 );
 export const TextTypography = styled(Typography)(
@@ -148,6 +149,7 @@ export const CustomContainer = styled("div")(
     marginLeft: { md: "5%", lg: "0%", xl: "5%" },
 
     flexDirection: " column",
+    marginTop: { xs: "30px", sm: "0px" },
   })
 );
 export const CustomDivContainer = styled("div")(

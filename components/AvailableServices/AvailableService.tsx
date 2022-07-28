@@ -104,7 +104,6 @@ const AvailableService = (props: Props) => {
     return (
       <>
         <div className="navbar__catwrappermobile">
-          <div style={{ marginTop: "60px" }}></div>
           <div className="navbar__sizewidth">
             <Paper elevation={0}>
               <StyledBox>

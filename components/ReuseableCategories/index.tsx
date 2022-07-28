@@ -89,7 +89,13 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
   console.log("displaying mainservices", state.mainservices);
 
   const label = { inputProps: { "aria-label": "Favorite Icon" } };
-
+  const RenderMobile = () => {
+    return (
+      <div className="navbar__catwrappermobile">
+        <div className="navbar__sizewidth"></div>{" "}
+      </div>
+    );
+  };
   return (
     <>
       <div className="navbar__rand" style={{ position: "relative" }}>
