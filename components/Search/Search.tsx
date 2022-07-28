@@ -25,7 +25,7 @@ const Search: React.FC<Props> = ({ isVisible }) => {
                   <SearchIcon
                     sx={{
                       fontSize: {
-                        xs: "40px",
+                        xs: "50px",
                         md: "1.3rem",
                       },
                     }}

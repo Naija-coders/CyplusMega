@@ -253,7 +253,7 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
       <Nondiv>
         <MyAppBar>
           {" "}
-          <div style={{ display: "flex", flexDirection: "row", gap: "150px" }}>
+          <div style={{ display: "flex", flexDirection: "row", gap: "170px" }}>
             <MobileMenu onClick={toggleDrawer("left", true)}>
               <MenuRoundedIcon sx={{ color: "black", fontSize: "50px" }} />
             </MobileMenu>

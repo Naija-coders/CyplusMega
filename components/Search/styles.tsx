@@ -36,5 +36,9 @@ export const StyledTextField = styled(TextField)(
     "& .MuiInputBase-root": {
       height: { xs: 70, md: "100%" },
     },
+    "& input::placeholder": {
+      fontSize: { xs: "30px", sm: "1rem" },
+      paddingLeft: "1rem",
+    },
   })
 );

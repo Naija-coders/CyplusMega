@@ -157,18 +157,28 @@ export default function Featured() {
         <Divider />
         <ListItemButton>
           <ListItemText>
-            <Typography sx={{ fontSize: "1.5rem" }}>IT Services</Typography>
+            <Typography
+              sx={{
+                fontSize: "1.5rem",
+                padding: "1rem 0rem",
+                fontWeight: "bold",
+              }}
+            >
+              IT Services
+            </Typography>
           </ListItemText>
-          {open ? (
-            <ExpandLess sx={{ fontSize: "1.5rem" }} />
-          ) : (
-            <ExpandMore sx={{ fontSize: "1.5rem" }} />
-          )}
+          {open ? <ExpandLess /> : <ExpandMore />}
         </ListItemButton>
         <Divider />
         <ListItemButton>
           <ListItemText>
-            <Typography sx={{ fontSize: "1.5rem" }}>
+            <Typography
+              sx={{
+                fontSize: "1.5rem",
+                padding: "1rem 0rem",
+                fontWeight: "bold",
+              }}
+            >
               Cleaning Services
             </Typography>
           </ListItemText>
@@ -178,7 +188,13 @@ export default function Featured() {
         <Divider />
         <ListItemButton>
           <ListItemText>
-            <Typography sx={{ fontSize: "1.5rem" }}>
+            <Typography
+              sx={{
+                fontSize: "1.5rem",
+                padding: "1rem 0rem",
+                fontWeight: "bold",
+              }}
+            >
               Building and Trade Services
             </Typography>
           </ListItemText>
@@ -188,7 +204,13 @@ export default function Featured() {
         <Divider />
         <ListItemButton>
           <ListItemText>
-            <Typography sx={{ fontSize: "1.5rem" }}>
+            <Typography
+              sx={{
+                fontSize: "1.5rem",
+                padding: "1rem 0rem",
+                fontWeight: "bold",
+              }}
+            >
               Manufacturing Services
             </Typography>
           </ListItemText>
@@ -198,7 +220,13 @@ export default function Featured() {
         <Divider />
         <ListItemButton>
           <ListItemText>
-            <Typography sx={{ fontSize: "1.5rem" }}>
+            <Typography
+              sx={{
+                fontSize: "1.5rem",
+                padding: "1rem 0rem",
+                fontWeight: "bold",
+              }}
+            >
               Landscaping & Gardening Services
             </Typography>
           </ListItemText>
