@@ -78,7 +78,7 @@ export const LatestServicesDiv = styled("div")(
     width: { xs: "210%", sm: "100%", md: "100%" },
     display: " grid",
     justifyContent: "space-between",
-    overflow: { xs: "scroll", md: "none" },
+    overflow: "unset",
 
     gridTemplateColumns: {
       xs: "repeat(3,1fr)",
