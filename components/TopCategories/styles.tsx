@@ -75,13 +75,13 @@ export const StyledCard = styled(Card)(
 export const LatestServicesDiv = styled("div")(
   sx({
     marginTop: "10px",
-    width: { xs: "110%", md: "100%" },
+    width: { xs: "210%", sm: "100%", md: "100%" },
     display: " grid",
     justifyContent: "space-between",
     overflow: { xs: "scroll", md: "none" },
 
     gridTemplateColumns: {
-      xs: "repeat(2,1fr)",
+      xs: "repeat(3,1fr)",
       sm: "repeat(2,1fr)",
       md: "repeat(3,1fr)",
       lg: "repeat(4,1fr)",
@@ -164,7 +164,7 @@ export const StyledBox = styled(Box)(
     justifyItems: "center",
     alignItems: "center",
 
-    width: "100%",
+    width: { xs: "210%", sm: "100%" },
     marginTop: { xs: "0%", md: "3%" },
   })
 );

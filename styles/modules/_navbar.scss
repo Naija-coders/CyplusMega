@@ -29,6 +29,8 @@
     @include atSmallMax {
       display: flex;
       justify-content: center;
+      margin-left: 0%;
+      padding: 1rem;
     }
     @include atMedium {
       display: flex;
@@ -105,7 +107,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       justify-items: center;
-      width: 100%;
+      width: 200%;
     }
     @include atSmallMax {
       display: flex;
@@ -114,7 +116,7 @@
       margin-top: 0%;
       justify-content: space-between;
       justify-items: center;
-      width: 106%;
+      width: 200%;
     }
     @include atMedium {
       display: none;
@@ -125,7 +127,7 @@
       width: 100%;
     }
     @include atFold {
-      width: 110%;
+      width: 100%;
     }
   }
   &__catwrapper {

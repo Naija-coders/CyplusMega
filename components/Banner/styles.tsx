@@ -100,6 +100,12 @@ export const StyledButton = styled(Button)(
   })
 );
 
+export const StyledDivBanner = styled("div")(
+  sx({
+    width: { xs: "185%", sm: "100%" },
+    marginTop: "3%",
+  })
+);
 export const StyledTypography = styled(Typography)(
   sx({
     color: "whitesmoke",

@@ -145,18 +145,15 @@ export default function Featured() {
     return (
       <List
         sx={{
-          width: "100%",
+          width: "200%",
           display: { sm: "none" },
-          maxWidth: "110%",
+          maxWidth: "200%",
           bgcolor: "background.paper",
         }}
         component="nav"
         aria-labelledby="nested-list-subheader"
       >
-        <Typography
-          paragraph
-          sx={{ padding: "0rem 1rem", fontFamily: "serif" }}
-        >
+        <Typography paragraph sx={{ padding: "0rem 1rem" }}>
           We deliver quality services for our customers, Start Finding services
         </Typography>
         <div style={{ padding: "0rem 1rem" }}>

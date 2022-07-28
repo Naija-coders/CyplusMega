@@ -130,72 +130,76 @@ const AvailableService = (props: Props) => {
                   width={"270px"}
                 />
               ) : (
-                <Swiper
-                  slidesPerView={3}
-                  spaceBetween={0}
-                  autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                  }}
-                  navigation={{
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                  }}
-                  modules={[Autoplay, Navigation]}
-                  className="mySwiper"
-                >
-                  {state.categories?.map(
-                    (
-                      item: {
-                        type:
-                          | boolean
-                          | React.ReactChild
-                          | React.ReactFragment
-                          | React.ReactPortal
-                          | null
-                          | undefined;
-                        categories_id: number;
-                      },
-                      i: string | number | any
-                    ) => (
-                      <SwiperSlide
-                        key={Math.random()}
-                        style={{ marginLeft: "1%", position: "relative" }}
-                      >
-                        <StyledCard elevation={0}>
-                          <StyledLink /* href={"/categories?list=" + item?.categories_id} */
-                            sx={{ textDecoration: "none", color: "#000" }}
-                            onClick={() => {
-                              route.push("/categories/" + item?.categories_id);
-                            }}
-                          >
-                            {" "}
-                            <img
-                              src={serviceimages[i]}
-                              style={{
-                                width: "100%",
-                                height: "100px",
-                                borderRadius: "13px",
-
-                                cursor: "pointer",
-                                objectFit: "cover",
-                              }}
-                            />
-                            <Typography
-                              style={{
-                                fontFamily: "serif",
-                                fontSize: "0.5rem",
-                                textAlign: "center",
+                <div>
+                  <Swiper
+                    slidesPerView={5}
+                    spaceBetween={0}
+                    autoplay={{
+                      delay: 2500,
+                      disableOnInteraction: false,
+                    }}
+                    navigation={{
+                      nextEl: ".swiper-button-next",
+                      prevEl: ".swiper-button-prev",
+                    }}
+                    modules={[Autoplay, Navigation]}
+                    className="mySwiper"
+                  >
+                    {state.categories?.map(
+                      (
+                        item: {
+                          type:
+                            | boolean
+                            | React.ReactChild
+                            | React.ReactFragment
+                            | React.ReactPortal
+                            | null
+                            | undefined;
+                          categories_id: number;
+                        },
+                        i: string | number | any
+                      ) => (
+                        <SwiperSlide
+                          key={Math.random()}
+                          style={{ marginLeft: "1%", position: "relative" }}
+                        >
+                          <StyledCard elevation={0}>
+                            <StyledLink /* href={"/categories?list=" + item?.categories_id} */
+                              sx={{ textDecoration: "none", color: "#000" }}
+                              onClick={() => {
+                                route.push(
+                                  "/categories/" + item?.categories_id
+                                );
                               }}
                             >
-                              {item.type}
-                            </Typography>
-                          </StyledLink>
-                        </StyledCard>
-                      </SwiperSlide>
-                    )
-                  )}
-                </Swiper>
+                              {" "}
+                              <img
+                                src={serviceimages[i]}
+                                style={{
+                                  width: "100%",
+                                  height: "100px",
+                                  borderRadius: "13px",
+
+                                  cursor: "pointer",
+                                  objectFit: "cover",
+                                }}
+                              />
+                              <Typography
+                                style={{
+                                  fontFamily: "serif",
+                                  fontSize: "0.5rem",
+                                  textAlign: "center",
+                                }}
+                              >
+                                {item.type}
+                              </Typography>
+                            </StyledLink>
+                          </StyledCard>
+                        </SwiperSlide>
+                      )
+                    )}
+                  </Swiper>
+                </div>
               )}
             </Paper>
           </div>

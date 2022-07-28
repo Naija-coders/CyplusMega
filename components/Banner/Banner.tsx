@@ -8,18 +8,18 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper";
-import { StyledCustomDivBanner, StyledImage } from "./styles";
+import { StyledCustomDivBanner, StyledImage, StyledDivBanner } from "./styles";
 
 export default function Banner() {
   return (
     <>
-      <div style={{ marginTop: "3%" }}></div>
-      <Swiper
-        pagination={true}
-        modules={[Pagination]}
-        className="myCustomSwiper"
-      >
-        {/*  <SwiperSlide>
+      <StyledDivBanner>
+        <Swiper
+          pagination={true}
+          modules={[Pagination]}
+          className="myCustomSwiper"
+        >
+          {/*  <SwiperSlide>
           <div style={{ width: "100%", height: "100%" }}>
             <img
               src="servicesbanner.png"
@@ -33,13 +33,14 @@ export default function Banner() {
           </div>
         </SwiperSlide> */}
 
-        <SwiperSlide>
-          {" "}
-          <StyledCustomDivBanner>
-            <StyledImage src="bannerservice2.png" />
-          </StyledCustomDivBanner>
-        </SwiperSlide>
-      </Swiper>
+          <SwiperSlide>
+            {" "}
+            <StyledCustomDivBanner>
+              <StyledImage src="bannerservice2.png" />
+            </StyledCustomDivBanner>
+          </SwiperSlide>
+        </Swiper>
+      </StyledDivBanner>
     </>
   );
 }
