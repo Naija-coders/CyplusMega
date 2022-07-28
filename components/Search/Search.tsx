@@ -18,7 +18,7 @@ const Search: React.FC<Props> = ({ isVisible }) => {
         <div style={{ width: "100%" }}>
           <StyledTextField
             fullWidth
-            placeholder={"Find a service "}
+            placeholder={"Find services "}
             InputProps={{
               endAdornment: (
                 <InputAdornment position="start">

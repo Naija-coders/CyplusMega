@@ -26,6 +26,11 @@ export const DurationDiv = styled("div")(
     width: { xs: "100%", md: "80%" },
   })
 );
+export const NonDiv = styled("div")(
+  sx({
+    display: { xs: "block", sm: "none" },
+  })
+);
 export const DurationGroup = styled("div")(
   sx({
     display: "table-row-group",
@@ -111,7 +116,7 @@ export const CustomFooterBackgroundDiv = styled(AppBar)(
     position: "relative",
     zIndex: 0,
 
-    display: "flex",
+    display: { xs: "none", sm: "flex" },
     background: "white",
     opacity: "90%",
     marginTop: "60px",

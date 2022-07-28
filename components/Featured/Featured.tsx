@@ -233,6 +233,7 @@ export default function Featured() {
 
           {open ? <ExpandLess /> : <ExpandMore />}
         </ListItemButton>
+        <Divider />
       </List>
     );
   };

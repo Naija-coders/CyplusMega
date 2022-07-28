@@ -178,7 +178,7 @@ const AvailableService = (props: Props) => {
                                 src={serviceimages[i]}
                                 style={{
                                   width: "100%",
-                                  height: "100px",
+                                  height: "150px",
                                   borderRadius: "13px",
 
                                   cursor: "pointer",
@@ -188,7 +188,7 @@ const AvailableService = (props: Props) => {
                               <Typography
                                 style={{
                                   fontFamily: "serif",
-                                  fontSize: "0.5rem",
+                                  fontSize: "0.8rem",
                                   textAlign: "center",
                                 }}
                               >
