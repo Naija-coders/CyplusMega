@@ -21,6 +21,7 @@ import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import Divider from "@mui/material/Divider";
 import StarBorder from "@mui/icons-material/StarBorder";
+import Search from "../Search/Search";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -151,16 +152,18 @@ export default function Featured() {
         }}
         component="nav"
         aria-labelledby="nested-list-subheader"
-        subheader={
-          <ListSubheader component="div" id="nested-list-subheader">
-            <Typography
-              sx={{ fontSize: "1.2rem", fontWeight: "bold", color: "black" }}
-            >
-              Top Categories
-            </Typography>
-          </ListSubheader>
-        }
       >
+        <Typography
+          paragraph
+          sx={{ padding: "0rem 1rem", fontFamily: "serif" }}
+        >
+          We deliver quality services for our customers, Start Finding services
+        </Typography>
+        <div style={{ padding: "0rem 1rem" }}>
+          <Search isVisible={true} />
+        </div>
+        <br></br>
+        <Divider />
         <ListItemButton>
           <ListItemText>IT Services</ListItemText>
           {open ? <ExpandLess /> : <ExpandMore />}
