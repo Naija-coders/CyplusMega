@@ -8,6 +8,19 @@ import { RootState } from "../../state/reducers";
 import { useDispatch, useSelector } from "react-redux";
 import { StyledTabs, StyledTab } from "./styles";
 import { CustomContainer, CustomDivContainer } from "../TopCategories/styles";
+import ListSubheader from "@mui/material/ListSubheader";
+import List from "@mui/material/List";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import Collapse from "@mui/material/Collapse";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import DraftsIcon from "@mui/icons-material/Drafts";
+import SendIcon from "@mui/icons-material/Send";
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
+import Divider from "@mui/material/Divider";
+import StarBorder from "@mui/icons-material/StarBorder";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -122,128 +135,184 @@ export default function Featured() {
     handleManufacturing();
     handleLandspacing();
   }, [servicetype, servicecleaning, servicebuilding, servicemanufacturing]);
+  const [open, setOpen] = React.useState(true);
 
+  const handleClick = () => {
+    setOpen(!open);
+  };
+  const RenderMobile = () => {
+    return (
+      <List
+        sx={{
+          width: "100%",
+          display: { sm: "none" },
+          maxWidth: "110%",
+          bgcolor: "background.paper",
+        }}
+        component="nav"
+        aria-labelledby="nested-list-subheader"
+        subheader={
+          <ListSubheader component="div" id="nested-list-subheader">
+            <Typography
+              sx={{ fontSize: "1.2rem", fontWeight: "bold", color: "black" }}
+            >
+              Top Categories
+            </Typography>
+          </ListSubheader>
+        }
+      >
+        <ListItemButton>
+          <ListItemText>IT Services</ListItemText>
+          {open ? <ExpandLess /> : <ExpandMore />}
+        </ListItemButton>
+        <Divider />
+        <ListItemButton>
+          <ListItemText>Cleaning Services</ListItemText>
+          {open ? <ExpandLess /> : <ExpandMore />}
+        </ListItemButton>
+        <Divider />
+        <ListItemButton>
+          <ListItemText>Building and Trade Services</ListItemText>
+          {open ? <ExpandLess /> : <ExpandMore />}
+        </ListItemButton>
+        <Divider />
+        <ListItemButton>
+          <ListItemText>Manufacturing Services</ListItemText>
+          {open ? <ExpandLess /> : <ExpandMore />}
+        </ListItemButton>
+        <Divider />
+        <ListItemButton>
+          <ListItemText>Landscaping & Gardening Services</ListItemText>
+          {open ? <ExpandLess /> : <ExpandMore />}
+        </ListItemButton>
+      </List>
+    );
+  };
   return (
-    <Box
-      sx={{
-        width: "100%",
-        display: { xs: "none", sm: "block" },
-        marginTop: { md: "20px" },
-      }}
-    >
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <StyledTabs
-          variant="scrollable"
-          scrollButtons="auto"
-          value={value}
-          onChange={handleChange}
-          aria-label="basic tabs example"
-          sx={{ marginLeft: { md: "5%", lg: "5%", xl: "9%" } }}
-        >
-          <StyledTab label="IT Services" {...a11yProps(0)} />
-          <StyledTab label="Cleaning Services" {...a11yProps(1)} />
+    <div>
+      <RenderMobile />
 
-          <StyledTab label="Building and Trade Services" {...a11yProps(2)} />
-          <StyledTab label="Manufacturing Services" {...a11yProps(3)} />
-          <StyledTab
-            label="Landspacing &  Gardening Services"
-            {...a11yProps(4)}
-          />
-        </StyledTabs>
+      <Box
+        sx={{
+          width: "100%",
+          display: { xs: "none", sm: "block" },
+          marginTop: { md: "20px" },
+        }}
+      >
+        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+          <StyledTabs
+            variant="scrollable"
+            scrollButtons="auto"
+            value={value}
+            onChange={handleChange}
+            aria-label="basic tabs example"
+            sx={{ marginLeft: { md: "5%", lg: "5%", xl: "9%" } }}
+          >
+            <StyledTab label="IT Services" {...a11yProps(0)} />
+            <StyledTab label="Cleaning Services" {...a11yProps(1)} />
+
+            <StyledTab label="Building and Trade Services" {...a11yProps(2)} />
+            <StyledTab label="Manufacturing Services" {...a11yProps(3)} />
+            <StyledTab
+              label="Landspacing &  Gardening Services"
+              {...a11yProps(4)}
+            />
+          </StyledTabs>
+        </Box>
+        <TabPanel value={value} index={0}>
+          <CustomContainer>
+            <CustomDivContainer>
+              <div style={{ marginLeft: "4%" }}>
+                {servicetype?.length <= 0 ? (
+                  <div>
+                    <Typography align="center">
+                      {"There's no IT Services at the moment"!}
+                    </Typography>
+                  </div>
+                ) : (
+                  <>
+                    <CustomCardFeature data={servicetype} />
+                  </>
+                )}
+              </div>
+            </CustomDivContainer>
+          </CustomContainer>
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <CustomContainer>
+            <CustomDivContainer>
+              <div style={{ marginLeft: "4%" }}>
+                {servicecleaning?.length <= 0 ? (
+                  <div>
+                    <Typography align="center">
+                      {" There's no Cleaning Services at the moment!"}
+                    </Typography>
+                  </div>
+                ) : (
+                  <>
+                    <CustomCardFeature data={servicecleaning} />
+                  </>
+                )}
+              </div>
+            </CustomDivContainer>
+          </CustomContainer>
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          <CustomDivContainer>
+            <div style={{ marginLeft: "4%" }}>
+              {servicebuilding?.length <= 0 ? (
+                <div>
+                  <Typography align="center">
+                    {
+                      " There's no Building and Trade Services services at the moment!"
+                    }
+                  </Typography>
+                </div>
+              ) : (
+                <>
+                  <CustomCardFeature data={servicebuilding} />
+                </>
+              )}
+            </div>
+          </CustomDivContainer>
+        </TabPanel>
+        <TabPanel value={value} index={3}>
+          <CustomDivContainer>
+            <div style={{ marginLeft: "4%" }}>
+              {servicemanufacturing?.length <= 0 ? (
+                <div>
+                  <Typography align="center">
+                    {"There's no Manufacturing Services at the moment!"}
+                  </Typography>
+                </div>
+              ) : (
+                <>
+                  <CustomCardFeature data={servicemanufacturing} />
+                </>
+              )}
+            </div>
+          </CustomDivContainer>
+        </TabPanel>
+        <TabPanel value={value} index={4}>
+          <CustomDivContainer>
+            <div style={{ marginLeft: "4%" }}>
+              {servicelandspacing?.length <= 0 ? (
+                <div>
+                  <Typography align="center">
+                    {
+                      " There's no Landspacing and Gardening Services at the moment!"
+                    }
+                  </Typography>
+                </div>
+              ) : (
+                <>
+                  <CustomCardFeature data={servicelandspacing} />
+                </>
+              )}
+            </div>
+          </CustomDivContainer>
+        </TabPanel>
       </Box>
-      <TabPanel value={value} index={0}>
-        <CustomContainer>
-          <CustomDivContainer>
-            <div style={{ marginLeft: "4%" }}>
-              {servicetype?.length <= 0 ? (
-                <div>
-                  <Typography align="center">
-                    {"There's no IT Services at the moment"!}
-                  </Typography>
-                </div>
-              ) : (
-                <>
-                  <CustomCardFeature data={servicetype} />
-                </>
-              )}
-            </div>
-          </CustomDivContainer>
-        </CustomContainer>
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <CustomContainer>
-          <CustomDivContainer>
-            <div style={{ marginLeft: "4%" }}>
-              {servicecleaning?.length <= 0 ? (
-                <div>
-                  <Typography align="center">
-                    {" There's no Cleaning Services at the moment!"}
-                  </Typography>
-                </div>
-              ) : (
-                <>
-                  <CustomCardFeature data={servicecleaning} />
-                </>
-              )}
-            </div>
-          </CustomDivContainer>
-        </CustomContainer>
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <CustomDivContainer>
-          <div style={{ marginLeft: "4%" }}>
-            {servicebuilding?.length <= 0 ? (
-              <div>
-                <Typography align="center">
-                  {
-                    " There's no Building and Trade Services services at the moment!"
-                  }
-                </Typography>
-              </div>
-            ) : (
-              <>
-                <CustomCardFeature data={servicebuilding} />
-              </>
-            )}
-          </div>
-        </CustomDivContainer>
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        <CustomDivContainer>
-          <div style={{ marginLeft: "4%" }}>
-            {servicemanufacturing?.length <= 0 ? (
-              <div>
-                <Typography align="center">
-                  {"There's no Manufacturing Services at the moment!"}
-                </Typography>
-              </div>
-            ) : (
-              <>
-                <CustomCardFeature data={servicemanufacturing} />
-              </>
-            )}
-          </div>
-        </CustomDivContainer>
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        <CustomDivContainer>
-          <div style={{ marginLeft: "4%" }}>
-            {servicelandspacing?.length <= 0 ? (
-              <div>
-                <Typography align="center">
-                  {
-                    " There's no Landspacing and Gardening Services at the moment!"
-                  }
-                </Typography>
-              </div>
-            ) : (
-              <>
-                <CustomCardFeature data={servicelandspacing} />
-              </>
-            )}
-          </div>
-        </CustomDivContainer>
-      </TabPanel>
-    </Box>
+    </div>
   );
 }
