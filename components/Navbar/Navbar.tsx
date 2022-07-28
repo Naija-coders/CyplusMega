@@ -69,6 +69,7 @@ import {
   HtmlTooltip,
   TooltipText,
   LightTooltip,
+  Nondiv,
 } from "./styles";
 import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
 
@@ -249,12 +250,12 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
   ];
   const RenderMobile = () => {
     return (
-      <div>
+      <Nondiv>
         <MyAppBar>
           {" "}
-          <div style={{ display: "flex", flexDirection: "row", gap: "50px" }}>
+          <div style={{ display: "flex", flexDirection: "row", gap: "150px" }}>
             <MobileMenu onClick={toggleDrawer("left", true)}>
-              <MenuRoundedIcon sx={{ color: "black" }} />
+              <MenuRoundedIcon sx={{ color: "black", fontSize: "50px" }} />
             </MobileMenu>
             <div
               onClick={() => {
@@ -262,7 +263,7 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
               }}
               style={{
                 display: "flex",
-                height: "30px",
+                height: "60px",
               }}
             >
               <img
@@ -280,7 +281,7 @@ const Navbar: React.FC<Props> = ({ isfixed, showSearch }) => {
             <Search isVisible={showSearch} />
           </div>
         </MyAppBar>
-      </div>
+      </Nondiv>
     );
   };
   return (

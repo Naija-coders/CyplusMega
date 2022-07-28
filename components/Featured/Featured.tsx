@@ -153,36 +153,56 @@ export default function Featured() {
         component="nav"
         aria-labelledby="nested-list-subheader"
       >
-        <Typography paragraph sx={{ padding: "0rem 1rem" }}>
-          We deliver quality services for our customers, Start Finding services
-        </Typography>
-        <div style={{ padding: "0rem 1rem" }}>
-          <Search isVisible={true} />
-        </div>
         <br></br>
         <Divider />
         <ListItemButton>
-          <ListItemText>IT Services</ListItemText>
+          <ListItemText>
+            <Typography sx={{ fontSize: "1.5rem" }}>IT Services</Typography>
+          </ListItemText>
+          {open ? (
+            <ExpandLess sx={{ fontSize: "1.5rem" }} />
+          ) : (
+            <ExpandMore sx={{ fontSize: "1.5rem" }} />
+          )}
+        </ListItemButton>
+        <Divider />
+        <ListItemButton>
+          <ListItemText>
+            <Typography sx={{ fontSize: "1.5rem" }}>
+              Cleaning Services
+            </Typography>
+          </ListItemText>
+
           {open ? <ExpandLess /> : <ExpandMore />}
         </ListItemButton>
         <Divider />
         <ListItemButton>
-          <ListItemText>Cleaning Services</ListItemText>
+          <ListItemText>
+            <Typography sx={{ fontSize: "1.5rem" }}>
+              Building and Trade Services
+            </Typography>
+          </ListItemText>
+
           {open ? <ExpandLess /> : <ExpandMore />}
         </ListItemButton>
         <Divider />
         <ListItemButton>
-          <ListItemText>Building and Trade Services</ListItemText>
+          <ListItemText>
+            <Typography sx={{ fontSize: "1.5rem" }}>
+              Manufacturing Services
+            </Typography>
+          </ListItemText>
+
           {open ? <ExpandLess /> : <ExpandMore />}
         </ListItemButton>
         <Divider />
         <ListItemButton>
-          <ListItemText>Manufacturing Services</ListItemText>
-          {open ? <ExpandLess /> : <ExpandMore />}
-        </ListItemButton>
-        <Divider />
-        <ListItemButton>
-          <ListItemText>Landscaping & Gardening Services</ListItemText>
+          <ListItemText>
+            <Typography sx={{ fontSize: "1.5rem" }}>
+              Landscaping & Gardening Services
+            </Typography>
+          </ListItemText>
+
           {open ? <ExpandLess /> : <ExpandMore />}
         </ListItemButton>
       </List>

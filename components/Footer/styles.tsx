@@ -116,6 +116,6 @@ export const CustomFooterBackgroundDiv = styled(AppBar)(
     opacity: "90%",
     marginTop: "60px",
 
-    width: { xs: "110%", sm: "100%", md: "100%" },
+    width: { xs: "200%", sm: "100%", md: "100%" },
   })
 );

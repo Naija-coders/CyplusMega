@@ -78,6 +78,11 @@ export const StyledTypography = styled(Typography)(
     fontSize: { xs: "1.3rem", md: "2rem" },
   })
 );
+export const Nondiv = styled("div")(
+  sx({
+    display: { md: "none" },
+  })
+);
 export const Tooltipdiv = styled("div")(
   sx({
     display: "flex",

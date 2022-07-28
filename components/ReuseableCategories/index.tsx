@@ -105,7 +105,10 @@ const ReuseableCategory: React.FC<Props> = ({ data, title, quantity }) => {
               <StyledBox>
                 <StyledCustomTypography
                   variant="h5"
-                  style={{ fontFamily: "serif" }}
+                  sx={{
+                    fontFamily: "serif",
+                    fontSize: { xs: "2rem", sm: "1.5rem" },
+                  }}
                 >
                   {title}
                 </StyledCustomTypography>

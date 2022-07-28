@@ -33,5 +33,8 @@ export const StyledTextField = styled(TextField)(
     "& fieldset": {
       borderRadius: "10px",
     },
+    "& .MuiInputBase-root": {
+      height: { xs: 70, md: "100%" },
+    },
   })
 );

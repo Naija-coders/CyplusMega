@@ -108,11 +108,12 @@ const AvailableService = (props: Props) => {
             <Paper elevation={0}>
               <StyledBox>
                 <StyledCustomTypography
-                  style={{
+                  variant="h5"
+                  sx={{
                     fontFamily: "serif",
-                    fontSize: "1.3rem",
+                    fontSize: { xs: "2rem !important", sm: "1.3rem" },
                     fontWeight: "bold",
-                    paddingLeft: "1rem",
+                    padding: "1rem",
                   }}
                 >
                   {t("service_categories")}

@@ -103,7 +103,7 @@ export const StyledButton = styled(Button)(
 export const StyledDivBanner = styled("div")(
   sx({
     width: { xs: "185%", sm: "100%" },
-    marginTop: "3%",
+    marginTop: { xs: "80px", md: "3%" },
   })
 );
 export const StyledTypography = styled(Typography)(
