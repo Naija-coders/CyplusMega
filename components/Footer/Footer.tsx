@@ -40,10 +40,23 @@ const Root = styled("div")(({ theme }) => ({
 }));
 
 export default function Footer({}: Props) {
-  const [open, setOpen] = React.useState(true);
+  const [support, setSupport] = React.useState(false);
+  const [categories, setCategories] = React.useState(false);
+  const [advertise, setAdvertise] = React.useState(false);
+  const [about, setAbout] = React.useState(false);
 
-  const handleClick = () => {
-    setOpen(!open);
+  const handleClickCategories = () => {
+    setCategories(!categories);
+  };
+
+  const handleClickSuport = () => {
+    setSupport(!support);
+  };
+  const handleClickAdvertise = () => {
+    setAdvertise(!advertise);
+  };
+  const handleClickAbout = () => {
+    setAbout(!about);
   };
   const RenderMobile = () => {
     return (
@@ -60,7 +73,7 @@ export default function Footer({}: Props) {
         >
           <br></br>
           <Divider />
-          <ListItemButton>
+          <ListItemButton onClick={handleClickCategories}>
             <ListItemText>
               <Typography
                 sx={{
@@ -72,10 +85,40 @@ export default function Footer({}: Props) {
                 Categories
               </Typography>
             </ListItemText>
-            {open ? <ExpandLess /> : <ExpandMore />}
+            {categories ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
+          <Collapse in={categories} timeout="auto" unmountOnExit>
+            <div style={{ padding: "0rem 1rem" }}>
+              <DurationTypography>IT Services</DurationTypography>
+              <DurationTypography>Cleaning Services</DurationTypography>
+              <DurationTypography>Event Services</DurationTypography>
+              <DurationTypography>Automative Services</DurationTypography>
+              <DurationTypography>Building & Trade Services</DurationTypography>
+              <DurationTypography>Health & Beauty Services</DurationTypography>
+              <DurationTypography>
+                Landscaping & Gardening Services
+              </DurationTypography>
+              <DurationTypography>Logistics Services</DurationTypography>
+              <DurationTypography>Printing Services</DurationTypography>
+              <DurationTypography>
+                Photography & Video Services
+              </DurationTypography>
+              <DurationTypography>Wedding Event Services</DurationTypography>
+              <DurationTypography>Repair Services</DurationTypography>
+              <DurationTypography>Fitness Services</DurationTypography>
+              <DurationTypography>Pet Services</DurationTypography>
+              <DurationTypography>
+                Travel Agent & Tour Services
+              </DurationTypography>
+              <DurationTypography>
+                Classes & Courses Services
+              </DurationTypography>
+              <DurationTypography>Manufacturing Services</DurationTypography>
+              <br></br>
+            </div>
+          </Collapse>
           <Divider />
-          <ListItemButton>
+          <ListItemButton onClick={handleClickSuport}>
             <ListItemText>
               <Typography
                 sx={{
@@ -88,10 +131,19 @@ export default function Footer({}: Props) {
               </Typography>
             </ListItemText>
 
-            {open ? <ExpandLess /> : <ExpandMore />}
+            {support ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
+          <Collapse in={support} timeout="auto" unmountOnExit>
+            <div style={{ padding: "0rem 1rem" }}>
+              <DurationTypography>Help & Support</DurationTypography>
+              <DurationTypography>Trust & Safety</DurationTypography>
+              <DurationTypography>Buying on Elverr</DurationTypography>
+              <DurationTypography>Selling on Elverr</DurationTypography>
+              <br></br>
+            </div>
+          </Collapse>
           <Divider />
-          <ListItemButton>
+          <ListItemButton onClick={handleClickAdvertise}>
             <ListItemText>
               <Typography
                 sx={{
@@ -104,10 +156,17 @@ export default function Footer({}: Props) {
               </Typography>
             </ListItemText>
 
-            {open ? <ExpandLess /> : <ExpandMore />}
+            {advertise ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
+          <Collapse in={advertise} timeout="auto" unmountOnExit>
+            <div style={{ padding: "0rem 1rem" }}>
+              <DurationTypography>Become a Seller</DurationTypography>
+              <DurationTypography>Forum</DurationTypography>
+              <br></br>
+            </div>
+          </Collapse>
           <Divider />
-          <ListItemButton>
+          <ListItemButton onClick={handleClickAbout}>
             <ListItemText>
               <Typography
                 sx={{
@@ -120,8 +179,19 @@ export default function Footer({}: Props) {
               </Typography>
             </ListItemText>
 
-            {open ? <ExpandLess /> : <ExpandMore />}
+            {about ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
+          <Collapse in={about} timeout="auto" unmountOnExit>
+            <div style={{ padding: "0rem 1rem" }}>
+              <DurationTypography>Contact us</DurationTypography>
+              <DurationTypography>FAQ</DurationTypography>
+              <DurationTypography>Terms of Services</DurationTypography>
+              <DurationTypography>Blog</DurationTypography>
+              <DurationTypography>Privacy Policy</DurationTypography>
+              <DurationTypography>Terms and Conditions</DurationTypography>
+              <br></br>
+            </div>
+          </Collapse>
           <Divider />
         </List>
         <div
@@ -224,9 +294,7 @@ export default function Footer({}: Props) {
                 <TableCells>
                   <DurationTypography>{"Buying on Elverr"}</DurationTypography>
                 </TableCells>
-                <TableCells>
-                  <DurationTypography>{"Inivite a Friend"}</DurationTypography>
-                </TableCells>
+                <TableCells></TableCells>
                 <TableCells>
                   <DurationTypography>{"Terms of Services"}</DurationTypography>
                 </TableCells>
