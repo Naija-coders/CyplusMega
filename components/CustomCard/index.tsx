@@ -19,7 +19,8 @@ type Props = {
   about?: any;
   price?: any;
   updated_at?: any;
-  bottomColor: string;
+  bottomColor?: string;
+  avatar?: any;
 };
 import {
   LatestServicesDiv,
@@ -40,6 +41,7 @@ const CustomCard: React.FC<Props> = ({
   price,
   updated_at,
   bottomColor,
+  avatar,
 }) => {
   const route = useRouter();
   return (
@@ -76,7 +78,7 @@ const CustomCard: React.FC<Props> = ({
                 }}
               >
                 <span>
-                  <Avatar />
+                  <Avatar src={avatar} />
                 </span>
                 <div
                   style={{

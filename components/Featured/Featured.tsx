@@ -22,6 +22,7 @@ import ExpandMore from "@mui/icons-material/ExpandMore";
 import Divider from "@mui/material/Divider";
 import StarBorder from "@mui/icons-material/StarBorder";
 import Search from "../Search/Search";
+import CustomCard from "../CustomCard";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -96,6 +97,8 @@ export default function Featured() {
   const [servicemanufacturing, setServicemanufacservicemanufacturing] =
     React.useState<any>();
   const [servicelandspacing, setServicelandspacing] = React.useState<any>();
+  const [serviceevent, setServiceevent] = React.useState<any>();
+  const [servicehealth, setServicehealth] = React.useState<any>();
   const state = useSelector((state: RootState) => state.appstate);
 
   const HandleFilter = () => {
@@ -104,6 +107,19 @@ export default function Featured() {
     );
     setServicetype(types);
   };
+  const HandleFilterEvent = () => {
+    const types = state.mainservices.filter(
+      (items: any) => items?.type == "Event Services"
+    );
+    setServiceevent(types);
+  };
+  const HandleFilterHealth = () => {
+    const types = state.mainservices.filter(
+      (items: any) => items?.type == "Health & Beauty Services"
+    );
+    setServicehealth(types);
+  };
+
   const handleFilterCleaning = () => {
     const types = state.mainservices.filter(
       (items: any) => items?.type == "Cleaning Services"
@@ -135,11 +151,41 @@ export default function Featured() {
     handleFilterBuilding();
     handleManufacturing();
     handleLandspacing();
-  }, [servicetype, servicecleaning, servicebuilding, servicemanufacturing]);
+    HandleFilterEvent();
+    HandleFilterHealth();
+  }, [
+    servicetype,
+    servicecleaning,
+    servicebuilding,
+    servicemanufacturing,
+    serviceevent,
+  ]);
   const [open, setOpen] = React.useState(true);
 
   const handleClick = () => {
     setOpen(!open);
+  };
+  const [itservice, setItservice] = React.useState(true);
+  const [cleaningservices, setCleaningservices] = React.useState(false);
+  const [eventservices, setEventServices] = React.useState(false);
+  const [manufacturingservices, setManufacturingservices] =
+    React.useState(false);
+  const [healthservices, setHealthservices] = React.useState(false);
+
+  const handleClickItservices = () => {
+    setItservice(!itservice);
+  };
+  const handleClickCleaning = () => {
+    setCleaningservices(!cleaningservices);
+  };
+  const handleClickEvent = () => {
+    setEventServices(!eventservices);
+  };
+  const handleClickManufacturing = () => {
+    setManufacturingservices(!manufacturingservices);
+  };
+  const handleClickHealth = () => {
+    setHealthservices(!healthservices);
   };
   const RenderMobile = () => {
     return (
@@ -155,7 +201,7 @@ export default function Featured() {
       >
         <br></br>
         <Divider />
-        <ListItemButton>
+        <ListItemButton onClick={handleClickItservices}>
           <ListItemText>
             <Typography
               sx={{
@@ -167,10 +213,44 @@ export default function Featured() {
               IT Services
             </Typography>
           </ListItemText>
-          {open ? <ExpandLess /> : <ExpandMore />}
+          {itservice ? <ExpandLess /> : <ExpandMore />}
         </ListItemButton>
+        <Collapse in={itservice} timeout="auto" unmountOnExit>
+          <div
+            style={{
+              padding: "0rem 1rem",
+              overflow: "scroll",
+              display: "flex",
+              gap: "20px",
+            }}
+          >
+            {servicetype?.length <= 0 ? (
+              <div>
+                <Typography align="center">
+                  {"There's no IT Services at the moment"!}
+                </Typography>
+              </div>
+            ) : (
+              <>
+                {servicetype?.slice(0, 9).map((item: any, i: any) => {
+                  return (
+                    <CustomCard
+                      id={item.id}
+                      name={item.name}
+                      type={item.type}
+                      about={item.about}
+                      price={item.price}
+                      updated_at={item.updated_at}
+                    ></CustomCard>
+                  );
+                })}
+              </>
+            )}
+            <br></br>
+          </div>
+        </Collapse>
         <Divider />
-        <ListItemButton>
+        <ListItemButton onClick={handleClickCleaning}>
           <ListItemText>
             <Typography
               sx={{
@@ -183,10 +263,45 @@ export default function Featured() {
             </Typography>
           </ListItemText>
 
-          {open ? <ExpandLess /> : <ExpandMore />}
+          {cleaningservices ? <ExpandLess /> : <ExpandMore />}
         </ListItemButton>
+        <Collapse in={cleaningservices} timeout="auto" unmountOnExit>
+          <div
+            style={{
+              padding: "0rem 1rem",
+              overflow: "scroll",
+              display: "flex",
+              gap: "20px",
+            }}
+          >
+            {servicecleaning?.length <= 0 ? (
+              <div>
+                <Typography align="center">
+                  {"There's no Cleaning Services at the moment"!}
+                </Typography>
+                <br></br>
+              </div>
+            ) : (
+              <>
+                {servicecleaning?.slice(0, 9).map((item: any, i: any) => {
+                  return (
+                    <CustomCard
+                      id={item.id}
+                      name={item.name}
+                      type={item.type}
+                      about={item.about}
+                      price={item.price}
+                      updated_at={item.updated_at}
+                    ></CustomCard>
+                  );
+                })}
+              </>
+            )}
+            <br></br>
+          </div>
+        </Collapse>
         <Divider />
-        <ListItemButton>
+        <ListItemButton onClick={handleClickEvent}>
           <ListItemText>
             <Typography
               sx={{
@@ -195,14 +310,49 @@ export default function Featured() {
                 fontWeight: "bold",
               }}
             >
-              Building and Trade Services
+              Event Services
             </Typography>
           </ListItemText>
 
-          {open ? <ExpandLess /> : <ExpandMore />}
+          {eventservices ? <ExpandLess /> : <ExpandMore />}
         </ListItemButton>
+        <Collapse in={eventservices} timeout="auto" unmountOnExit>
+          <div
+            style={{
+              padding: "0rem 1rem",
+              overflow: "scroll",
+              display: "flex",
+              gap: "20px",
+            }}
+          >
+            {serviceevent?.length <= 0 ? (
+              <div>
+                <Typography align="center">
+                  {"There's no Event Services at the moment"!}
+                </Typography>
+                <br></br>
+              </div>
+            ) : (
+              <>
+                {serviceevent?.slice(0, 9).map((item: any, i: any) => {
+                  return (
+                    <CustomCard
+                      id={item.id}
+                      name={item.name}
+                      type={item.type}
+                      about={item.about}
+                      price={item.price}
+                      updated_at={item.updated_at}
+                    ></CustomCard>
+                  );
+                })}
+              </>
+            )}
+            <br></br>
+          </div>
+        </Collapse>
         <Divider />
-        <ListItemButton>
+        <ListItemButton onClick={handleClickManufacturing}>
           <ListItemText>
             <Typography
               sx={{
@@ -215,10 +365,45 @@ export default function Featured() {
             </Typography>
           </ListItemText>
 
-          {open ? <ExpandLess /> : <ExpandMore />}
+          {manufacturingservices ? <ExpandLess /> : <ExpandMore />}
         </ListItemButton>
+        <Collapse in={manufacturingservices} timeout="auto" unmountOnExit>
+          <div
+            style={{
+              padding: "0rem 1rem",
+              overflow: "scroll",
+              display: "flex",
+              gap: "20px",
+            }}
+          >
+            {servicemanufacturing?.length <= 0 ? (
+              <div>
+                <Typography align="center">
+                  {"There's no Manufacturing Services at the moment"!}
+                </Typography>
+                <br></br>
+              </div>
+            ) : (
+              <>
+                {servicemanufacturing?.slice(0, 9).map((item: any, i: any) => {
+                  return (
+                    <CustomCard
+                      id={item.id}
+                      name={item.name}
+                      type={item.type}
+                      about={item.about}
+                      price={item.price}
+                      updated_at={item.updated_at}
+                    ></CustomCard>
+                  );
+                })}
+              </>
+            )}
+            <br></br>
+          </div>
+        </Collapse>
         <Divider />
-        <ListItemButton>
+        <ListItemButton onClick={handleClickHealth}>
           <ListItemText>
             <Typography
               sx={{
@@ -227,12 +412,47 @@ export default function Featured() {
                 fontWeight: "bold",
               }}
             >
-              Landscaping & Gardening Services
+              Healthy & Beauty Services
             </Typography>
           </ListItemText>
 
-          {open ? <ExpandLess /> : <ExpandMore />}
+          {healthservices ? <ExpandLess /> : <ExpandMore />}
         </ListItemButton>
+        <Collapse in={healthservices} timeout="auto" unmountOnExit>
+          <div
+            style={{
+              padding: "0rem 1rem",
+              overflow: "scroll",
+              display: "flex",
+              gap: "20px",
+            }}
+          >
+            {servicehealth?.length <= 0 ? (
+              <div>
+                <Typography align="center">
+                  {"There's no Healthy & Beauty Services at the moment"!}
+                </Typography>
+                <br></br>
+              </div>
+            ) : (
+              <>
+                {servicehealth?.slice(0, 9).map((item: any, i: any) => {
+                  return (
+                    <CustomCard
+                      id={item.id}
+                      name={item.name}
+                      type={item.type}
+                      about={item.about}
+                      price={item.price}
+                      updated_at={item.updated_at}
+                    ></CustomCard>
+                  );
+                })}
+              </>
+            )}
+            <br></br>
+          </div>
+        </Collapse>
         <Divider />
       </List>
     );
