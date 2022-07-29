@@ -235,6 +235,7 @@ export default function Featured() {
                 {servicetype?.slice(0, 9).map((item: any, i: any) => {
                   return (
                     <CustomCard
+                      key={Math.random()}
                       id={item.id}
                       name={item.name}
                       type={item.type}
@@ -286,6 +287,7 @@ export default function Featured() {
                 {servicecleaning?.slice(0, 9).map((item: any, i: any) => {
                   return (
                     <CustomCard
+                      key={Math.random()}
                       id={item.id}
                       name={item.name}
                       type={item.type}
@@ -337,6 +339,7 @@ export default function Featured() {
                 {serviceevent?.slice(0, 9).map((item: any, i: any) => {
                   return (
                     <CustomCard
+                      key={Math.random()}
                       id={item.id}
                       name={item.name}
                       type={item.type}
@@ -388,6 +391,7 @@ export default function Featured() {
                 {servicemanufacturing?.slice(0, 9).map((item: any, i: any) => {
                   return (
                     <CustomCard
+                      key={Math.random()}
                       id={item.id}
                       name={item.name}
                       type={item.type}
@@ -439,6 +443,7 @@ export default function Featured() {
                 {servicehealth?.slice(0, 9).map((item: any, i: any) => {
                   return (
                     <CustomCard
+                      key={Math.random()}
                       id={item.id}
                       name={item.name}
                       type={item.type}
