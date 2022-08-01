@@ -16,6 +16,7 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import DraftsIcon from "@mui/icons-material/Drafts";
 import SendIcon from "@mui/icons-material/Send";
 import ExpandLess from "@mui/icons-material/ExpandLess";
+
 import ExpandMore from "@mui/icons-material/ExpandMore";
 
 import StarBorder from "@mui/icons-material/StarBorder";
@@ -183,7 +184,9 @@ export default function Footer({}: Props) {
           </ListItemButton>
           <Collapse in={about} timeout="auto" unmountOnExit>
             <div style={{ padding: "0rem 1rem" }}>
-              <DurationTypography>Contact us</DurationTypography>
+              <Link href={"/contactus"}>
+                <DurationTypography>Contact us</DurationTypography>
+              </Link>
               <DurationTypography>FAQ</DurationTypography>
               <DurationTypography>Terms of Services</DurationTypography>
               <DurationTypography>Blog</DurationTypography>
@@ -270,7 +273,9 @@ export default function Footer({}: Props) {
                   <DurationTypography>{"Become a Seller"}</DurationTypography>
                 </TableCells>
                 <TableCells>
-                  <DurationTypography>{"Contact us"}</DurationTypography>
+                  <Link href={"/contactus"} passHref={true}>
+                    <DurationTypography>Contact us</DurationTypography>
+                  </Link>
                 </TableCells>
               </DurationSubDiv>
               <DurationSubDiv>

@@ -188,7 +188,7 @@ const AvailableService = (props: Props) => {
                               <Typography
                                 style={{
                                   fontFamily: "serif",
-                                  fontSize: "0.8rem",
+                                  fontSize: "0.8 rem",
                                   textAlign: "center",
                                 }}
                               >
