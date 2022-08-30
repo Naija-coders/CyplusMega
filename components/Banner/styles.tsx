@@ -18,7 +18,18 @@ export const StyledImage = styled("img")(
     width: "100%",
     objectFit: "contain",
     marginTop: { xs: "30px", md: "-10px" },
-    height: "90%",
+    height: "20%",
+  })
+);
+export const BannerImage = styled("img")(
+  sx({
+    height: { md: "100px" },
+    objectFit: "contain",
+  })
+);
+export const CustomImage = styled("div")(
+  sx({
+    height: { sm: "500px", md: "600px", xl: "900px" },
   })
 );
 

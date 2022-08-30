@@ -25,6 +25,7 @@ const TopCategories = dynamic(
 );
 
 import "../i18n";
+import NotLoggedIn from "../components/Banner/NotLoggedIn";
 const Home: NextPage = () => {
   const [categories, setCategories] = useState([]);
   const articles: readonly IArticle[] = useSelector(
@@ -63,7 +64,9 @@ const Home: NextPage = () => {
         <ChatWidget />
       </div>{" "}
     </Layout> */
-    <HomePageLayout>hello</HomePageLayout>
+    <HomePageLayout>
+      <NotLoggedIn />
+    </HomePageLayout>
   );
 };
 
