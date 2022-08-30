@@ -35,7 +35,7 @@ export const StyledBoxFooter = styled(Box)(
     paddingRight: "100px",
     paddingLeft: "100px",
     paddingTop: "2rem",
-    background: "#34A422",
+    background: "#001847",
     paddingBottom: "2rem",
     display: "flex",
     justifyContent: "center",

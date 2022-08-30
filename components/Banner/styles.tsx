@@ -59,6 +59,37 @@ export const mainStyleDiv = styled("div")(
       "linear-gradient(164.22deg, #23395D 11.02%, rgba(16, 101, 240, 0) 112.14%) !important",
   })
 );
+export const StyledTextFieldSearch = styled(TextField)(
+  sx({
+    "minWidth": {
+      xs: "84%",
+      sm: "100%",
+      md: "90%",
+      lg: "90%",
+      xl: "90%",
+    },
+    "border": "none",
+    "borderStyle": "none",
+    "display": { xs: "flex", md: "flex", lg: "flex", xl: "flex" },
+
+    "background": "#ffff",
+    "borderRadius": "30px",
+
+    "outline": 0,
+    "& fieldset": {
+      borderRadius: "30px",
+    },
+    "& .MuiInputBase-root": {
+      height: { xs: 70, md: "70px" },
+    },
+    "& input::placeholder": {
+      fontSize: { xs: "30px", sm: " 20px" },
+      paddingLeft: "1rem",
+      fontFamily: "DM Sans",
+    },
+  })
+);
+
 export const StyledContainers = styled("div")(
   sx({
     width: "98%",
@@ -80,6 +111,19 @@ export const Text = styled(Typography)(
   sx({
     fontSize: "1.4rem",
     fontWeight: "bold",
+  })
+);
+export const GetStartedBtn = styled(Button)(
+  sx({
+    fontWeight: "bold",
+    width: "213.5px",
+    height: "70px",
+    borderRadius: "195.2px",
+    border: " 3px solid rgba(255, 255, 255, 0.8)",
+    filter: " drop-shadow(0px 30.5px 50.8333px rgba(168, 22, 75, 0.15))",
+    textTransform: "none",
+    fontFamily: "DM Sans",
+    color: "#FFFFFF",
   })
 );
 export const SubText = styled(Typography)(

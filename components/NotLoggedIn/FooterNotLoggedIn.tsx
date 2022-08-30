@@ -40,7 +40,7 @@ const FooterNotLoggedIn: React.FC<Props> = ({}) => {
           >
             <div>
               <img
-                src={"footerlogo.png"}
+                src={"elverrlogos.png"}
                 style={{
                   width: "148.49px",
                   height: " 52.59px",
@@ -140,7 +140,7 @@ const FooterNotLoggedIn: React.FC<Props> = ({}) => {
                     <InputAdornment position="end">
                       <div
                         style={{
-                          background: "#093701",
+                          background: " #34A422",
                           width: "110px",
                           height: "40px",
                           marginLeft: "10px",
