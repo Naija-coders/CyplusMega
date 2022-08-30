@@ -8,6 +8,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Navbar from "../components/Navbar/Navbar";
 import Layout from "./layout";
+import HomePageLayout from "./homepagelayout";
 import Banner from "../components/Banner/Banner";
 import Clientapi from "./api/client";
 import AvailableServices from "../components/AvailableServices";
@@ -43,7 +44,7 @@ const Home: NextPage = () => {
   }, [categories]);
   console.log("checking via the index", categories);
   return (
-    <Layout showSearch={true} isVisible={false}>
+    /*     <Layout showSearch={true} isVisible={false}>
       {" "}
       <Head>
         <title>Elverr - The Market Place</title>
@@ -61,7 +62,8 @@ const Home: NextPage = () => {
         <Recommended />
         <ChatWidget />
       </div>{" "}
-    </Layout>
+    </Layout> */
+    <HomePageLayout>hello</HomePageLayout>
   );
 };
 
