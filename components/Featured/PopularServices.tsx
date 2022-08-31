@@ -10,6 +10,9 @@ import {
   BasicImage,
   BasicServiceTitle,
   BasicDiv,
+  BasicServiceButton,
+  BasicServiceDiv,
+  BasicServiceGrid,
 } from "./styles";
 import { Paper, Button } from "@mui/material";
 type Props = {};
@@ -33,14 +36,7 @@ export default function PopularServices({}: Props) {
         <BasicTextHeader style={{ color: "#2B2B2B" }}>
           Popular Services
         </BasicTextHeader>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "auto auto auto ",
-            rowGap: "30px",
-            columnGap: "1px",
-          }}
-        >
+        <BasicServiceGrid>
           <BasicPaper elevation={0}>
             <BasicImage src="servicesit.jpeg" />
             <BasicDiv>
@@ -96,42 +92,19 @@ export default function PopularServices({}: Props) {
               </BasicText>
             </BasicDiv>
           </BasicPaper>{" "}
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-
-              width: "300.4px",
-              justifyItems: "center",
-              height: "315.4px",
-              justifyContent: "center",
-              padding: "1rem",
-              gap: "1rem",
-            }}
-          >
+          <BasicServiceDiv>
             <BasicText>PROJECTS</BasicText>
             <BasicServiceTitle>
-              get ahead of the competition with{" "}
+              Get ahead of the competition with{" "}
               <BasicServiceTitle sx={{ color: "#34A422" }}>
                 Elverr
               </BasicServiceTitle>
             </BasicServiceTitle>
-            <Button
-              style={{
-                width: "146.68px",
-                height: "59.69",
-                border: "1.08524px solid #80CC28",
-                borderRadius: "86.8191px",
-                background: "#ffffff",
-                color: "#747582",
-                textTransform: "none",
-              }}
-              variant={"outlined"}
-            >
+            <BasicServiceButton variant={"outlined"}>
               See More
-            </Button>
-          </div>
-        </div>
+            </BasicServiceButton>
+          </BasicServiceDiv>
+        </BasicServiceGrid>
       </div>
     </StyledBox>
   );

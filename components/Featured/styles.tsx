@@ -158,3 +158,35 @@ export const BasicServiceTitle = styled(Typography)(
     color: "#282C4B;",
   })
 );
+
+export const BasicServiceButton = styled(Button)(
+  sx({
+    width: "146.68px",
+    height: "59.69",
+    border: "1.08524px solid #80CC28",
+    borderRadius: "86.8191px",
+    background: "#ffffff",
+    color: "#747582",
+    textTransform: "none",
+  })
+);
+export const BasicServiceDiv = styled("div")(
+  sx({
+    display: "flex",
+    flexDirection: "column",
+    width: "300.4px",
+    justifyItems: "center",
+    height: "315.4px",
+    justifyContent: "center",
+    padding: "1rem",
+    gap: "1rem",
+  })
+);
+export const BasicServiceGrid = styled("div")(
+  sx({
+    display: "grid",
+    gridTemplateColumns: "auto auto auto ",
+    rowGap: "30px",
+    columnGap: "1px",
+  })
+);
