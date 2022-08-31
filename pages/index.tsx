@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback } from "react";
 import { Typography } from "@mui/material";
 import type { NextPage } from "next";
 import { useSelector, shallowEqual, useDispatch } from "react-redux";
+import CompaniesFeatured from "../components/Featured/CompaniesFeatured";
 
 import { Dispatch } from "redux";
 import Head from "next/head";
@@ -66,6 +67,7 @@ const Home: NextPage = () => {
     </Layout> */
     <HomePageLayout>
       <NotLoggedIn />
+      <CompaniesFeatured />
     </HomePageLayout>
   );
 };

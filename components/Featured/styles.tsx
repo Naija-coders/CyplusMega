@@ -31,7 +31,7 @@ interface StyledTabsProps {
 interface StyledTabProps {
   label?: string;
   value?: string;
-  onClick?:any;
+  onClick?: any;
 }
 export const StyledTab = styled((props: StyledTabProps) => (
   <Tab disableRipple {...props} />
@@ -68,3 +68,57 @@ export const StyledTabs = styled((props: StyledTabsProps) => (
     backgroundColor: "green",
   },
 });
+export const BasicText = styled(Typography)(
+  sx({
+    fontFamily: "DM Sans",
+    fontStyle: "normal",
+    fontWeight: "700",
+    fontSize: "1rem",
+    lineHeight: "24px",
+    color: "#747582",
+  })
+);
+export const BasicTextHeader = styled(Typography)(
+  sx({
+    fontFamily: "DM Sans",
+    fontStyle: "normal",
+    fontWeight: "700",
+    fontSize: "39px",
+    lineHeight: "46px",
+    color: "#34A422",
+  })
+);
+export const BasicTextbody = styled(Typography)(
+  sx({
+    fontFamily: "DM Sans",
+    fontStyle: "normal",
+    fontWeight: "700",
+    fontSize: "1rem",
+
+    lineHeight: "21px",
+    color: "#747582",
+  })
+);
+export const CustomPaper = styled(Paper)(
+  sx({
+    background: "#FFFFFF",
+    height: "180px",
+    width: "239.63px",
+    boxShadow:
+      " 38.1882px 0px 66.8293px rgba(121, 121, 121, 0.05), -38.1882px 95.4704px 66.8293px rgba(121, 121, 121, 0.05);",
+    padding: "2rem",
+    display: "flex",
+    flexDirection: "Column",
+    justifyContent: "center",
+  })
+);
+export const BasicTextTitle = styled(Typography)(
+  sx({
+    fontFamily: "DM Sans",
+    fontStyle: "bold",
+    fontWeight: "700",
+    fontSize: "1rem",
+    lineHeight: "24px",
+    color: "#14183E",
+  })
+);

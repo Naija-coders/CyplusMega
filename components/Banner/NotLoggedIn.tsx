@@ -37,7 +37,8 @@ export default function NotLoggedIn() {
               minWidth: "100%",
 
               backgroundImage: `url("pics3.jpeg")`,
-              backgroundSize: "100% 120%",
+              backgroundSize: "100% 140%",
+              backgroundBlendMode: "darken",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
             }}
@@ -72,8 +73,9 @@ export default function NotLoggedIn() {
               minWidth: "100%",
 
               backgroundImage: `url("pics2.jpeg")`,
-              backgroundSize: "100% 120%",
+              backgroundSize: "100% 140%",
               backgroundRepeat: "no-repeat",
+              backgroundBlendMode: "darken",
               backgroundPosition: "center",
             }}
           >
@@ -107,9 +109,10 @@ export default function NotLoggedIn() {
               minWidth: "100%",
 
               backgroundImage: `url("pics1.jpeg")`,
-              backgroundSize: "100% 120%",
+              backgroundSize: "100% 140%",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
+              backgroundBlendMode: "darken",
             }}
           >
             <div>
