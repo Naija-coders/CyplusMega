@@ -123,3 +123,38 @@ export const BasicTextTitle = styled(Typography)(
     color: "#14183E",
   })
 );
+
+export const BasicPaper = styled(Paper)(
+  sx({
+    height: "315.4px",
+    width: "300.4px",
+    filter: "drop-shadow(0px 21.5532px 53.8831px rgba(119, 115, 170, 0.1))",
+    borderRadius: "21.5532px 21.5532px 21.5532px  21.5532px ",
+  })
+);
+export const BasicImage = styled("img")(
+  sx({
+    height: "170.15px",
+    width: "100%",
+    borderRadius: "21.5532px 21.5532px 0px 0px",
+    objectFit: "cover",
+  })
+);
+export const BasicDiv = styled("div")(
+  sx({
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    padding: "1rem",
+  })
+);
+export const BasicServiceTitle = styled(Typography)(
+  sx({
+    fontFamily: "DM Sans",
+    fontStyle: "normal",
+    fontWeight: "700",
+    fontSize: "1.5rem",
+    lineHeight: "37px",
+    color: "#282C4B;",
+  })
+);

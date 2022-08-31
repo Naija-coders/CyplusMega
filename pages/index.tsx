@@ -28,6 +28,7 @@ const TopCategories = dynamic(
 
 import "../i18n";
 import NotLoggedIn from "../components/Banner/NotLoggedIn";
+import PopularServices from "../components/Featured/PopularServices";
 const Home: NextPage = () => {
   const [categories, setCategories] = useState([]);
   const articles: readonly IArticle[] = useSelector(
@@ -70,6 +71,7 @@ const Home: NextPage = () => {
       <NotLoggedIn />
       <CompaniesFeatured />
       <ElverrBanner />
+      <PopularServices />
     </HomePageLayout>
   );
 };
