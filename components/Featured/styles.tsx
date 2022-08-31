@@ -110,6 +110,7 @@ export const CustomPaper = styled(Paper)(
     display: "flex",
     flexDirection: "Column",
     justifyContent: "center",
+    gap: "1rem",
   })
 );
 export const BasicTextTitle = styled(Typography)(

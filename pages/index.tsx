@@ -3,6 +3,7 @@ import { Typography } from "@mui/material";
 import type { NextPage } from "next";
 import { useSelector, shallowEqual, useDispatch } from "react-redux";
 import CompaniesFeatured from "../components/Featured/CompaniesFeatured";
+import ElverrBanner from "../components/Banner/ElverrBanner";
 
 import { Dispatch } from "redux";
 import Head from "next/head";
@@ -68,6 +69,7 @@ const Home: NextPage = () => {
     <HomePageLayout>
       <NotLoggedIn />
       <CompaniesFeatured />
+      <ElverrBanner />
     </HomePageLayout>
   );
 };
