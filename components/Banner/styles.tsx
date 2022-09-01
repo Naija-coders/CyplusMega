@@ -21,6 +21,42 @@ export const StyledImage = styled("img")(
     height: "20%",
   })
 );
+
+export const Div1 = styled("div")(
+  sx({
+    display: "flex",
+    flexDirection: "row",
+    gap: "30px",
+    position: "absolute",
+    top: { xs: "450px", sm: "400px", md: "550px", lg: "550px" },
+
+    zIndex: 1,
+  })
+);
+export const Div2 = styled("div")(
+  sx({
+    width: { xs: "250px", sm: "450px", md: "500px", lg: " 643px" },
+  })
+);
+
+//for typography
+
+export const CustomTypography = styled(Typography)(
+  sx({
+    fontSize: { xs: "20px", sm: "30px", md: "40px", lg: "60px" },
+    fontStyle: "bold",
+    color: " #FFFFFF",
+    position: "relative",
+
+    top: { xs: "150px", sm: "100px", md: "250px", lg: "200px" },
+    width: { md: "600px", sm: "400px", lg: "915px" },
+    height: "182px",
+    lineHeight: { md: "60px", lg: "91px" },
+    textAlign: "left",
+
+    textShadow: " 0px 4px 10px rgba(0, 0, 0, 0.25)",
+  })
+);
 export const BannerImage = styled("img")(
   sx({
     height: { md: "100px" },
@@ -29,7 +65,7 @@ export const BannerImage = styled("img")(
 );
 export const CustomImage = styled("div")(
   sx({
-    height: { sm: "500px", md: "600px", xl: "900px" },
+    height: { xs: "400px", sm: "400px", md: "600px", xl: "900px" },
   })
 );
 
@@ -80,16 +116,29 @@ export const StyledTextFieldSearch = styled(TextField)(
       borderRadius: "30px",
     },
     "& .MuiInputBase-root": {
-      height: { xs: 70, md: "70px" },
+      height: { xs: "45px", md: "70px" },
     },
     "& input::placeholder": {
-      fontSize: { xs: "30px", sm: " 20px" },
+      fontSize: { xs: "1rem", md: " 20px" },
       paddingLeft: "1rem",
       fontFamily: "DM Sans",
     },
   })
 );
+export const GetStartedBtn = styled(Button)(
+  sx({
+    fontWeight: "bold",
+    width: { xs: "30%", lg: "213.5px" },
+    height: { xs: "45px", md: "70px" },
 
+    borderRadius: "195.2px",
+    border: " 3px solid rgba(255, 255, 255, 0.8)",
+    filter: " drop-shadow(0px 30.5px 50.8333px rgba(168, 22, 75, 0.15))",
+    textTransform: "none",
+    fontFamily: "DM Sans",
+    color: "#FFFFFF",
+  })
+);
 export const StyledContainers = styled("div")(
   sx({
     width: "98%",
@@ -113,19 +162,7 @@ export const Text = styled(Typography)(
     fontWeight: "bold",
   })
 );
-export const GetStartedBtn = styled(Button)(
-  sx({
-    fontWeight: "bold",
-    width: "213.5px",
-    height: "70px",
-    borderRadius: "195.2px",
-    border: " 3px solid rgba(255, 255, 255, 0.8)",
-    filter: " drop-shadow(0px 30.5px 50.8333px rgba(168, 22, 75, 0.15))",
-    textTransform: "none",
-    fontFamily: "DM Sans",
-    color: "#FFFFFF",
-  })
-);
+
 export const SubText = styled(Typography)(
   sx({
     fontSize: "1.3rem",
@@ -194,6 +231,7 @@ export const StyledTextField = styled(TextField)(
     },
   })
 );
+
 export const StyledDiv = styled("div")(
   sx({
     display: "flex",

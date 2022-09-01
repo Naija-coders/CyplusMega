@@ -22,7 +22,11 @@ export default function ElverrBanner({}: Props) {
             style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
           >
             <Typography
-              style={{ fontSize: "50px", fontStyle: "bold", color: " #FFFFFF" }}
+              sx={{
+                fontSize: { sm: "30px", md: "40px", lg: "50px" },
+                fontStyle: "bold",
+                color: " #FFFFFF",
+              }}
             >
               Earning on elverr made easy
             </Typography>

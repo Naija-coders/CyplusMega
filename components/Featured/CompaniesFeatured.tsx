@@ -11,6 +11,9 @@ import {
   BasicTextbody,
   CustomPaper,
   BasicTextTitle,
+  StyledDiv,
+  MainDivs,
+  StyledImages,
 } from "./styles";
 
 type Props = {};
@@ -25,14 +28,7 @@ export default function CompaniesFeatured({}: Props) {
           width: "100%",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-          }}
-        >
+        <StyledDiv>
           <img
             style={{ width: "203px", height: "75.33px" }}
             src={"slack.png"}
@@ -49,21 +45,13 @@ export default function CompaniesFeatured({}: Props) {
             style={{ width: "203px", height: "60.33px" }}
             src={"zoover.png"}
           />
-        </div>
+        </StyledDiv>
         <br></br>
         <div>
           <BasicText>PROFESSIONAL SERVICES</BasicText>
         </div>
         <br></br>
-        <div
-          style={{
-            display: "grid",
-            flexDirection: "row",
-            gridTemplateColumns: "auto auto auto auto",
-
-            alignItems: "start",
-          }}
-        >
+        <MainDivs>
           <div>
             <BasicTextHeader> Why choose us?</BasicTextHeader>
             <br></br>
@@ -96,7 +84,7 @@ export default function CompaniesFeatured({}: Props) {
               Grow the holistic world view of disruptive innovation workspace
             </BasicTextbody>
           </CustomPaper>
-        </div>
+        </MainDivs>
         <div
           style={{
             display: "flex",
@@ -105,18 +93,14 @@ export default function CompaniesFeatured({}: Props) {
             justifyContent: "space-around",
           }}
         >
-          <img
-            width={"709.06px"}
-            height={"360px"}
-            src={"descriptions.png"}
-            alt="how the system works"
-          />
+          <StyledImages src={"descriptions.png"} alt="how the system works" />
           <div
             style={{
               display: "flex",
               flexDirection: "column",
               gap: "1rem",
               marginTop: "30px",
+              justifyContent: "center",
             }}
           >
             <BasicText>HOW OUR SYSTEM WORKS</BasicText>

@@ -50,6 +50,29 @@ export const StyledTab = styled((props: StyledTabProps) => (
   },
 }));
 
+export const StyledDiv = styled("div")(
+  sx({
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+  })
+);
+export const MainDivs = styled("div")(
+  sx({
+    display: "grid",
+    flexDirection: "row",
+    gridTemplateColumns: {
+      sm: "auto ",
+      md: "auto auto auto ",
+      lg: "auto auto auto auto",
+    },
+    gap: "10px",
+
+    alignItems: "start",
+  })
+);
+
 export const StyledTabs = styled((props: StyledTabsProps) => (
   <Tabs
     {...props}
@@ -102,8 +125,9 @@ export const BasicTextbody = styled(Typography)(
 export const CustomPaper = styled(Paper)(
   sx({
     background: "#FFFFFF",
-    height: "180px",
-    width: "239.63px",
+    minHeight: "180px",
+    width: { sm: "100%", md: "100%", lg: "239.63px" },
+    minWidth: "100px",
     boxShadow:
       " 38.1882px 0px 66.8293px rgba(121, 121, 121, 0.05), -38.1882px 95.4704px 66.8293px rgba(121, 121, 121, 0.05);",
     padding: "2rem",
@@ -111,6 +135,14 @@ export const CustomPaper = styled(Paper)(
     flexDirection: "Column",
     justifyContent: "center",
     gap: "1rem",
+  })
+);
+
+export const StyledImages = styled("img")(
+  sx({
+    width: { sm: "400px", md: "500px", lg: "709.06px" },
+    height: "360px",
+    objectFit: "contain",
   })
 );
 export const BasicTextTitle = styled(Typography)(
@@ -133,10 +165,17 @@ export const AccessPaper = styled(Paper)(
     borderRadius: " 12.0852px",
   })
 );
+export const BasicIDiv = styled("div")(
+  sx({
+    marginLeft: { md: "-50px", lg: "-100px" },
+    marginTop: "40px",
+    width: "424px",
+  })
+);
 export const BasicPaper = styled(Paper)(
   sx({
-    height: "315.4px",
-    width: "300.4px",
+    minHeight: "315.4px",
+    width: { sm: "260.4px", md: "280px", lg: "300.4px" },
     filter: "drop-shadow(0px 21.5532px 53.8831px rgba(119, 115, 170, 0.1))",
     borderRadius: "21.5532px 21.5532px 21.5532px  21.5532px ",
   })
@@ -226,7 +265,7 @@ export const BasicServiceGrid = styled("div")(
     display: "grid",
     gridTemplateColumns: "auto auto auto ",
     rowGap: "30px",
-    columnGap: "1px",
+    columnGap: { sm: "20px", lg: "1px" },
   })
 );
 export const StyledQuote = styled("span")(

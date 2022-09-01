@@ -16,6 +16,9 @@ import {
   StyledDivBanner,
   StyledTextFieldSearch,
   GetStartedBtn,
+  CustomTypography,
+  Div1,
+  Div2,
 } from "./styles";
 import { StyledBox } from "../NotLoggedIn/style";
 import { Typography, Button } from "@mui/material";
@@ -53,25 +56,9 @@ export default function NotLoggedIn() {
                   width: "100%",
                 }}
               >
-                <Typography
-                  gutterBottom
-                  sx={{
-                    fontSize: "60px",
-                    fontStyle: "bold",
-                    color: " #FFFFFF",
-                    position: "relative",
-
-                    top: "200px",
-                    width: "915px",
-                    height: "182px",
-                    lineHeight: "91px",
-                    textAlign: "left",
-
-                    textShadow: " 0px 4px 10px rgba(0, 0, 0, 0.25)",
-                  }}
-                >
+                <CustomTypography gutterBottom>
                   Find Skilled Workers from anywhere with Elverr
-                </Typography>
+                </CustomTypography>
               </div>
             </StyledBox>
           </CustomImage>
@@ -97,25 +84,9 @@ export default function NotLoggedIn() {
                   width: "100%",
                 }}
               >
-                <Typography
-                  gutterBottom
-                  sx={{
-                    fontSize: "60px",
-                    fontStyle: "bold",
-                    color: " #FFFFFF",
-                    position: "relative",
-
-                    top: "200px",
-                    width: "915px",
-                    height: "182px",
-                    lineHeight: "91px",
-                    textAlign: "left",
-
-                    textShadow: " 0px 4px 10px rgba(0, 0, 0, 0.25)",
-                  }}
-                >
+                <CustomTypography gutterBottom>
                   Reach your business goals in record time
-                </Typography>
+                </CustomTypography>
               </div>
             </StyledBox>
           </CustomImage>
@@ -141,25 +112,9 @@ export default function NotLoggedIn() {
                   width: "100%",
                 }}
               >
-                <Typography
-                  gutterBottom
-                  sx={{
-                    fontSize: "60px",
-                    fontStyle: "bold",
-                    color: " #FFFFFF",
-                    position: "relative",
-
-                    top: "200px",
-                    width: "915px",
-                    height: "182px",
-                    lineHeight: "91px",
-                    textAlign: "left",
-
-                    textShadow: " 0px 4px 10px rgba(0, 0, 0, 0.25)",
-                  }}
-                >
+                <CustomTypography gutterBottom>
                   Get ahead of the competition with Elverr
-                </Typography>
+                </CustomTypography>
               </div>
             </StyledBox>
           </CustomImage>
@@ -173,31 +128,17 @@ export default function NotLoggedIn() {
             width: "100%",
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              gap: "30px",
-              position: "absolute",
-              top: "550px",
-
-              zIndex: 1,
-            }}
-          >
-            <div
-              style={{
-                width: " 643px",
-              }}
-            >
+          <Div1>
+            <Div2>
               {" "}
               <StyledTextFieldSearch
                 placeholder={"Search or type keywords.."}
               />
-            </div>
+            </Div2>
             <GetStartedBtn size="small" variant="outlined">
               Get Statrted
             </GetStartedBtn>
-          </div>
+          </Div1>
         </div>
       </StyledBox>
     </>

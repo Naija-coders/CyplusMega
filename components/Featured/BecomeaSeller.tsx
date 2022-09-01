@@ -21,6 +21,7 @@ import {
   BasicAccessPaper,
   BasicAccessPaper2,
   BasicCutomDiv,
+  BasicIDiv,
 } from "./styles";
 
 type Props = {};
@@ -74,13 +75,7 @@ export default function BecomeaSeller({}: Props) {
               Create a team of experienced freelancers to suit your business
               projects offers.
             </BasicTextbody>
-            <div
-              style={{
-                marginLeft: "-100px",
-                marginTop: "40px",
-                width: "424px",
-              }}
-            >
+            <BasicIDiv>
               <span style={{}}>
                 <Typography
                   sx={{
@@ -106,7 +101,7 @@ export default function BecomeaSeller({}: Props) {
                   </BasicTextQuote>
                 </div>
               </span>
-            </div>
+            </BasicIDiv>
           </div>
         </div>
         <br></br>
