@@ -123,7 +123,16 @@ export const BasicTextTitle = styled(Typography)(
     color: "#14183E",
   })
 );
-
+export const AccessPaper = styled(Paper)(
+  sx({
+    minHeight: "150.05px",
+    width: "375.67px",
+    padding: "1rem",
+    boxShadow:
+      "28.1403px 0px 49.2456px rgba(123, 67, 67, 0.07), -28.1403px 70.3508px 49.2456px rgba(122, 79, 79, 0.07)",
+    borderRadius: " 12.0852px",
+  })
+);
 export const BasicPaper = styled(Paper)(
   sx({
     height: "315.4px",
@@ -225,5 +234,47 @@ export const StyledQuote = styled("span")(
     fontSize: "32px",
     color: "#FB3F6C",
     fontFamily: "cursive",
+  })
+);
+export const BasicStyledPaper = styled(Paper)(
+  sx({
+    minHeight: "150.05px",
+    width: "375.67px",
+    padding: "1rem",
+    boxShadow:
+      "28.1403px 0px 49.2456px rgba(123, 67, 67, 0.07), -28.1403px 70.3508px 49.2456px rgba(122, 79, 79, 0.07)",
+    borderRadius: " 12.0852px",
+  })
+);
+export const BasicAccessPaper = styled(Paper)(
+  sx({
+    width: "288.3px",
+    marginTop: "30px",
+    padding: "1rem",
+    minHeight: "150.05px",
+    boxShadow:
+      "18.5991px 0px 32.5483px rgba(123, 67, 67, 0.07), -18.5991px 46.4976px 32.5483px rgba(122, 79, 79, 0.07)",
+    borderRadius: " 12.0852px",
+  })
+);
+export const BasicAccessPaper2 = styled(Paper)(
+  sx({
+    width: "288.3px",
+    marginTop: "30px",
+    minHeight: "150.05px",
+
+    boxShadow:
+      "22.6722px 0px 39.6763px rgba(123, 67, 67, 0.07), -22.6722px 56.6804px 39.6763px rgba(122, 79, 79, 0.07)",
+    borderRadius: " 12.0852px",
+    padding: "1rem",
+  })
+);
+export const BasicCutomDiv = styled("div")(
+  sx({
+    display: "flex",
+    flexDirection: "row",
+    gap: "10px",
+    alignItems: "center",
+    marginTop: "0.5rem",
   })
 );

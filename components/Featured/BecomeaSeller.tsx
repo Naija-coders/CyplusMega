@@ -16,6 +16,11 @@ import {
   StyledQuote,
   BasicTextTestimonials,
   BasicTextTestimonialsTitle,
+  AccessPaper,
+  BasicStyledPaper,
+  BasicAccessPaper,
+  BasicAccessPaper2,
+  BasicCutomDiv,
 } from "./styles";
 
 type Props = {};
@@ -154,7 +159,7 @@ export default function BecomeaSeller({}: Props) {
                 marginTop: "30px",
               }}
             >
-              <Paper
+              <BasicAccessPaper2
                 elevation={0}
                 sx={{
                   width: "288.3px",
@@ -174,15 +179,7 @@ export default function BecomeaSeller({}: Props) {
                   collegial working relationships with her peers, subordinates
                   and customers.
                 </BasicTextbody>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    gap: "10px",
-                    alignItems: "center",
-                    marginTop: "0.5rem",
-                  }}
-                >
+                <BasicCutomDiv>
                   <div>
                     <Avatar />
                   </div>
@@ -201,20 +198,9 @@ export default function BecomeaSeller({}: Props) {
                       readOnly
                     />
                   </div>
-                </div>
-              </Paper>
-              <Paper
-                elevation={0}
-                sx={{
-                  width: "288.3px",
-                  marginTop: "30px",
-                  padding: "1rem",
-                  minHeight: "150.05px",
-                  boxShadow:
-                    "18.5991px 0px 32.5483px rgba(123, 67, 67, 0.07), -18.5991px 46.4976px 32.5483px rgba(122, 79, 79, 0.07)",
-                  borderRadius: " 12.0852px",
-                }}
-              >
+                </BasicCutomDiv>
+              </BasicAccessPaper2>
+              <BasicAccessPaper elevation={0}>
                 <StyledQuote>&#8220;</StyledQuote>
                 <BasicTextbody style={{ fontSize: "0.8rem" }}>
                   I really like the team for example, a relationship-focused
@@ -222,15 +208,7 @@ export default function BecomeaSeller({}: Props) {
                   collegial working relationships with her peers, subordinates
                   and customers.
                 </BasicTextbody>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    gap: "10px",
-                    alignItems: "center",
-                    marginTop: "0.5rem",
-                  }}
-                >
+                <BasicCutomDiv>
                   <div>
                     <Avatar />
                   </div>
@@ -249,8 +227,8 @@ export default function BecomeaSeller({}: Props) {
                       readOnly
                     />
                   </div>
-                </div>
-              </Paper>
+                </BasicCutomDiv>
+              </BasicAccessPaper>
             </div>
             <div
               style={{
@@ -259,17 +237,7 @@ export default function BecomeaSeller({}: Props) {
                 marginTop: "40px",
               }}
             >
-              <Paper
-                elevation={0}
-                sx={{
-                  minHeight: "150.05px",
-                  width: "375.67px",
-                  padding: "1rem",
-                  boxShadow:
-                    "28.1403px 0px 49.2456px rgba(123, 67, 67, 0.07), -28.1403px 70.3508px 49.2456px rgba(122, 79, 79, 0.07)",
-                  borderRadius: " 12.0852px",
-                }}
-              >
+              <BasicStyledPaper elevation={0}>
                 <StyledQuote sx={{ fontSize: "2.6rem" }}>&#8220;</StyledQuote>
                 <BasicTextbody style={{ fontSize: "0.8rem" }}>
                   I really like the team for example, a relationship-focused
@@ -277,15 +245,7 @@ export default function BecomeaSeller({}: Props) {
                   collegial working relationships with her peers, subordinates
                   and customers.
                 </BasicTextbody>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    gap: "10px",
-                    alignItems: "center",
-                    marginTop: "0.5rem",
-                  }}
-                >
+                <BasicCutomDiv>
                   <div>
                     <Avatar />
                   </div>
@@ -304,8 +264,8 @@ export default function BecomeaSeller({}: Props) {
                       readOnly
                     />
                   </div>
-                </div>
-              </Paper>
+                </BasicCutomDiv>
+              </BasicStyledPaper>
             </div>
           </div>
         </div>
