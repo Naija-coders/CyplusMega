@@ -1,5 +1,5 @@
 import * as React from "react";
-import { StyledBox } from "./style";
+import { StyledBox, TypographyStyle, StyledImage } from "./style";
 import Typography from "@mui/material/Typography";
 
 type Props = {};
@@ -19,76 +19,49 @@ const HeaderNotLoggedIn: React.FC<Props> = ({}) => {
             display: "flex",
             flexDirection: "row",
             width: "100%",
+            alignItems: "center",
             justifyContent: "space-between",
           }}
         >
           <div>
-            <img
-              src="elverrlogo.png"
-              style={{
-                width: "148.49px",
-                height: " 42.59px",
-                objectFit: "contain",
-                userSelect: "none",
-              }}
-            ></img>
+            <StyledImage src="elverrlogo.png"></StyledImage>
           </div>
           <div style={{ display: "flex", gap: "50px" }}>
-            <Typography
+            <TypographyStyle
               style={{
-                fontFamily: "DM Sans",
-                fontWeight: 500,
-                fontSize: "1.2rem",
-                lineHeight: "31px",
                 color: "green",
               }}
             >
               Elverr Business
-            </Typography>
-            <Typography
+            </TypographyStyle>
+            <TypographyStyle
               style={{
-                fontFamily: "DM Sans",
-                fontWeight: 500,
-                fontSize: "1.2rem",
-                lineHeight: "31px",
                 color: "#747582",
               }}
             >
               Explore
-            </Typography>
-            <Typography
+            </TypographyStyle>
+            <TypographyStyle
               style={{
-                fontFamily: "DM Sans",
-                fontWeight: 500,
-                fontSize: "1.2rem",
-                lineHeight: "31px",
                 color: "#747582",
               }}
             >
               Categories
-            </Typography>
-            <Typography
+            </TypographyStyle>
+            <TypographyStyle
               style={{
-                fontFamily: "DM Sans",
-                fontWeight: 500,
-                fontSize: "1.2rem",
-                lineHeight: "31px",
                 color: "#747582",
               }}
             >
               Become a Seller
-            </Typography>
-            <Typography
+            </TypographyStyle>
+            <TypographyStyle
               style={{
-                fontFamily: "DM Sans",
-                fontWeight: 500,
-                fontSize: "1.2rem",
-                lineHeight: "31px",
                 color: "#747582",
               }}
             >
               Log in / Sign up
-            </Typography>
+            </TypographyStyle>
           </div>
         </div>
       </div>

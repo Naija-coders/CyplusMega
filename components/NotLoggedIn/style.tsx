@@ -28,6 +28,22 @@ export const StyledBox = styled(Box)(
     width: "100%",
   })
 );
+export const StyledImage = styled("img")(
+  sx({
+    width: { sm: "90px", md: "110px", lg: "148.44px" },
+    height: " 42.59px",
+    objectFit: "contain",
+    userSelect: "none",
+  })
+);
+export const TypographyStyle = styled(Typography)(
+  sx({
+    fontFamily: "DM Sans",
+    fontWeight: 500,
+    fontSize: { sm: "0.7rem", md: "0.9rem", lg: "1.2rem" },
+    lineHeight: "31px",
+  })
+);
 
 export const StyledBoxFooter = styled(Box)(
   sx({
