@@ -6,7 +6,7 @@ type Props = {};
 
 export default function ElverrBanner({}: Props) {
   return (
-    <div style={{ background: "#001847", height: "492px" }}>
+    <div style={{ background: "#001847", height: "492px", marginTop: "40px" }}>
       <StyledBox>
         <div
           style={{

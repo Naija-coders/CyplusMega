@@ -59,22 +59,31 @@ export default function BecomeaSeller({}: Props) {
         <div
           style={{
             display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            marginTop: "30px",
+          }}
+        >
+          <BasicTextHeader style={{ color: "#2B2B2B" }}>
+            Become an Agency
+          </BasicTextHeader>
+          <BasicTextbody style={{ width: "495px" }} align="center">
+            Create a team of experienced freelancers to suit your business
+            projects offers.
+          </BasicTextbody>
+        </div>
+        <div
+          style={{
+            display: "flex",
             justifyContent: "space-evenly",
             flexDirection: "row",
 
-            marginTop: "50px",
+            marginTop: "30px",
             gap: "1rem",
           }}
         >
           <img src="founderlogo.png" />
           <div>
-            <BasicTextHeader style={{ color: "#2B2B2B" }}>
-              Become an Agency
-            </BasicTextHeader>
-            <BasicTextbody style={{ width: "495px" }} align="center">
-              Create a team of experienced freelancers to suit your business
-              projects offers.
-            </BasicTextbody>
             <BasicIDiv>
               <span style={{}}>
                 <Typography
@@ -107,6 +116,23 @@ export default function BecomeaSeller({}: Props) {
         <br></br>
         <div
           style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            marginTop: "40px",
+          }}
+        >
+          <BasicTextHeader style={{ color: "#2B2B2B" }} align={"center"}>
+            Become a company
+          </BasicTextHeader>
+          <br></br>
+          <BasicTextbody style={{ width: "495px" }} align={"center"}>
+            Find and hire lead agencies on Elverr to execute your projects and
+            increase your productivity in record time.
+          </BasicTextbody>
+        </div>
+        <div
+          style={{
             minWidth: "100%",
             height: "400px",
 
@@ -116,16 +142,7 @@ export default function BecomeaSeller({}: Props) {
             backgroundBlendMode: "darken",
             backgroundPosition: "center",
           }}
-        >
-          <BasicTextHeader style={{ color: "#2B2B2B" }}>
-            Become a company
-          </BasicTextHeader>
-          <br></br>
-          <BasicTextbody style={{ width: "305px" }}>
-            Find and hire lead agencies on Elverr to execute your projects and
-            increase your productivity in record time.
-          </BasicTextbody>
-        </div>
+        ></div>
         <div style={{ marginTop: "80px" }}>
           <div style={{ display: "flex", gap: "1rem" }}>
             <BasicTextHeader style={{ color: "#2B2B2B" }}>
