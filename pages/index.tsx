@@ -22,6 +22,7 @@ import Featured from "../components/Featured/Featured";
 import Cookie from "../components/CookieManager/Cookie";
 import dynamic from "next/dynamic";
 import ChatWidget from "../components/ChatWidget/ChatWidget";
+import BecomeaSeller from "../components/Featured/BecomeaSeller";
 const TopCategories = dynamic(
   () => import("../components/TopCategories/TopCategories")
 );
@@ -70,8 +71,10 @@ const Home: NextPage = () => {
     <HomePageLayout>
       <NotLoggedIn />
       <CompaniesFeatured />
-      <ElverrBanner />
       <PopularServices />
+      <ElverrBanner />
+      <BecomeaSeller />
+      <div style={{ marginTop: "250px" }}></div>
     </HomePageLayout>
   );
 };

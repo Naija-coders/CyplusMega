@@ -158,7 +158,36 @@ export const BasicServiceTitle = styled(Typography)(
     color: "#282C4B;",
   })
 );
+export const BasicTextQuote = styled(Typography)(
+  sx({
+    fontFamily: "DM Sans",
+    fontStyle: "normal",
+    fontWeight: "500",
+    fontSize: "1.2rem",
+    lineHeight: "37px",
+    color: "#747582",
+  })
+);
+export const BasicTextTestimonials = styled(Typography)(
+  sx({
+    fontFamily: "DM Sans",
+    fontStyle: "normal",
+    fontWeight: "500",
+    fontSize: "0.9rem",
 
+    color: "#BBBBBB",
+  })
+);
+export const BasicTextTestimonialsTitle = styled(Typography)(
+  sx({
+    fontFamily: "DM Sans",
+    fontStyle: "normal",
+    fontWeight: "500",
+    fontSize: "0.9rem",
+
+    color: "#34A422",
+  })
+);
 export const BasicServiceButton = styled(Button)(
   sx({
     width: "146.68px",
@@ -170,6 +199,7 @@ export const BasicServiceButton = styled(Button)(
     textTransform: "none",
   })
 );
+
 export const BasicServiceDiv = styled("div")(
   sx({
     display: "flex",
@@ -188,5 +218,12 @@ export const BasicServiceGrid = styled("div")(
     gridTemplateColumns: "auto auto auto ",
     rowGap: "30px",
     columnGap: "1px",
+  })
+);
+export const StyledQuote = styled("span")(
+  sx({
+    fontSize: "32px",
+    color: "#FB3F6C",
+    fontFamily: "cursive",
   })
 );

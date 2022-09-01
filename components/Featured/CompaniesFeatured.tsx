@@ -140,44 +140,6 @@ export default function CompaniesFeatured({}: Props) {
             </div>
           </div>
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flexDirection: "column",
-            alignItems: "center",
-            marginTop: "50px",
-            gap: "1rem",
-          }}
-        >
-          <BasicTextHeader style={{ color: "#2B2B2B" }}>
-            Become a seller
-          </BasicTextHeader>
-          <BasicTextbody style={{ width: "495px" }} align="center">
-            Sign up for free and offers your services to our audience while
-            building your client base on Elverr.
-          </BasicTextbody>
-          <img src="users.png" alt="users" />
-          <img src="ratings.png" alt="ratings" />
-        </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flexDirection: "column",
-            alignItems: "center",
-            marginTop: "50px",
-            gap: "1rem",
-          }}
-        >
-          <BasicTextHeader style={{ color: "#2B2B2B" }}>
-            Become an Agency
-          </BasicTextHeader>
-          <BasicTextbody style={{ width: "495px" }} align="center">
-            Create a team of experienced freelancers to suit your business
-            projects offers.
-          </BasicTextbody>
-        </div>
       </div>
     </StyledBox>
   );
