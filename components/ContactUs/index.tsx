@@ -26,7 +26,7 @@ const ContactUs: React.FunctionComponent<IAppProps> = (props) => {
       >
         <CustomDiv>
           <CustomInfo>
-            <h1>We'd Love To Hear From You.</h1>
+            <h1>We Love To Hear From You.</h1>
             <CustomTypography paragraph>
               We strive to bring professionals together and we value your input
               to our quest. Every message counts as it will help us understand
