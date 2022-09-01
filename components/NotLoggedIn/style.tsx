@@ -19,8 +19,8 @@ import {
 export const StyledBox = styled(Box)(
   sx({
     boxSizing: "border-box",
-    paddingRight: "100px",
-    paddingLeft: "100px",
+    paddingRight: { md: "50px", lg: "100px" },
+    paddingLeft: { md: "40px", lg: "100px" },
     paddingTop: "2rem",
     paddingBottom: "1rem",
     display: "flex",

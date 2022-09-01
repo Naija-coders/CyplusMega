@@ -106,7 +106,7 @@ export const BasicTextHeader = styled(Typography)(
     fontFamily: "DM Sans",
     fontStyle: "normal",
     fontWeight: "700",
-    fontSize: "39px",
+    fontSize: { md: "30px", lg: "39px" },
     lineHeight: "46px",
     color: "#34A422",
   })
