@@ -43,7 +43,7 @@ export const Div2 = styled("div")(
 
 export const CustomTypography = styled(Typography)(
   sx({
-    fontSize: { xs: "20px", sm: "30px", md: "40px", lg: "60px" },
+    fontSize: { xs: "20px", sm: "30px", md: "50px", lg: "70px" },
     fontStyle: "bold",
     color: " #FFFFFF",
     position: "relative",
