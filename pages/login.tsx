@@ -11,6 +11,7 @@ export default function login({}: Props) {
         <title>Elverr - Login</title>
       </Head>
       <Login />
+      <div style={{ marginTop: "40px" }}></div>
     </HomePageLayout>
   );
 }
