@@ -64,8 +64,8 @@ const Login: React.FC<Props> = ({}) => {
 
               display: "flex",
               flexDirection: "column",
-              padding: "1rem",
-              gap: "1rem",
+              padding: "3rem",
+              gap: "0.4rem",
             }}
           >
             <BasicTextHeader style={{ color: "#000000" }}>
