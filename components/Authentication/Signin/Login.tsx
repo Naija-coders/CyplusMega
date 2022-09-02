@@ -4,11 +4,27 @@ import {
   TextField,
   Checkbox,
   FormControlLabel,
+  Avatar,
 } from "@mui/material";
 import * as React from "react";
 
 import { StyledBox, StyleContainer } from "../..//NotLoggedIn/style";
 import SwiperSlider from "../../SlideCustomCard/SwiperSlider";
+import {
+  BasicText,
+  BasicTextHeader,
+  BasicTextbody,
+  CustomPaper,
+  BasicTextTitle,
+  BasicPaper,
+  BasicImage,
+  BasicServiceTitle,
+  BasicDiv,
+  BasicServiceButton,
+  BasicServiceDiv,
+  BasicServiceGrid,
+} from "../../Featured/styles";
+import { StyledTextField } from "./styles";
 
 type Props = {};
 const Login: React.FC<Props> = ({}) => {
@@ -52,29 +68,93 @@ const Login: React.FC<Props> = ({}) => {
               gap: "1rem",
             }}
           >
-            <div>Welcome</div>
-            <div>
+            <BasicTextHeader style={{ color: "#000000" }}>
+              Welcome 👋
+            </BasicTextHeader>
+            <BasicTextbody>
               Clarity gives you the blocks and components you need to create a
               truly professional website.
-            </div>
-            <Button variant="contained" style={{ borderRadius: "20px" }}>
+            </BasicTextbody>
+            <Button
+              sx={{
+                "background": "#1E293B",
+                "&:hover": { background: "#1E293B" },
+                "textTransform": "none",
+              }}
+              startIcon={
+                <Avatar
+                  src="googleimagelogo.png"
+                  sx={{ width: 24, height: 24 }}
+                />
+              }
+              variant="contained"
+              style={{ borderRadius: "20px" }}
+            >
               Sign up with Google
             </Button>
-            <label>First & last name </label>
-            <TextField />
-            <label>Email Address </label>
-            <TextField />
-            <label>Password </label>
-            <TextField />
+            <BasicTextbody sx={{ fontSize: "0.9rem" }}>
+              First & last name{" "}
+            </BasicTextbody>
+            <StyledTextField size="small" placeholder="i.e Davon Lean" />
+            <BasicTextbody sx={{ fontSize: "0.9rem" }}>
+              Email Address{" "}
+            </BasicTextbody>
+            <StyledTextField size="small" placeholder="i.e davon@gmail.com" />
+            <BasicTextbody sx={{ fontSize: "0.9rem" }}>Password </BasicTextbody>
+            <StyledTextField
+              type={"password"}
+              size="small"
+              placeholder="********"
+            />
             <FormControlLabel
               value="start"
-              control={<Checkbox />}
-              label="Remember me"
+              control={
+                <Checkbox
+                  sx={{
+                    "color": "#747582",
+                    "&.Mui-checked": {
+                      color: "green",
+                    },
+                  }}
+                />
+              }
+              label={
+                <BasicTextbody sx={{ fontSize: "0.9rem" }}>
+                  Remember me{" "}
+                </BasicTextbody>
+              }
               labelPlacement="end"
             />
-            <Button variant="contained" style={{ borderRadius: "20px" }}>
+            <Button
+              variant="contained"
+              sx={{
+                "borderRadius": "20px",
+                "textTransform": "none",
+                "width": "40%",
+                "&:hover": { background: "#34A422" },
+                "background": "#34A422",
+              }}
+              size="large"
+            >
               Sign up
             </Button>
+            <div style={{ display: "flex", gap: "10px" }}>
+              <BasicTextbody sx={{ fontSize: "0.9rem" }}>
+                {"Don't have an account?"}
+              </BasicTextbody>
+              <BasicTextbody
+                sx={{
+                  "fontSize": "0.9rem",
+                  "color": "#34A422",
+                  "&:hover": {
+                    textDecoration: "underline",
+                    cursor: "pointer",
+                  },
+                }}
+              >
+                {"Create free account"}
+              </BasicTextbody>
+            </div>
           </Paper>
         </div>
       </StyleContainer>

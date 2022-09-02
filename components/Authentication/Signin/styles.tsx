@@ -55,13 +55,29 @@ export const CustomDivider = styled(Divider)(
 );
 export const StyledTextField = styled(TextField)(
   sx({
-    width: "80%",
+    "minWidth": {
+      xs: "84%",
+      sm: "100%",
+      md: "90%",
+      lg: "90%",
+      xl: "90%",
+    },
+    "border": "1px solid #334155",
+    "borderStyle": "none",
+    "display": { xs: "flex", md: "flex", lg: "flex", xl: "flex" },
 
-    marginTop: "30px",
-    color: "white",
-    borderRadius: "10px",
+    "background": "#ffff",
+    "borderRadius": "30px",
 
-    textTransform: "none",
+    "outline": 0,
+    "& fieldset": {
+      borderRadius: "30px",
+    },
+    "& .MuiInputBase-root": {},
+    "& input::placeholder": {
+      paddingLeft: "1rem",
+      fontFamily: "DM Sans",
+    },
   })
 );
 export const StyledBox = styled(Box)(
