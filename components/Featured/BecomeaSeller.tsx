@@ -61,7 +61,7 @@ export default function BecomeaSeller({}: Props) {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            marginTop: "30px",
+            marginTop: "50px",
           }}
         >
           <BasicTextHeader style={{ color: "#2B2B2B" }}>
@@ -78,7 +78,6 @@ export default function BecomeaSeller({}: Props) {
             justifyContent: "space-evenly",
             flexDirection: "row",
 
-            marginTop: "30px",
             gap: "1rem",
           }}
         >
@@ -119,7 +118,7 @@ export default function BecomeaSeller({}: Props) {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            marginTop: "40px",
+            marginTop: "50px",
           }}
         >
           <BasicTextHeader style={{ color: "#2B2B2B" }} align={"center"}>
@@ -143,7 +142,7 @@ export default function BecomeaSeller({}: Props) {
             backgroundPosition: "center",
           }}
         ></div>
-        <div style={{ marginTop: "80px" }}>
+        <div style={{ marginTop: "50px" }}>
           <div style={{ display: "flex", gap: "1rem" }}>
             <BasicTextHeader style={{ color: "#2B2B2B" }}>
               Enjoy unlimited access to world class talent on

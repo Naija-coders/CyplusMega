@@ -52,7 +52,12 @@ export const TypographyStyle = styled(Typography)(
     "&:hover": {
       cursor: "pointer",
       color: "green !important",
-      textDecoration: "underline",
+      fontWeight: 700,
+      transition: " color 10s",
+      transitionProperty: " color",
+      transitionDuration: "0.2s",
+      transitionTimingFunction: "ease",
+      transitionDelay: "0s",
     },
   })
 );

@@ -47,7 +47,7 @@ export default function CompaniesFeatured({}: Props) {
           />
         </StyledDiv>
         <br></br>
-        <div>
+        <div style={{ marginTop: "50px" }}>
           <BasicText>PROFESSIONAL SERVICES</BasicText>
         </div>
         <br></br>

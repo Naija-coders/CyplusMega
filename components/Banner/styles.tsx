@@ -28,7 +28,7 @@ export const Div1 = styled("div")(
     flexDirection: "row",
     gap: "30px",
     position: "absolute",
-    top: { xs: "450px", sm: "400px", md: "550px", lg: "550px" },
+    top: { xs: "450px", sm: "400px", md: "500px", lg: "550px" },
 
     zIndex: 1,
   })
@@ -48,7 +48,7 @@ export const CustomTypography = styled(Typography)(
     color: " #FFFFFF",
     position: "relative",
 
-    top: { xs: "150px", sm: "100px", md: "250px", lg: "200px" },
+    top: { xs: "150px", sm: "100px", md: "200px", lg: "200px" },
     width: { md: "600px", sm: "400px", lg: "915px" },
     height: "182px",
     lineHeight: { md: "60px", lg: "91px" },
@@ -67,7 +67,7 @@ export const BannerImage = styled("img")(
 );
 export const CustomImage = styled("div")(
   sx({
-    height: { xs: "400px", sm: "400px", md: "600px", xl: "900px" },
+    height: { xs: "400px", sm: "400px", md: "500px", lg: "580px", xl: "900px" },
   })
 );
 

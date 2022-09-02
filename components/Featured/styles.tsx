@@ -56,6 +56,7 @@ export const StyledDiv = styled("div")(
     flexDirection: "row",
     justifyContent: "space-evenly",
     alignItems: "center",
+    marginTop: "-50px",
   })
 );
 export const MainDivs = styled("div")(
