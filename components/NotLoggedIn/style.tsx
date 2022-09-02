@@ -47,7 +47,7 @@ export const TypographyStyle = styled(Typography)(
   sx({
     "fontFamily": "DM Sans",
     "fontWeight": 500,
-    "fontSize": { sm: "0.7rem", md: "0.9rem", lg: "1.2rem" },
+    "fontSize": { sm: "0.7rem", md: "0.9rem", lg: "18px" },
     "lineHeight": "31px",
     "&:hover": {
       cursor: "pointer",
