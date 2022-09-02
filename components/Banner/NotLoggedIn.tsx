@@ -33,6 +33,10 @@ export default function NotLoggedIn() {
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(0, 0, 0, 0.5) 54.51%),linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(0, 0, 0, 0.5) 54.51%)",
+        }}
       >
         {" "}
         <SwiperSlide>
@@ -41,10 +45,10 @@ export default function NotLoggedIn() {
             style={{
               minWidth: "100%",
 
-              backgroundImage: `url("pics3.jpeg")`,
+              backgroundImage: `linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(0, 0, 0, 0.5) 54.51%),url("pics3.jpeg")`,
               backgroundSize: "100% 140%",
               backgroundRepeat: "no-repeat",
-              backgroundBlendMode: "darken",
+
               backgroundPosition: "center",
             }}
           >
@@ -69,10 +73,10 @@ export default function NotLoggedIn() {
             style={{
               minWidth: "100%",
 
-              backgroundImage: `url("pics2.jpeg")`,
+              backgroundImage: `linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(0, 0, 0, 0.5) 54.51%),url("pics2.jpeg")`,
               backgroundSize: "100% 140%",
               backgroundRepeat: "no-repeat",
-              backgroundBlendMode: "darken",
+
               backgroundPosition: "center",
             }}
           >
@@ -97,10 +101,10 @@ export default function NotLoggedIn() {
             style={{
               minWidth: "100%",
 
-              backgroundImage: `url("pics1.jpeg")`,
+              backgroundImage: `linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(0, 0, 0, 0.5) 54.51%),url("pics1.jpeg")`,
               backgroundSize: "100% 140%",
               backgroundRepeat: "no-repeat",
-              backgroundBlendMode: "darken",
+
               backgroundPosition: "center",
             }}
           >
