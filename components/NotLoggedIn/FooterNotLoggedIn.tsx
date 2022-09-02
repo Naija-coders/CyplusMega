@@ -46,7 +46,7 @@ const FooterNotLoggedIn: React.FC<Props> = ({}) => {
                   height: " 52.59px",
                   objectFit: "contain",
                   userSelect: "none",
-                  marginLeft: "-23px",
+                  marginLeft: "-43px",
                 }}
               />
             </div>

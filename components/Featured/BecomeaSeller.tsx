@@ -154,10 +154,10 @@ export default function BecomeaSeller({}: Props) {
           <div
             style={{
               minWidth: "100%",
-              height: "400px",
+              height: "650px",
               marginTop: "20px",
               backgroundImage: `url("world.png")`,
-              backgroundSize: "contain",
+              backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundBlendMode: "darken",
               backgroundPosition: "center",

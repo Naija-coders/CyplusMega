@@ -140,7 +140,7 @@ export default function NotLoggedIn() {
               />
             </Div2>
             <GetStartedBtn size="small" variant="outlined">
-              Get Statrted
+              Get Started
             </GetStartedBtn>
           </Div1>
         </div>

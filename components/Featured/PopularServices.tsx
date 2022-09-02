@@ -41,7 +41,7 @@ export default function PopularServices({}: Props) {
             <BasicImage src="servicesit.jpeg" />
             <BasicDiv>
               <BasicServiceTitle> IT Services</BasicServiceTitle>
-              <BasicText>
+              <BasicText align="center">
                 {" "}
                 We’ll get you directly seated and inside for you to enjoy the
                 show.
@@ -52,7 +52,7 @@ export default function PopularServices({}: Props) {
             <BasicImage src="servicelogistics.jpeg" />
             <BasicDiv>
               <BasicServiceTitle> Logistics Services</BasicServiceTitle>
-              <BasicText>
+              <BasicText align="center">
                 {" "}
                 We’ll get you directly seated and inside for you to enjoy the
                 show.
@@ -63,7 +63,7 @@ export default function PopularServices({}: Props) {
             <BasicImage src="servicebuilding.jpeg" />
             <BasicDiv>
               <BasicServiceTitle> Building Services</BasicServiceTitle>
-              <BasicText>
+              <BasicText align="center">
                 {" "}
                 We’ll get you directly seated and inside for you to enjoy the
                 show.
@@ -74,7 +74,7 @@ export default function PopularServices({}: Props) {
             <BasicImage src="serviceautomative.jpeg" />
             <BasicDiv>
               <BasicServiceTitle> Automative Services</BasicServiceTitle>
-              <BasicText>
+              <BasicText align="center">
                 {" "}
                 We’ll get you directly seated and inside for you to enjoy the
                 show.
@@ -85,7 +85,7 @@ export default function PopularServices({}: Props) {
             <BasicImage src="serviceimage.jpeg" />
             <BasicDiv>
               <BasicServiceTitle> Cleaning Services</BasicServiceTitle>
-              <BasicText>
+              <BasicText align="center">
                 {" "}
                 We’ll get you directly seated and inside for you to enjoy the
                 show.

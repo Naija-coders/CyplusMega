@@ -99,6 +99,7 @@ export const BasicText = styled(Typography)(
     fontWeight: "700",
     fontSize: "1rem",
     lineHeight: "24px",
+
     color: "#747582",
   })
 );
@@ -194,6 +195,7 @@ export const BasicDiv = styled("div")(
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+
     padding: "1rem",
   })
 );

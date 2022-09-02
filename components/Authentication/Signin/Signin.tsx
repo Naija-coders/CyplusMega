@@ -111,9 +111,7 @@ const Signin: React.FC<Props> = ({ saveUser, CloseModalForm, onSuccess }) => {
             fontWeight: "bold",
             marginTop: "30px",
           }}
-        >
-          Log In
-        </Typography>
+        ></Typography>
         <CustomDivider />
         <br></br>
         <div

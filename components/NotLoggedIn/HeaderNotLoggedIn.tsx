@@ -61,16 +61,40 @@ const HeaderNotLoggedIn: React.FC<Props> = ({}) => {
             >
               Become a Seller
             </TypographyStyle>
-            <TypographyStyle
-              style={{
-                color: "#747582",
-              }}
-              onClick={() => {
-                route.push("/login");
-              }}
-            >
-              Log in / Sign up
-            </TypographyStyle>
+            <div style={{ display: "flex", gap: "2px" }}>
+              <TypographyStyle
+                sx={{
+                  "color": "#747582",
+                  "&:hover": { textDecoration: "underline" },
+                }}
+                onClick={() => {
+                  route.push("/login");
+                }}
+              >
+                Login
+              </TypographyStyle>
+              <TypographyStyle
+                sx={{
+                  "color": "#747582",
+                  "&:hover": {
+                    color: "#747582 !important",
+                  },
+                }}
+              >
+                /
+              </TypographyStyle>
+              <TypographyStyle
+                sx={{
+                  "color": "#747582",
+                  "&:hover": { textDecoration: "underline" },
+                }}
+                onClick={() => {
+                  route.push("/signup");
+                }}
+              >
+                Sign up
+              </TypographyStyle>
+            </div>
           </div>
         </div>
       </div>

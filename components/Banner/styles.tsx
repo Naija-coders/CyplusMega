@@ -131,16 +131,21 @@ export const StyledTextFieldSearch = styled(TextField)(
 );
 export const GetStartedBtn = styled(Button)(
   sx({
-    fontWeight: "bold",
-    width: { xs: "30%", lg: "213.5px" },
-    height: { xs: "45px", md: "70px" },
+    "fontWeight": "bold",
+    "width": { xs: "30%", lg: "213.5px" },
+    "height": { xs: "45px", md: "70px" },
 
-    borderRadius: "195.2px",
-    border: " 3px solid rgba(255, 255, 255, 0.8)",
-    filter: " drop-shadow(0px 30.5px 50.8333px rgba(168, 22, 75, 0.15))",
-    textTransform: "none",
-    fontFamily: "DM Sans",
-    color: "#FFFFFF",
+    "borderRadius": "195.2px",
+    "border": " 3px solid rgba(255, 255, 255, 0.8)",
+    "filter": " drop-shadow(0px 30.5px 50.8333px rgba(168, 22, 75, 0.15))",
+    "textTransform": "none",
+    "fontFamily": "DM Sans",
+    "transition": "ease-in 300ms",
+    "&:hover": {
+      background: "green",
+      border: " 3px solid rgba(255, 255, 255, 0.8)",
+    },
+    "color": "#FFFFFF",
   })
 );
 export const StyledContainers = styled("div")(

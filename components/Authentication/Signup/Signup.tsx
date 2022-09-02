@@ -230,9 +230,7 @@ const SignUp: React.FC<Props> = ({}) => {
                 textDecorationLine: "underline",
                 cursor: "pointer",
               }}
-            >
-              Log In
-            </Typography>
+            ></Typography>
           </Typography>
         </div>
       </StyledBox>
