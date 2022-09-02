@@ -71,10 +71,12 @@ const Login: React.FC<Props> = ({}) => {
             <BasicTextHeader style={{ color: "#000000" }}>
               Welcome 👋
             </BasicTextHeader>
+
             <BasicTextbody>
               Clarity gives you the blocks and components you need to create a
               truly professional website.
             </BasicTextbody>
+            <br></br>
             <Button
               sx={{
                 "background": "#1E293B",
@@ -136,7 +138,7 @@ const Login: React.FC<Props> = ({}) => {
               }}
               size="large"
             >
-              Sign up
+              Sign In
             </Button>
             <div style={{ display: "flex", gap: "10px" }}>
               <BasicTextbody sx={{ fontSize: "0.9rem" }}>
