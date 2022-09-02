@@ -61,6 +61,8 @@ export const BannerImage = styled("img")(
   sx({
     height: { md: "100px" },
     objectFit: "contain",
+    background:
+      "linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(0, 0, 0, 0.5) 54.51%)",
   })
 );
 export const CustomImage = styled("div")(

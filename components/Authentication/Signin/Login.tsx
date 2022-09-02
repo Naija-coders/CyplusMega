@@ -64,7 +64,7 @@ const Login: React.FC<Props> = ({}) => {
 
               display: "flex",
               flexDirection: "column",
-              padding: "3rem",
+              padding: "1rem",
               gap: "1rem",
             }}
           >
