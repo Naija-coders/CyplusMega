@@ -16,6 +16,13 @@ import {
 } from "@mui/system";
 //for container use width 100%
 //maxwidth 1500px
+export const StyleContainer = styled("div")(
+  sx({
+    justifyContent: "space-around",
+    maxWidth: "1500px",
+    width: "100%",
+  })
+);
 export const StyledBox = styled(Box)(
   sx({
     boxSizing: "border-box",
@@ -38,10 +45,15 @@ export const StyledImage = styled("img")(
 );
 export const TypographyStyle = styled(Typography)(
   sx({
-    fontFamily: "DM Sans",
-    fontWeight: 500,
-    fontSize: { sm: "0.7rem", md: "0.9rem", lg: "1.2rem" },
-    lineHeight: "31px",
+    "fontFamily": "DM Sans",
+    "fontWeight": 500,
+    "fontSize": { sm: "0.7rem", md: "0.9rem", lg: "1.2rem" },
+    "lineHeight": "31px",
+    "&:hover": {
+      cursor: "pointer",
+      color: "green !important",
+      textDecoration: "underline",
+    },
   })
 );
 

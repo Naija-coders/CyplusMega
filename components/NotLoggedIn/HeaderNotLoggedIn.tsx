@@ -1,10 +1,12 @@
 import * as React from "react";
 import { StyledBox, TypographyStyle, StyledImage } from "./style";
+import { useRouter } from "next/router";
 import Typography from "@mui/material/Typography";
 
 type Props = {};
 
 const HeaderNotLoggedIn: React.FC<Props> = ({}) => {
+  const route = useRouter();
   return (
     <StyledBox>
       <div
@@ -23,7 +25,11 @@ const HeaderNotLoggedIn: React.FC<Props> = ({}) => {
             justifyContent: "space-between",
           }}
         >
-          <div>
+          <div
+            onClick={() => {
+              route.push("/");
+            }}
+          >
             <StyledImage src="elverrlogo.png"></StyledImage>
           </div>
           <div style={{ display: "flex", gap: "50px" }}>
@@ -58,6 +64,9 @@ const HeaderNotLoggedIn: React.FC<Props> = ({}) => {
             <TypographyStyle
               style={{
                 color: "#747582",
+              }}
+              onClick={() => {
+                route.push("/login");
               }}
             >
               Log in / Sign up
