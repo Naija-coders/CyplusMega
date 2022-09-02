@@ -69,6 +69,9 @@ const Home: NextPage = () => {
       </div>{" "}
     </Layout> */
     <HomePageLayout>
+      <Head>
+        <title>Elverr - The Market Place</title>
+      </Head>
       <NotLoggedIn />
       <CompaniesFeatured />
       <PopularServices />
