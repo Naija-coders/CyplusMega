@@ -3,10 +3,10 @@ import { Action } from "../actions"
 import Clientapi from "../../pages/api/client";
 
 let categoryres;
-let servicedata = Clientapi.get("/api/company/services").then((response) => {
+/* let servicedata = Clientapi.get("/api/company/services").then((response) => {
   categoryres = response.data;
   console.log("checking userservice response", categoryres);
-});
+}); */
 const initialState = {
     user: [],
     isLoggedIn: false,
@@ -15,8 +15,8 @@ const initialState = {
     services: [],
     mainservices : [],
     userfavorite : [],
-    userservices: !!servicedata,
-    servicedata: [],
+
+
     allservicedata: [],
     recommended:[],
     viewed: '',
