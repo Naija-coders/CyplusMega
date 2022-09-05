@@ -43,7 +43,6 @@ const Login: React.FC<Props> = ({}) => {
             elevation={0}
             style={{
               width: "50%",
-              background: "rgba(128, 204, 40, 0.1)",
 
               display: "flex",
               flexDirection: "column",
@@ -138,7 +137,7 @@ const Login: React.FC<Props> = ({}) => {
               }}
               size="large"
             >
-              Sign In
+              Sign Up
             </Button>
             <div style={{ display: "flex", gap: "10px" }}>
               <BasicTextbody sx={{ fontSize: "0.9rem" }}>
