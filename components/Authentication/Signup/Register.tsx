@@ -55,6 +55,7 @@ const Register: React.FC<Props> = ({}) => {
               <SwiperSlider />
             </div>
           </Paper>
+
           <Paper
             elevation={0}
             style={{
@@ -76,6 +77,7 @@ const Register: React.FC<Props> = ({}) => {
               truly professional website.
             </BasicTextbody>
             <br></br>
+
             <Button
               sx={{
                 "background": "#1E293B",
@@ -93,52 +95,65 @@ const Register: React.FC<Props> = ({}) => {
             >
               Sign in with Google
             </Button>
-
-            <BasicTextbody sx={{ fontSize: "0.9rem" }}>
-              Email Address{" "}
-            </BasicTextbody>
-            <StyledTextField size="small" placeholder="i.e davon@gmail.com" />
-            <BasicTextbody sx={{ fontSize: "0.9rem" }}>Password </BasicTextbody>
-            <StyledTextField
-              type={"password"}
-              size="small"
-              placeholder="********"
-            />
-            <FormControlLabel
-              value="start"
-              control={
-                <Checkbox
-                  sx={{
-                    "color": "#747582",
-                    "&.Mui-checked": {
-                      color: "green",
-                    },
-                  }}
-                />
-              }
-              label={
-                <BasicTextbody sx={{ fontSize: "0.9rem" }}>
-                  Remember me{" "}
-                </BasicTextbody>
-              }
-              labelPlacement="end"
-            />
-            <Button
-              variant="contained"
-              sx={{
-                "borderRadius": "20px",
-                "textTransform": "none",
-                "width": "40%",
-                "&:hover": { background: "#34A422" },
-                "background": "#34A422",
-              }}
-              size="large"
+            <form
+              style={{ display: "flex", flexDirection: "column", gap: "10px" }}
             >
-              Sign Up
-            </Button>
+              <BasicTextbody sx={{ fontSize: "0.9rem" }}>
+                {"First & Last Name "}
+              </BasicTextbody>
+              <StyledTextField size="small" placeholder="i.e Davon lean" />
+              <BasicTextbody sx={{ fontSize: "0.9rem" }}>
+                Password{" "}
+              </BasicTextbody>{" "}
+              <BasicTextbody sx={{ fontSize: "0.9rem" }}>
+                Email Address{" "}
+              </BasicTextbody>
+              <StyledTextField size="small" placeholder="i.e davon@gmail.com" />
+              <BasicTextbody sx={{ fontSize: "0.9rem" }}>
+                Password{" "}
+              </BasicTextbody>
+              <StyledTextField
+                type={"password"}
+                size="small"
+                placeholder="********"
+              />
+              <FormControlLabel
+                value="start"
+                control={
+                  <Checkbox
+                    sx={{
+                      "color": "#747582",
+                      "&.Mui-checked": {
+                        color: "green",
+                      },
+                    }}
+                  />
+                }
+                label={
+                  <BasicTextbody sx={{ fontSize: "0.9rem" }}>
+                    Remember me{" "}
+                  </BasicTextbody>
+                }
+                labelPlacement="end"
+              />
+              <Button
+                variant="contained"
+                sx={{
+                  "borderRadius": "20px",
+                  "textTransform": "none",
+                  "width": "40%",
+                  "&:hover": { background: "#34A422" },
+                  "background": "#34A422",
+                }}
+                size="large"
+              >
+                Sign Up
+              </Button>
+            </form>
+
             <div style={{ display: "flex", gap: "10px" }}>
               <BasicTextbody sx={{ fontSize: "0.9rem" }}>
-                {"Don't have an account?"}
+                {"Already have an account?"}
               </BasicTextbody>
               <BasicTextbody
                 sx={{
@@ -150,7 +165,7 @@ const Register: React.FC<Props> = ({}) => {
                   },
                 }}
               >
-                {"Create free account"}
+                {"Sign in"}
               </BasicTextbody>
             </div>
           </Paper>
