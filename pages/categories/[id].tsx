@@ -9,13 +9,13 @@ interface Props {
 const Categoriesid: React.FC<Props> = ({ query, ourService }) => {
   return (
     <Layout showSearch={true}>
-      <div style={{ marginTop: "10%" }}>
+      {/*    <div style={{ marginTop: "10%" }}>
         <CustomCategories query={query} servicesState={ourService} />
-      </div>
+      </div> */}
     </Layout>
   );
 };
-export async function getServerSideProps(context: any) {
+/* export async function getServerSideProps(context: any) {
   const query = context.query;
   let datas;
   const { res } = context;
@@ -31,6 +31,6 @@ export async function getServerSideProps(context: any) {
   return {
     props: { query, ourService },
   };
-}
+} */
 
 export default Categoriesid;

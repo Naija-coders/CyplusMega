@@ -10,11 +10,11 @@ type Props = {
 export default function categories({ ourService }: Props) {
   return (
     <Layout showSearch={true}>
-      <CustomCategories servicesState={ourService} />
+      {/*  <CustomCategories servicesState={ourService} /> */}
     </Layout>
   );
 }
-export async function getStaticProps(context: any) {
+/* export async function getStaticProps(context: any) {
   let datas;
   const mydata = Clientapi.get("/api/company/categories")
     .then((response) => {
@@ -31,3 +31,4 @@ export async function getStaticProps(context: any) {
     revalidate: 360,
   };
 }
+ */

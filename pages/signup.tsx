@@ -8,7 +8,7 @@ export default function login({}: Props) {
   return (
     <HomePageLayout>
       <Head>
-        <title>Elverr - Login</title>
+        <title>Elverr - Sign up</title>
       </Head>
       <Register />
       <div style={{ marginTop: "40px" }}></div>
