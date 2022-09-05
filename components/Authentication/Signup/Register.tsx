@@ -1,0 +1,163 @@
+import {
+  Paper,
+  Button,
+  TextField,
+  Checkbox,
+  FormControlLabel,
+  Avatar,
+} from "@mui/material";
+import * as React from "react";
+
+import { StyledBox, StyleContainer } from "../../NotLoggedIn/style";
+import SwiperSlider from "../../SlideCustomCard/SwiperSlider";
+import {
+  BasicText,
+  BasicTextHeader,
+  BasicTextbody,
+  CustomPaper,
+  BasicTextTitle,
+  BasicPaper,
+  BasicImage,
+  BasicServiceTitle,
+  BasicDiv,
+  BasicServiceButton,
+  BasicServiceDiv,
+  BasicServiceGrid,
+} from "../../Featured/styles";
+import { StyledTextField } from "../Signin/styles";
+
+type Props = {};
+const Register: React.FC<Props> = ({}) => {
+  return (
+    <StyledBox>
+      <StyleContainer>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            width: "100%",
+            justifyContent: "center",
+          }}
+        >
+          <Paper
+            elevation={0}
+            style={{
+              width: "50%",
+
+              display: "flex",
+              flexDirection: "column",
+              padding: "3rem",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <div style={{ width: "95%" }}>
+              <SwiperSlider />
+            </div>
+          </Paper>
+          <Paper
+            elevation={0}
+            style={{
+              width: "40%",
+              background: "white",
+
+              display: "flex",
+              flexDirection: "column",
+              padding: "3rem",
+              gap: "0.4rem",
+            }}
+          >
+            <BasicTextHeader style={{ color: "#000000" }}>
+              Welcome 👋
+            </BasicTextHeader>
+
+            <BasicTextbody>
+              Clarity gives you the blocks and components you need to create a
+              truly professional website.
+            </BasicTextbody>
+            <br></br>
+            <Button
+              sx={{
+                "background": "#1E293B",
+                "&:hover": { background: "#1E293B" },
+                "textTransform": "none",
+              }}
+              startIcon={
+                <Avatar
+                  src="googleimagelogo.png"
+                  sx={{ width: 24, height: 24 }}
+                />
+              }
+              variant="contained"
+              style={{ borderRadius: "20px" }}
+            >
+              Sign in with Google
+            </Button>
+
+            <BasicTextbody sx={{ fontSize: "0.9rem" }}>
+              Email Address{" "}
+            </BasicTextbody>
+            <StyledTextField size="small" placeholder="i.e davon@gmail.com" />
+            <BasicTextbody sx={{ fontSize: "0.9rem" }}>Password </BasicTextbody>
+            <StyledTextField
+              type={"password"}
+              size="small"
+              placeholder="********"
+            />
+            <FormControlLabel
+              value="start"
+              control={
+                <Checkbox
+                  sx={{
+                    "color": "#747582",
+                    "&.Mui-checked": {
+                      color: "green",
+                    },
+                  }}
+                />
+              }
+              label={
+                <BasicTextbody sx={{ fontSize: "0.9rem" }}>
+                  Remember me{" "}
+                </BasicTextbody>
+              }
+              labelPlacement="end"
+            />
+            <Button
+              variant="contained"
+              sx={{
+                "borderRadius": "20px",
+                "textTransform": "none",
+                "width": "40%",
+                "&:hover": { background: "#34A422" },
+                "background": "#34A422",
+              }}
+              size="large"
+            >
+              Sign Up
+            </Button>
+            <div style={{ display: "flex", gap: "10px" }}>
+              <BasicTextbody sx={{ fontSize: "0.9rem" }}>
+                {"Don't have an account?"}
+              </BasicTextbody>
+              <BasicTextbody
+                sx={{
+                  "fontSize": "0.9rem",
+                  "color": "#34A422",
+                  "&:hover": {
+                    textDecoration: "underline",
+                    cursor: "pointer",
+                  },
+                }}
+              >
+                {"Create free account"}
+              </BasicTextbody>
+            </div>
+          </Paper>
+        </div>
+      </StyleContainer>
+    </StyledBox>
+  );
+};
+
+export default Register;

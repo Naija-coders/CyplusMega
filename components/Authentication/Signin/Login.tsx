@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import * as React from "react";
 
-import { StyledBox, StyleContainer } from "../..//NotLoggedIn/style";
+import { StyledBox, StyleContainer } from "../../NotLoggedIn/style";
 import SwiperSlider from "../../SlideCustomCard/SwiperSlider";
 import {
   BasicText,
@@ -91,12 +91,9 @@ const Login: React.FC<Props> = ({}) => {
               variant="contained"
               style={{ borderRadius: "20px" }}
             >
-              Sign up with Google
+              Sign in with Google
             </Button>
-            <BasicTextbody sx={{ fontSize: "0.9rem" }}>
-              First & last name{" "}
-            </BasicTextbody>
-            <StyledTextField size="small" placeholder="i.e Davon Lean" />
+
             <BasicTextbody sx={{ fontSize: "0.9rem" }}>
               Email Address{" "}
             </BasicTextbody>
