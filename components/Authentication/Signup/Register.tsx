@@ -166,9 +166,7 @@ const Register: React.FC<Props> = ({}) => {
                 required
                 {...register("name", { required: true, maxLength: 100 })}
               />
-              <BasicTextbody sx={{ fontSize: "0.9rem" }}>
-                Password{" "}
-              </BasicTextbody>{" "}
+
               <BasicTextbody sx={{ fontSize: "0.9rem" }}>
                 Email Address{" "}
               </BasicTextbody>
