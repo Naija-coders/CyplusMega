@@ -82,7 +82,7 @@ const Home: NextPage = () => {
         <PopularServices />
         <ElverrBanner />
         <BecomeaSeller />
-        <div style={{ marginTop: "250px" }}></div>
+        <div style={{ marginTop: "50px" }}></div>
       </>
     );
   };
