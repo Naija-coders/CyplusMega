@@ -88,14 +88,8 @@ const Home: NextPage = () => {
   };
   useEffect(() => {
     CheckAuth();
-    if (categories.length === 0) {
-      Clientapi.get("api/Categories").then((response) => {
-        setCategories(response.data);
-      });
-      console.log("the lenght wasnt fetched");
-    }
-  }, [categories]);
-  console.log("checking via the index", categories);
+  }, []);
+
   return (
     /*     <Layout showSearch={true} isVisible={false}>
       {" "}
