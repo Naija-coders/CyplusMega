@@ -20,17 +20,12 @@ import {
 
 export const StyledButton = styled(Button)(
   sx({
-    "width": { xs: "95%", md: "400px" },
-
-    "color": "white",
-
+    "borderRadius": "20px",
     "textTransform": "none",
-    "boxShadow": "  0px 1px 0px 1px #888888",
-    "marginTop": "15px",
-    "background": "	green",
-    "&:hover": {
-      background: "green",
-    },
+    "width": "40%",
+    "&:hover": { background: "#34A422" },
+    "background": "#34A422",
+    "color": "white",
   })
 );
 export const ContainerDiv = styled("div")(
@@ -115,13 +110,11 @@ export const StyleCheckoutButton = styled(Button)(
 
 export const StyleLoadingButton = styled(LoadingButton)(
   sx({
-    width: { xs: "95%", md: "400px" },
-    color: "white",
-    marginTop: "15px",
-
-    textTransform: "none",
-    background: "grey",
-    boxShadow: "  0px 1px 0px 1px grey",
+    "borderRadius": "20px",
+    "textTransform": "none",
+    "width": "40%",
+    "&:hover": { background: "#34A422" },
+    "background": "grey",
   })
 );
 export const StyledTypography = styled(Typography)(

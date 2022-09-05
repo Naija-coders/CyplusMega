@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useContext } from "react";
 import { Typography } from "@mui/material";
 import type { NextPage } from "next";
 import { useSelector, shallowEqual, useDispatch } from "react-redux";
@@ -22,6 +22,8 @@ import Featured from "../components/Featured/Featured";
 import Cookie from "../components/CookieManager/Cookie";
 import dynamic from "next/dynamic";
 import ChatWidget from "../components/ChatWidget/ChatWidget";
+import StateContext from "../context/StateContext";
+import Cookies from "js-cookie";
 import BecomeaSeller from "../components/Featured/BecomeaSeller";
 const TopCategories = dynamic(
   () => import("../components/TopCategories/TopCategories")
@@ -30,6 +32,11 @@ const TopCategories = dynamic(
 import "../i18n";
 import NotLoggedIn from "../components/Banner/NotLoggedIn";
 import PopularServices from "../components/Featured/PopularServices";
+interface Props {
+  query: any;
+  ourService: any;
+}
+
 const Home: NextPage = () => {
   const [categories, setCategories] = useState([]);
   const articles: readonly IArticle[] = useSelector(
@@ -38,8 +45,49 @@ const Home: NextPage = () => {
   );
 
   const dispatch: Dispatch<any> = useDispatch();
+  const [loggedIn, setLoggedIn] = useState(false);
 
+  const CheckAuth = () => {
+    if (AuthState.isLoggedIn) setLoggedIn(true);
+    else {
+      setLoggedIn(false);
+    }
+  };
+  const { AuthState } = useContext<any>(StateContext);
+
+  const LoggedIn = () => {
+    return (
+      <>
+        <div>
+          <div style={{ padding: "2.5rem" }}></div>
+          <Banner />
+
+          <Cookie />
+          <Featured />
+          <AvailableServices services={categories} />
+
+          <LatestServices />
+          <TopCategories />
+          <Recommended />
+          <ChatWidget />
+        </div>{" "}
+      </>
+    );
+  };
+  const NotRegistered = () => {
+    return (
+      <>
+        <NotLoggedIn />
+        <CompaniesFeatured />
+        <PopularServices />
+        <ElverrBanner />
+        <BecomeaSeller />
+        <div style={{ marginTop: "250px" }}></div>
+      </>
+    );
+  };
   useEffect(() => {
+    CheckAuth();
     if (categories.length === 0) {
       Clientapi.get("api/Categories").then((response) => {
         setCategories(response.data);
@@ -72,12 +120,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Elverr - The Market Place</title>
       </Head>
-      <NotLoggedIn />
-      <CompaniesFeatured />
-      <PopularServices />
-      <ElverrBanner />
-      <BecomeaSeller />
-      <div style={{ marginTop: "250px" }}></div>
+      {loggedIn ? <NotRegistered /> : <NotRegistered />}
     </HomePageLayout>
   );
 };
