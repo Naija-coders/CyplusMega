@@ -113,6 +113,10 @@ const Home: NextPage = () => {
     <HomePageLayout>
       <Head>
         <title>Elverr - The Market Place</title>
+        <meta
+          name="google-site-verification"
+          content="akR2jwmrZi2Uam2Y0H-VUckRGWE7VSQyxO676zfQg_Y"
+        />
       </Head>
       {loggedIn ? <NotRegistered /> : <NotRegistered />}
     </HomePageLayout>
