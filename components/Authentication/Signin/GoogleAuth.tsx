@@ -33,6 +33,7 @@ interface Props {
   onAuthenticated?: () => void;
 }
 const googleClientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
+const clientid = JSON.stringify(googleClientId);
 
 const GoogleOauth: React.FC<Props> = (props: Props) => {
   const [loading, setLoading] = React.useState(false);
@@ -46,7 +47,7 @@ const GoogleOauth: React.FC<Props> = (props: Props) => {
   return (
     <div style={{ justifyContent: "center" }}>
       <GoogleLogin
-        clientId={googleClientId}
+        clientId={clientid}
         onAutoLoadFinished={(successLogin) => {}}
         onSuccess={googleLoginHandler}
         render={(ownProps) => (
