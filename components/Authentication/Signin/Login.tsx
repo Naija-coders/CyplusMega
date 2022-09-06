@@ -45,6 +45,7 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import InputAdornment from "@mui/material/InputAdornment";
 import FormHelperText from "@mui/material/FormHelperText";
 import FormControl from "@mui/material/FormControl";
+import GoogleAuth from "./GoogleAuth";
 
 type Props = {};
 const Login: React.FC<Props> = ({}) => {
@@ -154,23 +155,7 @@ const Login: React.FC<Props> = ({}) => {
               truly professional website.
             </BasicTextbody>
             <br></br>
-            <Button
-              sx={{
-                "background": "#1E293B",
-                "&:hover": { background: "#1E293B" },
-                "textTransform": "none",
-              }}
-              startIcon={
-                <Avatar
-                  src="googleimagelogo.png"
-                  sx={{ width: 24, height: 24 }}
-                />
-              }
-              variant="contained"
-              style={{ borderRadius: "20px" }}
-            >
-              Sign in with Google
-            </Button>
+            <GoogleAuth />
             <form
               style={{ display: "flex", flexDirection: "column", gap: "10px" }}
               onSubmit={handleSubmit(onSubmit)}

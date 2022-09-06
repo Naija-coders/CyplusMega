@@ -13,6 +13,7 @@ import { StyledBox, StyleContainer } from "../../NotLoggedIn/style";
 import SwiperSlider from "../../SlideCustomCard/SwiperSlider";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
+import GoogleOauth from "../Signin/GoogleAuth";
 import {
   BasicText,
   BasicTextHeader,
@@ -65,6 +66,11 @@ const Register: React.FC<Props> = ({}) => {
   function handleClick() {
     setLoading(true);
   }
+  const handleGoogleLogin = () => {
+    Clientapi.get("api/auth/google").then((response) => {
+      console.log(response, "checking response");
+    });
+  };
   const onSubmit = async (data: any) => {
     console.log(data.email, "your email is ");
     console.log(data.password, "password is ");
@@ -135,23 +141,7 @@ const Register: React.FC<Props> = ({}) => {
             </BasicTextbody>
             <br></br>
 
-            <Button
-              sx={{
-                "background": "#1E293B",
-                "&:hover": { background: "#1E293B" },
-                "textTransform": "none",
-              }}
-              startIcon={
-                <Avatar
-                  src="googleimagelogo.png"
-                  sx={{ width: 24, height: 24 }}
-                />
-              }
-              variant="contained"
-              style={{ borderRadius: "20px" }}
-            >
-              Sign in with Google
-            </Button>
+            <GoogleOauth />
             <form
               style={{ display: "flex", flexDirection: "column", gap: "10px" }}
               onSubmit={handleSubmit(onSubmit)}
