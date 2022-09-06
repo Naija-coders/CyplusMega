@@ -47,6 +47,9 @@ const GoogleOauth: React.FC<Props> = ({}) => {
     setEmail(response.profileObj.email);
     setUrl(response.profileObj.imageUrl);
     setLoginStatus(true);
+    console.log("response name is ", response.profileObj.name);
+    console.log("response email is ", response.profileObj.email);
+    console.log("response profile obj is ", response.profileObj.imageUrl);
   };
   //make a props in the main page and pass the function which is the google login to the header page that way it should be fixed
   return (
