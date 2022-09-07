@@ -41,23 +41,34 @@ const GoogleOauth: React.FC<Props> = ({}) => {
   const [loginStatus, setLoginStatus] = React.useState(false);
 
   const route = useRouter();
-  const responseGoogle = (response: any) => {
-    console.log(response);
-    setName(response.profileObj.name);
-    setEmail(response.profileObj.email);
-    setUrl(response.profileObj.imageUrl);
-    setLoginStatus(true);
-    console.log("response name is ", response.profileObj.name);
-    console.log("response email is ", response.profileObj.email);
-    console.log("response profile obj is ", response.profileObj.imageUrl);
+  const googleLoginHandler = (response?: any) => {
+    setLoading(true);
+    const accessToken = { access_token: response.accessToken };
+    Clientapi.post("/api/login/google", accessToken)
+      .then(async (response: AxiosResponse) => {
+        Cookies.set("auth_token", response.data.token, {
+          domain: process.env.NEXT_PUBLIC_APP_DOMAIN ?? ".iskibris.com",
+          sameSite: "None",
+          secure: true,
+          expires: 364,
+        });
+        localStorage.setItem("mano_token", response.data["token"]);
+
+        console.log("this shit worked", response);
+      })
+      .catch((err: AxiosError) => {
+        setLoading(false);
+      });
   };
   //make a props in the main page and pass the function which is the google login to the header page that way it should be fixed
   return (
     <div style={{ justifyContent: "center" }}>
       <GoogleLogin
         clientId={googleClientId}
-        onSuccess={responseGoogle}
-        onFailure={responseGoogle}
+        onSuccess={googleLoginHandler}
+        onFailure={() => {
+          console.log("not success");
+        }}
         cookiePolicy={"single_host_origin"}
         render={(ownProps) => (
           <Button
