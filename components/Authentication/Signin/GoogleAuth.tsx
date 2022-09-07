@@ -31,7 +31,7 @@ import { route } from "next/dist/server/router";
 interface Props {}
 const googleClientId =
   process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID ??
-  "810142204796-049csl6vk8m7nctd9rljb44225k7fac2.apps.googleusercontent.com";
+  "810142204796-f4ben70l6156k4vl9fpfpifrgmt48aji.apps.googleusercontent.com";
 
 const GoogleOauth: React.FC<Props> = ({}) => {
   const [loading, setLoading] = React.useState(false);

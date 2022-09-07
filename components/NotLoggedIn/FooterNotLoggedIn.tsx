@@ -11,9 +11,11 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { InputAdornment } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import { useRouter } from "next/router";
 type Props = {};
 
 const FooterNotLoggedIn: React.FC<Props> = ({}) => {
+  const route = useRouter();
   return (
     <StyledBoxFooter>
       <div
@@ -117,7 +119,13 @@ const FooterNotLoggedIn: React.FC<Props> = ({}) => {
               <FooterTypo>Contact Us</FooterTypo>
               <FooterTypo>Help Center</FooterTypo>
               <FooterTypo>How it Works</FooterTypo>
-              <FooterTypo>Privacy </FooterTypo>
+              <FooterTypo
+                onClick={() => {
+                  route.push("/privacy-policies");
+                }}
+              >
+                Privacy{" "}
+              </FooterTypo>
               <FooterTypo>Terms </FooterTypo>
             </div>
             <div

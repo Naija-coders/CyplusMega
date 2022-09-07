@@ -77,9 +77,14 @@ export const StyledBoxFooter = styled(Box)(
 );
 export const FooterTypo = styled(Typography)(
   sx({
-    fontSize: "1rem",
-    color: "#F3F3F3",
-    fontFamily: "DM Sans",
+    "fontSize": "1rem",
+    "color": "#F3F3F3",
+    "fontFamily": "DM Sans",
+    "&:hover": {
+      textDecoration: "underline",
+      cursor: "pointer",
+      fontSize: "1.1rem",
+    },
   })
 );
 export const FooterHeader = styled(Typography)(
