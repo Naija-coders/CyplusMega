@@ -23,13 +23,13 @@ export default function privacyPolicies({}: Props) {
       <StyledBox>
         <StyleContainer>
           <BasicTextTitle style={{ fontSize: "1.5rem", fontWeight: "bolder" }}>
-            Privacy Policy
+            {" Privacy Policy"}
           </BasicTextTitle>
           <br></br>
           <BasicTextTitle style={{ fontSize: "1.2rem", fontWeight: "lighter" }}>
-            Your privacy is important to us. It is Unicorn Platform's policy to
-            respect your privacy regarding any information we may collect from
-            you across our website, https://elverr.company
+            Your privacy is important to us. It is Elverr policy to respect your
+            privacy regarding any information we may collect from you across our
+            website, https://elverr.company
           </BasicTextTitle>
           <br></br>
           <BasicTextTitle style={{ fontSize: "1.2rem", fontWeight: "lighter" }}>
@@ -40,7 +40,7 @@ export default function privacyPolicies({}: Props) {
           </BasicTextTitle>
           <br></br>
           <BasicTextTitle style={{ fontSize: "1.2rem", fontWeight: "lighter" }}>
-            We only keep the data we've acquired for as long as it takes to
+            We only keep the data we have acquired for as long as it takes to
             deliver the service you requested. We will safeguard the data we
             store using reasonable commercial efforts to thwart loss, theft, and
             unauthorized access, disclosure, copying, use, or alteration.
@@ -73,7 +73,7 @@ export default function privacyPolicies({}: Props) {
           <br></br>
           <BasicTextTitle style={{ fontSize: "1.2rem", fontWeight: "lighter" }}>
             You can delete your account and all associated data by visiting your
-            account settings and pressing the "Delete account" button.
+            account settings and pressing the Delete account button.
           </BasicTextTitle>
         </StyleContainer>
       </StyledBox>
