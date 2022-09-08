@@ -34,6 +34,9 @@ const HeaderNotLoggedIn: React.FC<Props> = ({}) => {
           </div>
           <div style={{ display: "flex", gap: "50px" }}>
             <TypographyStyle
+              onClick={() => {
+                route.push("https://business.elverr.com/");
+              }}
               style={{
                 color: "green",
               }}
