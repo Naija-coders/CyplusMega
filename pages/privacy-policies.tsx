@@ -29,7 +29,7 @@ export default function privacyPolicies({}: Props) {
           <BasicTextTitle style={{ fontSize: "1.2rem", fontWeight: "lighter" }}>
             Your privacy is important to us. It is Elverr policy to respect your
             privacy regarding any information we may collect from you across our
-            website, https://elverr.company
+            website, https://elverr.com
           </BasicTextTitle>
           <br></br>
           <BasicTextTitle style={{ fontSize: "1.2rem", fontWeight: "lighter" }}>
