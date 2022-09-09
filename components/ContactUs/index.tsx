@@ -45,7 +45,7 @@ const ContactUs: React.FunctionComponent<IAppProps> = (props) => {
             <CustomTextField fullWidth placeholder="First name" />
             <CustomTextField fullWidth placeholder="E-mail" />
             <CustomTextField fullWidth placeholder="Phone Number" />
-            <CustomTextArea minRows={5} placeholder="Message" />
+            <CustomTextArea minRows={6} placeholder="Message" />
             <CustomBtn variant="contained" size="large">
               Submit
             </CustomBtn>
