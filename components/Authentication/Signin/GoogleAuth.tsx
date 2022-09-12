@@ -14,14 +14,17 @@ import React from "react";
 import Cookies from "js-cookie";
 import ReactDOM from "react-dom";
 import { useRouter } from "next/router";
+import jwt_decode from "jwt-decode";
 
 import { useTranslation } from "react-i18next";
 import { AxiosError, AxiosResponse } from "axios";
 
 import { GoogleLogin } from "@react-oauth/google";
+import { useGoogleLogin } from "@react-oauth/google";
 import Clientapi from "../../../pages/api/client";
 import { Button, Avatar } from "@mui/material";
 import { StyleLoadingButton, StyledButton } from "../Signup/styles";
+import axios from "axios";
 //import OverlayLoader from "../../OverlayLoader"
 
 import Image from "next/image";
@@ -40,38 +43,47 @@ const GoogleOauth: React.FC<Props> = ({}) => {
   const [loginStatus, setLoginStatus] = React.useState(false);
 
   const route = useRouter();
-  const googleLoginHandler = (response?: any) => {
-    setLoading(true);
-    const accessToken = { access_token: response.accessToken };
-    Clientapi.post("/api/login/google", accessToken)
-      .then(async (response: AxiosResponse) => {
-        Cookies.set("auth_token", response.data.token, {
-          domain: process.env.NEXT_PUBLIC_APP_DOMAIN ?? ".iskibris.com",
-          sameSite: "None",
-          secure: true,
-          expires: 364,
-        });
-        localStorage.setItem("mano_token", response.data["token"]);
+  const login = useGoogleLogin({
+    onSuccess: async (response) => {
+      try {
+        const data = await axios.get(
+          "https://www.googleapis.com/oauth2/v3/userinfo",
+          {
+            headers: {
+              Authorization: `Bearer ${response.access_token}`,
+            },
+          }
+        );
+        console.log("the data is", data);
+      } catch (err) {
+        console.log(err);
+      }
+      console.log("response is", response);
+    },
+  });
 
-        console.log("this shit worked", response);
-      })
-      .catch((err: AxiosError) => {
-        setLoading(false);
-      });
-  };
   //make a props in the main page and pass the function which is the google login to the header page that way it should be fixed
   return (
     <div style={{ justifyContent: "center" }}>
-      <GoogleLogin
-        onSuccess={(credentialResponse) => {
-          console.log(credentialResponse);
-          console.log("api worked oh");
+      <Button
+        sx={{
+          "background": "#1E293B",
+          "&:hover": { background: "#1E293B" },
+          "textTransform": "none",
+          "width": "100%",
         }}
-        onError={() => {
-          console.log("Login Failed");
+        size="medium"
+        onClick={() => {
+          login();
         }}
-      />
-      ;
+        startIcon={
+          <Avatar src="googleimagelogo.png" sx={{ width: 24, height: 24 }} />
+        }
+        variant="contained"
+        style={{ borderRadius: "20px" }}
+      >
+        Sign in with Google
+      </Button>
       {/*  {loading ? (
         <OverlayLoader
           handleClose={() => {
