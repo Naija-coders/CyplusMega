@@ -6,6 +6,7 @@ import DispatchContext from "../context/DispatchContext";
 import { AuthReducer, initialAuthState } from "../store/auth.store";
 import { GlobalReducer, initialGlobalState } from "../store/global.store";
 import { createStore, applyMiddleware, Store } from "redux";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import reducer from "../store/reducer.store";
@@ -28,11 +29,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <Provider store={store}>
-      <StateContext.Provider value={{ ...StateProviders }}>
-        <DispatchContext.Provider value={{ ...DispatchProviders }}>
-          <Component {...pageProps} />
-        </DispatchContext.Provider>
-      </StateContext.Provider>
+      <GoogleOAuthProvider clientId="810142204796-f4ben70l6156k4vl9fpfpifrgmt48aji.apps.googleusercontent.com">
+        <StateContext.Provider value={{ ...StateProviders }}>
+          <DispatchContext.Provider value={{ ...DispatchProviders }}>
+            <Component {...pageProps} />
+          </DispatchContext.Provider>
+        </StateContext.Provider>
+      </GoogleOAuthProvider>
     </Provider>
   );
 }

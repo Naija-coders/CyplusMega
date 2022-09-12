@@ -18,7 +18,7 @@ import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
 import { AxiosError, AxiosResponse } from "axios";
 
-import GoogleLogin from "react-google-login";
+import { GoogleLogin } from "@react-oauth/google";
 import Clientapi from "../../../pages/api/client";
 import { Button, Avatar } from "@mui/material";
 import { StyleLoadingButton, StyledButton } from "../Signup/styles";
@@ -30,8 +30,7 @@ import { route } from "next/dist/server/router";
 
 interface Props {}
 const googleClientId =
-  process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID ??
-  "810142204796-f4ben70l6156k4vl9fpfpifrgmt48aji.apps.googleusercontent.com";
+  "264301299946-ijjjc7iej14fqe906a3geog90sssjt98.apps.googleusercontent.com";
 
 const GoogleOauth: React.FC<Props> = ({}) => {
   const [loading, setLoading] = React.useState(false);
@@ -64,35 +63,15 @@ const GoogleOauth: React.FC<Props> = ({}) => {
   return (
     <div style={{ justifyContent: "center" }}>
       <GoogleLogin
-        clientId={googleClientId}
-        onSuccess={googleLoginHandler}
-        onFailure={() => {
-          console.log("not success");
+        onSuccess={(credentialResponse) => {
+          console.log(credentialResponse);
+          console.log("api worked oh");
         }}
-        cookiePolicy={"single_host_origin"}
-        render={(ownProps) => (
-          <Button
-            sx={{
-              "background": "#1E293B",
-              "&:hover": { background: "#1E293B" },
-              "textTransform": "none",
-              "width": "100%",
-            }}
-            size="medium"
-            onClick={ownProps.onClick}
-            startIcon={
-              <Avatar
-                src="googleimagelogo.png"
-                sx={{ width: 24, height: 24 }}
-              />
-            }
-            variant="contained"
-            style={{ borderRadius: "20px" }}
-          >
-            Sign in with Google
-          </Button>
-        )}
+        onError={() => {
+          console.log("Login Failed");
+        }}
       />
+      ;
       {/*  {loading ? (
         <OverlayLoader
           handleClose={() => {

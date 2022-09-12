@@ -25,6 +25,8 @@ import ChatWidget from "../components/ChatWidget/ChatWidget";
 import StateContext from "../context/StateContext";
 import Cookies from "js-cookie";
 import BecomeaSeller from "../components/Featured/BecomeaSeller";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+
 const TopCategories = dynamic(
   () => import("../components/TopCategories/TopCategories")
 );
@@ -110,6 +112,7 @@ const Home: NextPage = () => {
         <ChatWidget />
       </div>{" "}
     </Layout> */
+
     <HomePageLayout>
       <Head>
         <title>Elverr - The Market Place</title>
