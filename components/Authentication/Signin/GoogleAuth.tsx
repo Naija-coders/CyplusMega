@@ -30,6 +30,7 @@ import axios from "axios";
 import Image from "next/image";
 import { resolve } from "path";
 import { route } from "next/dist/server/router";
+import { user } from "../../../state/action-creators";
 
 interface Props {}
 const googleClientId =
@@ -54,7 +55,20 @@ const GoogleOauth: React.FC<Props> = ({}) => {
             },
           }
         );
-        console.log("the data is", data);
+
+        const userdata = {
+          name: data?.data?.name,
+          email: data?.data?.email,
+          picture: data?.data?.picture,
+        };
+
+        await Clientapi.post("api/googlelogin", data.data)
+          .then((res) => {
+            Cookies.set("auth_token", res?.data.auth_token);
+          })
+          .catch((err: AxiosError) => {
+            console.log("failed to regsiter this user");
+          });
       } catch (err) {
         console.log(err);
       }
@@ -82,7 +96,7 @@ const GoogleOauth: React.FC<Props> = ({}) => {
         variant="contained"
         style={{ borderRadius: "10px" }}
       >
-        Sign in with Google
+        Sign up with Google
       </Button>
       {/*  {loading ? (
         <OverlayLoader

@@ -13,7 +13,7 @@ import { StyledBox, StyleContainer } from "../../NotLoggedIn/style";
 import SwiperSlider from "../../SlideCustomCard/SwiperSlider";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
-import GoogleOauth from "../Signin/GoogleAuth";
+import GoogleOauth from "./GoogleAuth";
 import {
   BasicText,
   BasicTextHeader,
