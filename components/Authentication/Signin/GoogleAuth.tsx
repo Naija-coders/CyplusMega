@@ -72,7 +72,7 @@ const GoogleOauth: React.FC<Props> = ({}) => {
           "textTransform": "none",
           "width": "100%",
         }}
-        size="medium"
+        size="large"
         onClick={() => {
           login();
         }}
