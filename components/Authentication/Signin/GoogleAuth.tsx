@@ -80,7 +80,7 @@ const GoogleOauth: React.FC<Props> = ({}) => {
           <Avatar src="googleimagelogo.png" sx={{ width: 24, height: 24 }} />
         }
         variant="contained"
-        style={{ borderRadius: "20px" }}
+        style={{ borderRadius: "10px" }}
       >
         Sign in with Google
       </Button>

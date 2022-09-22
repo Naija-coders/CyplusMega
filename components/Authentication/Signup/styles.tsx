@@ -20,7 +20,7 @@ import {
 
 export const StyledButton = styled(Button)(
   sx({
-    "borderRadius": "20px",
+    "borderRadius": "10px",
     "textTransform": "none",
     "width": "40%",
     "&:hover": { background: "#34A422" },
@@ -110,7 +110,7 @@ export const StyleCheckoutButton = styled(Button)(
 
 export const StyleLoadingButton = styled(LoadingButton)(
   sx({
-    "borderRadius": "20px",
+    "borderRadius": "10px",
     "textTransform": "none",
     "width": "40%",
     "&:hover": { background: "#34A422" },

@@ -67,11 +67,11 @@ export const StyledTextField = styled(TextField)(
     "display": { xs: "flex", md: "flex", lg: "flex", xl: "flex" },
 
     "background": "#ffff",
-    "borderRadius": "30px",
+    "borderRadius": "10px",
 
     "outline": 0,
     "& fieldset": {
-      borderRadius: "30px",
+      borderRadius: "10px",
     },
     "& .MuiInputBase-root": {},
     "& input::placeholder": {
